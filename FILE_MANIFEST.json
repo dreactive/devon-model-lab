@@ -3100,8 +3100,8 @@
     },
     {
       "path": "docs/experiment/METHODS.md",
-      "bytes": 16089,
-      "sha256": "9a8364b48f2b097cf2661f6dc0917402f564efdbfe1535cedad7b390d074f2e0"
+      "bytes": 16320,
+      "sha256": "1f041154166b4710a1e1c5d92d604087a57a2a2467812535e5109947587b11b6"
     },
     {
       "path": "docs/experiment/PUBLICATION.md",
@@ -3215,8 +3215,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 7732,
-      "sha256": "c892467966171113af1eb0fe851c3f8b177cb4e04b463176ce3eb484f33aa19e"
+      "bytes": 8207,
+      "sha256": "f29723d172b0a4e704841d7ec60bcc8b2a57113a3c0cb3da50b5001f93fcdd7c"
     },
     {
       "path": "reports/budget-connection.md",

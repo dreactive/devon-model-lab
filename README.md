@@ -39,6 +39,8 @@ DEVON 면접 서비스의 **A: 질문 생성(Director)**, **B: 답변 평가(rep
 | `artifacts/experiments/elice-dev30-20261111/` | 5개 실행 원본, 원문 출력, 승인·회계·해시, 실행 당시 소스 이력 |
 | `FILE_MANIFEST.json` | 게시 파일별 SHA-256과 바이트 수 |
 
+루트 `pricing.yaml`은 초기 미설정 템플릿입니다. 이번 비용에 쓴 여섯 모델의 실제 제공 단가·출처·가격표 버전은 [최종 실행 가격 사본](artifacts/experiments/elice-dev30-20261111/runs/elice-dev30-10usd-20261111-recovery-4/pricing.yaml)에 있습니다. 기존 `manifests/elice-30pct` 역시 초기 4,096토큰 설정이며, 최종 2,000토큰 조건은 아카이브의 manifests와 아래 이식 도구를 기준으로 합니다.
+
 `.env`, 실제 키, 가상환경, 로컬 작업 일지, 관련 없는 실행은 제외했습니다. `artifacts/.../claims`와 `approvals`는 당시 실행의 감사 증거입니다. 현재 실행에서 사용할 승인으로 재사용하지 않습니다. 현재 코드는 실험 종료 후 캐시 쓰기 토큰 별칭 수정이 반영된 버전이며, [당시 소스 이력](artifacts/experiments/elice-dev30-20261111/source-history/README.md)으로 구분합니다.
 
 ## API 없이 아카이브 검증

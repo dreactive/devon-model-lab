@@ -40,7 +40,7 @@ B main에는 HR null 답변, 답변 안의 지시 주입, 프로젝트 이해 nu
 | `claude-haiku-5-5` | Chat Completions 호환 브리지 | 동일 |
 | `claude-sonnet-5-5` | 같은 Chat 브리지 요청, 명시적 거절 | schema 완화 없이 중단 |
 
-모델명·제공 단가는 사용자 제공 문서와 고정 설정에서 가져왔다. 이 기록은 다른 계정·시점의 모델 제공 여부나 현재 가격을 보증하지 않는다. [pricing.yaml](../../pricing.yaml)과 실행별 가격 사본·지문을 함께 봐야 한다.
+모델명·제공 단가는 사용자 제공 문서와 고정 설정에서 가져왔다. 이 기록은 다른 계정·시점의 모델 제공 여부나 현재 가격을 보증하지 않는다. 이번 비용 계산은 [최종 실행의 가격 사본](../../artifacts/experiments/elice-dev30-20261111/runs/elice-dev30-10usd-20261111-recovery-4/pricing.yaml)과 실행별 지문을 기준으로 한다. 루트 [pricing.yaml](../../pricing.yaml)은 초기 미설정 템플릿이며 이번 실행의 가격표가 아니다.
 
 초기에는 제공 문서의 Responses 경로를 사용했다. Gemini가 Responses의 `text` 매개변수를 거절하여, Gemini·Claude 네 모델은 model-lab의 Chat 브리지를 사용했다. 브리지는 원래 프롬프트·payload·같은 strict schema·`store=false`를 전달했다. GPT 두 모델은 Responses 경로를 유지했다. 따라서 **모든 모델의 wire protocol이 같았다고 주장하지 않는다**. 이 경로 차이 자체가 비교 조건이다.
 

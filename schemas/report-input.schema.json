@@ -1,0 +1,1165 @@
+{
+  "type": "object",
+  "properties": {
+    "case_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "control": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "report"
+        },
+        "split": {
+          "enum": [
+            "dev",
+            "holdout"
+          ]
+        },
+        "source_group_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "synthetic": {
+          "const": true
+        }
+      },
+      "required": [
+        "kind",
+        "split",
+        "source_group_id",
+        "synthetic"
+      ],
+      "additionalProperties": false
+    },
+    "payload": {
+      "type": "object",
+      "properties": {
+        "service_task": {
+          "const": "report"
+        },
+        "service_input": {
+          "type": "object",
+          "properties": {
+            "turns": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "turn_no": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 9
+                  },
+                  "persona": {
+                    "enum": [
+                      "hr_manager",
+                      "tech_lead",
+                      "domain_lead"
+                    ]
+                  },
+                  "question": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "answer": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "question_contract": {
+                    "type": "object",
+                    "properties": {
+                      "purpose": {
+                        "type": "string",
+                        "pattern": "\\S"
+                      },
+                      "required_points": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "key": {
+                              "type": "string",
+                              "pattern": "\\S"
+                            },
+                            "description": {
+                              "type": "string",
+                              "pattern": "\\S"
+                            }
+                          },
+                          "required": [
+                            "key",
+                            "description"
+                          ],
+                          "additionalProperties": false
+                        }
+                      },
+                      "assumptions": {
+                        "type": "array",
+                        "items": {
+                          "type": "string",
+                          "pattern": "\\S"
+                        }
+                      },
+                      "basis_refs": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "kind": {
+                              "enum": [
+                                "evidence",
+                                "jd_requirement",
+                                "job_posting",
+                                "answer_turn",
+                                "document_claim",
+                                "document_claim_comparison",
+                                "external_source",
+                                "document_visual"
+                              ]
+                            },
+                            "id": {
+                              "type": "string",
+                              "pattern": "\\S"
+                            }
+                          },
+                          "required": [
+                            "kind",
+                            "id"
+                          ],
+                          "additionalProperties": false
+                        }
+                      },
+                      "evaluation_scope": {
+                        "type": "string",
+                        "pattern": "\\S"
+                      },
+                      "evaluation_keys": {
+                        "type": "array",
+                        "items": {
+                          "enum": [
+                            "project_understanding",
+                            "technical_reasoning",
+                            "problem_solving",
+                            "communication",
+                            "contribution_clarity",
+                            "company_job_fit"
+                          ]
+                        }
+                      }
+                    },
+                    "required": [
+                      "purpose",
+                      "required_points",
+                      "assumptions",
+                      "basis_refs",
+                      "evaluation_scope"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "analysis": {
+                    "anyOf": [
+                      {
+                        "type": "object",
+                        "properties": {
+                          "evaluation_status": {
+                            "enum": [
+                              "evaluated",
+                              "needs_clarification",
+                              "not_evaluable"
+                            ]
+                          },
+                          "sufficiency": {
+                            "anyOf": [
+                              {
+                                "enum": [
+                                  "sufficient",
+                                  "partial",
+                                  "insufficient"
+                                ]
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          },
+                          "covered_points": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "properties": {
+                                "key": {
+                                  "type": "string",
+                                  "pattern": "\\S"
+                                },
+                                "answer_quotes": {
+                                  "type": "array",
+                                  "items": {
+                                    "type": "string",
+                                    "pattern": "\\S"
+                                  }
+                                }
+                              },
+                              "required": [
+                                "key",
+                                "answer_quotes"
+                              ],
+                              "additionalProperties": false
+                            }
+                          },
+                          "missing_points": {
+                            "type": "array",
+                            "items": {
+                              "type": "string",
+                              "pattern": "\\S"
+                            }
+                          },
+                          "technical_assessment": {
+                            "type": "object",
+                            "properties": {
+                              "explanation": {
+                                "type": "string",
+                                "pattern": "\\S"
+                              },
+                              "answer_quotes": {
+                                "type": "array",
+                                "items": {
+                                  "type": "string",
+                                  "pattern": "\\S"
+                                }
+                              },
+                              "evidence_refs": {
+                                "type": "array",
+                                "items": {
+                                  "type": "string",
+                                  "pattern": "\\S"
+                                }
+                              },
+                              "limitations": {
+                                "type": "array",
+                                "items": {
+                                  "type": "string",
+                                  "pattern": "\\S"
+                                }
+                              }
+                            },
+                            "required": [
+                              "explanation",
+                              "answer_quotes",
+                              "evidence_refs",
+                              "limitations"
+                            ],
+                            "additionalProperties": false
+                          },
+                          "contribution_scope": {
+                            "type": "object",
+                            "properties": {
+                              "scope": {
+                                "enum": [
+                                  "self",
+                                  "shared",
+                                  "teammate",
+                                  "unknown"
+                                ]
+                              },
+                              "answer_quotes": {
+                                "type": "array",
+                                "items": {
+                                  "type": "string",
+                                  "pattern": "\\S"
+                                }
+                              }
+                            },
+                            "required": [
+                              "scope",
+                              "answer_quotes"
+                            ],
+                            "additionalProperties": false
+                          },
+                          "claim_checks": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "properties": {
+                                "claim_text": {
+                                  "type": "string",
+                                  "pattern": "\\S"
+                                },
+                                "status": {
+                                  "enum": [
+                                    "supported",
+                                    "partially_supported",
+                                    "unverified",
+                                    "conflicting"
+                                  ]
+                                },
+                                "evidence_refs": {
+                                  "type": "array",
+                                  "items": {
+                                    "type": "string",
+                                    "pattern": "\\S"
+                                  }
+                                },
+                                "limitations": {
+                                  "type": "array",
+                                  "items": {
+                                    "type": "string",
+                                    "pattern": "\\S"
+                                  }
+                                }
+                              },
+                              "required": [
+                                "claim_text",
+                                "status",
+                                "evidence_refs",
+                                "limitations"
+                              ],
+                              "additionalProperties": false
+                            }
+                          },
+                          "needs_verification": {
+                            "type": "boolean"
+                          },
+                          "verification_requests": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "properties": {
+                                "claim_text": {
+                                  "type": "string",
+                                  "pattern": "\\S"
+                                },
+                                "purpose": {
+                                  "type": "string",
+                                  "pattern": "\\S"
+                                },
+                                "repository_id": {
+                                  "type": "string",
+                                  "pattern": "\\S"
+                                },
+                                "git_ref": {
+                                  "type": "string",
+                                  "pattern": "\\S"
+                                },
+                                "allowed_paths": {
+                                  "type": "array",
+                                  "items": {
+                                    "type": "string",
+                                    "pattern": "\\S"
+                                  }
+                                }
+                              },
+                              "required": [
+                                "claim_text",
+                                "purpose",
+                                "repository_id",
+                                "git_ref",
+                                "allowed_paths"
+                              ],
+                              "additionalProperties": false
+                            }
+                          },
+                          "limitations": {
+                            "type": "array",
+                            "items": {
+                              "type": "string",
+                              "pattern": "\\S"
+                            }
+                          },
+                          "external_queries": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "properties": {
+                                "query": {
+                                  "type": "string",
+                                  "pattern": "\\S"
+                                },
+                                "purpose": {
+                                  "type": "string",
+                                  "pattern": "\\S"
+                                }
+                              },
+                              "required": [
+                                "query",
+                                "purpose"
+                              ],
+                              "additionalProperties": false
+                            }
+                          }
+                        },
+                        "required": [
+                          "evaluation_status",
+                          "sufficiency",
+                          "covered_points",
+                          "missing_points",
+                          "technical_assessment",
+                          "contribution_scope",
+                          "claim_checks",
+                          "needs_verification",
+                          "verification_requests",
+                          "limitations"
+                        ],
+                        "additionalProperties": false
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "parent_turn_no": {
+                    "anyOf": [
+                      {
+                        "type": "integer",
+                        "minimum": 1,
+                        "maximum": 9
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "jd_requirement_ids": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "evidences": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "anyOf": [
+                            {
+                              "type": "string",
+                              "pattern": "\\S"
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "repository_id": {
+                          "anyOf": [
+                            {
+                              "type": "string",
+                              "pattern": "\\S"
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "git_ref": {
+                          "anyOf": [
+                            {
+                              "type": "string",
+                              "pattern": "\\S"
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "source_type": {
+                          "type": "string",
+                          "pattern": "\\S"
+                        },
+                        "path": {
+                          "anyOf": [
+                            {
+                              "type": "string",
+                              "pattern": "\\S"
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "metadata_key": {
+                          "anyOf": [
+                            {
+                              "type": "string",
+                              "pattern": "\\S"
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "snippet": {
+                          "type": "string",
+                          "pattern": "\\S"
+                        },
+                        "tool_name": {
+                          "anyOf": [
+                            {
+                              "type": "string",
+                              "pattern": "\\S"
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "summary": {
+                          "anyOf": [
+                            {
+                              "type": "string",
+                              "pattern": "\\S"
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "start_line": {
+                          "anyOf": [
+                            {
+                              "type": "integer"
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "end_line": {
+                          "anyOf": [
+                            {
+                              "type": "integer"
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        }
+                      },
+                      "required": [
+                        "id",
+                        "repository_id",
+                        "git_ref",
+                        "source_type",
+                        "path",
+                        "metadata_key",
+                        "snippet",
+                        "tool_name"
+                      ],
+                      "additionalProperties": false
+                    }
+                  }
+                },
+                "required": [
+                  "turn_no",
+                  "persona",
+                  "question",
+                  "answer",
+                  "question_contract",
+                  "analysis",
+                  "parent_turn_no",
+                  "jd_requirement_ids",
+                  "evidences"
+                ],
+                "additionalProperties": false
+              },
+              "minItems": 9,
+              "maxItems": 9
+            },
+            "requirements": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "pattern": "\\S"
+                  },
+                  "category": {
+                    "type": "string",
+                    "pattern": "\\S"
+                  },
+                  "text": {
+                    "type": "string",
+                    "pattern": "\\S"
+                  }
+                },
+                "required": [
+                  "id",
+                  "category",
+                  "text"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "rubrics": {
+              "type": "object",
+              "properties": {
+                "project_understanding": {
+                  "type": "object",
+                  "properties": {
+                    "0": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "1": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "2": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "3": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "4": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4"
+                  ],
+                  "additionalProperties": false
+                },
+                "technical_reasoning": {
+                  "type": "object",
+                  "properties": {
+                    "0": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "1": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "2": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "3": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "4": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4"
+                  ],
+                  "additionalProperties": false
+                },
+                "problem_solving": {
+                  "type": "object",
+                  "properties": {
+                    "0": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "1": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "2": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "3": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "4": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4"
+                  ],
+                  "additionalProperties": false
+                },
+                "communication": {
+                  "type": "object",
+                  "properties": {
+                    "0": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "1": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "2": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "3": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "4": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4"
+                  ],
+                  "additionalProperties": false
+                },
+                "contribution_clarity": {
+                  "type": "object",
+                  "properties": {
+                    "0": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "1": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "2": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "3": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "4": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4"
+                  ],
+                  "additionalProperties": false
+                },
+                "company_job_fit": {
+                  "type": "object",
+                  "properties": {
+                    "0": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "1": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "2": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "3": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "4": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "required": [
+                "project_understanding",
+                "technical_reasoning",
+                "problem_solving",
+                "communication",
+                "contribution_clarity",
+                "company_job_fit"
+              ],
+              "additionalProperties": false
+            },
+            "tool_results": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "turn_id": {
+                    "type": "string",
+                    "pattern": "\\S"
+                  },
+                  "result": {
+                    "type": "object",
+                    "properties": {
+                      "status": {
+                        "enum": [
+                          "found",
+                          "not_found",
+                          "insufficient_analysis",
+                          "tool_error"
+                        ]
+                      },
+                      "items": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "evidence_id": {
+                              "anyOf": [
+                                {
+                                  "type": "string",
+                                  "pattern": "\\S"
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "repository_id": {
+                              "anyOf": [
+                                {
+                                  "type": "string",
+                                  "pattern": "\\S"
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "git_ref": {
+                              "anyOf": [
+                                {
+                                  "type": "string",
+                                  "pattern": "\\S"
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "source_kind": {
+                              "type": "string",
+                              "pattern": "\\S"
+                            },
+                            "path": {
+                              "anyOf": [
+                                {
+                                  "type": "string",
+                                  "pattern": "\\S"
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "metadata_key": {
+                              "anyOf": [
+                                {
+                                  "type": "string",
+                                  "pattern": "\\S"
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "content": {
+                              "type": "string",
+                              "pattern": "\\S"
+                            },
+                            "tool_name": {
+                              "anyOf": [
+                                {
+                                  "type": "string",
+                                  "pattern": "\\S"
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "summary": {
+                              "anyOf": [
+                                {
+                                  "type": "string",
+                                  "pattern": "\\S"
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "start_line": {
+                              "anyOf": [
+                                {
+                                  "type": "integer"
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "end_line": {
+                              "anyOf": [
+                                {
+                                  "type": "integer"
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            }
+                          },
+                          "required": [
+                            "evidence_id",
+                            "repository_id",
+                            "git_ref",
+                            "source_kind",
+                            "path",
+                            "metadata_key",
+                            "content",
+                            "tool_name"
+                          ],
+                          "additionalProperties": false
+                        }
+                      },
+                      "searched_scope": {
+                        "type": "array",
+                        "items": {
+                          "type": "string",
+                          "pattern": "\\S"
+                        }
+                      },
+                      "limitations": {
+                        "type": "array",
+                        "items": {
+                          "type": "string",
+                          "pattern": "\\S"
+                        }
+                      },
+                      "error_code": {
+                        "anyOf": [
+                          {
+                            "type": "string",
+                            "pattern": "\\S"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      }
+                    },
+                    "required": [
+                      "status",
+                      "items",
+                      "searched_scope",
+                      "limitations",
+                      "error_code"
+                    ],
+                    "additionalProperties": false
+                  }
+                },
+                "required": [
+                  "turn_id",
+                  "result"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "limitations": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "supplemental_sources": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "source_id": {
+                    "type": "string",
+                    "pattern": "\\S"
+                  },
+                  "kind": {
+                    "enum": [
+                      "document_claim",
+                      "document_claim_comparison",
+                      "document_visual",
+                      "external_source"
+                    ]
+                  },
+                  "content": {
+                    "type": "string",
+                    "pattern": "\\S"
+                  },
+                  "location": {
+                    "type": "string",
+                    "pattern": "\\S"
+                  },
+                  "version": {
+                    "type": "string",
+                    "pattern": "\\S"
+                  },
+                  "limitations": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "pattern": "\\S"
+                    }
+                  },
+                  "title": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "pattern": "\\S"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "retrieved_at": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "pattern": "\\S"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  }
+                },
+                "required": [
+                  "source_id",
+                  "kind",
+                  "content",
+                  "location",
+                  "version",
+                  "limitations"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "source_notes": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "requirement_id": {
+                    "type": "string",
+                    "pattern": "\\S"
+                  },
+                  "block_id": {
+                    "type": "string",
+                    "pattern": "\\S"
+                  },
+                  "source_field": {
+                    "enum": [
+                      "job_posting.source_blocks"
+                    ]
+                  },
+                  "content": {
+                    "type": "string",
+                    "pattern": "\\S"
+                  },
+                  "location": {
+                    "type": "string",
+                    "pattern": "\\S"
+                  },
+                  "text_hash": {
+                    "type": "string",
+                    "pattern": "\\S"
+                  },
+                  "image_hash": {
+                    "type": "string",
+                    "pattern": "\\S"
+                  },
+                  "limitations": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "pattern": "\\S"
+                    }
+                  },
+                  "read_scope": {
+                    "enum": [
+                      "entire_block",
+                      "prefix_excerpt"
+                    ]
+                  }
+                },
+                "required": [
+                  "requirement_id",
+                  "block_id",
+                  "source_field",
+                  "content",
+                  "location",
+                  "text_hash",
+                  "image_hash",
+                  "limitations"
+                ],
+                "additionalProperties": false
+              }
+            }
+          },
+          "required": [
+            "turns",
+            "requirements",
+            "rubrics",
+            "tool_results",
+            "limitations"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "service_task",
+        "service_input"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "case_id",
+    "version",
+    "control",
+    "payload"
+  ],
+  "additionalProperties": false
+}

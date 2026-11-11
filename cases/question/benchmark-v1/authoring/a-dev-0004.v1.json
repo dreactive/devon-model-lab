@@ -1,0 +1,108 @@
+{
+  "case_id": "a-dev-0004",
+  "version": 1,
+  "state": "S2",
+  "history_contracts": [
+    {
+      "turn_id": "c7872bda-c78e-546d-99ef-c5a33ce24c68",
+      "persona": "hr_manager",
+      "question_contract": {
+        "purpose": "실제 역할과 협업 경계 확인",
+        "required_points": [
+          {
+            "key": "responsibility",
+            "description": "직접 맡은 업무"
+          },
+          {
+            "key": "handoff",
+            "description": "다른 구성원과 나눈 경계"
+          }
+        ],
+        "assumptions": [],
+        "basis_refs": [
+          {
+            "kind": "evidence",
+            "id": "59709dcc-c422-5e51-82a9-dfd49048ad0e"
+          }
+        ],
+        "evaluation_scope": "실제 역할과 협업 경계 확인",
+        "evaluation_keys": [
+          "contribution_clarity",
+          "communication"
+        ]
+      },
+      "authored_before_answer": true
+    },
+    {
+      "turn_id": "73e606b1-b3c0-53f3-9b70-d620b1bb3da9",
+      "persona": "tech_lead",
+      "question_contract": {
+        "purpose": "처리 방식과 선택 이유 확인",
+        "required_points": [
+          {
+            "key": "mechanism",
+            "description": "주장하는 처리 방식"
+          },
+          {
+            "key": "choice",
+            "description": "순서 또는 단위의 선택 이유"
+          }
+        ],
+        "assumptions": [],
+        "basis_refs": [
+          {
+            "kind": "evidence",
+            "id": "59709dcc-c422-5e51-82a9-dfd49048ad0e"
+          }
+        ],
+        "evaluation_scope": "처리 방식과 선택 이유 확인",
+        "evaluation_keys": [
+          "project_understanding",
+          "communication"
+        ]
+      },
+      "authored_before_answer": true
+    }
+  ],
+  "synthetic_source_bundle": {
+    "synthetic": true,
+    "authorship": "Codex; newly composed for this corpus, no user data or original q fixtures",
+    "source_group_id": "a-dev-reserve",
+    "repository_id": "f1a3b69a-f455-561d-8657-b88a24d5d23e",
+    "git_ref": "8cadf7cafbe550447f4a2906eb71698cb96d31c4",
+    "provenance_kind": "synthetic_project_source_bundle",
+    "files": [
+      {
+        "path": "reservations/lease.py",
+        "content": "from datetime import timedelta\n\ndef retain_seat(db, seat, owner, now):\n    deadline = now + timedelta(seconds=75)\n    with db.transaction():\n        db.execute('DELETE FROM seat_lease WHERE seat = ? AND until_at <= ?', seat, now)\n        return db.insert_unique('seat_lease', seat=seat, owner=owner, until_at=deadline)\n\ndef release_expired(db, now):\n    return db.execute('DELETE FROM seat_lease WHERE until_at <= ?', now)\n",
+        "sha256": "e80b0a54a2de4da602714e8df24129de6d317c7b3a6641beeafcfa6dc6ba82fa"
+      },
+      {
+        "path": "PROJECT_NOTES.md",
+        "content": "자리누리는 공연 좌석을 75초 동안 임시 점유하는 합성 팀 프로젝트다. 요청 시 만료 행 정리와 별도 청소 작업을 함께 둔다. 팀 문서는 개인 작성자를 기록하지 않는다. 유일 제약은 좌석별 임시 점유 행에만 적용되며 결제 시스템의 성공이나 실제 운영 부하는 자료에 없다.",
+        "sha256": "b60e4e1f7a876f31018bbda2e2ae4ea75efc1bede88d41e550cf79c85a991411"
+      }
+    ],
+    "limitations": [
+      "Generated observations are authored test inputs, not results of repository tools or production operations.",
+      "Git ref is an opaque synthetic fixture identity; no external repository is claimed."
+    ]
+  },
+  "construction_order": [
+    "question and contract",
+    "synthetic answer",
+    "canonical observation",
+    "draft expectation"
+  ],
+  "observation_provenance": "AnswerAnalysis and ToolResults are authored canonical synthetic observations, not model/provider outputs.",
+  "review": {
+    "status": "unreviewed",
+    "author": "Codex",
+    "reviewer": null,
+    "reviewed_at": null,
+    "pending_notes": [
+      "Draft semantic expectations and all three controls require independent human review.",
+      "Ambiguous control is a calibration boundary; no Judge or model output was used to author gold."
+    ]
+  }
+}

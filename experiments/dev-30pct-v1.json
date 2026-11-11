@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "selection": "selections/dev-30pct-v1.json",
+  "purpose": "same16 dev cases across6models; userauthorized totalUSD10; pendingcredentials andbudgetbinding",
+  "models": [
+    {
+      "model_id": "gpt-6.1-sol",
+      "manifest": "manifests/elice-30pct/gpt-6.1-sol.json"
+    },
+    {
+      "model_id": "gemini-3.8-flash",
+      "manifest": "manifests/elice-30pct/gemini-3.8-flash.json"
+    },
+    {
+      "model_id": "gemini-4-argon",
+      "manifest": "manifests/elice-30pct/gemini-4-argon.json"
+    },
+    {
+      "model_id": "claude-haiku-5-5",
+      "manifest": "manifests/elice-30pct/claude-haiku-5-5.json"
+    },
+    {
+      "model_id": "claude-sonnet-5-5",
+      "manifest": "manifests/elice-30pct/claude-sonnet-5-5.json"
+    },
+    {
+      "model_id": "gpt-6-luna",
+      "manifest": "manifests/elice-30pct/gpt-6-luna.json"
+    }
+  ],
+  "source": {
+    "kind": "user_supplied_html",
+    "path": "C:\\Users\\dreac\\.codex\\attachments\\e31e678c-2597-49bf-b01d-0f234bfdb547\\붙여넣은 텍스트.txt",
+    "sha256": "b192518d816ae1568fe75eb28ba70091bc90d5e76caae4940cfe47352f35e095",
+    "live_verified": false
+  },
+  "selected_inputs": 16,
+  "reference_total_inputs": 52,
+  "fraction": 0.3076923076923077,
+  "dev_population": 38,
+  "repeats": 1,
+  "http_counts": {
+    "per_model_normal": 27,
+    "per_model_cap": 32,
+    "six_models_normal": 162,
+    "six_models_cap": 192,
+    "includes_judge": false,
+    "extra_smoke": 0
+  },
+  "pricing_configured": false,
+  "budget_usd": "10.00",
+  "approved": false,
+  "execution_enabled": false,
+  "review_status": "unreviewed",
+  "budget_scope": "all_six_models_combined",
+  "campaign": "campaigns/dev-30pct-10usd.json",
+  "scope_authorized_in_chat": true
+}

@@ -1,0 +1,622 @@
+{
+  "experiment": "B",
+  "mode": "execute",
+  "manifest": {
+    "task_name": "report_score",
+    "version": "report_score_v3",
+    "model": "gpt-6-luna",
+    "template_sha256": "fa79e4af67a70bae1a3eef312ccdcbb852121d0e2fc0b978414afe2b86b1a702",
+    "limits": {
+      "timeout_seconds": 30,
+      "max_output_tokens": 2000,
+      "max_input_bytes": 65536,
+      "max_response_bytes": 1048576,
+      "reasoning_effort": null,
+      "stream": false
+    }
+  },
+  "cases": [
+    {
+      "case_id": "b-legacy-na-01",
+      "kind": "report",
+      "attempts": [
+        {
+          "attempt": 1,
+          "provider": "openai",
+          "model": "gpt-6-luna",
+          "prompt_version": "report_score_v3",
+          "schema_version": "1",
+          "latency_ms": 21102,
+          "input_tokens": 7975,
+          "output_tokens": 2000,
+          "error_stage": "provider",
+          "error_code": "llm_failed",
+          "response_id": "resp_0071f670a77db3a3016af37ee6b2c087d095ac0e7ae5bdb7f5"
+        },
+        {
+          "attempt": 2,
+          "provider": "openai",
+          "model": "gpt-6-luna",
+          "prompt_version": "report_score_v3",
+          "schema_version": "1",
+          "latency_ms": 17565,
+          "input_tokens": 6755,
+          "output_tokens": 1700,
+          "error_stage": null,
+          "error_code": null,
+          "response_id": "resp_0efe3e354b00bc1c016af37efbbf6487d092752d0b5c6b4ba0"
+        }
+      ],
+      "status": "succeeded",
+      "output": {
+        "judgments": [
+          {
+            "turn_id": "1",
+            "key": "contribution_clarity",
+            "level": 4
+          },
+          {
+            "turn_id": "1",
+            "key": "communication",
+            "level": 4
+          },
+          {
+            "turn_id": "2",
+            "key": "project_understanding",
+            "level": 4
+          },
+          {
+            "turn_id": "2",
+            "key": "technical_reasoning",
+            "level": 4
+          },
+          {
+            "turn_id": "2",
+            "key": "problem_solving",
+            "level": "not_applicable"
+          },
+          {
+            "turn_id": "2",
+            "key": "communication",
+            "level": 3
+          },
+          {
+            "turn_id": "3",
+            "key": "project_understanding",
+            "level": 2
+          },
+          {
+            "turn_id": "3",
+            "key": "technical_reasoning",
+            "level": 2
+          },
+          {
+            "turn_id": "3",
+            "key": "problem_solving",
+            "level": "not_applicable"
+          },
+          {
+            "turn_id": "3",
+            "key": "communication",
+            "level": 3
+          },
+          {
+            "turn_id": "4",
+            "key": "project_understanding",
+            "level": 2
+          },
+          {
+            "turn_id": "4",
+            "key": "technical_reasoning",
+            "level": 3
+          },
+          {
+            "turn_id": "4",
+            "key": "problem_solving",
+            "level": 3
+          },
+          {
+            "turn_id": "4",
+            "key": "communication",
+            "level": 3
+          },
+          {
+            "turn_id": "5",
+            "key": "company_job_fit",
+            "level": 3
+          },
+          {
+            "turn_id": "5",
+            "key": "communication",
+            "level": 4
+          },
+          {
+            "turn_id": "6",
+            "key": "project_understanding",
+            "level": 2
+          },
+          {
+            "turn_id": "6",
+            "key": "technical_reasoning",
+            "level": 4
+          },
+          {
+            "turn_id": "6",
+            "key": "problem_solving",
+            "level": "not_applicable"
+          },
+          {
+            "turn_id": "6",
+            "key": "communication",
+            "level": 3
+          },
+          {
+            "turn_id": "7",
+            "key": "project_understanding",
+            "level": 2
+          },
+          {
+            "turn_id": "7",
+            "key": "technical_reasoning",
+            "level": 4
+          },
+          {
+            "turn_id": "7",
+            "key": "problem_solving",
+            "level": "not_applicable"
+          },
+          {
+            "turn_id": "7",
+            "key": "communication",
+            "level": 3
+          },
+          {
+            "turn_id": "8",
+            "key": "company_job_fit",
+            "level": "not_applicable"
+          },
+          {
+            "turn_id": "8",
+            "key": "communication",
+            "level": 4
+          },
+          {
+            "turn_id": "9",
+            "key": "project_understanding",
+            "level": 2
+          },
+          {
+            "turn_id": "9",
+            "key": "technical_reasoning",
+            "level": 2
+          },
+          {
+            "turn_id": "9",
+            "key": "problem_solving",
+            "level": "not_applicable"
+          },
+          {
+            "turn_id": "9",
+            "key": "communication",
+            "level": 3
+          }
+        ]
+      },
+      "review_status": "unreviewed",
+      "quality": "excluded_unreviewed",
+      "failure": null
+    }
+  ],
+  "summary": {
+    "total_cases": 1,
+    "quality_denominator": 0,
+    "quality_evaluation": "diagnostic_only"
+  },
+  "in_progress_case": null,
+  "approval_plan_sha256": "ae9791182e23a6c4eda0fae52726026b3e4bdb684e352fd593fb7a16a8714338",
+  "cost_budget": {
+    "amount_usd": "0.03125",
+    "max_attempts": 2,
+    "approval_id": "5f75245f646fad5d23870a2b1543d6f970e78880e5163975828c1d4494e0443e",
+    "attempts_started": 2,
+    "spent_usd": "0.00344495",
+    "reserved_usd": "0",
+    "remaining_usd": "0.02780505",
+    "unknown_attempts": 0,
+    "in_flight_attempts": 0,
+    "halted": false,
+    "halt_reason": null,
+    "transport_integration": "guarded_http_transport",
+    "accounting_basis": "conservative_cost_upper_bound"
+  },
+  "cost_audit": [
+    {
+      "event": "reserved",
+      "attempt_id": "attempt-53",
+      "local_attempt_id": "attempt-1",
+      "model": "gpt-6-luna",
+      "reserved_usd": "0.004452625",
+      "accounting_basis": "billing_upper_bound",
+      "wire_protocol": "responses",
+      "canonical_request_bytes": 27621,
+      "wire_request_bytes": 27621,
+      "reservation_input_bytes": 27621,
+      "budget": {
+        "amount_usd": "0.03125",
+        "max_attempts": 2,
+        "approval_id": "5f75245f646fad5d23870a2b1543d6f970e78880e5163975828c1d4494e0443e",
+        "attempts_started": 1,
+        "spent_usd": "0",
+        "reserved_usd": "0.004452625",
+        "remaining_usd": "0.026797375",
+        "unknown_attempts": 0,
+        "in_flight_attempts": 1,
+        "halted": false,
+        "halt_reason": null,
+        "transport_integration": "elice_global_guard",
+        "accounting_basis": "billing_upper_bound",
+        "spent_upper_usd": "0"
+      },
+      "global_budget": {
+        "amount_usd": "8.6218768",
+        "max_attempts": 122,
+        "approval_id": "campaign-a0a91702b404de48ba279a95f8671f1d260f95b1b3afdbf12931a24560ac2b5f-continuation4",
+        "attempts_started": 53,
+        "spent_usd": "0.1842925",
+        "reserved_usd": "0.004452625",
+        "remaining_usd": "8.433131675",
+        "unknown_attempts": 0,
+        "in_flight_attempts": 1,
+        "halted": false,
+        "halt_reason": null,
+        "transport_integration": "elice_global_guard",
+        "accounting_basis": "billing_upper_bound",
+        "spent_upper_usd": "0.1842925"
+      },
+      "halted": false,
+      "halt_reason": null
+    },
+    {
+      "event": "settled",
+      "attempt_id": "attempt-53",
+      "local_attempt_id": "attempt-1",
+      "model": "gpt-6-luna",
+      "reserved_usd": "0.004452625",
+      "cost_usd": null,
+      "cost_lower_usd": "0.00173205",
+      "cost_upper_usd": "0.00191945",
+      "cost_status": "bounded",
+      "accounting_basis": "billing_upper_bound",
+      "error_code": null,
+      "http_status": 200,
+      "sent": true,
+      "response_id": "resp_0071f670a77db3a3016af37ee6b2c087d095ac0e7ae5bdb7f5",
+      "wire_protocol": "responses",
+      "canonical_request_bytes": 27621,
+      "wire_request_bytes": 27621,
+      "reservation_input_bytes": 27621,
+      "usage": {
+        "input_tokens": 7975,
+        "output_tokens": 2000,
+        "cached_input_tokens": 1874,
+        "cache_write_input_tokens": 4878,
+        "reasoning_output_tokens": 1642,
+        "cache_write_short_tokens": null,
+        "cache_write_long_tokens": null
+      },
+      "input_tokens": 7975,
+      "output_tokens": 2000,
+      "cached_input_tokens": 1874,
+      "cache_write_input_tokens": 4878,
+      "reasoning_output_tokens": 1642,
+      "provider_model": "gpt-6-luna",
+      "raw_response_sha256": "5747e9ea883773ab809720632aa34e077fa5d233e15b07b626e464c9440d76f9",
+      "budget": {
+        "amount_usd": "0.03125",
+        "max_attempts": 2,
+        "approval_id": "5f75245f646fad5d23870a2b1543d6f970e78880e5163975828c1d4494e0443e",
+        "attempts_started": 1,
+        "spent_usd": "0.00191945",
+        "reserved_usd": "0",
+        "remaining_usd": "0.02933055",
+        "unknown_attempts": 0,
+        "in_flight_attempts": 0,
+        "halted": false,
+        "halt_reason": null,
+        "transport_integration": "elice_global_guard",
+        "accounting_basis": "billing_upper_bound",
+        "spent_upper_usd": "0.00191945"
+      },
+      "global_budget": {
+        "amount_usd": "8.6218768",
+        "max_attempts": 122,
+        "approval_id": "campaign-a0a91702b404de48ba279a95f8671f1d260f95b1b3afdbf12931a24560ac2b5f-continuation4",
+        "attempts_started": 53,
+        "spent_usd": "0.18621195",
+        "reserved_usd": "0",
+        "remaining_usd": "8.43566485",
+        "unknown_attempts": 0,
+        "in_flight_attempts": 0,
+        "halted": false,
+        "halt_reason": null,
+        "transport_integration": "elice_global_guard",
+        "accounting_basis": "billing_upper_bound",
+        "spent_upper_usd": "0.18621195"
+      },
+      "halted": false,
+      "halt_reason": null
+    },
+    {
+      "event": "reserved",
+      "attempt_id": "attempt-54",
+      "local_attempt_id": "attempt-2",
+      "model": "gpt-6-luna",
+      "reserved_usd": "0.004452625",
+      "accounting_basis": "billing_upper_bound",
+      "wire_protocol": "responses",
+      "canonical_request_bytes": 27621,
+      "wire_request_bytes": 27621,
+      "reservation_input_bytes": 27621,
+      "budget": {
+        "amount_usd": "0.03125",
+        "max_attempts": 2,
+        "approval_id": "5f75245f646fad5d23870a2b1543d6f970e78880e5163975828c1d4494e0443e",
+        "attempts_started": 2,
+        "spent_usd": "0.00191945",
+        "reserved_usd": "0.004452625",
+        "remaining_usd": "0.024877925",
+        "unknown_attempts": 0,
+        "in_flight_attempts": 1,
+        "halted": false,
+        "halt_reason": null,
+        "transport_integration": "elice_global_guard",
+        "accounting_basis": "billing_upper_bound",
+        "spent_upper_usd": "0.00191945"
+      },
+      "global_budget": {
+        "amount_usd": "8.6218768",
+        "max_attempts": 122,
+        "approval_id": "campaign-a0a91702b404de48ba279a95f8671f1d260f95b1b3afdbf12931a24560ac2b5f-continuation4",
+        "attempts_started": 54,
+        "spent_usd": "0.18621195",
+        "reserved_usd": "0.004452625",
+        "remaining_usd": "8.431212225",
+        "unknown_attempts": 0,
+        "in_flight_attempts": 1,
+        "halted": false,
+        "halt_reason": null,
+        "transport_integration": "elice_global_guard",
+        "accounting_basis": "billing_upper_bound",
+        "spent_upper_usd": "0.18621195"
+      },
+      "halted": false,
+      "halt_reason": null
+    },
+    {
+      "event": "settled",
+      "attempt_id": "attempt-54",
+      "local_attempt_id": "attempt-2",
+      "model": "gpt-6-luna",
+      "reserved_usd": "0.004452625",
+      "cost_usd": null,
+      "cost_lower_usd": "0.0008503",
+      "cost_upper_usd": "0.0015255",
+      "cost_status": "bounded",
+      "accounting_basis": "billing_upper_bound",
+      "error_code": null,
+      "http_status": 200,
+      "sent": true,
+      "response_id": "resp_0efe3e354b00bc1c016af37efbbf6487d092752d0b5c6b4ba0",
+      "wire_protocol": "responses",
+      "canonical_request_bytes": 27621,
+      "wire_request_bytes": 27621,
+      "reservation_input_bytes": 27621,
+      "usage": {
+        "input_tokens": 6755,
+        "output_tokens": 1700,
+        "cached_input_tokens": 6752,
+        "cache_write_input_tokens": 0,
+        "reasoning_output_tokens": 1238,
+        "cache_write_short_tokens": null,
+        "cache_write_long_tokens": null
+      },
+      "input_tokens": 6755,
+      "output_tokens": 1700,
+      "cached_input_tokens": 6752,
+      "cache_write_input_tokens": 0,
+      "reasoning_output_tokens": 1238,
+      "provider_model": "gpt-6-luna",
+      "raw_response_sha256": "4f99d410b2fd41ba61366fd377a25eca0a7fa4692920f06a94339487102d33e1",
+      "budget": {
+        "amount_usd": "0.03125",
+        "max_attempts": 2,
+        "approval_id": "5f75245f646fad5d23870a2b1543d6f970e78880e5163975828c1d4494e0443e",
+        "attempts_started": 2,
+        "spent_usd": "0.00344495",
+        "reserved_usd": "0",
+        "remaining_usd": "0.02780505",
+        "unknown_attempts": 0,
+        "in_flight_attempts": 0,
+        "halted": false,
+        "halt_reason": null,
+        "transport_integration": "elice_global_guard",
+        "accounting_basis": "billing_upper_bound",
+        "spent_upper_usd": "0.00344495"
+      },
+      "global_budget": {
+        "amount_usd": "8.6218768",
+        "max_attempts": 122,
+        "approval_id": "campaign-a0a91702b404de48ba279a95f8671f1d260f95b1b3afdbf12931a24560ac2b5f-continuation4",
+        "attempts_started": 54,
+        "spent_usd": "0.18773745",
+        "reserved_usd": "0",
+        "remaining_usd": "8.43413935",
+        "unknown_attempts": 0,
+        "in_flight_attempts": 0,
+        "halted": false,
+        "halt_reason": null,
+        "transport_integration": "elice_global_guard",
+        "accounting_basis": "billing_upper_bound",
+        "spent_upper_usd": "0.18773745"
+      },
+      "halted": false,
+      "halt_reason": null
+    }
+  ],
+  "guarded_transport": {
+    "budget": {
+      "amount_usd": "0.03125",
+      "max_attempts": 2,
+      "approval_id": "5f75245f646fad5d23870a2b1543d6f970e78880e5163975828c1d4494e0443e",
+      "attempts_started": 2,
+      "spent_usd": "0.00344495",
+      "reserved_usd": "0",
+      "remaining_usd": "0.02780505",
+      "unknown_attempts": 0,
+      "in_flight_attempts": 0,
+      "halted": false,
+      "halt_reason": null,
+      "transport_integration": "elice_global_guard",
+      "accounting_basis": "billing_upper_bound",
+      "spent_upper_usd": "0.00344495"
+    },
+    "global_budget": {
+      "amount_usd": "8.6218768",
+      "max_attempts": 122,
+      "approval_id": "campaign-a0a91702b404de48ba279a95f8671f1d260f95b1b3afdbf12931a24560ac2b5f-continuation4",
+      "attempts_started": 54,
+      "spent_usd": "0.18773745",
+      "reserved_usd": "0",
+      "remaining_usd": "8.43413935",
+      "unknown_attempts": 0,
+      "in_flight_attempts": 0,
+      "halted": false,
+      "halt_reason": null,
+      "transport_integration": "elice_global_guard",
+      "accounting_basis": "billing_upper_bound",
+      "spent_upper_usd": "0.18773745"
+    },
+    "halted": false,
+    "halt_reason": null,
+    "attempts": [
+      {
+        "event": "settled",
+        "attempt_id": "attempt-53",
+        "local_attempt_id": "attempt-1",
+        "model": "gpt-6-luna",
+        "reserved_usd": "0.004452625",
+        "cost_usd": null,
+        "cost_lower_usd": "0.00173205",
+        "cost_upper_usd": "0.00191945",
+        "cost_status": "bounded",
+        "accounting_basis": "billing_upper_bound",
+        "error_code": null,
+        "http_status": 200,
+        "sent": true,
+        "response_id": "resp_0071f670a77db3a3016af37ee6b2c087d095ac0e7ae5bdb7f5",
+        "wire_protocol": "responses",
+        "canonical_request_bytes": 27621,
+        "wire_request_bytes": 27621,
+        "reservation_input_bytes": 27621,
+        "usage": {
+          "input_tokens": 7975,
+          "output_tokens": 2000,
+          "cached_input_tokens": 1874,
+          "cache_write_input_tokens": 4878,
+          "reasoning_output_tokens": 1642,
+          "cache_write_short_tokens": null,
+          "cache_write_long_tokens": null
+        },
+        "input_tokens": 7975,
+        "output_tokens": 2000,
+        "cached_input_tokens": 1874,
+        "cache_write_input_tokens": 4878,
+        "reasoning_output_tokens": 1642,
+        "provider_model": "gpt-6-luna",
+        "raw_response_sha256": "5747e9ea883773ab809720632aa34e077fa5d233e15b07b626e464c9440d76f9"
+      },
+      {
+        "event": "settled",
+        "attempt_id": "attempt-54",
+        "local_attempt_id": "attempt-2",
+        "model": "gpt-6-luna",
+        "reserved_usd": "0.004452625",
+        "cost_usd": null,
+        "cost_lower_usd": "0.0008503",
+        "cost_upper_usd": "0.0015255",
+        "cost_status": "bounded",
+        "accounting_basis": "billing_upper_bound",
+        "error_code": null,
+        "http_status": 200,
+        "sent": true,
+        "response_id": "resp_0efe3e354b00bc1c016af37efbbf6487d092752d0b5c6b4ba0",
+        "wire_protocol": "responses",
+        "canonical_request_bytes": 27621,
+        "wire_request_bytes": 27621,
+        "reservation_input_bytes": 27621,
+        "usage": {
+          "input_tokens": 6755,
+          "output_tokens": 1700,
+          "cached_input_tokens": 6752,
+          "cache_write_input_tokens": 0,
+          "reasoning_output_tokens": 1238,
+          "cache_write_short_tokens": null,
+          "cache_write_long_tokens": null
+        },
+        "input_tokens": 6755,
+        "output_tokens": 1700,
+        "cached_input_tokens": 6752,
+        "cache_write_input_tokens": 0,
+        "reasoning_output_tokens": 1238,
+        "provider_model": "gpt-6-luna",
+        "raw_response_sha256": "4f99d410b2fd41ba61366fd377a25eca0a7fa4692920f06a94339487102d33e1"
+      }
+    ],
+    "sent_attempts": 2,
+    "transport_integration": "elice_global_guard",
+    "wire_protocol": "responses",
+    "request_byte_counts": [
+      {
+        "attempt_id": "attempt-53",
+        "wire_protocol": "responses",
+        "canonical_request_bytes": 27621,
+        "wire_request_bytes": 27621,
+        "reservation_input_bytes": 27621
+      },
+      {
+        "attempt_id": "attempt-54",
+        "wire_protocol": "responses",
+        "canonical_request_bytes": 27621,
+        "wire_request_bytes": 27621,
+        "reservation_input_bytes": 27621
+      }
+    ]
+  },
+  "raw_response_artifacts": [
+    {
+      "path": "runs/elice-dev30-10usd-20261111-recovery-4/results/gpt-6-luna-3-raw/response-0001.json",
+      "sha256": "50de4c89ee8360fe0ef8a69cbd261d072429f5d9bace771eb30bbf0b6226b798"
+    },
+    {
+      "path": "runs/elice-dev30-10usd-20261111-recovery-4/results/gpt-6-luna-3-raw/response-0002.json",
+      "sha256": "b7e859d256707fca61eb21326297b43c954cf50534927ac47769b5519c87b710"
+    }
+  ],
+  "campaign_budget": {
+    "amount_usd": "8.6218768",
+    "max_attempts": 122,
+    "approval_id": "campaign-a0a91702b404de48ba279a95f8671f1d260f95b1b3afdbf12931a24560ac2b5f-continuation4",
+    "attempts_started": 54,
+    "spent_usd": "0.18773745",
+    "reserved_usd": "0",
+    "remaining_usd": "8.43413935",
+    "unknown_attempts": 0,
+    "in_flight_attempts": 0,
+    "halted": false,
+    "halt_reason": null,
+    "transport_integration": "requires_transport_binding",
+    "accounting_basis": "conservative_cost_upper_bound"
+  },
+  "run_state": "completed",
+  "output_format_version": 2
+}

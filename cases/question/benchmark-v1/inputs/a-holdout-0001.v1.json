@@ -1,0 +1,96 @@
+{
+  "case_id": "a-holdout-0001",
+  "version": 1,
+  "control": {
+    "kind": "question",
+    "split": "holdout",
+    "source_group_id": "a-holdout-parcel",
+    "synthetic": true
+  },
+  "payload": {
+    "service_task": "director",
+    "service_input": {
+      "context": {
+        "interview_id": "5e9aa7c5-c8f5-5dbf-ab1b-d68d15b02b04",
+        "current_turn_id": null,
+        "turn_no": 1,
+        "total_turns": 9,
+        "persona_counts": [
+          {
+            "persona": "tech_lead",
+            "count": 0
+          },
+          {
+            "persona": "hr_manager",
+            "count": 0
+          },
+          {
+            "persona": "domain_lead",
+            "count": 0
+          }
+        ],
+        "allowed_personas": [
+          "hr_manager"
+        ],
+        "jd_requirements": [],
+        "repositories": [
+          {
+            "repository_id": "81f0ff17-125f-5504-9012-a1c7f0ccb28f",
+            "git_ref": "3aba7d5fe7414e59dada68ce4bbffcc097d73518",
+            "primary": true,
+            "analysis_refs": [],
+            "limitations": []
+          }
+        ],
+        "history": [],
+        "current_question_contract": null,
+        "evidence": [
+          {
+            "evidence_id": "34ca279b-7abb-5f1c-9bff-6eece35846b4",
+            "repository_id": "81f0ff17-125f-5504-9012-a1c7f0ccb28f",
+            "git_ref": "3aba7d5fe7414e59dada68ce4bbffcc097d73518",
+            "source_kind": "code",
+            "path": "tracking/StateFold.java",
+            "metadata_key": null,
+            "content": "record Scan(long sequence, String state) {}\nrecord ParcelState(long sequence, String state) {}\nclass StateFold {\n    ParcelState apply(ParcelState current, Scan incoming) {\n        if (incoming.sequence() <= current.sequence()) return current;\n        return new ParcelState(incoming.sequence(), incoming.state());\n    }\n}\n",
+            "tool_name": null,
+            "summary": "합성 프로젝트 원문 발췌. 개인 작성 사실이나 운영 성과를 증명하지 않는다.",
+            "start_line": 1,
+            "end_line": 8
+          },
+          {
+            "evidence_id": "618629e2-b2f2-5950-949b-67f07c47d734",
+            "repository_id": "81f0ff17-125f-5504-9012-a1c7f0ccb28f",
+            "git_ref": "3aba7d5fe7414e59dada68ce4bbffcc097d73518",
+            "source_kind": "document",
+            "path": "PROJECT_NOTES.md",
+            "metadata_key": null,
+            "content": "경로편지는 택배 스캔 이벤트를 상태로 변환하는 합성 프로젝트다. StateFold는 단일 택배의 순번만 비교하며 늦게 받은 낮은 순번은 무시한다. 배차 최적화와 지연 시간 보정 코드는 제공하지 않는다. 이 한 파일 검색에서 미발견인 사실은 전체 저장소의 기능 부재를 뜻하지 않는다.",
+            "tool_name": null,
+            "summary": null,
+            "start_line": 1,
+            "end_line": 1
+          }
+        ],
+        "domain_frames": [],
+        "limits": {
+          "remaining_calls": 2,
+          "remaining_replans": 0,
+          "policy_version": "interview-v1"
+        },
+        "evaluation_targets": [
+          {
+            "persona": "hr_manager",
+            "keys": [
+              "contribution_clarity",
+              "communication"
+            ]
+          }
+        ],
+        "supplemental_sources": [],
+        "external_searches": [],
+        "supplemental_limitations": []
+      }
+    }
+  }
+}

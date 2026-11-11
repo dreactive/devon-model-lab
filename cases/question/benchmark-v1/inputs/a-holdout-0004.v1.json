@@ -1,0 +1,266 @@
+{
+  "case_id": "a-holdout-0004",
+  "version": 1,
+  "control": {
+    "kind": "question",
+    "split": "holdout",
+    "source_group_id": "a-holdout-parcel",
+    "synthetic": true
+  },
+  "payload": {
+    "service_task": "director",
+    "service_input": {
+      "context": {
+        "interview_id": "6c2f3824-f604-5dd3-9a71-4f34330846a9",
+        "current_turn_id": "9201e9df-2f2a-5c1f-85da-177bdcae58f8",
+        "turn_no": 3,
+        "total_turns": 9,
+        "persona_counts": [
+          {
+            "persona": "tech_lead",
+            "count": 1
+          },
+          {
+            "persona": "hr_manager",
+            "count": 1
+          },
+          {
+            "persona": "domain_lead",
+            "count": 0
+          }
+        ],
+        "allowed_personas": [
+          "tech_lead",
+          "domain_lead"
+        ],
+        "jd_requirements": [
+          {
+            "id": "3960261e-1f6e-5bde-87c6-78628ea4aec4",
+            "text": "배송 상태의 품질과 지연 안내를 추적 근거에 맞춰 설명한다.",
+            "category": "responsibility",
+            "source_field": "responsibilities",
+            "tech_tags": []
+          }
+        ],
+        "repositories": [
+          {
+            "repository_id": "81f0ff17-125f-5504-9012-a1c7f0ccb28f",
+            "git_ref": "3aba7d5fe7414e59dada68ce4bbffcc097d73518",
+            "primary": true,
+            "analysis_refs": [],
+            "limitations": []
+          }
+        ],
+        "history": [
+          {
+            "turn_id": "a83509ae-8c78-5c1d-81bf-0dc626becfaf",
+            "persona": "hr_manager",
+            "question": "프로젝트에서 본인이 맡은 부분과 협업 경계를 소개해 주세요.",
+            "answer": "저는 스캔 이벤트를 배송 상태로 바꾸는 모듈을 맡았습니다. 배차 최적화는 동료가 맡았고 스캔 시간 보정은 제가 구현하지 않았습니다.",
+            "analysis_ref": null
+          },
+          {
+            "turn_id": "9201e9df-2f2a-5c1f-85da-177bdcae58f8",
+            "persona": "tech_lead",
+            "question": "말씀하신 처리 방식이 어떻게 동작하며 그 순서나 단위를 왜 선택했는지 설명해 주세요.",
+            "answer": "지연된 스캔은 별도 보정 단계에서 관측 시간을 정리했습니다. 상태 변환에서는 순번만 비교해 예전 상태로 돌아가지 않게 했습니다.",
+            "analysis_ref": null
+          }
+        ],
+        "current_question_contract": {
+          "purpose": "처리 방식과 선택 이유 확인",
+          "required_points": [
+            {
+              "key": "mechanism",
+              "description": "주장하는 처리 방식"
+            },
+            {
+              "key": "choice",
+              "description": "순서 또는 단위의 선택 이유"
+            }
+          ],
+          "assumptions": [],
+          "basis_refs": [
+            {
+              "kind": "evidence",
+              "id": "34ca279b-7abb-5f1c-9bff-6eece35846b4"
+            }
+          ],
+          "evaluation_scope": "처리 방식과 선택 이유 확인",
+          "evaluation_keys": [
+            "project_understanding",
+            "communication"
+          ]
+        },
+        "evidence": [
+          {
+            "evidence_id": "34ca279b-7abb-5f1c-9bff-6eece35846b4",
+            "repository_id": "81f0ff17-125f-5504-9012-a1c7f0ccb28f",
+            "git_ref": "3aba7d5fe7414e59dada68ce4bbffcc097d73518",
+            "source_kind": "code",
+            "path": "tracking/StateFold.java",
+            "metadata_key": null,
+            "content": "record Scan(long sequence, String state) {}\nrecord ParcelState(long sequence, String state) {}\nclass StateFold {\n    ParcelState apply(ParcelState current, Scan incoming) {\n        if (incoming.sequence() <= current.sequence()) return current;\n        return new ParcelState(incoming.sequence(), incoming.state());\n    }\n}\n",
+            "tool_name": null,
+            "summary": "합성 프로젝트 원문 발췌. 개인 작성 사실이나 운영 성과를 증명하지 않는다.",
+            "start_line": 1,
+            "end_line": 8
+          },
+          {
+            "evidence_id": "618629e2-b2f2-5950-949b-67f07c47d734",
+            "repository_id": "81f0ff17-125f-5504-9012-a1c7f0ccb28f",
+            "git_ref": "3aba7d5fe7414e59dada68ce4bbffcc097d73518",
+            "source_kind": "document",
+            "path": "PROJECT_NOTES.md",
+            "metadata_key": null,
+            "content": "경로편지는 택배 스캔 이벤트를 상태로 변환하는 합성 프로젝트다. StateFold는 단일 택배의 순번만 비교하며 늦게 받은 낮은 순번은 무시한다. 배차 최적화와 지연 시간 보정 코드는 제공하지 않는다. 이 한 파일 검색에서 미발견인 사실은 전체 저장소의 기능 부재를 뜻하지 않는다.",
+            "tool_name": null,
+            "summary": null,
+            "start_line": 1,
+            "end_line": 1
+          }
+        ],
+        "domain_frames": [],
+        "limits": {
+          "remaining_calls": 2,
+          "remaining_replans": 0,
+          "policy_version": "interview-v1"
+        },
+        "evaluation_targets": [
+          {
+            "persona": "tech_lead",
+            "keys": [
+              "technical_reasoning",
+              "communication"
+            ]
+          },
+          {
+            "persona": "domain_lead",
+            "keys": [
+              "company_job_fit",
+              "communication"
+            ]
+          }
+        ],
+        "supplemental_sources": [],
+        "external_searches": [],
+        "supplemental_limitations": []
+      },
+      "question": {
+        "persona": "tech_lead",
+        "text": "말씀하신 처리 방식이 어떻게 동작하며 그 순서나 단위를 왜 선택했는지 설명해 주세요.",
+        "topic_code": "project_discussion",
+        "question_contract": {
+          "purpose": "처리 방식과 선택 이유 확인",
+          "required_points": [
+            {
+              "key": "mechanism",
+              "description": "주장하는 처리 방식"
+            },
+            {
+              "key": "choice",
+              "description": "순서 또는 단위의 선택 이유"
+            }
+          ],
+          "assumptions": [],
+          "basis_refs": [
+            {
+              "kind": "evidence",
+              "id": "34ca279b-7abb-5f1c-9bff-6eece35846b4"
+            }
+          ],
+          "evaluation_scope": "처리 방식과 선택 이유 확인",
+          "evaluation_keys": [
+            "project_understanding",
+            "communication"
+          ]
+        },
+        "evidence_refs": [
+          "34ca279b-7abb-5f1c-9bff-6eece35846b4"
+        ],
+        "jd_requirement_ids": [],
+        "question_type": "main",
+        "parent_turn_id": null
+      },
+      "answer_text": "지연된 스캔은 별도 보정 단계에서 관측 시간을 정리했습니다. 상태 변환에서는 순번만 비교해 예전 상태로 돌아가지 않게 했습니다.",
+      "answer_analysis": {
+        "evaluation_status": "evaluated",
+        "sufficiency": "sufficient",
+        "covered_points": [
+          {
+            "key": "mechanism",
+            "answer_quotes": [
+              "지연된 스캔은 별도 보정 단계에서 관측 시간을 정리했습니다. 상태 변환에서는 순번만 비교해 예전 상태로 돌아가지 않게 했습니다."
+            ]
+          },
+          {
+            "key": "choice",
+            "answer_quotes": [
+              "지연된 스캔은 별도 보정 단계에서 관측 시간을 정리했습니다. 상태 변환에서는 순번만 비교해 예전 상태로 돌아가지 않게 했습니다."
+            ]
+          }
+        ],
+        "missing_points": [],
+        "technical_assessment": {
+          "explanation": "답변이 설명한 범위와 제공 원문을 구분해 관찰했다.",
+          "answer_quotes": [
+            "지연된 스캔은 별도 보정 단계에서 관측 시간을 정리했습니다. 상태 변환에서는 순번만 비교해 예전 상태로 돌아가지 않게 했습니다."
+          ],
+          "evidence_refs": [],
+          "limitations": []
+        },
+        "contribution_scope": {
+          "scope": "unknown",
+          "answer_quotes": [
+            "지연된 스캔은 별도 보정 단계에서 관측 시간을 정리했습니다. 상태 변환에서는 순번만 비교해 예전 상태로 돌아가지 않게 했습니다."
+          ]
+        },
+        "claim_checks": [
+          {
+            "claim_text": "지연된 스캔은 별도 보정 단계에서 관측 시간을 정리했습니다.",
+            "status": "unverified",
+            "evidence_refs": [],
+            "limitations": [
+              "제공된 범위만으로 이 주장을 확인하지 못했다."
+            ]
+          }
+        ],
+        "needs_verification": true,
+        "verification_requests": [
+          {
+            "claim_text": "지연된 스캔은 별도 보정 단계에서 관측 시간을 정리했습니다.",
+            "purpose": "처리 선택 질문에 영향을 주는 주장과 제공 원문의 경계를 확인한다.",
+            "repository_id": "81f0ff17-125f-5504-9012-a1c7f0ccb28f",
+            "git_ref": "3aba7d5fe7414e59dada68ce4bbffcc097d73518",
+            "allowed_paths": [
+              "tracking/StateFold.java"
+            ]
+          }
+        ],
+        "limitations": [],
+        "external_queries": []
+      },
+      "allowed_locations": [
+        [
+          "81f0ff17-125f-5504-9012-a1c7f0ccb28f",
+          "3aba7d5fe7414e59dada68ce4bbffcc097d73518",
+          "tracking/StateFold.java"
+        ]
+      ],
+      "reference_texts": [],
+      "tool_results": [
+        {
+          "status": "not_found",
+          "items": [],
+          "searched_scope": [
+            "tracking/StateFold.java"
+          ],
+          "limitations": [
+            "합성 조회 관찰: StateFold 한 파일만 검색했으며 다른 파일은 검색하지 않았다."
+          ],
+          "error_code": null
+        }
+      ]
+    }
+  }
+}

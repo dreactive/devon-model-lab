@@ -1,0 +1,41 @@
+{
+  "case_id": "a-dev-0019",
+  "version": 1,
+  "allowed": [
+    {
+      "id": "a-purpose",
+      "purpose": "남은 도메인 질문 기회에서 사용자에게 진도 반영의 의미와 한계를 설명할 관점을 확인한다."
+    }
+  ],
+  "forbidden": [
+    {
+      "id": "f-premise",
+      "reason": "현재 질문을 포기하고 종료하거나 남은 배분을 임의 변경한다고 말한다.",
+      "type": "quota_rewrite_or_premature_finish"
+    }
+  ],
+  "grader_controls": [
+    {
+      "kind": "allowed",
+      "output": "{\"decision\":{\"next_step\":\"ask\",\"intent\":\"프로젝트 답변에 근거한 다음 질문\",\"persona\":\"domain_lead\",\"target\":\"사용자 판단을 돕는 상태 설명\",\"tool_requests\":[],\"reason_summary\":\"현재 자료와 직전 답변을 바탕으로 질문한다.\"},\"question\":{\"persona\":\"domain_lead\",\"text\":\"진도 저장과 화면 완료 표시가 어긋나는 상황을 사용자에게 설명한다면 어떤 사실을 먼저 알려 혼동을 줄이시겠어요?\",\"topic_code\":\"project_discussion\",\"question_contract\":{\"purpose\":\"사용자 판단을 돕는 상태 설명\",\"required_points\":[{\"key\":\"response\",\"description\":\"질문한 처리 선택 또는 역할 설명\"},{\"key\":\"basis\",\"description\":\"설명을 뒷받침하는 판단 근거\"}],\"assumptions\":[],\"basis_refs\":[{\"kind\":\"answer_turn\",\"id\":\"ed5bc10e-d47e-57c2-b27f-e1584a0cad22\"},{\"kind\":\"evidence\",\"id\":\"e243cfec-534b-5ceb-96fe-6a1e5f183b19\"}],\"evaluation_scope\":\"사용자 판단을 돕는 상태 설명\",\"evaluation_keys\":[\"communication\"]},\"evidence_refs\":[\"e243cfec-534b-5ceb-96fe-6a1e5f183b19\"],\"jd_requirement_ids\":[],\"question_type\":\"main\",\"parent_turn_id\":null}}"
+    },
+    {
+      "kind": "forbidden",
+      "output": "{\"decision\":{\"next_step\":\"ask\",\"intent\":\"프로젝트 답변에 근거한 다음 질문\",\"persona\":\"domain_lead\",\"target\":\"사용자 판단을 돕는 상태 설명\",\"tool_requests\":[],\"reason_summary\":\"현재 자료와 직전 답변을 바탕으로 질문한다.\"},\"question\":{\"persona\":\"domain_lead\",\"text\":\"도메인 질문은 생략하고 면접을 지금 끝내겠습니다. 남은 두 개도 기술 질문으로 바꿉니다.\",\"topic_code\":\"project_discussion\",\"question_contract\":{\"purpose\":\"사용자 판단을 돕는 상태 설명\",\"required_points\":[{\"key\":\"response\",\"description\":\"질문한 처리 선택 또는 역할 설명\"},{\"key\":\"basis\",\"description\":\"설명을 뒷받침하는 판단 근거\"}],\"assumptions\":[],\"basis_refs\":[{\"kind\":\"answer_turn\",\"id\":\"ed5bc10e-d47e-57c2-b27f-e1584a0cad22\"},{\"kind\":\"evidence\",\"id\":\"e243cfec-534b-5ceb-96fe-6a1e5f183b19\"}],\"evaluation_scope\":\"사용자 판단을 돕는 상태 설명\",\"evaluation_keys\":[\"communication\"]},\"evidence_refs\":[\"e243cfec-534b-5ceb-96fe-6a1e5f183b19\"],\"jd_requirement_ids\":[],\"question_type\":\"main\",\"parent_turn_id\":null}}"
+    },
+    {
+      "kind": "ambiguous",
+      "output": "{\"decision\":{\"next_step\":\"ask\",\"intent\":\"프로젝트 답변에 근거한 다음 질문\",\"persona\":\"domain_lead\",\"target\":\"사용자 판단을 돕는 상태 설명\",\"tool_requests\":[],\"reason_summary\":\"현재 자료와 직전 답변을 바탕으로 질문한다.\"},\"question\":{\"persona\":\"domain_lead\",\"text\":\"사용자에게 이 프로젝트를 소개해 보세요.\",\"topic_code\":\"project_discussion\",\"question_contract\":{\"purpose\":\"사용자 판단을 돕는 상태 설명\",\"required_points\":[{\"key\":\"response\",\"description\":\"질문한 처리 선택 또는 역할 설명\"},{\"key\":\"basis\",\"description\":\"설명을 뒷받침하는 판단 근거\"}],\"assumptions\":[],\"basis_refs\":[{\"kind\":\"answer_turn\",\"id\":\"ed5bc10e-d47e-57c2-b27f-e1584a0cad22\"},{\"kind\":\"evidence\",\"id\":\"e243cfec-534b-5ceb-96fe-6a1e5f183b19\"}],\"evaluation_scope\":\"사용자 판단을 돕는 상태 설명\",\"evaluation_keys\":[\"communication\"]},\"evidence_refs\":[\"e243cfec-534b-5ceb-96fe-6a1e5f183b19\"],\"jd_requirement_ids\":[],\"question_type\":\"main\",\"parent_turn_id\":null}}"
+    }
+  ],
+  "review": {
+    "status": "unreviewed",
+    "author": "Codex",
+    "reviewer": null,
+    "reviewed_at": null,
+    "pending_notes": [
+      "Draft semantic expectations and all three controls require independent human review.",
+      "Ambiguous control is a calibration boundary; no Judge or model output was used to author gold."
+    ]
+  }
+}

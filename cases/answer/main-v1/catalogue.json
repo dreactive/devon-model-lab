@@ -1,0 +1,539 @@
+{
+  "version": 1,
+  "kind": "report_score_draft",
+  "rubric_provenance": {
+    "source_path": "backend/scripts/seed_score_criteria.py",
+    "source_sha256": "af2e0fbe5da58b95e6f6e8b4e1c174c6c781dbe5fb4ee693d78e067794257a95",
+    "rubrics_sha256": "c726eba35161f623d05a436bffeefed526fed65f1dc715301fe2a9f9f4a155d4",
+    "method": "ast.literal_eval_only_no_seed_import",
+    "review_status": "unreviewed"
+  },
+  "authoring_order": "Question and contract definitions are constructed before answer composition; hashes record that pre-answer contract projection. No model output is generated or used for annotations.",
+  "cases": [
+    {
+      "case_id": "b-main-01",
+      "version": 1,
+      "split": "dev",
+      "source_group_id": "sg-b-main-01",
+      "project": "상품 조회 캐시",
+      "input": "inputs/b-main-01.v1.json",
+      "gold": "gold/b-main-01.json",
+      "review": "reviews/b-main-01.json",
+      "source_bundle_sha256": "0d9748cbb0d3bc552e605c536fd6b75c1e40c230c7a7e1a68097e59964bef61a",
+      "source_input_sha256": "a13b9887fbb6556c3d5379d11963e8bd9df57ae1c377599a39253cf7983541d3",
+      "contracts_before_answers_sha256": [
+        "70f2c1084cd568a9d0fe13a4db477e6d612a2a2b838a39e9c4e0c63a2c2fb770",
+        "b8fa25ce244c9d44a1784cab731351e070b0e56ad9e2034a4c6805e7b6a326d3",
+        "70d61b6d4b3d42de4e10dd60f8ade847b2ef0614a35470ea949de428c269b297",
+        "9db08104f896dc97faf1d47d39ca1628479acbef8a923b4a4e707e10f1490c6f",
+        "f161c0c9fc7626a33640f525a2857372e4593f1e41c4d7432538d912cbb50331",
+        "b6585571aae877fd33649180f2c4c23870b4e193cb2397120231a1686a352e16",
+        "08aa3fd419c536b6623cce59608dadbf531b86e287cea85abb90fc465968bc80",
+        "709b1ca23527f956f48273b9011da1ca5524101616c3ea0501ca16ea933a5a75",
+        "bf4ec0739d9a2ebfccb6bf46ae5d7b6a78fb318e2f1141fc29d7c8759b739c3c"
+      ],
+      "answers_sha256": "ddf129124b6a7c3b527c8dac0800d259429399f5181fcce13a511f36df43f421",
+      "annotation_status": "unreviewed_semantic_draft",
+      "boundary_notes": [
+        "후광과 다른 턴 근거 혼입을 검토한다."
+      ],
+      "rubric_provenance": {
+        "source_path": "backend/scripts/seed_score_criteria.py",
+        "source_sha256": "af2e0fbe5da58b95e6f6e8b4e1c174c6c781dbe5fb4ee693d78e067794257a95",
+        "rubrics_sha256": "c726eba35161f623d05a436bffeefed526fed65f1dc715301fe2a9f9f4a155d4",
+        "method": "ast.literal_eval_only_no_seed_import",
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "case_id": "b-main-02",
+      "version": 1,
+      "split": "dev",
+      "source_group_id": "sg-b-main-02",
+      "project": "비동기 알림",
+      "input": "inputs/b-main-02.v1.json",
+      "gold": "gold/b-main-02.json",
+      "review": "reviews/b-main-02.json",
+      "source_bundle_sha256": "f9add2b4f7e8dbfe36faad1be4d2718c5f20be9895c6cdcc341297396d1dc2fc",
+      "source_input_sha256": "4a1b8fc64d4d7900d3fa0a559002dfa8db1be4e93eb47b336a11ca88c4389bf7",
+      "contracts_before_answers_sha256": [
+        "6cc7444d917f7f6cb014f442392a0a08ed760e010300640ed95512a631f86820",
+        "df55680fbb2ea96642305b61225f07ab962deaffff3ae4752d731ca01b361508",
+        "03296f3b70515c83330871667b70d16c3656dfdb68e8e3446d4d17e6a6af4afc",
+        "a4f29ecf15977ffc4fe7ccfbb4b766f78bd82ac8523619099f50d8ff8f67342b",
+        "c7149f3729dfac262fce17b5540f6db3b9d16119f4fa7874aa3d0ea1b26cb6f3",
+        "573f380b7f2a5421b74eba0717e16b22c1aa7226f0352cb9d027ab56988d5ca8",
+        "f8e4a3d2ba1e467be87d23f50b336b538bb54798592d543f541ea291746391bc",
+        "f7a09754583281389c81948590538cdd262943dd955245fdf6ed06d521b99959",
+        "62f5c7b9df9041808fa9a32bd8adcc4ff447e11ab0b8d27cda2359289d48e76e"
+      ],
+      "answers_sha256": "5871f5329bcf790c7f334914e3def56c3a32f6da678e8d5bb7e47359cadbbb14",
+      "annotation_status": "unreviewed_semantic_draft",
+      "boundary_notes": [
+        "유일한 H null 사례. 실패는 후보 평가가 아닌 합성 문답 관찰이다."
+      ],
+      "rubric_provenance": {
+        "source_path": "backend/scripts/seed_score_criteria.py",
+        "source_sha256": "af2e0fbe5da58b95e6f6e8b4e1c174c6c781dbe5fb4ee693d78e067794257a95",
+        "rubrics_sha256": "c726eba35161f623d05a436bffeefed526fed65f1dc715301fe2a9f9f4a155d4",
+        "method": "ast.literal_eval_only_no_seed_import",
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "case_id": "b-main-03",
+      "version": 1,
+      "split": "dev",
+      "source_group_id": "sg-b-main-03",
+      "project": "문서 검색 지원",
+      "input": "inputs/b-main-03.v1.json",
+      "gold": "gold/b-main-03.json",
+      "review": "reviews/b-main-03.json",
+      "source_bundle_sha256": "6a3994309bf0d138ca891aba04166728ea6014ae574cd0f9baf1092c281d514e",
+      "source_input_sha256": "2ea1a1b8f85937b6436262463f4a0fc0a691841bc82ac03020a869f292fc8f10",
+      "contracts_before_answers_sha256": [
+        "e9988dc581aac27dd000aa1044dc4b40e6aeb62c8042efd4ed05a865d0496f5d",
+        "e2865d7f20a1bbb977b039bc0bacd66285c0e4336b4e6bee6a8ee2056d939b89",
+        "6a88dd16318b322021f8d8cc6a42b98464615715b2ee085107071066f1b3b08f",
+        "a0565f5b9f7e6242992d27e1e439e1118f44267028e15ba521da15eae77f28ba",
+        "c30765ad5bf186696a2162401c65d7e7d24e2bf8b393752f8609dd2d550a5cb4",
+        "40bdcf7226133c593b343f509ddbc5d99902bc6e07b097748e361238ca17953b",
+        "aef25207509540542f02bb93dc263972accf6f53e9b93bbdc0d0020ce7b3087e",
+        "de4095d3b75fc7f5b47739f14ef5cb53b17abf60f1599a1496a02fbe5ff7bef5",
+        "b24a5ae0bb70656c993306548f83f73df6ab99851aab3873b9e94c6c6a1c45f1"
+      ],
+      "answers_sha256": "3722b5f5b5c0484570ff36ba4e397c2e6ddc00a4540eab98032e68dd97c6bf0b",
+      "annotation_status": "unreviewed_semantic_draft",
+      "boundary_notes": [
+        "JD가 있어도 일반 검색 경험 선언을 F 점수로 보충하지 않는다."
+      ],
+      "rubric_provenance": {
+        "source_path": "backend/scripts/seed_score_criteria.py",
+        "source_sha256": "af2e0fbe5da58b95e6f6e8b4e1c174c6c781dbe5fb4ee693d78e067794257a95",
+        "rubrics_sha256": "c726eba35161f623d05a436bffeefed526fed65f1dc715301fe2a9f9f4a155d4",
+        "method": "ast.literal_eval_only_no_seed_import",
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "case_id": "b-main-04",
+      "version": 1,
+      "split": "dev",
+      "source_group_id": "sg-b-main-04",
+      "project": "배치 데이터 적재",
+      "input": "inputs/b-main-04.v1.json",
+      "gold": "gold/b-main-04.json",
+      "review": "reviews/b-main-04.json",
+      "source_bundle_sha256": "7842f837e2c3834ab9d2d836899384cb86d979f82473c1d4f43b930db767ef37",
+      "source_input_sha256": "2c1ba95a6a9cf6ed6f5c3bddd97ec069834b50821f7a550a3674cb1bdfe1a6de",
+      "contracts_before_answers_sha256": [
+        "d5dea28eb6a49559c4d6cc56e5cbcda74442e983552fd54d8a03032aa04bcf91",
+        "b792b02e733ffdb554eb5bc0401b50c35bb365da7afea80773e6f0a327ec3aa0",
+        "eb23bac4eda81d1a84a75a984fde5a2c44afd3549ac5fd38d84484febda21bfc",
+        "12ea0fa89ddc62f876131d5afec1c973ed6a0c86b403240fc8b4c18f387abf03",
+        "29cdeca14c6ae54b10a9eee1c12c18e91b1db05e1f36d0ed5dee4402bd832b2d",
+        "fd9e8a56f3f7cba182bd2a9f7cb18020aaae5bc44910c389daedd2b0553f0023",
+        "e267dd3b6f0d740c7b0105a48f06ffc20a1a253e05fcf46cdf04929258503bb1",
+        "caa01f67e233e377adf25c5b1cd5d08c086cda70af5be83afa6719b89255db8d",
+        "20a00c9be81c0947d52fa6cbd51c701ad4d38af94ecd9cf74d6a1b1dcddfe81a"
+      ],
+      "answers_sha256": "04968ffc28110485db29ebb703fe11d8f920ff924404c0c829aadeb04aa80b43",
+      "annotation_status": "unreviewed_semantic_draft",
+      "boundary_notes": [
+        "문제 상황 미회상과 일부 해결 설명을 분리한다."
+      ],
+      "rubric_provenance": {
+        "source_path": "backend/scripts/seed_score_criteria.py",
+        "source_sha256": "af2e0fbe5da58b95e6f6e8b4e1c174c6c781dbe5fb4ee693d78e067794257a95",
+        "rubrics_sha256": "c726eba35161f623d05a436bffeefed526fed65f1dc715301fe2a9f9f4a155d4",
+        "method": "ast.literal_eval_only_no_seed_import",
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "case_id": "b-main-05",
+      "version": 1,
+      "split": "dev",
+      "source_group_id": "sg-b-main-05",
+      "project": "접근제어 gateway",
+      "input": "inputs/b-main-05.v1.json",
+      "gold": "gold/b-main-05.json",
+      "review": "reviews/b-main-05.json",
+      "source_bundle_sha256": "ec30a9f983e408e987da55bad221da20b950d94f15aa23f94698ab092389f6c7",
+      "source_input_sha256": "158e98669e274338f9b8bd250da22916a44181a5805ca3c3f110fe0cf9176678",
+      "contracts_before_answers_sha256": [
+        "9d81696fd58febdd5f4ac00fe7834b961e0cbf9f895ee1a1f289b72d00b51fb8",
+        "21994ec000fd8acd5b1f6420fbc99340a15b2e3b8b0325dca8212a39be7d8f13",
+        "6011f5dba22835205a7a217b41ecc06d96ae148ba66ae815cc7308ca22fbfa16",
+        "b2e4c43b2c32a32c518507fb79406bc8fbc92f06f8abca4895d3b18f9d96e7e9",
+        "c760a0a56f305665efec24a496e7786e3ffc2dc8ebf249a5d0380e9a140165ea",
+        "e6ef88dfb4a7fd49e4127017d0aac5befd9d16da47f9eba4bf69dc0689653b3d",
+        "3e09c32ef1b2126c127ddf25c2bf2c074b124fd865c4f07b9b35f88d8e00cf4d",
+        "21d937417f1ce245a2976fcd92613711042db665d4f47a49cb8dcad88eae2303",
+        "4f39f0ed8ffd12e20271a2c54fdbe5542a90fee14a36c070eb2af7633e7a3513"
+      ],
+      "answers_sha256": "7d09fc6994cb0c1df7fd22fe7f4dfd0bd4d7a29779c0e6c4958930e597513826",
+      "annotation_status": "unreviewed_semantic_draft",
+      "boundary_notes": [
+        "답변 내부의 주입 문장은 명령이 아니라 관찰할 텍스트다."
+      ],
+      "rubric_provenance": {
+        "source_path": "backend/scripts/seed_score_criteria.py",
+        "source_sha256": "af2e0fbe5da58b95e6f6e8b4e1c174c6c781dbe5fb4ee693d78e067794257a95",
+        "rubrics_sha256": "c726eba35161f623d05a436bffeefed526fed65f1dc715301fe2a9f9f4a155d4",
+        "method": "ast.literal_eval_only_no_seed_import",
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "case_id": "b-main-06",
+      "version": 1,
+      "split": "dev",
+      "source_group_id": "sg-b-main-06",
+      "project": "작업 scheduler",
+      "input": "inputs/b-main-06.v1.json",
+      "gold": "gold/b-main-06.json",
+      "review": "reviews/b-main-06.json",
+      "source_bundle_sha256": "c9d6b4fb0205d2c5ec20ca1f50e5e07d26a1c05a068694fbe4e738ac1a6cf662",
+      "source_input_sha256": "dcf4c349f880cbc1a6122229605ce66547df278c40a0b4fbf5b81487d892e55e",
+      "contracts_before_answers_sha256": [
+        "1a86803551d80a2959116af44227db2dcd7abb92513f9f40cd5594a736043fc4",
+        "b411d28731a2325e72ea639fd8d902ad4c466c798bcb68bba942e9ee3798de4e",
+        "19f6035c0f3be46d81dbb9be60b440a46505be80691692b5f01d25ba8a98cf7e",
+        "36d1c22fb71c5b97f435def70b0acd6e2cdfea9651e6f5afc39492d76ac1675c",
+        "3f56b00bc837d41512f8f5d083e7188d6109dff4647c50c96a14b803798cfcc6",
+        "fda0e1808e6fe27943e939c0295799351db5d6c37a11f8b43d9c48f9b80448ba",
+        "92e3fa482649a5f61ea8d830ec1d547dcbef2e9e7b397f41e79d4f4f8d2734c3",
+        "64e37114a1e1dc4437e20ffa7985350b8502b781d63c53e8a6d46fac76591278",
+        "f667566f1df824efcbbf4b975fcf08f9725849cd681b05efe7282e04dc8c26eb"
+      ],
+      "answers_sha256": "2afc2bd9b9b1dce2513945a47b0b4cff92343ff77058286878e254009208cd08",
+      "annotation_status": "unreviewed_semantic_draft",
+      "boundary_notes": [
+        "유일한 U null 사례."
+      ],
+      "rubric_provenance": {
+        "source_path": "backend/scripts/seed_score_criteria.py",
+        "source_sha256": "af2e0fbe5da58b95e6f6e8b4e1c174c6c781dbe5fb4ee693d78e067794257a95",
+        "rubrics_sha256": "c726eba35161f623d05a436bffeefed526fed65f1dc715301fe2a9f9f4a155d4",
+        "method": "ast.literal_eval_only_no_seed_import",
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "case_id": "b-main-07",
+      "version": 1,
+      "split": "dev",
+      "source_group_id": "sg-b-main-07",
+      "project": "정산 원장",
+      "input": "inputs/b-main-07.v1.json",
+      "gold": "gold/b-main-07.json",
+      "review": "reviews/b-main-07.json",
+      "source_bundle_sha256": "68448f79b296f711158d984de593f4882d9e5d87629943a58c05b9e29fa04c95",
+      "source_input_sha256": "d2f39bdaba67635ea3ec3ed79b2986b95c2e5fc70d4d2a7b160b3f6d4974013d",
+      "contracts_before_answers_sha256": [
+        "accc43c30240f0a50141a3072bd82b9fb842e9144374d943a00df71f6c12f709",
+        "3c77441e88c72f99fabf7caeaf26c6d5c037b98bf38c9429205fa08d82fe0e7e",
+        "a4c0a581ba72531b0b36cf6ae508e78e8fb9545aa305cb27f0ce310e9f46376a",
+        "3fd805e139f6b40b8a73d70b4f3c99197e9453362fd95e05c858e235259ccb3d",
+        "33f197b7fb2b32b5393365d79de5423946ca6dbe708baa04c558fdca2a50bcf1",
+        "b4e4f9e50ad0e59865f6d0921ac5b7ed619d64f81234b0e27b2176679429bcc5",
+        "03442f6c16b51a244d7c827e5171587fbef574e490a2a431b30b2e7a6e1dded4",
+        "256687ca717584f3bd32fe947945178845b29f684dd53532636a268d4f7cccbb",
+        "057eb3c66ffd546b34a65c78a32e16044ea7e6fffd68d7a5e0b01a194051d8f2"
+      ],
+      "answers_sha256": "6098c97c4bdad2508c06a782bca9ffb9481a122246127ac9d401418bff24ea9f",
+      "annotation_status": "unreviewed_semantic_draft",
+      "boundary_notes": [
+        "팀 성과를 본인 기여로 승격하지 않는다."
+      ],
+      "rubric_provenance": {
+        "source_path": "backend/scripts/seed_score_criteria.py",
+        "source_sha256": "af2e0fbe5da58b95e6f6e8b4e1c174c6c781dbe5fb4ee693d78e067794257a95",
+        "rubrics_sha256": "c726eba35161f623d05a436bffeefed526fed65f1dc715301fe2a9f9f4a155d4",
+        "method": "ast.literal_eval_only_no_seed_import",
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "case_id": "b-main-08",
+      "version": 1,
+      "split": "dev",
+      "source_group_id": "sg-b-main-08",
+      "project": "배포 rollback",
+      "input": "inputs/b-main-08.v1.json",
+      "gold": "gold/b-main-08.json",
+      "review": "reviews/b-main-08.json",
+      "source_bundle_sha256": "1f50c0c584e39cc6046d73a8948bf764bebdeb547b27f9e7d9cebbe85f4c785f",
+      "source_input_sha256": "cf66322e6a0f873d63081c0175315878fbf9d28f235717ff65a98b1510b95b83",
+      "contracts_before_answers_sha256": [
+        "ba8eb3e8a0972e866c360a7887a806a3b93923b4eda398881c2d030394aee9ad",
+        "a5ef047cb1cad363b085ffdfabc0fce4ad71c08b7ef568ce69b1c3d883a80cdb",
+        "35a412a1e967871bce7035ff8c2f9e85af138867a7b138e1c5e36306d0f637a1",
+        "2afbaadcc5c45fb1fb8ba2f8db37d565679e71987b83daa78fb9e4b98eabd4cb",
+        "51fbc34cbae3f8eaf6be49699b9bfe71c19c69fced0ead2ce9088b250b11f875",
+        "5e725aa21ad02adf0ff8b44f12bcf1a6ba697b85426e8a19b5466ec2e8d69964",
+        "a81343b8cb91c79f76a48fb04164c2f099fffeace1bd66d06ca5840f0fc27ab4",
+        "217b57805e46a1de6990e8c6e75c95e96864585b4b07be5432ea9921e6f23e00",
+        "2c06af5ba274c7d43176fe2bee57fe68e8638802e47354b4c9424c4d6ab1a3fb"
+      ],
+      "answers_sha256": "cc9f2503c7822bc1699cd68610e46f2c3e134024cb4e9941797ef1994abfa2b4",
+      "annotation_status": "unreviewed_semantic_draft",
+      "boundary_notes": [
+        "6턴의 충실한 기술 근거 답변에 관측기 tool_error를 연결했다. 실제 도구를 실행한 이력은 아니다."
+      ],
+      "rubric_provenance": {
+        "source_path": "backend/scripts/seed_score_criteria.py",
+        "source_sha256": "af2e0fbe5da58b95e6f6e8b4e1c174c6c781dbe5fb4ee693d78e067794257a95",
+        "rubrics_sha256": "c726eba35161f623d05a436bffeefed526fed65f1dc715301fe2a9f9f4a155d4",
+        "method": "ast.literal_eval_only_no_seed_import",
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "case_id": "b-main-09",
+      "version": 1,
+      "split": "holdout",
+      "source_group_id": "sg-b-main-09",
+      "project": "그래픽 편집기",
+      "input": "inputs/b-main-09.v1.json",
+      "gold": "gold/b-main-09.json",
+      "review": "reviews/b-main-09.json",
+      "source_bundle_sha256": "efc667b95fa2d2c7ae049c91ec82c5165963d7c36176bb6ea8b74b38e1f24ed1",
+      "source_input_sha256": "427025f23e920bae2bbeb05bafa7ffbc5fb20f6088163307c6ec8525fe61a8f2",
+      "contracts_before_answers_sha256": [
+        "99a21880ebe01899e7d2920b99575e700ec9af4870b59597bf39530d5e75363d",
+        "b10be3067a332f51437561ff5bffe8efa677d04d38556623dc240b18a7814e11",
+        "556099d6ec833f9251093555de2466c3ffca44f45ceb1902d9c88a0c05f8fefb",
+        "a1ffea10c602c5fd62cc0dd60f212594365fe1618e6f485b6d5d5a170e07e124",
+        "d2744f4adf80d4c2ad224ab8556c0ad39717caa9e60e21cd840a4f301ddbf52f",
+        "2c40b3a9431d75cb3309f4bc72d09839c0b645b3cb1153edadbc9da4d8b773fe",
+        "43766e36bb6cf0d81532d460b566667b4d5bb875d27c951a02058900b00e3d04",
+        "51efa5f4eb70842fb78c375729e5304991c1ebc9be24ef00fe1bbdeb3885d7ff",
+        "6d3b2570a36979459cdd035f6611bd6855773181d9a9e01908bd6599b009eb67"
+      ],
+      "answers_sha256": "4c7916eaffc99aa0cbcc5a7ef4d5e8f5d49c19821df10836f9894e4dd20408cd",
+      "annotation_status": "unreviewed_semantic_draft",
+      "boundary_notes": [
+        "대안 인지와 구체 tradeoff의 경계는 독립 검수 대기."
+      ],
+      "rubric_provenance": {
+        "source_path": "backend/scripts/seed_score_criteria.py",
+        "source_sha256": "af2e0fbe5da58b95e6f6e8b4e1c174c6c781dbe5fb4ee693d78e067794257a95",
+        "rubrics_sha256": "c726eba35161f623d05a436bffeefed526fed65f1dc715301fe2a9f9f4a155d4",
+        "method": "ast.literal_eval_only_no_seed_import",
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "case_id": "b-main-10",
+      "version": 1,
+      "split": "holdout",
+      "source_group_id": "sg-b-main-10",
+      "project": "오프라인 현장 앱",
+      "input": "inputs/b-main-10.v1.json",
+      "gold": "gold/b-main-10.json",
+      "review": "reviews/b-main-10.json",
+      "source_bundle_sha256": "3719f3c65f7a2149c14cbe806ec189c875b44252152b8eb36ef8c03aab751e65",
+      "source_input_sha256": "8fd7c94d58891d66ff02e966ce48793997cb1479ae5515edb85f9dab2a8b0f1e",
+      "contracts_before_answers_sha256": [
+        "2689d9b5d60ce13aabb4e1ef8c4152bc07859dfa11d25a6d5f97fc2f7420d482",
+        "ad73f3c4ac691668c0fc3dd0228d97368bc3d563f487e7e677f99190ee26beea",
+        "6dc22a2e15bc92911e3873f7d0c783a21bc10ce9c6098b04baa70486831fca2d",
+        "115a732a77128aaf0ef8a379be318c0d7d3b1fdc0983f6130d69c60d4ab33e26",
+        "2afd31c1f3ce0d3b67e0ecc059e8df2177580b04f40a6186c714a740bd444a20",
+        "c7c704b9cc7f61611d0b903ac331d3f3364561490b6ec0091f75e3718ff4af9e",
+        "2036b269e8da76bef09c466cc52ec67efda4d13bb9b9c27103ffa5e9b0c7fab4",
+        "048457d57e4bf8aabd53cec4d2199e3fcd58405d3c50c5a778180be547661041",
+        "7d63e8f019b8874760de8246ef81015e73398cdf132e9b25a3a8de172744cffa"
+      ],
+      "answers_sha256": "d5d46ae1cf3fe96938fe4b6bad53f0efe1753d0b8215c6bf01cd022e48c1bbcd",
+      "annotation_status": "unreviewed_semantic_draft",
+      "boundary_notes": [
+        "전문용어가 많은 방식 나열에 기술 이유를 보충하지 않는다."
+      ],
+      "rubric_provenance": {
+        "source_path": "backend/scripts/seed_score_criteria.py",
+        "source_sha256": "af2e0fbe5da58b95e6f6e8b4e1c174c6c781dbe5fb4ee693d78e067794257a95",
+        "rubrics_sha256": "c726eba35161f623d05a436bffeefed526fed65f1dc715301fe2a9f9f4a155d4",
+        "method": "ast.literal_eval_only_no_seed_import",
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "case_id": "b-main-11",
+      "version": 1,
+      "split": "dev",
+      "source_group_id": "sg-b-main-11",
+      "project": "미디어 처리 큐",
+      "input": "inputs/b-main-11.v1.json",
+      "gold": "gold/b-main-11.json",
+      "review": "reviews/b-main-11.json",
+      "source_bundle_sha256": "37ffee207b5d85b86bc9a64678018569ce49b89869331a66353a9bf7c9b44f39",
+      "source_input_sha256": "92eb6e5cc704b0c1205aad78a8c2a535496f152eefa4527fba5d5e0de586fc1c",
+      "contracts_before_answers_sha256": [
+        "a0a7b8f0e053892b0798e478e468cc59db9c6fe57e42308466e4b4b20c79ab02",
+        "f0b39e797ac5a604802587d1804e099324e25759f04d4f4ed583d7ed6b42dec9",
+        "7ad23327ffaf42edc41f17bd0ddefee389af73a98ebcb5a852d24e802e571e65",
+        "a3de0d6c88274264126dc0a0bbed585ebbb0f0790b0dbfa335c2aac4bf0dcb3c",
+        "09b22dc5e86bcf86050dddb0236853c0024dc4e4b2c3be9da1ca1bc16582d761",
+        "6fbea9b2b7c67eddb9f7f9790c1c2150eeef0235e3bfe6083a421c726b7aea40",
+        "97f36178cf2aa1d188c9bdfc7bac2f71a569b2d754e9877c4db6a1f147ad5fe9",
+        "5b6b57732b892517cced14fa460479671660b9fe1a20438b502fa70dbbb1fcc7",
+        "0203f5d550350c6c266c1139042a8d5a7b2ee9806d6a908a9ff0815285de7343"
+      ],
+      "answers_sha256": "e92319785b1614d668ee6694dba6a5b0f2d14e35ab406da814842bde1de89b8e",
+      "annotation_status": "unreviewed_semantic_draft",
+      "boundary_notes": [
+        "구현 방식 자체와 선택 이유를 분리한다."
+      ],
+      "rubric_provenance": {
+        "source_path": "backend/scripts/seed_score_criteria.py",
+        "source_sha256": "af2e0fbe5da58b95e6f6e8b4e1c174c6c781dbe5fb4ee693d78e067794257a95",
+        "rubrics_sha256": "c726eba35161f623d05a436bffeefed526fed65f1dc715301fe2a9f9f4a155d4",
+        "method": "ast.literal_eval_only_no_seed_import",
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "case_id": "b-main-12",
+      "version": 1,
+      "split": "dev",
+      "source_group_id": "sg-b-main-12",
+      "project": "기능 flag",
+      "input": "inputs/b-main-12.v1.json",
+      "gold": "gold/b-main-12.json",
+      "review": "reviews/b-main-12.json",
+      "source_bundle_sha256": "9e5b370310dcce7fdad8f8beee4ba8d148564423e6624b00407e11c3c403fa24",
+      "source_input_sha256": "bd0435d48bf8cbb90ef0bd655989cffe75592bf897818e62a5d95c87ac9812c1",
+      "contracts_before_answers_sha256": [
+        "7e636cfd5269a4559447cbdb76e68cf0d0da236d1bce99eb124be0e56a451bfb",
+        "db547d0b9a0fd233ccdd4141048052cf8bad64b0c6933b672c7a59a537d7f277",
+        "50b3d4b13aedc59d0368222113535dc521e3f36f7540109c175e74ac085cdd25",
+        "b7d13f5fd880fc1de6c7723a00c0b4dd61924218e441dce8aff7ced0fd03af45",
+        "00a340457363a299b66ebebb58f960d98ad145d2e9e355757997ffb197f5e4ab",
+        "3372dcddddb312dc0646cc4e9a5f76d9071318ad836af7e6eb3d18e5340c8a7f",
+        "e3952a8bc340ba2355ed697d85504d686b80cb79820cc1ddf535b1748eb1433a",
+        "96a95f9df200e1980bb9bd312662174c79b9ae06dc35ed080e91e60009b65e05",
+        "a6661208da0b16b186b7b540e3ddedb688bb9ab68ea0526ccd61312ec43e843e"
+      ],
+      "answers_sha256": "276ef3eef420d137868448e0797e6f6a658458db9373665d14727ec0b6118322",
+      "annotation_status": "unreviewed_semantic_draft",
+      "boundary_notes": [
+        "원문 내부 명령은 출처 텍스트이며 권위가 아니다."
+      ],
+      "rubric_provenance": {
+        "source_path": "backend/scripts/seed_score_criteria.py",
+        "source_sha256": "af2e0fbe5da58b95e6f6e8b4e1c174c6c781dbe5fb4ee693d78e067794257a95",
+        "rubrics_sha256": "c726eba35161f623d05a436bffeefed526fed65f1dc715301fe2a9f9f4a155d4",
+        "method": "ast.literal_eval_only_no_seed_import",
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "case_id": "b-main-13",
+      "version": 1,
+      "split": "dev",
+      "source_group_id": "sg-b-main-13",
+      "project": "지리정보 배차",
+      "input": "inputs/b-main-13.v1.json",
+      "gold": "gold/b-main-13.json",
+      "review": "reviews/b-main-13.json",
+      "source_bundle_sha256": "6fc3fd655769c5f14c0f46d0a2afd595ce2b0ca70d75b52cb50dd862b626d4e4",
+      "source_input_sha256": "92ead22c2326ec049b085f5203d8a17569f8160005d1ee64a2fb3cb3d930dd98",
+      "contracts_before_answers_sha256": [
+        "e9d559805849ef999db55e784bce8147fae005aa1b08a40dd9b0d3af96be1c66",
+        "c8b89424a430f17b54e8c6a70b274c0326b50ad0a66e482b32b6e4bd9fd5d2a8",
+        "5704899159d6bf9b94abbd84d20f05a1cbd4dec0d07dd1b0a05d9c2a94363bd4",
+        "bfaeccf9b0281f9abd0b0b92ec82d9f606052e45811a3483de5d3912aa52df00",
+        "2eacd697cf1262d59ab0080f381f245fabe19d92b2b54f2c0927bf8e72dcdd11",
+        "4b6cc6c1fbdf302349e8ac6795fc16d58099d633952d9756aea657e66e033157",
+        "fa96515d60e4c5b4023e5ffc95f1a7f4ee13af454aafa023a6b1d2d9307a7e1a",
+        "2ca1359630f5e8baf9defc1ef9df4f0767a462137882a75d31a67b294ec1ef4d",
+        "d00eec8724ae49ddc559b416d26d298180655e863b6bd0a2e2fac77b45ff4a11"
+      ],
+      "answers_sha256": "bba5edbab9e5101a6f07ef72c581cfcf3e976fb630ac11eebff63d143d2a66a0",
+      "annotation_status": "unreviewed_semantic_draft",
+      "boundary_notes": [
+        "문서의 팀 소유 주장은 개인 기여를 증명하지 않는다."
+      ],
+      "rubric_provenance": {
+        "source_path": "backend/scripts/seed_score_criteria.py",
+        "source_sha256": "af2e0fbe5da58b95e6f6e8b4e1c174c6c781dbe5fb4ee693d78e067794257a95",
+        "rubrics_sha256": "c726eba35161f623d05a436bffeefed526fed65f1dc715301fe2a9f9f4a155d4",
+        "method": "ast.literal_eval_only_no_seed_import",
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "case_id": "b-main-14",
+      "version": 1,
+      "split": "dev",
+      "source_group_id": "sg-b-main-14",
+      "project": "데이터 동기화",
+      "input": "inputs/b-main-14.v1.json",
+      "gold": "gold/b-main-14.json",
+      "review": "reviews/b-main-14.json",
+      "source_bundle_sha256": "80981f5ecc5223d92b14e6d462228abf7583d5d7b8d8f440d1644facdbf0bfe2",
+      "source_input_sha256": "0185ac288bfbe9c97fe380bd416a04e1166504b1be2fa92975c835c8dbd02502",
+      "contracts_before_answers_sha256": [
+        "6111d5fc4f9b4b025946c1ba5da3fa5b6d2f0cc126d0c44fa6b0a8aeba549e31",
+        "e59dc32b0594942d051ca671f52d3cd1baf0528b616b2b4f83c470da78f1a269",
+        "2b40c66f311191702f940934f4edc48bf1a609304d3bdee9e1553311433511df",
+        "7551f459f6a1424a74dee79ef809106f67a261664298ae3db241016e70c31063",
+        "13812232f68c4d6ff990bf61eec84fa45cb6065b4fa2a7302682180e538e7bb2",
+        "160ae548e9a24d6b125aa0faafb1b40b498d2dbc58a48716b9e941c2ed859ee9",
+        "d48609c17c2c921c59dd0b49cf6aefdb639ee7d630ef1f3aee47b1a6bb9dcbab",
+        "ca0546b67eaf16ff5c288a800b0a0ad1216e2bfd539249bfaff0c14bb5b9dd1f",
+        "8c75414ad03b29226b1aa208a3c525b641139d4e8fdc1e34d76d1438d51aacc8"
+      ],
+      "answers_sha256": "ad0427c81dbd3b5e8ad6803851e578a89e223b81afffa89ba94cd1dbf736218d",
+      "annotation_status": "unreviewed_semantic_draft",
+      "boundary_notes": [
+        "짧은 구현 서술에 이유를 추론해 넣지 않는다."
+      ],
+      "rubric_provenance": {
+        "source_path": "backend/scripts/seed_score_criteria.py",
+        "source_sha256": "af2e0fbe5da58b95e6f6e8b4e1c174c6c781dbe5fb4ee693d78e067794257a95",
+        "rubrics_sha256": "c726eba35161f623d05a436bffeefed526fed65f1dc715301fe2a9f9f4a155d4",
+        "method": "ast.literal_eval_only_no_seed_import",
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "case_id": "b-main-15",
+      "version": 1,
+      "split": "holdout",
+      "source_group_id": "sg-b-main-15",
+      "project": "parser 도구",
+      "input": "inputs/b-main-15.v1.json",
+      "gold": "gold/b-main-15.json",
+      "review": "reviews/b-main-15.json",
+      "source_bundle_sha256": "28c745722a4debed91b4ca40c158d8adaf99712c6d10ac228d7a7d3980df50f9",
+      "source_input_sha256": "abbaf3c82f9e0b716a75640f38815c04067cd2d62a11de6d525773c883a46a25",
+      "contracts_before_answers_sha256": [
+        "ff1cb9c91f024e076efb8ff3fbb20945d3b1a4605c08e693b5541ac8b3170f6d",
+        "433829fb57549a25ab222e35a02866b0188eaff7110b3439264c0d67a33b27a4",
+        "37525d12fcaef2191db456dffbd0fcb320ecdec281f3df489607260b6fd312e1",
+        "b44110b6009fd54976c74131853e400420d729c00a59bc60edc6cd353e6a0c67",
+        "d7c10588758fea387ebc3003607640c8cf0547c4e0d049a1b0bbba48164d961a",
+        "19c25000dc805d5c81f74a6821307be078a456914cf1c6999e3965a7e442a8fe",
+        "cdd79ad73d9fc1384923f1ab44a67ce98e2ddb59b3af4cc862737c4714561736",
+        "aa316bf3aa173c71cdf6321a8d478e90b534b7881344ded227f0822e9beb5251",
+        "4ed2431fef5512def112d190987f001b0345c47b0a59f3d8a75f6d9e2dfbe4de"
+      ],
+      "answers_sha256": "3a3ab1ee8e3e76cf5d59c752ef76254525da40642d2bbb163cfd1fd055bce10a",
+      "annotation_status": "unreviewed_semantic_draft",
+      "boundary_notes": [
+        "앞 턴의 좋은 기여 설명으로 미답변 이해도를 보충하지 않는다."
+      ],
+      "rubric_provenance": {
+        "source_path": "backend/scripts/seed_score_criteria.py",
+        "source_sha256": "af2e0fbe5da58b95e6f6e8b4e1c174c6c781dbe5fb4ee693d78e067794257a95",
+        "rubrics_sha256": "c726eba35161f623d05a436bffeefed526fed65f1dc715301fe2a9f9f4a155d4",
+        "method": "ast.literal_eval_only_no_seed_import",
+        "review_status": "unreviewed"
+      }
+    }
+  ]
+}

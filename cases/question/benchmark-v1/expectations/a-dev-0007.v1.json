@@ -1,0 +1,41 @@
+{
+  "case_id": "a-dev-0007",
+  "version": 1,
+  "allowed": [
+    {
+      "id": "a-purpose",
+      "purpose": "최신 수량 재검증과 제한 재시도 설명은 수용하고 높은 충돌률에서 대안의 선택 기준을 묻는다."
+    }
+  ],
+  "forbidden": [
+    {
+      "id": "f-premise",
+      "reason": "이미 답한 재시도 동작이 누락됐다고 반복한다.",
+      "type": "repeated_satisfied_purpose"
+    }
+  ],
+  "grader_controls": [
+    {
+      "kind": "allowed",
+      "output": "{\"decision\":{\"next_step\":\"ask\",\"intent\":\"프로젝트 답변에 근거한 다음 질문\",\"persona\":\"tech_lead\",\"target\":\"처리 방식의 조건별 선택 기준 확인\",\"tool_requests\":[],\"reason_summary\":\"현재 자료와 직전 답변을 바탕으로 질문한다.\"},\"question\":{\"persona\":\"tech_lead\",\"text\":\"충돌 때 최신 수량을 읽어 재검증하는 흐름은 들었습니다. 충돌률이 계속 높다면 현재 재시도와 요청 직렬화 중 어느 쪽을 택할지 어떤 비용을 비교하시겠어요?\",\"topic_code\":\"project_discussion\",\"question_contract\":{\"purpose\":\"처리 방식의 조건별 선택 기준 확인\",\"required_points\":[{\"key\":\"response\",\"description\":\"질문한 처리 선택 또는 역할 설명\"},{\"key\":\"basis\",\"description\":\"설명을 뒷받침하는 판단 근거\"}],\"assumptions\":[],\"basis_refs\":[{\"kind\":\"answer_turn\",\"id\":\"22e65a81-084e-53dd-bc55-bcbd95c30918\"},{\"kind\":\"evidence\",\"id\":\"3fa818ac-b382-5747-ae51-6fe387d0b3ee\"}],\"evaluation_scope\":\"처리 방식의 조건별 선택 기준 확인\",\"evaluation_keys\":[\"technical_reasoning\",\"communication\"]},\"evidence_refs\":[\"3fa818ac-b382-5747-ae51-6fe387d0b3ee\"],\"jd_requirement_ids\":[],\"question_type\":\"main\",\"parent_turn_id\":null}}"
+    },
+    {
+      "kind": "forbidden",
+      "output": "{\"decision\":{\"next_step\":\"ask\",\"intent\":\"프로젝트 답변에 근거한 다음 질문\",\"persona\":\"tech_lead\",\"target\":\"처리 방식의 조건별 선택 기준 확인\",\"tool_requests\":[],\"reason_summary\":\"현재 자료와 직전 답변을 바탕으로 질문한다.\"},\"question\":{\"persona\":\"tech_lead\",\"text\":\"최신 수량을 읽고 재시도하는 방법을 아직 말씀하지 않으셨습니다. 그 흐름부터 다시 설명해 주세요.\",\"topic_code\":\"project_discussion\",\"question_contract\":{\"purpose\":\"처리 방식의 조건별 선택 기준 확인\",\"required_points\":[{\"key\":\"response\",\"description\":\"질문한 처리 선택 또는 역할 설명\"},{\"key\":\"basis\",\"description\":\"설명을 뒷받침하는 판단 근거\"}],\"assumptions\":[],\"basis_refs\":[{\"kind\":\"answer_turn\",\"id\":\"22e65a81-084e-53dd-bc55-bcbd95c30918\"},{\"kind\":\"evidence\",\"id\":\"3fa818ac-b382-5747-ae51-6fe387d0b3ee\"}],\"evaluation_scope\":\"처리 방식의 조건별 선택 기준 확인\",\"evaluation_keys\":[\"technical_reasoning\",\"communication\"]},\"evidence_refs\":[\"3fa818ac-b382-5747-ae51-6fe387d0b3ee\"],\"jd_requirement_ids\":[],\"question_type\":\"main\",\"parent_turn_id\":null}}"
+    },
+    {
+      "kind": "ambiguous",
+      "output": "{\"decision\":{\"next_step\":\"ask\",\"intent\":\"프로젝트 답변에 근거한 다음 질문\",\"persona\":\"tech_lead\",\"target\":\"처리 방식의 조건별 선택 기준 확인\",\"tool_requests\":[],\"reason_summary\":\"현재 자료와 직전 답변을 바탕으로 질문한다.\"},\"question\":{\"persona\":\"tech_lead\",\"text\":\"재시도 방법을 더 자세히 말해 주세요.\",\"topic_code\":\"project_discussion\",\"question_contract\":{\"purpose\":\"처리 방식의 조건별 선택 기준 확인\",\"required_points\":[{\"key\":\"response\",\"description\":\"질문한 처리 선택 또는 역할 설명\"},{\"key\":\"basis\",\"description\":\"설명을 뒷받침하는 판단 근거\"}],\"assumptions\":[],\"basis_refs\":[{\"kind\":\"answer_turn\",\"id\":\"22e65a81-084e-53dd-bc55-bcbd95c30918\"},{\"kind\":\"evidence\",\"id\":\"3fa818ac-b382-5747-ae51-6fe387d0b3ee\"}],\"evaluation_scope\":\"처리 방식의 조건별 선택 기준 확인\",\"evaluation_keys\":[\"technical_reasoning\",\"communication\"]},\"evidence_refs\":[\"3fa818ac-b382-5747-ae51-6fe387d0b3ee\"],\"jd_requirement_ids\":[],\"question_type\":\"main\",\"parent_turn_id\":null}}"
+    }
+  ],
+  "review": {
+    "status": "unreviewed",
+    "author": "Codex",
+    "reviewer": null,
+    "reviewed_at": null,
+    "pending_notes": [
+      "Draft semantic expectations and all three controls require independent human review.",
+      "Ambiguous control is a calibration boundary; no Judge or model output was used to author gold."
+    ]
+  }
+}

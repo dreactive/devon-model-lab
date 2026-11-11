@@ -1,0 +1,51 @@
+{
+  "id": "msg_011Cguses8eemydGpEKi3gHA",
+  "object": "chat.completion",
+  "created": 1794342304,
+  "model": "claude-haiku-5-5",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\"plan_valid\": false, \"context_valid\": false, \"wording_valid\": false, \"contract_matches\": false, \"safe_alternative\": true, \"reason_summary\": \"직전 답변은 boundary를 covered, flow를 missing으로 판정했으나 후보는 직전 턴 보완이 아닌 새 main 질문으로 전환하면서 parent_turn_id가 null이다. 그 자체는 허용될 수 있으나, 질문 문장은 register와 deliver의 흐름을 묻고 \\\"확인하지 못한 부분\\\" 경계까지 함께 묻는 복합 문장이며 required_points의 boundary는 지원자가 이미 답한 잠금 범위의 반복에 가깝다. 제공 원문 CallbackRegistry는 ticket 키 기반 등록·제거·실행만 보여주며 실행 시점의 외부 호출 여부는 확인되지 않으므로 질문에서 실행 시점을 단정하지 않는 중립 표현이 필요하다. 평가 키는 배정과 일치하나 실제 질문은 technical_reasoning(선택 이유·조건·대안)보다 흐름 설명에 치우쳐 있다. 안전한 대안은 원문 근거 범위 안에서 flow 하나만 묻는 질문으로 구성할 수 있다.\"}",
+        "refusal": null
+      },
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 14307,
+    "completion_tokens": 559,
+    "total_tokens": 14866,
+    "input_tokens": 14307,
+    "output_tokens": 559,
+    "cached_prompt_tokens": 0,
+    "cache_write_tokens": 11428
+  },
+  "_elice_billing": {
+    "usage": {
+      "input_tokens": 14307,
+      "output_tokens": 559,
+      "cached_input_tokens": 0,
+      "cache_write_input_tokens": null,
+      "reasoning_output_tokens": null,
+      "cache_write_short_tokens": null,
+      "cache_write_long_tokens": null
+    },
+    "cost_usd": null,
+    "cost_lower_usd": "0.0017102",
+    "cost_upper_usd": "0.0031409",
+    "cost_status": "bounded",
+    "provider_model": "claude-haiku-5-5",
+    "canonical_model": "claude-haiku-5-5",
+    "attempt_id": "attempt-10",
+    "accounting_basis": "billing_upper_bound"
+  },
+  "_elice_wire": {
+    "protocol": "chat_completions",
+    "canonical_request_bytes": 26419,
+    "wire_request_bytes": 26385,
+    "reservation_input_bytes": 26419
+  }
+}

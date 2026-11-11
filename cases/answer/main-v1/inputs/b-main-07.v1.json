@@ -1,0 +1,418 @@
+{
+  "case_id": "b-main-07",
+  "version": 1,
+  "control": {
+    "kind": "report",
+    "split": "dev",
+    "source_group_id": "sg-b-main-07",
+    "synthetic": true
+  },
+  "payload": {
+    "service_task": "report",
+    "service_input": {
+      "turns": [
+        {
+          "turn_no": 1,
+          "persona": "hr_manager",
+          "question": "정산 원장에서 본인이 한 일과 팀원이 한 일을 구분하고, 작업 근거와 협업 지점을 소개해 주세요.",
+          "question_contract": {
+            "purpose": "개인 담당과 협업 경계를 설명한다.",
+            "required_points": [
+              {
+                "key": "own_scope",
+                "description": "직접 수행한 작업과 확인할 수 있는 작업 근거를 설명한다."
+              },
+              {
+                "key": "boundary",
+                "description": "팀원의 담당과 공동으로 결정한 부분을 구분한다."
+              }
+            ],
+            "assumptions": [],
+            "basis_refs": [],
+            "evaluation_scope": "개인 담당과 협업 경계를 설명한다. 답변의 의도 적합성과 설명 구성을 함께 확인한다.",
+            "evaluation_keys": [
+              "contribution_clarity",
+              "communication"
+            ]
+          },
+          "analysis": null,
+          "parent_turn_no": null,
+          "jd_requirement_ids": [],
+          "evidences": [],
+          "answer": "정산 프로젝트에서 제가 어떤 일을 했는지는 말씀드리지 못하겠습니다. 팀이 잔액을 맞췄다는 것만 기억합니다."
+        },
+        {
+          "turn_no": 2,
+          "persona": "tech_lead",
+          "question": "정산 원장의 목적과 핵심 기능을 요청·처리·저장 흐름으로 설명하고 구성요소가 어떻게 의존하는지 말해 주세요.",
+          "question_contract": {
+            "purpose": "프로젝트 목적과 핵심 구조 및 흐름을 설명한다.",
+            "required_points": [
+              {
+                "key": "core_flow",
+                "description": "사용자 입력부터 결과까지 구성요소의 연결을 설명한다."
+              },
+              {
+                "key": "dependency",
+                "description": "구성요소의 의존 관계와 그 의도를 설명한다."
+              }
+            ],
+            "assumptions": [],
+            "basis_refs": [
+              {
+                "kind": "evidence",
+                "id": "ev-e084b7f0881c0b0d"
+              }
+            ],
+            "evaluation_scope": "프로젝트 목적과 핵심 구조 및 흐름을 설명한다. 답변의 의도 적합성과 설명 구성을 함께 확인한다.",
+            "evaluation_keys": [
+              "project_understanding",
+              "communication"
+            ]
+          },
+          "analysis": null,
+          "parent_turn_no": null,
+          "jd_requirement_ids": [],
+          "evidences": [
+            {
+              "id": "ev-e084b7f0881c0b0d",
+              "repository_id": "repo-e084b7f0881c0b0d",
+              "git_ref": "0781283b1b36cdfb3cd842cfdd5c397af67db287",
+              "source_type": "repository",
+              "path": "docs/project-context.md",
+              "metadata_key": null,
+              "snippet": "사용량 청구 항목을 차변·대변의 합으로 기록하는 원장 실습이다. 청구 이벤트 ID로 중복을 막고 정정은 기존 행 수정 대신 역분개 행을 추가한다. 원장은 금전 이동을 실제 수행하지 않는다.",
+              "tool_name": "repository_reader",
+              "summary": "제공된 프로젝트 설명의 제한된 구간",
+              "start_line": 1,
+              "end_line": 1
+            }
+          ],
+          "answer": "사용량을 모아 청구 금액을 보여주는 프로젝트입니다. 구체적인 원장 구조나 저장 흐름은 잘 모르겠습니다."
+        },
+        {
+          "turn_no": 3,
+          "persona": "tech_lead",
+          "question": "정산 원장의 정정 방식에서 어떤 방식을 택했고 주된 이유는 무엇인가요? 비교한 대안이나 남는 한계가 있다면 설명해 주세요.",
+          "question_contract": {
+            "purpose": "정정 방식의 선택과 근거를 설명한다.",
+            "required_points": [
+              {
+                "key": "choice_reason",
+                "description": "선택한 방식과 해당 상황에서의 이유를 설명한다."
+              }
+            ],
+            "assumptions": [],
+            "basis_refs": [],
+            "evaluation_scope": "정정 방식의 선택과 근거를 설명한다. 답변의 의도 적합성과 설명 구성을 함께 확인한다.",
+            "evaluation_keys": [
+              "technical_reasoning",
+              "communication"
+            ]
+          },
+          "analysis": null,
+          "parent_turn_no": null,
+          "jd_requirement_ids": [],
+          "evidences": [],
+          "answer": "원분개를 가리키는 역분개을 택했습니다. 선택 근거는 다음과 같습니다: 누가 어떤 금액을 취소했는지 이전 상태와 함께 추적합니다."
+        },
+        {
+          "turn_no": 4,
+          "persona": "tech_lead",
+          "question": "정산 원장에서 떠올릴 수 있는 구체적 문제 한 가지와 원인 확인, 수정, 검증 과정을 설명해 주세요. 검토한 대안이나 재발 방지가 있다면 함께 설명해 주세요.",
+          "question_contract": {
+            "purpose": "하나의 문제를 식별하고 해결한 과정을 설명한다.",
+            "required_points": [
+              {
+                "key": "diagnosis",
+                "description": "문제 증상과 원인을 확인한 관찰을 설명한다."
+              },
+              {
+                "key": "resolution",
+                "description": "수정 방법과 검증 과정을 설명한다."
+              }
+            ],
+            "assumptions": [],
+            "basis_refs": [],
+            "evaluation_scope": "하나의 문제를 식별하고 해결한 과정을 설명한다. 답변의 의도 적합성과 설명 구성을 함께 확인한다.",
+            "evaluation_keys": [
+              "problem_solving",
+              "communication"
+            ]
+          },
+          "analysis": null,
+          "parent_turn_no": null,
+          "jd_requirement_ids": [],
+          "evidences": [],
+          "answer": "같은 청구 이벤트를 재전송하면 잔액이 두 번 늘었습니다. 이벤트 ID별 행 수를 조회해 재전송 요청이 각각 새 분개를 만드는 것을 확인했습니다. 입력 이벤트 ID에 유일 제약을 추가하고 충돌 시 기존 분개 ID를 반환했습니다. 같은 이벤트를 연속·동시에 보내도 분개 묶음과 잔액이 한 번만 늘어나는지 검사했습니다."
+        },
+        {
+          "turn_no": 5,
+          "persona": "domain_lead",
+          "question": "제공된 두 JD 요구사항을 보고 정산 원장에서의 본인 경험이 어떻게 대응하는지 사례로 연결해 주세요. 경험 범위의 한계도 함께 말해 주세요.",
+          "question_contract": {
+            "purpose": "제공된 JD 요구사항과 개인 경험을 연결한다.",
+            "required_points": [
+              {
+                "key": "experience_link",
+                "description": "요구사항에 대응하는 직접 수행 경험과 사례를 설명한다."
+              },
+              {
+                "key": "limits",
+                "description": "경험으로 뒷받침할 수 있는 범위를 설명한다."
+              }
+            ],
+            "assumptions": [],
+            "basis_refs": [
+              {
+                "kind": "jd_requirement",
+                "id": "req-f51272be0911e13c"
+              },
+              {
+                "kind": "jd_requirement",
+                "id": "req-3dcbf6fc9a49674c"
+              }
+            ],
+            "evaluation_scope": "제공된 JD 요구사항과 개인 경험을 연결한다. 답변의 의도 적합성과 설명 구성을 함께 확인한다.",
+            "evaluation_keys": [
+              "company_job_fit",
+              "communication"
+            ]
+          },
+          "analysis": null,
+          "parent_turn_no": null,
+          "jd_requirement_ids": [
+            "req-f51272be0911e13c",
+            "req-3dcbf6fc9a49674c"
+          ],
+          "evidences": [],
+          "answer": "정정 이력 요구에는 제가 만든 역분개 연결 ID와 원분개를 함께 조회하는 화면 API가 대응합니다. 이전 금액을 덮지 않아 정정 전후를 설명할 수 있습니다. 불변식 요구에는 분개 묶음의 차변·대변 합 일치 테스트를 작성한 경험이 대응합니다. 다만 합이 맞는다고 청구 대상이나 요율까지 맞다는 뜻은 아니며 실제 지급기관과 대사한 경험도 없습니다."
+        },
+        {
+          "turn_no": 6,
+          "persona": "tech_lead",
+          "question": "정산 원장의 금액 표현에서 어떤 방식을 택했고 주된 이유는 무엇인가요? 비교한 대안이나 남는 한계가 있다면 설명해 주세요.",
+          "question_contract": {
+            "purpose": "금액 표현의 선택과 근거를 설명한다.",
+            "required_points": [
+              {
+                "key": "choice_reason",
+                "description": "선택한 방식과 해당 상황에서의 이유를 설명한다."
+              }
+            ],
+            "assumptions": [],
+            "basis_refs": [],
+            "evaluation_scope": "금액 표현의 선택과 근거를 설명한다. 답변의 의도 적합성과 설명 구성을 함께 확인한다.",
+            "evaluation_keys": [
+              "technical_reasoning",
+              "communication"
+            ]
+          },
+          "analysis": null,
+          "parent_turn_no": null,
+          "jd_requirement_ids": [],
+          "evidences": [],
+          "answer": "최소 통화 단위 정수을 택했습니다. 선택 근거는 다음과 같습니다: 소수 연산의 반올림 오차 없이 분개 합을 비교합니다. 부동소수점 금액도 검토했습니다. 부동소수점은 익숙하지만 작은 오차가 누적돼 합 비교가 흔들립니다."
+        },
+        {
+          "turn_no": 7,
+          "persona": "tech_lead",
+          "question": "정산 원장의 잔액 제공에서 어떤 방식을 택했고 주된 이유는 무엇인가요? 비교한 대안이나 남는 한계가 있다면 설명해 주세요.",
+          "question_contract": {
+            "purpose": "잔액 제공의 선택과 근거를 설명한다.",
+            "required_points": [
+              {
+                "key": "choice_reason",
+                "description": "선택한 방식과 해당 상황에서의 이유를 설명한다."
+              }
+            ],
+            "assumptions": [],
+            "basis_refs": [
+              {
+                "kind": "document_claim",
+                "id": "doc-e084b7f0881c0b0d"
+              }
+            ],
+            "evaluation_scope": "잔액 제공의 선택과 근거를 설명한다. 답변의 의도 적합성과 설명 구성을 함께 확인한다.",
+            "evaluation_keys": [
+              "technical_reasoning",
+              "communication"
+            ]
+          },
+          "analysis": null,
+          "parent_turn_no": null,
+          "jd_requirement_ids": [],
+          "evidences": [],
+          "answer": "원장으로 재계산 가능한 스냅샷을 택했습니다. 조회는 빠르게 하면서 특정 시점 잔액을 원장과 대조할 수 있습니다. 비교한 스냅샷만 보관은 스냅샷만 두면 읽기는 쉽지만 틀렸을 때 다시 계산할 이력이 없습니다. 대신 원장과 스냅샷의 기준 순번을 함께 관리합니다. 그리고 지연된 분개가 들어오면 스냅샷을 다시 갱신해야 합니다."
+        },
+        {
+          "turn_no": 8,
+          "persona": "domain_lead",
+          "question": "원장 행을 수정하는 것과 역분개를 추가하는 것은 정산 이력에서 어떤 차이가 있나요?",
+          "question_contract": {
+            "purpose": "프로젝트의 사용자 관점에서 상태 또는 개념의 차이를 설명한다.",
+            "required_points": [
+              {
+                "key": "domain_distinction",
+                "description": "질문한 개념을 구분하고 사용자가 이해할 수 있는 예나 흐름으로 설명한다."
+              }
+            ],
+            "assumptions": [],
+            "basis_refs": [
+              {
+                "kind": "jd_requirement",
+                "id": "req-f51272be0911e13c"
+              },
+              {
+                "kind": "jd_requirement",
+                "id": "req-3dcbf6fc9a49674c"
+              }
+            ],
+            "evaluation_scope": "프로젝트의 사용자 관점에서 상태 또는 개념의 차이를 설명한다. 답변의 의도 적합성과 설명 구성을 함께 확인한다.",
+            "evaluation_keys": [
+              "communication"
+            ]
+          },
+          "analysis": null,
+          "parent_turn_no": null,
+          "jd_requirement_ids": [
+            "req-f51272be0911e13c",
+            "req-3dcbf6fc9a49674c"
+          ],
+          "evidences": [],
+          "answer": "정정은 금액을 고치는 것입니다. 기록이 남는다는 점도 있지만 어느 기록을 어떻게 읽는지는 잘 설명하지 못하겠습니다."
+        },
+        {
+          "turn_no": 9,
+          "persona": "tech_lead",
+          "question": "정산 원장의 입력 중복에서 어떤 방식을 택했고 주된 이유는 무엇인가요? 비교한 대안이나 남는 한계가 있다면 설명해 주세요.",
+          "question_contract": {
+            "purpose": "입력 중복의 선택과 근거를 설명한다.",
+            "required_points": [
+              {
+                "key": "choice_reason",
+                "description": "선택한 방식과 해당 상황에서의 이유를 설명한다."
+              }
+            ],
+            "assumptions": [],
+            "basis_refs": [],
+            "evaluation_scope": "입력 중복의 선택과 근거를 설명한다. 답변의 의도 적합성과 설명 구성을 함께 확인한다.",
+            "evaluation_keys": [
+              "technical_reasoning",
+              "communication"
+            ]
+          },
+          "analysis": null,
+          "parent_turn_no": null,
+          "jd_requirement_ids": [],
+          "evidences": [],
+          "answer": "청구 이벤트 ID 유일 키 방식으로 구현했습니다. 선택한 이유는 말씀드리지 못하겠습니다."
+        }
+      ],
+      "requirements": [
+        {
+          "id": "req-f51272be0911e13c",
+          "category": "required",
+          "text": "정산 이벤트의 추적 가능성과 정정 이력을 설명할 수 있어야 한다."
+        },
+        {
+          "id": "req-3dcbf6fc9a49674c",
+          "category": "required",
+          "text": "잔액 계산의 불변식을 테스트하고 그 한계를 설명해야 한다."
+        }
+      ],
+      "rubrics": {
+        "project_understanding": {
+          "0": "질문을 받았지만 프로젝트의 목적이나 핵심 기능을 설명하지 못한다.",
+          "1": "목적이나 기능을 언급하나 핵심이 빈약하고 구체적인 내용이 없다.",
+          "2": "핵심 기능은 설명하나 구조·흐름 설명이 피상적이거나 일부 부정확하다.",
+          "3": "핵심 기능과 구조를 대체로 정확히 설명한다.",
+          "4": "구조·의존관계·설계 의도까지 근거를 들어 설명한다."
+        },
+        "technical_reasoning": {
+          "0": "질문을 받았지만 이유를 말하지 않거나(방식만 말하는 경우 포함) 모른다고 답한다.",
+          "1": "이유를 말하지만 '편해서·많이 써서' 같이 내용이 없는 수준이다.",
+          "2": "근거는 제시하나 대안과의 비교가 없거나 피상적이다.",
+          "3": "대안을 인지하고 선택 이유를 합리적으로 설명한다.",
+          "4": "트레이드오프를 구체적으로 비교하고 한계까지 인지하고 있다."
+        },
+        "problem_solving": {
+          "0": "질문을 받았지만 문제 상황을 구체적으로 떠올리지 못한다.",
+          "1": "문제 상황만 말하거나, 구체적인 원인·방법 없이 해결했다고만 말한다.",
+          "2": "해결했다고 말하며 원인이나 방법을 언급하나 모호하거나 일부만 설명한다.",
+          "3": "문제 원인을 진단하고 해결한 과정을 구체적으로 설명한다.",
+          "4": "여러 대안을 검토한 근거와 재발 방지까지 설명한다."
+        },
+        "communication": {
+          "0": "질문과 무관한 답변을 하거나 의미를 파악하기 어렵다.",
+          "1": "질문의 일부에만 답하고 핵심이 불분명하다.",
+          "2": "질문에는 답하나 설명 순서가 뒤섞여 이해하기 어렵다.",
+          "3": "질문 의도에 맞춰 논리적 순서로 답변한다.",
+          "4": "핵심을 먼저 제시하고 근거를 명확히 구조화해 설명한다."
+        },
+        "contribution_clarity": {
+          "0": "질문을 받았지만 본인이 한 일을 말하지 못한다.",
+          "1": "참여했다고만 말하고 팀 성과와 본인 기여를 구분하지 못한다.",
+          "2": "본인이 한 일은 말하나 범위와 결과가 불명확하다.",
+          "3": "본인이 담당한 부분과 그 근거를 구체적으로 설명한다.",
+          "4": "협업 지점과 단독 기여를 명확히 구분해 설명한다."
+        },
+        "company_job_fit": {
+          "0": "질문을 받았지만 무엇을 했는지 말하지 않거나(경험이 있다는 말만 하는 경우 포함) 모른다고 답한다.",
+          "1": "요구사항이나 경험 중 하나만 구체적으로 언급한다.",
+          "2": "요구사항과 경험을 둘 다 언급하며 연결하나 근거가 빈약하거나 일반론에 그친다.",
+          "3": "요구사항과 본인 경험을 구체적 사례로 연결한다.",
+          "4": "요구사항별로 대응하는 경험과 한계까지 균형 있게 설명한다."
+        }
+      },
+      "tool_results": [
+        {
+          "turn_id": "2",
+          "result": {
+            "status": "found",
+            "items": [
+              {
+                "evidence_id": "ev-e084b7f0881c0b0d",
+                "repository_id": "repo-e084b7f0881c0b0d",
+                "git_ref": "0781283b1b36cdfb3cd842cfdd5c397af67db287",
+                "source_kind": "repository",
+                "path": "docs/project-context.md",
+                "metadata_key": null,
+                "content": "사용량 청구 항목을 차변·대변의 합으로 기록하는 원장 실습이다. 청구 이벤트 ID로 중복을 막고 정정은 기존 행 수정 대신 역분개 행을 추가한다. 원장은 금전 이동을 실제 수행하지 않는다.",
+                "tool_name": "repository_reader",
+                "summary": "제공된 프로젝트 설명의 제한된 구간",
+                "start_line": 1,
+                "end_line": 1
+              }
+            ],
+            "searched_scope": [
+              "docs/project-context.md:1"
+            ],
+            "limitations": [
+              "이 구간 이외 소스와 실행 결과는 확인하지 않았다."
+            ],
+            "error_code": null
+          }
+        }
+      ],
+      "limitations": [
+        "제공된 문서 구간과 저장된 관측 외의 구현·실행·기여 사실은 확인되지 않았다."
+      ],
+      "supplemental_sources": [
+        {
+          "source_id": "doc-e084b7f0881c0b0d",
+          "kind": "document_claim",
+          "content": "사용량 청구 항목을 차변·대변의 합으로 기록하는 원장 실습이다. 청구 이벤트 ID로 중복을 막고 정정은 기존 행 수정 대신 역분개 행을 추가한다. 원장은 금전 이동을 실제 수행하지 않는다.\n설계 기록: 원장으로 재계산 가능한 스냅샷. 조회는 빠르게 하면서 특정 시점 잔액을 원장과 대조할 수 있습니다",
+          "location": "design-notes.md#decision-record",
+          "version": "bcb266ab8b46224e4446fbeca7be0b61501acbc07a590c5673f3322818bcf8e9",
+          "limitations": [
+            "설계 기록은 구현 존재나 개인 기여를 독립 확인한 자료가 아니다."
+          ],
+          "title": "정산 원장 설계 기록",
+          "retrieved_at": null
+        }
+      ],
+      "source_notes": []
+    }
+  }
+}

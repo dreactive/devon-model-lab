@@ -1,0 +1,68 @@
+{
+  "scope": "Unreviewed synthetic structural exports; no model execution or semantic calibration.",
+  "rubric_extraction": "SCORE_CRITERIA AST literal keyword values; seed module never executed.",
+  "rubric_rows": 30,
+  "sources": [
+    {
+      "path": "backend/scripts/seed_score_criteria.py",
+      "sha256": "af2e0fbe5da58b95e6f6e8b4e1c174c6c781dbe5fb4ee693d78e067794257a95"
+    },
+    {
+      "path": "ai/src/devon_ai/contracts.py",
+      "sha256": "5d57cc25da7071ae242dd31b0c3d4e0dcff0afb7d32182bf0124c5de44e68f5b"
+    },
+    {
+      "path": "ai/src/devon_ai/agents/director/agent.py",
+      "sha256": "72b5eabfe37e685c45a984e271c478794715a87d61ac7d6c20340b3740c644b0"
+    },
+    {
+      "path": "ai/src/devon_ai/agents/director/runtime.py",
+      "sha256": "a98787accf16c6f6828f55df09743cf3e81ab0fae6f2a9151b84a485344858ad"
+    },
+    {
+      "path": "ai/src/devon_ai/llm_tasks/answer_analysis_wire.py",
+      "sha256": "dba0db85917935e92a589e7ee16ba6d22dde4c45c37ca99b08863f9e624d1c2f"
+    },
+    {
+      "path": "ai/src/devon_ai/llm_tasks/answer_analysis.py",
+      "sha256": "33ce80eaef23f5a7f7be33b3d2a30b78fed525e7c79388a709b65d278aa1411d"
+    },
+    {
+      "path": "ai/src/devon_ai/llm_tasks/report_score.py",
+      "sha256": "bd4d1f321eeaf0aed4e2987867bf1a5cd0147d579541a4dee7e3d3014865203a"
+    },
+    {
+      "path": "ai/src/devon_ai/llm_tasks/report.py",
+      "sha256": "42682de1fdf56f93b4227ed58db2075d090d2a5441d2e50a09f8c7fbb4ea7901"
+    },
+    {
+      "path": "ai/prompts/director-runtime-v8.md",
+      "sha256": "8edaaa516dd76d9ee994b423f1274da496b643ec2c915800ab3ebd9c354777ef"
+    },
+    {
+      "path": "ai/prompts/answer-analysis-runtime-v6.md",
+      "sha256": "2361cb6596f6b979ba6c4eb0a9185de57a2197bd752da897a1ed5dc1b385646e"
+    },
+    {
+      "path": "ai/prompts/report-score-v3.md",
+      "sha256": "1f851b9c0674268c718fd1ec720f8ff70bac039ddfa0f332e0964a31c9732762"
+    }
+  ],
+  "fixture_sources": [
+    {
+      "path": "cases/question/inputs/q-lab-smoke-0001.v1.json",
+      "sha256": "4982a9606961d820a11c463bb34156439ade3d3767bb458d32633c519cbd9c21"
+    },
+    {
+      "path": "cases/answer/inputs/b-lab-smoke-0001.v1.json",
+      "sha256": "0c0668d6e5717754157c17cb67c1fbccfb67a3aa14a152e61752aac7e5d49487"
+    }
+  ],
+  "generators": {
+    "director-plan.q-lab-smoke-0001.v1.schema.json": "runtime._bounded_plan_schema(context, _references(context, {}), True); director_v8",
+    "director-review.schema.json": "runtime._review_schema()",
+    "report-score.schema.json": "report_score._output_schema()",
+    "answer-analysis-v6.b-lab-smoke-0001.turn-1.schema.json": "answer_analysis_wire.output_schema(required point keys, answer_units(turn 1), empty evidence, empty locations)"
+  },
+  "lab_envelopes": "Strict lab-only structural bounds; original service semantic validation remains mandatory."
+}

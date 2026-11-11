@@ -1,0 +1,392 @@
+{
+  "case_id": "b-legacy-na-01",
+  "version": 1,
+  "control": {
+    "kind": "report",
+    "split": "dev",
+    "source_group_id": "sg-b-legacy-na-01",
+    "synthetic": true
+  },
+  "payload": {
+    "service_task": "report",
+    "service_input": {
+      "turns": [
+        {
+          "turn_no": 1,
+          "persona": "hr_manager",
+          "question": "센서 관측 portal에서 본인이 한 일과 팀원이 한 일을 구분하고, 작업 근거와 협업 지점을 소개해 주세요.",
+          "question_contract": {
+            "purpose": "개인 담당과 협업 경계를 설명한다.",
+            "required_points": [
+              {
+                "key": "own_scope",
+                "description": "직접 수행한 작업과 확인할 수 있는 작업 근거를 설명한다."
+              },
+              {
+                "key": "boundary",
+                "description": "팀원의 담당과 공동으로 결정한 부분을 구분한다."
+              }
+            ],
+            "assumptions": [],
+            "basis_refs": [],
+            "evaluation_scope": "개인 담당과 협업 경계를 설명한다. 답변의 의도 적합성과 설명 구성을 함께 확인한다.",
+            "evaluation_keys": []
+          },
+          "analysis": null,
+          "parent_turn_no": null,
+          "jd_requirement_ids": [],
+          "evidences": [],
+          "answer": "저는 관측 수신 API와 품질 코드 표시를 맡았습니다. 수신 스키마와 결측 표시 테스트가 제 작업이며 센서 펌웨어는 동료 담당입니다. 품질 코드 이름은 함께 정했지만 코드 변환 함수는 제가 작성했습니다."
+        },
+        {
+          "turn_no": 2,
+          "persona": "tech_lead",
+          "question": "센서 관측 portal의 목적과 핵심 기능을 요청·처리·저장 흐름으로 설명하고 구성요소가 어떻게 의존하는지 말해 주세요.",
+          "question_contract": {
+            "purpose": "프로젝트 목적과 핵심 구조 및 흐름을 설명한다.",
+            "required_points": [
+              {
+                "key": "core_flow",
+                "description": "사용자 입력부터 결과까지 구성요소의 연결을 설명한다."
+              },
+              {
+                "key": "dependency",
+                "description": "구성요소의 의존 관계와 그 의도를 설명한다."
+              }
+            ],
+            "assumptions": [],
+            "basis_refs": [
+              {
+                "kind": "evidence",
+                "id": "ev-54bdbbfa5ea6eb82"
+              }
+            ],
+            "evaluation_scope": "프로젝트 목적과 핵심 구조 및 흐름을 설명한다. 답변의 의도 적합성과 설명 구성을 함께 확인한다.",
+            "evaluation_keys": []
+          },
+          "analysis": null,
+          "parent_turn_no": null,
+          "jd_requirement_ids": [],
+          "evidences": [
+            {
+              "id": "ev-54bdbbfa5ea6eb82",
+              "repository_id": "repo-54bdbbfa5ea6eb82",
+              "git_ref": "bd1590d725d167c7c44ecbe36bc7d6a6e2ec7e66",
+              "source_type": "repository",
+              "path": "docs/project-context.md",
+              "metadata_key": null,
+              "snippet": "온도 센서의 원시 관측과 검증 후 표시 값을 구분하는 portal이다. 센서 시각·수신 시각·품질 코드를 보관하며 결측을 0도로 대체하지 않는다.",
+              "tool_name": "repository_reader",
+              "summary": "제공된 프로젝트 설명의 제한된 구간",
+              "start_line": 1,
+              "end_line": 1
+            }
+          ],
+          "answer": "portal은 센서 온도를 받아 품질 검사를 통과한 값을 보여줍니다. 수신 API가 원시 관측을 저장하고 검사 작업이 품질 코드를 붙입니다. 화면은 검증된 값과 마지막 관측 시각을 읽습니다. 원시 값과 표시 값을 나눠야 결측이나 재검사 때 원본을 잃지 않습니다."
+        },
+        {
+          "turn_no": 3,
+          "persona": "tech_lead",
+          "question": "센서 관측 portal의 관측 시각에서 어떤 방식을 택했고 주된 이유는 무엇인가요? 비교한 대안이나 남는 한계가 있다면 설명해 주세요.",
+          "question_contract": {
+            "purpose": "관측 시각의 선택과 근거를 설명한다.",
+            "required_points": [
+              {
+                "key": "choice_reason",
+                "description": "선택한 방식과 해당 상황에서의 이유를 설명한다."
+              }
+            ],
+            "assumptions": [],
+            "basis_refs": [],
+            "evaluation_scope": "관측 시각의 선택과 근거를 설명한다. 답변의 의도 적합성과 설명 구성을 함께 확인한다.",
+            "evaluation_keys": []
+          },
+          "analysis": null,
+          "parent_turn_no": null,
+          "jd_requirement_ids": [],
+          "evidences": [],
+          "answer": "센서 관측 시각과 수신 시각 분리을 택했습니다. 선택 근거는 다음과 같습니다: 늦게 도착한 측정을 방금 측정한 온도로 표시하지 않습니다."
+        },
+        {
+          "turn_no": 4,
+          "persona": "tech_lead",
+          "question": "센서 관측 portal에서 떠올릴 수 있는 구체적 문제 한 가지와 원인 확인, 수정, 검증 과정을 설명해 주세요. 검토한 대안이나 재발 방지가 있다면 함께 설명해 주세요.",
+          "question_contract": {
+            "purpose": "하나의 문제를 식별하고 해결한 과정을 설명한다.",
+            "required_points": [
+              {
+                "key": "diagnosis",
+                "description": "문제 증상과 원인을 확인한 관찰을 설명한다."
+              },
+              {
+                "key": "resolution",
+                "description": "수정 방법과 검증 과정을 설명한다."
+              }
+            ],
+            "assumptions": [],
+            "basis_refs": [],
+            "evaluation_scope": "하나의 문제를 식별하고 해결한 과정을 설명한다. 답변의 의도 적합성과 설명 구성을 함께 확인한다.",
+            "evaluation_keys": []
+          },
+          "analysis": null,
+          "parent_turn_no": null,
+          "jd_requirement_ids": [],
+          "evidences": [],
+          "answer": "결측 구간이 0도로 그려졌습니다. API JSON과 차트 입력을 비교해 null을 숫자로 바꾸는 변환에서 0이 됨을 확인했습니다. null을 유지하고 선을 끊도록 바꾼 뒤 정상 0도와 결측을 나란히 넣어 서로 다르게 보이는지 확인했습니다."
+        },
+        {
+          "turn_no": 5,
+          "persona": "domain_lead",
+          "question": "제공된 두 JD 요구사항을 보고 센서 관측 portal에서의 본인 경험이 어떻게 대응하는지 사례로 연결해 주세요. 경험 범위의 한계도 함께 말해 주세요.",
+          "question_contract": {
+            "purpose": "제공된 JD 요구사항과 개인 경험을 연결한다.",
+            "required_points": [
+              {
+                "key": "experience_link",
+                "description": "요구사항에 대응하는 직접 수행 경험과 사례를 설명한다."
+              },
+              {
+                "key": "limits",
+                "description": "경험으로 뒷받침할 수 있는 범위를 설명한다."
+              }
+            ],
+            "assumptions": [],
+            "basis_refs": [
+              {
+                "kind": "jd_requirement",
+                "id": "req-88b2293496e84a9b"
+              },
+              {
+                "kind": "jd_requirement",
+                "id": "req-6c27a6ed3057438e"
+              }
+            ],
+            "evaluation_scope": "제공된 JD 요구사항과 개인 경험을 연결한다. 답변의 의도 적합성과 설명 구성을 함께 확인한다.",
+            "evaluation_keys": []
+          },
+          "analysis": null,
+          "parent_turn_no": null,
+          "jd_requirement_ids": [
+            "req-88b2293496e84a9b",
+            "req-6c27a6ed3057438e"
+          ],
+          "evidences": [],
+          "answer": "공고의 결측 구분 요구에는 제가 작성한 null 유지 변환과 0도 비교 테스트가 대응합니다. 품질 범위 요구에는 수신 시각과 관측 시각을 따로 표시한 경험이 대응합니다. 다만 센서 교정의 정확도를 검증한 것은 아니고 표시가 맞아도 센서 값 자체가 참인지 알 수는 없습니다."
+        },
+        {
+          "turn_no": 6,
+          "persona": "tech_lead",
+          "question": "센서 관측 portal의 품질 표시에서 어떤 방식을 택했고 주된 이유는 무엇인가요? 비교한 대안이나 남는 한계가 있다면 설명해 주세요.",
+          "question_contract": {
+            "purpose": "품질 표시의 선택과 근거를 설명한다.",
+            "required_points": [
+              {
+                "key": "choice_reason",
+                "description": "선택한 방식과 해당 상황에서의 이유를 설명한다."
+              }
+            ],
+            "assumptions": [],
+            "basis_refs": [],
+            "evaluation_scope": "품질 표시의 선택과 근거를 설명한다. 답변의 의도 적합성과 설명 구성을 함께 확인한다.",
+            "evaluation_keys": []
+          },
+          "analysis": null,
+          "parent_turn_no": null,
+          "jd_requirement_ids": [],
+          "evidences": [],
+          "answer": "값과 품질 코드를 함께 반환을 택했습니다. 선택 근거는 다음과 같습니다: 숫자는 있어도 의심스러운 관측임을 화면에서 구별합니다. 이상치를 조용히 삭제도 검토했습니다. 삭제는 그래프가 깨끗하지만 값이 없어진 이유를 잃습니다."
+        },
+        {
+          "turn_no": 7,
+          "persona": "tech_lead",
+          "question": "센서 관측 portal의 재검사에서 어떤 방식을 택했고 주된 이유는 무엇인가요? 비교한 대안이나 남는 한계가 있다면 설명해 주세요.",
+          "question_contract": {
+            "purpose": "재검사의 선택과 근거를 설명한다.",
+            "required_points": [
+              {
+                "key": "choice_reason",
+                "description": "선택한 방식과 해당 상황에서의 이유를 설명한다."
+              }
+            ],
+            "assumptions": [],
+            "basis_refs": [
+              {
+                "kind": "document_claim",
+                "id": "doc-54bdbbfa5ea6eb82"
+              }
+            ],
+            "evaluation_scope": "재검사의 선택과 근거를 설명한다. 답변의 의도 적합성과 설명 구성을 함께 확인한다.",
+            "evaluation_keys": []
+          },
+          "analysis": null,
+          "parent_turn_no": null,
+          "jd_requirement_ids": [],
+          "evidences": [],
+          "answer": "원시 관측 불변 보관을 택했습니다. 검증 규칙이 바뀌어도 같은 입력으로 표시 값을 다시 계산합니다. 비교한 보정 값으로 원본 덮기은 덮기는 공간이 적지만 이전 규칙의 영향을 되돌리기 어렵습니다. 대신 원시 값과 계산 값의 저장 공간이 함께 듭니다. 그리고 센서에서 오기 전 유실된 값은 재계산하지 못합니다."
+        },
+        {
+          "turn_no": 8,
+          "persona": "domain_lead",
+          "question": "결측 관측과 실제 0도 관측이 왜 다른지 그래프를 보는 사용자에게 설명해 주세요.",
+          "question_contract": {
+            "purpose": "프로젝트의 사용자 관점에서 상태 또는 개념의 차이를 설명한다.",
+            "required_points": [
+              {
+                "key": "domain_distinction",
+                "description": "질문한 개념을 구분하고 사용자가 이해할 수 있는 예나 흐름으로 설명한다."
+              }
+            ],
+            "assumptions": [],
+            "basis_refs": [
+              {
+                "kind": "jd_requirement",
+                "id": "req-88b2293496e84a9b"
+              },
+              {
+                "kind": "jd_requirement",
+                "id": "req-6c27a6ed3057438e"
+              }
+            ],
+            "evaluation_scope": "프로젝트의 사용자 관점에서 상태 또는 개념의 차이를 설명한다. 답변의 의도 적합성과 설명 구성을 함께 확인한다.",
+            "evaluation_keys": []
+          },
+          "analysis": null,
+          "parent_turn_no": null,
+          "jd_requirement_ids": [
+            "req-88b2293496e84a9b",
+            "req-6c27a6ed3057438e"
+          ],
+          "evidences": [],
+          "answer": "결측은 측정 값이 없다는 뜻이고 0도는 실제 숫자 값입니다. 예를 들어 전원이 꺼진 센서의 구간을 0도로 그리면 온도가 내려갔다고 오해합니다. 그래서 결측은 선을 끊고 마지막 관측 시각을 함께 표시합니다."
+        },
+        {
+          "turn_no": 9,
+          "persona": "tech_lead",
+          "question": "센서 관측 portal의 구간 집계에서 어떤 방식을 택했고 주된 이유는 무엇인가요? 비교한 대안이나 남는 한계가 있다면 설명해 주세요.",
+          "question_contract": {
+            "purpose": "구간 집계의 선택과 근거를 설명한다.",
+            "required_points": [
+              {
+                "key": "choice_reason",
+                "description": "선택한 방식과 해당 상황에서의 이유를 설명한다."
+              }
+            ],
+            "assumptions": [],
+            "basis_refs": [],
+            "evaluation_scope": "구간 집계의 선택과 근거를 설명한다. 답변의 의도 적합성과 설명 구성을 함께 확인한다.",
+            "evaluation_keys": []
+          },
+          "analysis": null,
+          "parent_turn_no": null,
+          "jd_requirement_ids": [],
+          "evidences": [],
+          "answer": "유효 관측 개수와 평균 함께 표시을 택했습니다. 선택 근거는 다음과 같습니다: 몇 개의 값으로 평균을 만들었는지 사용자가 판단합니다."
+        }
+      ],
+      "requirements": [
+        {
+          "id": "req-88b2293496e84a9b",
+          "category": "required",
+          "text": "관측 값의 결측과 이상치를 구분해 설명할 수 있어야 한다."
+        },
+        {
+          "id": "req-6c27a6ed3057438e",
+          "category": "required",
+          "text": "수집 지연과 품질 코드의 검증 범위를 설명해야 한다."
+        }
+      ],
+      "rubrics": {
+        "project_understanding": {
+          "0": "질문을 받았지만 프로젝트의 목적이나 핵심 기능을 설명하지 못한다.",
+          "1": "목적이나 기능을 언급하나 핵심이 빈약하고 구체적인 내용이 없다.",
+          "2": "핵심 기능은 설명하나 구조·흐름 설명이 피상적이거나 일부 부정확하다.",
+          "3": "핵심 기능과 구조를 대체로 정확히 설명한다.",
+          "4": "구조·의존관계·설계 의도까지 근거를 들어 설명한다."
+        },
+        "technical_reasoning": {
+          "0": "질문을 받았지만 이유를 말하지 않거나(방식만 말하는 경우 포함) 모른다고 답한다.",
+          "1": "이유를 말하지만 '편해서·많이 써서' 같이 내용이 없는 수준이다.",
+          "2": "근거는 제시하나 대안과의 비교가 없거나 피상적이다.",
+          "3": "대안을 인지하고 선택 이유를 합리적으로 설명한다.",
+          "4": "트레이드오프를 구체적으로 비교하고 한계까지 인지하고 있다."
+        },
+        "problem_solving": {
+          "0": "질문을 받았지만 문제 상황을 구체적으로 떠올리지 못한다.",
+          "1": "문제 상황만 말하거나, 구체적인 원인·방법 없이 해결했다고만 말한다.",
+          "2": "해결했다고 말하며 원인이나 방법을 언급하나 모호하거나 일부만 설명한다.",
+          "3": "문제 원인을 진단하고 해결한 과정을 구체적으로 설명한다.",
+          "4": "여러 대안을 검토한 근거와 재발 방지까지 설명한다."
+        },
+        "communication": {
+          "0": "질문과 무관한 답변을 하거나 의미를 파악하기 어렵다.",
+          "1": "질문의 일부에만 답하고 핵심이 불분명하다.",
+          "2": "질문에는 답하나 설명 순서가 뒤섞여 이해하기 어렵다.",
+          "3": "질문 의도에 맞춰 논리적 순서로 답변한다.",
+          "4": "핵심을 먼저 제시하고 근거를 명확히 구조화해 설명한다."
+        },
+        "contribution_clarity": {
+          "0": "질문을 받았지만 본인이 한 일을 말하지 못한다.",
+          "1": "참여했다고만 말하고 팀 성과와 본인 기여를 구분하지 못한다.",
+          "2": "본인이 한 일은 말하나 범위와 결과가 불명확하다.",
+          "3": "본인이 담당한 부분과 그 근거를 구체적으로 설명한다.",
+          "4": "협업 지점과 단독 기여를 명확히 구분해 설명한다."
+        },
+        "company_job_fit": {
+          "0": "질문을 받았지만 무엇을 했는지 말하지 않거나(경험이 있다는 말만 하는 경우 포함) 모른다고 답한다.",
+          "1": "요구사항이나 경험 중 하나만 구체적으로 언급한다.",
+          "2": "요구사항과 경험을 둘 다 언급하며 연결하나 근거가 빈약하거나 일반론에 그친다.",
+          "3": "요구사항과 본인 경험을 구체적 사례로 연결한다.",
+          "4": "요구사항별로 대응하는 경험과 한계까지 균형 있게 설명한다."
+        }
+      },
+      "tool_results": [
+        {
+          "turn_id": "2",
+          "result": {
+            "status": "found",
+            "items": [
+              {
+                "evidence_id": "ev-54bdbbfa5ea6eb82",
+                "repository_id": "repo-54bdbbfa5ea6eb82",
+                "git_ref": "bd1590d725d167c7c44ecbe36bc7d6a6e2ec7e66",
+                "source_kind": "repository",
+                "path": "docs/project-context.md",
+                "metadata_key": null,
+                "content": "온도 센서의 원시 관측과 검증 후 표시 값을 구분하는 portal이다. 센서 시각·수신 시각·품질 코드를 보관하며 결측을 0도로 대체하지 않는다.",
+                "tool_name": "repository_reader",
+                "summary": "제공된 프로젝트 설명의 제한된 구간",
+                "start_line": 1,
+                "end_line": 1
+              }
+            ],
+            "searched_scope": [
+              "docs/project-context.md:1"
+            ],
+            "limitations": [
+              "이 구간 이외 소스와 실행 결과는 확인하지 않았다."
+            ],
+            "error_code": null
+          }
+        }
+      ],
+      "limitations": [
+        "제공된 문서 구간과 저장된 관측 외의 구현·실행·기여 사실은 확인되지 않았다."
+      ],
+      "supplemental_sources": [
+        {
+          "source_id": "doc-54bdbbfa5ea6eb82",
+          "kind": "document_claim",
+          "content": "온도 센서의 원시 관측과 검증 후 표시 값을 구분하는 portal이다. 센서 시각·수신 시각·품질 코드를 보관하며 결측을 0도로 대체하지 않는다.\n설계 기록: 원시 관측 불변 보관. 검증 규칙이 바뀌어도 같은 입력으로 표시 값을 다시 계산합니다",
+          "location": "design-notes.md#decision-record",
+          "version": "b2d0a2a0ec8ff5052000f064a223679ae55bb1d42d17e6c0b7762471dec8b792",
+          "limitations": [
+            "설계 기록은 구현 존재나 개인 기여를 독립 확인한 자료가 아니다."
+          ],
+          "title": "센서 관측 portal 설계 기록",
+          "retrieved_at": null
+        }
+      ],
+      "source_notes": []
+    }
+  }
+}

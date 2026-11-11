@@ -1,0 +1,55 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\n  \"question\": {\n    \"persona\": \"hr_manager\",\n    \"text\": \"안녕하세요. 먼저 간단한 자기소개와 함께, 제출해 주신 '자리누리' 공연 좌석 임시 점유 프로젝트에서 팀 내 본인이 맡았던 역할과 직접 기여한 범위는 어디까지였는지 구분하여 말씀해 주시겠습니까?\",\n    \"topic_code\": \"self_intro_and_role\",\n    \"question_contract\": {\n      \"purpose\": \"지원자의 자기소개를 듣고 '자리누리' 팀 프로젝트에서 본인이 실제로 담당한 역할과 팀 공동 작업 범위를 구분하여 확인한다.\",\n      \"required_points\": [\n        {\n          \"key\": \"self_introduction\",\n          \"description\": \"간단한 자기소개\"\n        },\n        {\n          \"key\": \"role_and_contribution_boundary\",\n          \"description\": \"'자리누리' 프로젝트에서 본인이 직접 담당한 역할·구현 범위와 팀이 수행한 영역의 구분\"\n        }\n      ],\n      \"assumptions\": [\n        \"제공된 프로젝트 문서만으로는 특정 기능의 개인 작성 여부가 확정되지 않으므로, 지원자의 설명을 통해 실제 담당 범위를 확인한다.\"\n      ],\n      \"basis_refs\": [\n        {\n          \"kind\": \"evidence\",\n          \"id\": \"8ee6abff-b7b8-5eda-98fc-54d85bbbf074\"\n        }\n      ],\n      \"evaluation_scope\": \"지원자가 자신의 역할과 기여 범위를 팀의 작업과 명확히 구분하여 조리 있게 설명하는지 평가한다.\",\n      \"evaluation_keys\": [\n        \"contribution_clarity\",\n        \"communication\"\n      ]\n    },\n    \"evidence_refs\": [\n      \"8ee6abff-b7b8-5eda-98fc-54d85bbbf074\"\n    ],\n    \"jd_requirement_ids\": [],\n    \"question_type\": \"main\",\n    \"parent_turn_id\": null\n  },\n  \"intent\": \"첫 턴 HR 질문으로 자기소개와 프로젝트 내 개인 기여 범위를 명확히 확인한다.\",\n  \"reason_summary\": \"첫 번째 질문(turn_no=1)이므로 허용된 hr_manager 페르소나를 선택하고, 배정된 평가 항목(contribution_clarity, communication)에 맞춰 PROJECT_NOTES.md를 근거로 자기소개 및 '자리누리' 프로젝트에서의 본인 담당 역할과 기여 범위를 구분해 묻는 질문을 구성함.\"\n}",
+        "extra_content": {
+          "google": {
+            "thought_signature": "EmMKYQFpFH0TUvQQBrN5OxbRSvd0dyVgnf8ekc7ygTtJU0adBiK4WVx3rw3NUOpYjj54LkzGHjrQ7k4oqQisEIsSn5kc07lUFlZtif+QQQK1gd690MhbgxU7gfGkfxDacZnx4YY="
+          }
+        },
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794341073,
+  "id": "xHjzap65AcS01e8Pnb3E2Q4",
+  "model": "gemini-4-argon",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 589,
+    "prompt_tokens": 5719,
+    "total_tokens": 6308,
+    "input_tokens": 5719,
+    "output_tokens": 589,
+    "cached_prompt_tokens": 0,
+    "cache_write_tokens": 0
+  },
+  "_elice_billing": {
+    "usage": {
+      "input_tokens": 5719,
+      "output_tokens": 589,
+      "cached_input_tokens": 0,
+      "cache_write_input_tokens": null,
+      "reasoning_output_tokens": null,
+      "cache_write_short_tokens": null,
+      "cache_write_long_tokens": null
+    },
+    "cost_usd": "0.017328",
+    "cost_lower_usd": "0.017328",
+    "cost_upper_usd": "0.017328",
+    "cost_status": "confirmed",
+    "provider_model": "gemini-4-argon",
+    "canonical_model": "gemini-4-argon",
+    "attempt_id": "attempt-20",
+    "accounting_basis": "billing_upper_bound"
+  },
+  "_elice_wire": {
+    "protocol": "chat_completions",
+    "canonical_request_bytes": 22255,
+    "wire_request_bytes": 22101,
+    "reservation_input_bytes": 22255
+  }
+}

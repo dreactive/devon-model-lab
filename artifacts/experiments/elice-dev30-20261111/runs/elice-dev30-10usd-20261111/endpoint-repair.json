@@ -1,0 +1,15 @@
+{
+  "operation": "append_v1_to_elice_deployment_roots",
+  "changed_variables": [
+    "MODEL_GPT_6_1_SOL_BASE_URL",
+    "MODEL_GEMINI_3_8_FLASH_BASE_URL",
+    "MODEL_GEMINI_4_ARGON_BASE_URL",
+    "MODEL_CLAUDE_HAIKU_5_5_BASE_URL",
+    "MODEL_CLAUDE_SONNET_5_5_BASE_URL",
+    "MODEL_GPT_6_LUNA_BASE_URL"
+  ],
+  "credentials_preserved": true,
+  "ledger_and_campaign_claim_preserved": true,
+  "network_calls": 0,
+  "campaign_resumed": false
+}

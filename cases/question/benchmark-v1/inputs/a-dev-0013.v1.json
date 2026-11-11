@@ -1,0 +1,233 @@
+{
+  "case_id": "a-dev-0013",
+  "version": 1,
+  "control": {
+    "kind": "question",
+    "split": "dev",
+    "source_group_id": "a-dev-helpdesk",
+    "synthetic": true
+  },
+  "payload": {
+    "service_task": "director",
+    "service_input": {
+      "context": {
+        "interview_id": "d0397a9a-597e-5739-a0d8-031ff08babbc",
+        "current_turn_id": "7fc0dd65-6d4b-509b-8cb5-a1f694fa84c8",
+        "turn_no": 3,
+        "total_turns": 9,
+        "persona_counts": [
+          {
+            "persona": "tech_lead",
+            "count": 1
+          },
+          {
+            "persona": "hr_manager",
+            "count": 1
+          },
+          {
+            "persona": "domain_lead",
+            "count": 0
+          }
+        ],
+        "allowed_personas": [
+          "tech_lead",
+          "domain_lead"
+        ],
+        "jd_requirements": [
+          {
+            "id": "f65c5605-c894-5550-8d43-62e55f3dc55d",
+            "text": "문의 처리 지연을 추적하고 담당 상태를 사용자에게 일관되게 설명한다.",
+            "category": "responsibility",
+            "source_field": "responsibilities",
+            "tech_tags": []
+          }
+        ],
+        "repositories": [
+          {
+            "repository_id": "b4ab0a10-35aa-55ce-9c82-49c673142b29",
+            "git_ref": "757adfdc546a73bb50a49baf5aecd6194dfbf651",
+            "primary": true,
+            "analysis_refs": [],
+            "limitations": []
+          }
+        ],
+        "history": [
+          {
+            "turn_id": "3be3b2aa-fe3c-5a61-8150-4d21fdb461f9",
+            "persona": "hr_manager",
+            "question": "프로젝트에서 본인이 맡은 부분과 협업 경계를 소개해 주세요.",
+            "answer": "저는 문의 화면의 담당 상태 갱신과 콜백 등록 API를 맡았습니다. 서버 간 잠금 설계는 동료가 맡았고 저는 그 내부 동작은 모릅니다.",
+            "analysis_ref": null
+          },
+          {
+            "turn_id": "7fc0dd65-6d4b-509b-8cb5-a1f694fa84c8",
+            "persona": "tech_lead",
+            "question": "이 프로젝트에서 본인이 아는 구성 요소의 경계와 입력이 결과로 바뀌는 흐름을 아는 범위에서 설명해 주세요.",
+            "answer": "서버 사이 잠금은 잘 모릅니다. 제가 맡은 것은 화면에서 등록됨과 담당 배정을 구분해 갱신하는 부분이고 잠금은 동료가 맡았습니다.",
+            "analysis_ref": null
+          }
+        ],
+        "current_question_contract": {
+          "purpose": "구성 요소의 경계와 처리 흐름 이해 확인",
+          "required_points": [
+            {
+              "key": "boundary",
+              "description": "본인이 아는 구성 요소의 담당 경계"
+            },
+            {
+              "key": "flow",
+              "description": "입력부터 결과까지의 처리 흐름"
+            }
+          ],
+          "assumptions": [],
+          "basis_refs": [
+            {
+              "kind": "evidence",
+              "id": "15994a55-9bd3-5cc1-9a47-7f1f639a7a51"
+            }
+          ],
+          "evaluation_scope": "구성 요소의 경계와 처리 흐름 이해 확인",
+          "evaluation_keys": [
+            "project_understanding",
+            "communication"
+          ]
+        },
+        "evidence": [
+          {
+            "evidence_id": "15994a55-9bd3-5cc1-9a47-7f1f639a7a51",
+            "repository_id": "b4ab0a10-35aa-55ce-9c82-49c673142b29",
+            "git_ref": "757adfdc546a73bb50a49baf5aecd6194dfbf651",
+            "source_kind": "code",
+            "path": "routing/CallbackRegistry.kt",
+            "metadata_key": null,
+            "content": "class CallbackRegistry {\n    private val callbacks = linkedMapOf<String, () -> Unit>()\n    fun register(ticket: String, callback: () -> Unit): Boolean {\n        if (callbacks.containsKey(ticket)) return false\n        callbacks[ticket] = callback\n        return true\n    }\n    fun deliver(ticket: String) { callbacks.remove(ticket)?.invoke() }\n}\n",
+            "tool_name": null,
+            "summary": "합성 프로젝트 원문 발췌. 개인 작성 사실이나 운영 성과를 증명하지 않는다.",
+            "start_line": 1,
+            "end_line": 9
+          },
+          {
+            "evidence_id": "a488df20-bbf0-5776-9df9-ee4e0d185ca1",
+            "repository_id": "b4ab0a10-35aa-55ce-9c82-49c673142b29",
+            "git_ref": "757adfdc546a73bb50a49baf5aecd6194dfbf651",
+            "source_kind": "document",
+            "path": "PROJECT_NOTES.md",
+            "metadata_key": null,
+            "content": "온콜트리아는 상담 문의를 큐에 등록하고 화면에 담당 상태를 표시하는 합성 팀 프로젝트다. 콜백은 register에서 보관하고 deliver에서 실행한다. 이 자료의 중복 키 검사는 단일 CallbackRegistry 인스턴스 범위다. 다중 서버의 잠금이나 실제 응답 시간 결과는 기록하지 않았다.",
+            "tool_name": null,
+            "summary": null,
+            "start_line": 1,
+            "end_line": 1
+          }
+        ],
+        "domain_frames": [],
+        "limits": {
+          "remaining_calls": 2,
+          "remaining_replans": 0,
+          "policy_version": "interview-v1"
+        },
+        "evaluation_targets": [
+          {
+            "persona": "tech_lead",
+            "keys": [
+              "technical_reasoning",
+              "communication"
+            ]
+          },
+          {
+            "persona": "domain_lead",
+            "keys": [
+              "company_job_fit",
+              "communication"
+            ]
+          }
+        ],
+        "supplemental_sources": [],
+        "external_searches": [],
+        "supplemental_limitations": []
+      },
+      "question": {
+        "persona": "tech_lead",
+        "text": "이 프로젝트에서 본인이 아는 구성 요소의 경계와 입력이 결과로 바뀌는 흐름을 아는 범위에서 설명해 주세요.",
+        "topic_code": "project_discussion",
+        "question_contract": {
+          "purpose": "구성 요소의 경계와 처리 흐름 이해 확인",
+          "required_points": [
+            {
+              "key": "boundary",
+              "description": "본인이 아는 구성 요소의 담당 경계"
+            },
+            {
+              "key": "flow",
+              "description": "입력부터 결과까지의 처리 흐름"
+            }
+          ],
+          "assumptions": [],
+          "basis_refs": [
+            {
+              "kind": "evidence",
+              "id": "15994a55-9bd3-5cc1-9a47-7f1f639a7a51"
+            }
+          ],
+          "evaluation_scope": "구성 요소의 경계와 처리 흐름 이해 확인",
+          "evaluation_keys": [
+            "project_understanding",
+            "communication"
+          ]
+        },
+        "evidence_refs": [
+          "15994a55-9bd3-5cc1-9a47-7f1f639a7a51"
+        ],
+        "jd_requirement_ids": [],
+        "question_type": "main",
+        "parent_turn_id": null
+      },
+      "answer_text": "서버 사이 잠금은 잘 모릅니다. 제가 맡은 것은 화면에서 등록됨과 담당 배정을 구분해 갱신하는 부분이고 잠금은 동료가 맡았습니다.",
+      "answer_analysis": {
+        "evaluation_status": "evaluated",
+        "sufficiency": "partial",
+        "covered_points": [
+          {
+            "key": "boundary",
+            "answer_quotes": [
+              "서버 사이 잠금은 잘 모릅니다. 제가 맡은 것은 화면에서 등록됨과 담당 배정을 구분해 갱신하는 부분이고 잠금은 동료가 맡았습니다."
+            ]
+          }
+        ],
+        "missing_points": [
+          "flow"
+        ],
+        "technical_assessment": {
+          "explanation": "답변이 설명한 범위와 제공 원문을 구분해 관찰했다.",
+          "answer_quotes": [
+            "서버 사이 잠금은 잘 모릅니다. 제가 맡은 것은 화면에서 등록됨과 담당 배정을 구분해 갱신하는 부분이고 잠금은 동료가 맡았습니다."
+          ],
+          "evidence_refs": [],
+          "limitations": []
+        },
+        "contribution_scope": {
+          "scope": "self",
+          "answer_quotes": [
+            "서버 사이 잠금은 잘 모릅니다. 제가 맡은 것은 화면에서 등록됨과 담당 배정을 구분해 갱신하는 부분이고 잠금은 동료가 맡았습니다."
+          ]
+        },
+        "claim_checks": [],
+        "needs_verification": false,
+        "verification_requests": [],
+        "limitations": [
+          "선택 이유 또는 대안 비교는 답변에 나타나지 않은 범위만 보완한다."
+        ],
+        "external_queries": []
+      },
+      "allowed_locations": [
+        [
+          "b4ab0a10-35aa-55ce-9c82-49c673142b29",
+          "757adfdc546a73bb50a49baf5aecd6194dfbf651",
+          "routing/CallbackRegistry.kt"
+        ]
+      ],
+      "reference_texts": [],
+      "tool_results": []
+    }
+  }
+}

@@ -1,0 +1,1675 @@
+{
+  "version": 1,
+  "run_directory": "C:\\Users\\dreac\\Desktop\\kdt\\model-lab\\runs\\elice-dev30-10usd-20261111-recovery-2",
+  "parent_directory": "C:\\Users\\dreac\\Desktop\\kdt\\model-lab\\runs\\elice-dev30-10usd-20261111-continuation-1",
+  "ancestor_directories": [
+    "C:\\Users\\dreac\\Desktop\\kdt\\model-lab\\runs\\elice-dev30-10usd-20261111",
+    "C:\\Users\\dreac\\Desktop\\kdt\\model-lab\\runs\\elice-dev30-10usd-20261111-continuation-1"
+  ],
+  "run_state": "budget_stopped",
+  "run_error": null,
+  "global_budget": {
+    "amount_usd": "10",
+    "max_attempts": 192,
+    "approval_id": "campaign-a0a91702b404de48ba279a95f8671f1d260f95b1b3afdbf12931a24560ac2b5f-continuation2",
+    "attempts_started": 30,
+    "reserved_usd": "0",
+    "remaining_usd": null,
+    "unknown_attempts": 3,
+    "in_flight_attempts": 0,
+    "halted": true,
+    "halt_reason": "actual_cost_unconfirmed",
+    "transport_integration": "elice_global_guard",
+    "active_amount_usd": "9.80682",
+    "active_max_attempts": 190,
+    "active_attempts_started": 28,
+    "new_unknown_attempts": 1,
+    "new_debited_upper_usd": "0.5304922",
+    "inherited_unknown_hold_usd": "0.19318",
+    "inherited_unknown_attempts": 2,
+    "debited_upper_usd": "0.7236722",
+    "prior_cost_status": "unconfirmed; held at original reservation upper bound",
+    "accounting_basis": "conservative billing upper-bound debits, not confirmed invoice cost"
+  },
+  "planned_model_case_pairs": 96,
+  "case_statuses": {
+    "succeeded": 16,
+    "interrupted": 1,
+    "not_executed": 79
+  },
+  "cost": {
+    "status": "unknown",
+    "cost_usd": null,
+    "cost_lower_usd": null,
+    "cost_upper_usd": null,
+    "known_confirmed_subtotal_usd": "0.3430030",
+    "known_tariff_lower_subtotal_usd": "0.5258786",
+    "known_tariff_upper_subtotal_usd": "0.5304922",
+    "unknown_attempts": 3,
+    "bounded_attempts": 14,
+    "attempts": 30
+  },
+  "tokens": {
+    "input_known_subtotal": 206449,
+    "output_known_subtotal": 13655,
+    "input_total": null,
+    "output_total": null,
+    "missing_input_attempts": 3,
+    "missing_output_attempts": 3,
+    "result_sdk_usage_missing_attempts": 3,
+    "known_subtotal_includes_identified_transport_orphans": true,
+    "unmatched_sdk_attempts": 0,
+    "ambiguous_orphan_observations_excluded_from_subtotal": 0,
+    "known_subtotal_reconciliation_complete": true
+  },
+  "exact_cost_total_usd": null,
+  "known_transport_tariff_upper_subtotal_usd": "0.5304922",
+  "known_fresh_transport_upper_debit_usd": "0.5304922",
+  "known_inherited_transport_upper_debit_usd": "0E-7",
+  "inherited_unknown_reservation_hold_usd": "0.19318",
+  "inherited_unknown_hold_by_model_usd": {
+    "gpt-6.1-sol": "0.19318",
+    "gemini-3.8-flash": "0",
+    "gemini-4-argon": "0",
+    "claude-haiku-5-5": "0",
+    "claude-sonnet-5-5": "0",
+    "gpt-6-luna": "0"
+  },
+  "unallocated_inherited_unknown_hold_usd": "0.00000",
+  "known_lifetime_budget_exposure_usd": "0.7236722",
+  "lifetime_budget_exposure_is_actual_invoice": false,
+  "additional_unpriced_fresh_attempts": 1,
+  "additional_unpriced_fresh_reservation_subtotal_usd": "0.02419275",
+  "known_upper_plus_all_unknown_reservations_usd": "0.74786495",
+  "full_lifetime_exposure_upper_usd": null,
+  "unknown_cost_cases": 2,
+  "physical_attempts": 30,
+  "accounting_attempt_records": 30,
+  "transport_attempts": 30,
+  "parent_attempts": 2,
+  "fresh_transport_attempts": 28,
+  "original_unknown_attempt_preserved": true,
+  "first_case_lifetime_cost_remains_unknown": true,
+  "original_first404": {
+    "physical_attempt_id": "C:/Users/dreac/Desktop/kdt/model-lab/runs/elice-dev30-10usd-20261111::attempt-1",
+    "http_status": 404,
+    "linked_case_key": "gpt-6.1-sol::cases/question/benchmark-v1::a-dev-0001",
+    "identity_inference": "continuation_first_case_proof",
+    "exact_expected_first_case": true,
+    "actual_cost_usd": null,
+    "actual_cost_status": "unknown"
+  },
+  "transport_unidentified_orphan_attempts": 0,
+  "reconciliation": {
+    "issues": [],
+    "issue_count": 0,
+    "origin_qualified_ids": true,
+    "result_attempts": 27,
+    "result_attempts_without_transport": 0,
+    "transport_attempts_without_result_sdk_row": 3,
+    "all_transport_attempts_accounted_once": true
+  },
+  "models": [
+    {
+      "model_id": "gpt-6.1-sol",
+      "planned_cases": 16,
+      "case_statuses": {
+        "succeeded": 16
+      },
+      "fresh_executed_cases": 16,
+      "executed_cases_including_reused_completed": 16,
+      "reused_completed_cases": 0,
+      "lifetime_attempted_cases": 16,
+      "unknown_cost_cases": 1,
+      "technical_failures": 0,
+      "failure_rate_executed": 0.0,
+      "failure_rate_fresh_executed": 0.0,
+      "latency_ms": {
+        "p50": 21161.0,
+        "p95": 25263.5,
+        "measured_cases": 16
+      },
+      "physical_attempts": 29,
+      "accounting_attempt_records": 29,
+      "sent_http_attempts": 29,
+      "cost": {
+        "status": "unknown",
+        "cost_usd": null,
+        "cost_lower_usd": null,
+        "cost_upper_usd": null,
+        "known_confirmed_subtotal_usd": "0.3430030",
+        "known_tariff_lower_subtotal_usd": "0.5258786",
+        "known_tariff_upper_subtotal_usd": "0.5304922",
+        "unknown_attempts": 2,
+        "bounded_attempts": 14,
+        "attempts": 29
+      },
+      "tokens": {
+        "input_known_subtotal": 206449,
+        "output_known_subtotal": 13655,
+        "input_total": null,
+        "output_total": null,
+        "missing_input_attempts": 2,
+        "missing_output_attempts": 2,
+        "result_sdk_usage_missing_attempts": 2,
+        "known_subtotal_includes_identified_transport_orphans": true,
+        "unmatched_sdk_attempts": 0,
+        "ambiguous_orphan_observations_excluded_from_subtotal": 0,
+        "known_subtotal_reconciliation_complete": true
+      },
+      "prior_unknown_reservation_hold_usd": "0.19318",
+      "average_cost_per_attempted_case": {
+        "denominator": 16,
+        "denominator_label": "lifetime model-case pairs with an attempt",
+        "status": "unknown",
+        "cost_usd": null,
+        "cost_lower_usd": null,
+        "cost_upper_usd": null
+      },
+      "average_cost_per_attempted_interview": {
+        "denominator": 5,
+        "denominator_label": "B interviews with an attempt; B costs only",
+        "status": "bounded",
+        "cost_usd": null,
+        "cost_lower_usd": "0.02101272",
+        "cost_upper_usd": "0.02116264"
+      },
+      "cost_per_strict_B_draft_pair_match_diagnostic": {
+        "denominator": 84,
+        "denominator_label": "strict matches to unreviewed B draft pairs; B costs only",
+        "status": "bounded",
+        "cost_usd": null,
+        "cost_lower_usd": "0.001250757142857142857142857143",
+        "cost_upper_usd": "0.001259680952380952380952380952",
+        "approved_correctness": false
+      },
+      "retry_or_failure_cost": {
+        "definition": "union(B attempt_number>1 or repeated A task stage, error_stage/error_code, attempt in failed/interrupted case); planned A review excluded; each physical attempt once",
+        "attempts": 2,
+        "cost": {
+          "status": "unknown",
+          "cost_usd": null,
+          "cost_lower_usd": null,
+          "cost_upper_usd": null,
+          "known_confirmed_subtotal_usd": "0",
+          "known_tariff_lower_subtotal_usd": "0",
+          "known_tariff_upper_subtotal_usd": "0",
+          "unknown_attempts": 2,
+          "bounded_attempts": 0,
+          "attempts": 2
+        },
+        "actual_cost_ratio": null,
+        "actual_cost_ratio_lower": null,
+        "actual_cost_ratio_upper": null,
+        "known_upper_subtotal_ratio_diagnostic": "0E+7",
+        "known_upper_subtotal_ratio_is_actual_cost": false
+      },
+      "A_technical": {
+        "planned_cases": 11,
+        "technical_valid_cases": 11,
+        "technical_validity_basis": "original service succeeded with its schema validation; no semantic judge",
+        "service_succeeded_cases": 11,
+        "automatic_checks_by_job": [
+          {
+            "job_id": "gpt-6.1-sol-1",
+            "model_id": "gpt-6.1-sol",
+            "experiment": "A",
+            "corpus": "cases/question/benchmark-v1",
+            "run_state": "completed",
+            "fresh_run_state": "completed",
+            "result_reused": false,
+            "result_origin": "C:\\Users\\dreac\\Desktop\\kdt\\model-lab\\runs\\elice-dev30-10usd-20261111-recovery-2",
+            "planned_cases": 11,
+            "recorded_cases": 11,
+            "automatic_checks": {
+              "input_contract": {
+                "status": "passed",
+                "total": 11,
+                "passed": 11,
+                "failed": 0,
+                "not_executed": 0
+              },
+              "service_execution": {
+                "status": "passed",
+                "total": 11,
+                "passed": 11,
+                "failed": 0,
+                "not_executed": 0
+              },
+              "report_form": {
+                "status": "not_executed",
+                "total": 0,
+                "passed": 0,
+                "failed": 0,
+                "not_executed": 0
+              },
+              "judge_controls": {
+                "status": "not_executed",
+                "total": 0,
+                "passed": 0,
+                "failed": 0,
+                "not_executed": 0
+              },
+              "diagnostic_judge_execution": {
+                "status": "not_executed",
+                "total": 11,
+                "passed": 0,
+                "failed": 0,
+                "not_executed": 11
+              }
+            },
+            "service_execution": null
+          }
+        ],
+        "semantic_judge": "not_run",
+        "semantic_accuracy": null
+      },
+      "B_draft_diagnostic": {
+        "main": {
+          "planned_interviews": 4,
+          "scored_interviews": 4,
+          "expected_pairs": 68,
+          "compared_pairs": 68,
+          "unavailable_pairs": 0,
+          "strict_matches": 60,
+          "acceptable_matches": 60,
+          "target_na_pairs": 0,
+          "compared_target_na_pairs": 0,
+          "predicted_na_pairs": 0,
+          "na_matches": 0,
+          "na_mismatches": 0,
+          "numeric_pairs_compared": 68,
+          "numeric_absolute_error_sum": 12,
+          "numeric_stage_mae": 0.17647058823529413,
+          "service_total_absolute_deviation_mean": 0.75,
+          "service_key_absolute_deviation_mean": 0.875,
+          "service_scores": [
+            {
+              "case_id": "b-main-02",
+              "corpus": "cases/answer/main-v1",
+              "predicted": {
+                "keys": {
+                  "project_understanding": 20,
+                  "technical_reasoning": 51,
+                  "problem_solving": 70,
+                  "communication": 54,
+                  "contribution_clarity": 0,
+                  "company_job_fit": 90
+                },
+                "total": 48
+              },
+              "draft_reference": {
+                "keys": {
+                  "project_understanding": 20,
+                  "technical_reasoning": 51,
+                  "problem_solving": 70,
+                  "communication": 57,
+                  "contribution_clarity": 0,
+                  "company_job_fit": 90
+                },
+                "total": 48
+              },
+              "absolute_total_deviation": 0,
+              "key_absolute_deviations": [
+                0,
+                0,
+                0,
+                3,
+                0,
+                0
+              ]
+            },
+            {
+              "case_id": "b-main-05",
+              "corpus": "cases/answer/main-v1",
+              "predicted": {
+                "keys": {
+                  "project_understanding": 90,
+                  "technical_reasoning": 34,
+                  "problem_solving": 20,
+                  "communication": 70,
+                  "contribution_clarity": 70,
+                  "company_job_fit": 45
+                },
+                "total": 55
+              },
+              "draft_reference": {
+                "keys": {
+                  "project_understanding": 90,
+                  "technical_reasoning": 34,
+                  "problem_solving": 20,
+                  "communication": 62,
+                  "contribution_clarity": 70,
+                  "company_job_fit": 45
+                },
+                "total": 54
+              },
+              "absolute_total_deviation": 1,
+              "key_absolute_deviations": [
+                0,
+                0,
+                0,
+                8,
+                0,
+                0
+              ]
+            },
+            {
+              "case_id": "b-main-06",
+              "corpus": "cases/answer/main-v1",
+              "predicted": {
+                "keys": {
+                  "project_understanding": 0,
+                  "technical_reasoning": 56,
+                  "problem_solving": 45,
+                  "communication": 68,
+                  "contribution_clarity": 90,
+                  "company_job_fit": 70
+                },
+                "total": 55
+              },
+              "draft_reference": {
+                "keys": {
+                  "project_understanding": 0,
+                  "technical_reasoning": 56,
+                  "problem_solving": 45,
+                  "communication": 58,
+                  "contribution_clarity": 90,
+                  "company_job_fit": 70
+                },
+                "total": 53
+              },
+              "absolute_total_deviation": 2,
+              "key_absolute_deviations": [
+                0,
+                0,
+                0,
+                10,
+                0,
+                0
+              ]
+            },
+            {
+              "case_id": "b-main-08",
+              "corpus": "cases/answer/main-v1",
+              "predicted": {
+                "keys": {
+                  "project_understanding": 45,
+                  "technical_reasoning": 45,
+                  "problem_solving": 90,
+                  "communication": 52,
+                  "contribution_clarity": 20,
+                  "company_job_fit": 0
+                },
+                "total": 42
+              },
+              "draft_reference": {
+                "keys": {
+                  "project_understanding": 45,
+                  "technical_reasoning": 45,
+                  "problem_solving": 90,
+                  "communication": 52,
+                  "contribution_clarity": 20,
+                  "company_job_fit": 0
+                },
+                "total": 42
+              },
+              "absolute_total_deviation": 0,
+              "key_absolute_deviations": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          "diagnostic_errors": [],
+          "review_status": "unreviewed",
+          "approved_accuracy_denominator": 0,
+          "interpretation": "unreviewed draft agreement; not approved correctness"
+        },
+        "legacy_na": {
+          "planned_interviews": 1,
+          "scored_interviews": 1,
+          "expected_pairs": 30,
+          "compared_pairs": 30,
+          "unavailable_pairs": 0,
+          "strict_matches": 24,
+          "acceptable_matches": 24,
+          "target_na_pairs": 13,
+          "compared_target_na_pairs": 13,
+          "predicted_na_pairs": 7,
+          "na_matches": 7,
+          "na_mismatches": 6,
+          "numeric_pairs_compared": 17,
+          "numeric_absolute_error_sum": 0,
+          "numeric_stage_mae": 0.0,
+          "service_total_absolute_deviation_mean": 3.0,
+          "service_key_absolute_deviation_mean": 3.0,
+          "service_scores": [
+            {
+              "case_id": "b-legacy-na-01",
+              "corpus": "cases/answer/legacy-na-v1",
+              "predicted": {
+                "keys": {
+                  "project_understanding": 78,
+                  "technical_reasoning": 57,
+                  "problem_solving": 70,
+                  "communication": 90,
+                  "contribution_clarity": 90,
+                  "company_job_fit": 90
+                },
+                "total": 79
+              },
+              "draft_reference": {
+                "keys": {
+                  "project_understanding": 90,
+                  "technical_reasoning": 63,
+                  "problem_solving": 70,
+                  "communication": 90,
+                  "contribution_clarity": 90,
+                  "company_job_fit": 90
+                },
+                "total": 82
+              },
+              "absolute_total_deviation": 3,
+              "key_absolute_deviations": [
+                12,
+                6,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          "diagnostic_errors": [],
+          "review_status": "unreviewed",
+          "approved_accuracy_denominator": 0,
+          "interpretation": "unreviewed draft agreement; not approved correctness"
+        }
+      },
+      "review_status": "unreviewed",
+      "approved_accuracy_denominator": 0
+    },
+    {
+      "model_id": "gemini-3.8-flash",
+      "planned_cases": 16,
+      "case_statuses": {
+        "interrupted": 1,
+        "not_executed": 15
+      },
+      "fresh_executed_cases": 1,
+      "executed_cases_including_reused_completed": 1,
+      "reused_completed_cases": 0,
+      "lifetime_attempted_cases": 1,
+      "unknown_cost_cases": 1,
+      "technical_failures": 1,
+      "failure_rate_executed": 1.0,
+      "failure_rate_fresh_executed": 1.0,
+      "latency_ms": {
+        "p50": null,
+        "p95": null,
+        "measured_cases": 0
+      },
+      "physical_attempts": 1,
+      "accounting_attempt_records": 1,
+      "sent_http_attempts": 1,
+      "cost": {
+        "status": "unknown",
+        "cost_usd": null,
+        "cost_lower_usd": null,
+        "cost_upper_usd": null,
+        "known_confirmed_subtotal_usd": "0",
+        "known_tariff_lower_subtotal_usd": "0",
+        "known_tariff_upper_subtotal_usd": "0",
+        "unknown_attempts": 1,
+        "bounded_attempts": 0,
+        "attempts": 1
+      },
+      "tokens": {
+        "input_known_subtotal": 0,
+        "output_known_subtotal": 0,
+        "input_total": null,
+        "output_total": null,
+        "missing_input_attempts": 1,
+        "missing_output_attempts": 1,
+        "result_sdk_usage_missing_attempts": 1,
+        "known_subtotal_includes_identified_transport_orphans": true,
+        "unmatched_sdk_attempts": 0,
+        "ambiguous_orphan_observations_excluded_from_subtotal": 0,
+        "known_subtotal_reconciliation_complete": true
+      },
+      "prior_unknown_reservation_hold_usd": "0",
+      "average_cost_per_attempted_case": {
+        "denominator": 1,
+        "denominator_label": "lifetime model-case pairs with an attempt",
+        "status": "unknown",
+        "cost_usd": null,
+        "cost_lower_usd": null,
+        "cost_upper_usd": null
+      },
+      "average_cost_per_attempted_interview": {
+        "denominator": 0,
+        "denominator_label": "B interviews with an attempt; B costs only",
+        "status": "unavailable",
+        "cost_usd": null,
+        "cost_lower_usd": null,
+        "cost_upper_usd": null
+      },
+      "cost_per_strict_B_draft_pair_match_diagnostic": {
+        "denominator": 0,
+        "denominator_label": "strict matches to unreviewed B draft pairs; B costs only",
+        "status": "unavailable",
+        "cost_usd": null,
+        "cost_lower_usd": null,
+        "cost_upper_usd": null,
+        "approved_correctness": false
+      },
+      "retry_or_failure_cost": {
+        "definition": "union(B attempt_number>1 or repeated A task stage, error_stage/error_code, attempt in failed/interrupted case); planned A review excluded; each physical attempt once",
+        "attempts": 1,
+        "cost": {
+          "status": "unknown",
+          "cost_usd": null,
+          "cost_lower_usd": null,
+          "cost_upper_usd": null,
+          "known_confirmed_subtotal_usd": "0",
+          "known_tariff_lower_subtotal_usd": "0",
+          "known_tariff_upper_subtotal_usd": "0",
+          "unknown_attempts": 1,
+          "bounded_attempts": 0,
+          "attempts": 1
+        },
+        "actual_cost_ratio": null,
+        "actual_cost_ratio_lower": null,
+        "actual_cost_ratio_upper": null,
+        "known_upper_subtotal_ratio_diagnostic": null,
+        "known_upper_subtotal_ratio_is_actual_cost": false
+      },
+      "A_technical": {
+        "planned_cases": 11,
+        "technical_valid_cases": 0,
+        "technical_validity_basis": "original service succeeded with its schema validation; no semantic judge",
+        "service_succeeded_cases": 0,
+        "automatic_checks_by_job": [
+          {
+            "job_id": "gemini-3.8-flash-1",
+            "model_id": "gemini-3.8-flash",
+            "experiment": "A",
+            "corpus": "cases/question/benchmark-v1",
+            "run_state": "budget_stopped",
+            "fresh_run_state": "budget_stopped",
+            "result_reused": false,
+            "result_origin": "C:\\Users\\dreac\\Desktop\\kdt\\model-lab\\runs\\elice-dev30-10usd-20261111-recovery-2",
+            "planned_cases": 11,
+            "recorded_cases": 0,
+            "automatic_checks": null,
+            "service_execution": null
+          }
+        ],
+        "semantic_judge": "not_run",
+        "semantic_accuracy": null
+      },
+      "B_draft_diagnostic": {
+        "main": {
+          "planned_interviews": 4,
+          "scored_interviews": 0,
+          "expected_pairs": 68,
+          "compared_pairs": 0,
+          "unavailable_pairs": 68,
+          "strict_matches": 0,
+          "acceptable_matches": 0,
+          "target_na_pairs": 0,
+          "compared_target_na_pairs": 0,
+          "predicted_na_pairs": 0,
+          "na_matches": 0,
+          "na_mismatches": 0,
+          "numeric_pairs_compared": 0,
+          "numeric_absolute_error_sum": 0,
+          "numeric_stage_mae": null,
+          "service_total_absolute_deviation_mean": null,
+          "service_key_absolute_deviation_mean": null,
+          "service_scores": [],
+          "diagnostic_errors": [],
+          "review_status": "unreviewed",
+          "approved_accuracy_denominator": 0,
+          "interpretation": "unreviewed draft agreement; not approved correctness"
+        },
+        "legacy_na": {
+          "planned_interviews": 1,
+          "scored_interviews": 0,
+          "expected_pairs": 30,
+          "compared_pairs": 0,
+          "unavailable_pairs": 30,
+          "strict_matches": 0,
+          "acceptable_matches": 0,
+          "target_na_pairs": 13,
+          "compared_target_na_pairs": 0,
+          "predicted_na_pairs": 0,
+          "na_matches": 0,
+          "na_mismatches": 0,
+          "numeric_pairs_compared": 0,
+          "numeric_absolute_error_sum": 0,
+          "numeric_stage_mae": null,
+          "service_total_absolute_deviation_mean": null,
+          "service_key_absolute_deviation_mean": null,
+          "service_scores": [],
+          "diagnostic_errors": [],
+          "review_status": "unreviewed",
+          "approved_accuracy_denominator": 0,
+          "interpretation": "unreviewed draft agreement; not approved correctness"
+        }
+      },
+      "review_status": "unreviewed",
+      "approved_accuracy_denominator": 0
+    },
+    {
+      "model_id": "gemini-4-argon",
+      "planned_cases": 16,
+      "case_statuses": {
+        "not_executed": 16
+      },
+      "fresh_executed_cases": 0,
+      "executed_cases_including_reused_completed": 0,
+      "reused_completed_cases": 0,
+      "lifetime_attempted_cases": 0,
+      "unknown_cost_cases": 0,
+      "technical_failures": 0,
+      "failure_rate_executed": null,
+      "failure_rate_fresh_executed": null,
+      "latency_ms": {
+        "p50": null,
+        "p95": null,
+        "measured_cases": 0
+      },
+      "physical_attempts": 0,
+      "accounting_attempt_records": 0,
+      "sent_http_attempts": 0,
+      "cost": {
+        "status": "not_executed",
+        "cost_usd": null,
+        "cost_lower_usd": null,
+        "cost_upper_usd": null,
+        "known_confirmed_subtotal_usd": "0",
+        "known_tariff_lower_subtotal_usd": "0",
+        "known_tariff_upper_subtotal_usd": "0",
+        "unknown_attempts": 0,
+        "bounded_attempts": 0,
+        "attempts": 0
+      },
+      "tokens": {
+        "input_known_subtotal": 0,
+        "output_known_subtotal": 0,
+        "input_total": null,
+        "output_total": null,
+        "missing_input_attempts": 0,
+        "missing_output_attempts": 0,
+        "result_sdk_usage_missing_attempts": 0,
+        "known_subtotal_includes_identified_transport_orphans": false,
+        "unmatched_sdk_attempts": 0,
+        "ambiguous_orphan_observations_excluded_from_subtotal": 0,
+        "known_subtotal_reconciliation_complete": true
+      },
+      "prior_unknown_reservation_hold_usd": "0",
+      "average_cost_per_attempted_case": {
+        "denominator": 0,
+        "denominator_label": "lifetime model-case pairs with an attempt",
+        "status": "unavailable",
+        "cost_usd": null,
+        "cost_lower_usd": null,
+        "cost_upper_usd": null
+      },
+      "average_cost_per_attempted_interview": {
+        "denominator": 0,
+        "denominator_label": "B interviews with an attempt; B costs only",
+        "status": "unavailable",
+        "cost_usd": null,
+        "cost_lower_usd": null,
+        "cost_upper_usd": null
+      },
+      "cost_per_strict_B_draft_pair_match_diagnostic": {
+        "denominator": 0,
+        "denominator_label": "strict matches to unreviewed B draft pairs; B costs only",
+        "status": "unavailable",
+        "cost_usd": null,
+        "cost_lower_usd": null,
+        "cost_upper_usd": null,
+        "approved_correctness": false
+      },
+      "retry_or_failure_cost": {
+        "definition": "union(B attempt_number>1 or repeated A task stage, error_stage/error_code, attempt in failed/interrupted case); planned A review excluded; each physical attempt once",
+        "attempts": 0,
+        "cost": {
+          "status": "not_executed",
+          "cost_usd": null,
+          "cost_lower_usd": null,
+          "cost_upper_usd": null,
+          "known_confirmed_subtotal_usd": "0",
+          "known_tariff_lower_subtotal_usd": "0",
+          "known_tariff_upper_subtotal_usd": "0",
+          "unknown_attempts": 0,
+          "bounded_attempts": 0,
+          "attempts": 0
+        },
+        "actual_cost_ratio": null,
+        "actual_cost_ratio_lower": null,
+        "actual_cost_ratio_upper": null,
+        "known_upper_subtotal_ratio_diagnostic": null,
+        "known_upper_subtotal_ratio_is_actual_cost": false
+      },
+      "A_technical": {
+        "planned_cases": 11,
+        "technical_valid_cases": 0,
+        "technical_validity_basis": "original service succeeded with its schema validation; no semantic judge",
+        "service_succeeded_cases": 0,
+        "automatic_checks_by_job": [
+          {
+            "job_id": "gemini-4-argon-1",
+            "model_id": "gemini-4-argon",
+            "experiment": "A",
+            "corpus": "cases/question/benchmark-v1",
+            "run_state": "not_executed",
+            "fresh_run_state": "not_executed",
+            "result_reused": false,
+            "result_origin": "C:\\Users\\dreac\\Desktop\\kdt\\model-lab\\runs\\elice-dev30-10usd-20261111-recovery-2",
+            "planned_cases": 11,
+            "recorded_cases": 0,
+            "automatic_checks": null,
+            "service_execution": null
+          }
+        ],
+        "semantic_judge": "not_run",
+        "semantic_accuracy": null
+      },
+      "B_draft_diagnostic": {
+        "main": {
+          "planned_interviews": 4,
+          "scored_interviews": 0,
+          "expected_pairs": 68,
+          "compared_pairs": 0,
+          "unavailable_pairs": 68,
+          "strict_matches": 0,
+          "acceptable_matches": 0,
+          "target_na_pairs": 0,
+          "compared_target_na_pairs": 0,
+          "predicted_na_pairs": 0,
+          "na_matches": 0,
+          "na_mismatches": 0,
+          "numeric_pairs_compared": 0,
+          "numeric_absolute_error_sum": 0,
+          "numeric_stage_mae": null,
+          "service_total_absolute_deviation_mean": null,
+          "service_key_absolute_deviation_mean": null,
+          "service_scores": [],
+          "diagnostic_errors": [],
+          "review_status": "unreviewed",
+          "approved_accuracy_denominator": 0,
+          "interpretation": "unreviewed draft agreement; not approved correctness"
+        },
+        "legacy_na": {
+          "planned_interviews": 1,
+          "scored_interviews": 0,
+          "expected_pairs": 30,
+          "compared_pairs": 0,
+          "unavailable_pairs": 30,
+          "strict_matches": 0,
+          "acceptable_matches": 0,
+          "target_na_pairs": 13,
+          "compared_target_na_pairs": 0,
+          "predicted_na_pairs": 0,
+          "na_matches": 0,
+          "na_mismatches": 0,
+          "numeric_pairs_compared": 0,
+          "numeric_absolute_error_sum": 0,
+          "numeric_stage_mae": null,
+          "service_total_absolute_deviation_mean": null,
+          "service_key_absolute_deviation_mean": null,
+          "service_scores": [],
+          "diagnostic_errors": [],
+          "review_status": "unreviewed",
+          "approved_accuracy_denominator": 0,
+          "interpretation": "unreviewed draft agreement; not approved correctness"
+        }
+      },
+      "review_status": "unreviewed",
+      "approved_accuracy_denominator": 0
+    },
+    {
+      "model_id": "claude-haiku-5-5",
+      "planned_cases": 16,
+      "case_statuses": {
+        "not_executed": 16
+      },
+      "fresh_executed_cases": 0,
+      "executed_cases_including_reused_completed": 0,
+      "reused_completed_cases": 0,
+      "lifetime_attempted_cases": 0,
+      "unknown_cost_cases": 0,
+      "technical_failures": 0,
+      "failure_rate_executed": null,
+      "failure_rate_fresh_executed": null,
+      "latency_ms": {
+        "p50": null,
+        "p95": null,
+        "measured_cases": 0
+      },
+      "physical_attempts": 0,
+      "accounting_attempt_records": 0,
+      "sent_http_attempts": 0,
+      "cost": {
+        "status": "not_executed",
+        "cost_usd": null,
+        "cost_lower_usd": null,
+        "cost_upper_usd": null,
+        "known_confirmed_subtotal_usd": "0",
+        "known_tariff_lower_subtotal_usd": "0",
+        "known_tariff_upper_subtotal_usd": "0",
+        "unknown_attempts": 0,
+        "bounded_attempts": 0,
+        "attempts": 0
+      },
+      "tokens": {
+        "input_known_subtotal": 0,
+        "output_known_subtotal": 0,
+        "input_total": null,
+        "output_total": null,
+        "missing_input_attempts": 0,
+        "missing_output_attempts": 0,
+        "result_sdk_usage_missing_attempts": 0,
+        "known_subtotal_includes_identified_transport_orphans": false,
+        "unmatched_sdk_attempts": 0,
+        "ambiguous_orphan_observations_excluded_from_subtotal": 0,
+        "known_subtotal_reconciliation_complete": true
+      },
+      "prior_unknown_reservation_hold_usd": "0",
+      "average_cost_per_attempted_case": {
+        "denominator": 0,
+        "denominator_label": "lifetime model-case pairs with an attempt",
+        "status": "unavailable",
+        "cost_usd": null,
+        "cost_lower_usd": null,
+        "cost_upper_usd": null
+      },
+      "average_cost_per_attempted_interview": {
+        "denominator": 0,
+        "denominator_label": "B interviews with an attempt; B costs only",
+        "status": "unavailable",
+        "cost_usd": null,
+        "cost_lower_usd": null,
+        "cost_upper_usd": null
+      },
+      "cost_per_strict_B_draft_pair_match_diagnostic": {
+        "denominator": 0,
+        "denominator_label": "strict matches to unreviewed B draft pairs; B costs only",
+        "status": "unavailable",
+        "cost_usd": null,
+        "cost_lower_usd": null,
+        "cost_upper_usd": null,
+        "approved_correctness": false
+      },
+      "retry_or_failure_cost": {
+        "definition": "union(B attempt_number>1 or repeated A task stage, error_stage/error_code, attempt in failed/interrupted case); planned A review excluded; each physical attempt once",
+        "attempts": 0,
+        "cost": {
+          "status": "not_executed",
+          "cost_usd": null,
+          "cost_lower_usd": null,
+          "cost_upper_usd": null,
+          "known_confirmed_subtotal_usd": "0",
+          "known_tariff_lower_subtotal_usd": "0",
+          "known_tariff_upper_subtotal_usd": "0",
+          "unknown_attempts": 0,
+          "bounded_attempts": 0,
+          "attempts": 0
+        },
+        "actual_cost_ratio": null,
+        "actual_cost_ratio_lower": null,
+        "actual_cost_ratio_upper": null,
+        "known_upper_subtotal_ratio_diagnostic": null,
+        "known_upper_subtotal_ratio_is_actual_cost": false
+      },
+      "A_technical": {
+        "planned_cases": 11,
+        "technical_valid_cases": 0,
+        "technical_validity_basis": "original service succeeded with its schema validation; no semantic judge",
+        "service_succeeded_cases": 0,
+        "automatic_checks_by_job": [
+          {
+            "job_id": "claude-haiku-5-5-1",
+            "model_id": "claude-haiku-5-5",
+            "experiment": "A",
+            "corpus": "cases/question/benchmark-v1",
+            "run_state": "not_executed",
+            "fresh_run_state": "not_executed",
+            "result_reused": false,
+            "result_origin": "C:\\Users\\dreac\\Desktop\\kdt\\model-lab\\runs\\elice-dev30-10usd-20261111-recovery-2",
+            "planned_cases": 11,
+            "recorded_cases": 0,
+            "automatic_checks": null,
+            "service_execution": null
+          }
+        ],
+        "semantic_judge": "not_run",
+        "semantic_accuracy": null
+      },
+      "B_draft_diagnostic": {
+        "main": {
+          "planned_interviews": 4,
+          "scored_interviews": 0,
+          "expected_pairs": 68,
+          "compared_pairs": 0,
+          "unavailable_pairs": 68,
+          "strict_matches": 0,
+          "acceptable_matches": 0,
+          "target_na_pairs": 0,
+          "compared_target_na_pairs": 0,
+          "predicted_na_pairs": 0,
+          "na_matches": 0,
+          "na_mismatches": 0,
+          "numeric_pairs_compared": 0,
+          "numeric_absolute_error_sum": 0,
+          "numeric_stage_mae": null,
+          "service_total_absolute_deviation_mean": null,
+          "service_key_absolute_deviation_mean": null,
+          "service_scores": [],
+          "diagnostic_errors": [],
+          "review_status": "unreviewed",
+          "approved_accuracy_denominator": 0,
+          "interpretation": "unreviewed draft agreement; not approved correctness"
+        },
+        "legacy_na": {
+          "planned_interviews": 1,
+          "scored_interviews": 0,
+          "expected_pairs": 30,
+          "compared_pairs": 0,
+          "unavailable_pairs": 30,
+          "strict_matches": 0,
+          "acceptable_matches": 0,
+          "target_na_pairs": 13,
+          "compared_target_na_pairs": 0,
+          "predicted_na_pairs": 0,
+          "na_matches": 0,
+          "na_mismatches": 0,
+          "numeric_pairs_compared": 0,
+          "numeric_absolute_error_sum": 0,
+          "numeric_stage_mae": null,
+          "service_total_absolute_deviation_mean": null,
+          "service_key_absolute_deviation_mean": null,
+          "service_scores": [],
+          "diagnostic_errors": [],
+          "review_status": "unreviewed",
+          "approved_accuracy_denominator": 0,
+          "interpretation": "unreviewed draft agreement; not approved correctness"
+        }
+      },
+      "review_status": "unreviewed",
+      "approved_accuracy_denominator": 0
+    },
+    {
+      "model_id": "claude-sonnet-5-5",
+      "planned_cases": 16,
+      "case_statuses": {
+        "not_executed": 16
+      },
+      "fresh_executed_cases": 0,
+      "executed_cases_including_reused_completed": 0,
+      "reused_completed_cases": 0,
+      "lifetime_attempted_cases": 0,
+      "unknown_cost_cases": 0,
+      "technical_failures": 0,
+      "failure_rate_executed": null,
+      "failure_rate_fresh_executed": null,
+      "latency_ms": {
+        "p50": null,
+        "p95": null,
+        "measured_cases": 0
+      },
+      "physical_attempts": 0,
+      "accounting_attempt_records": 0,
+      "sent_http_attempts": 0,
+      "cost": {
+        "status": "not_executed",
+        "cost_usd": null,
+        "cost_lower_usd": null,
+        "cost_upper_usd": null,
+        "known_confirmed_subtotal_usd": "0",
+        "known_tariff_lower_subtotal_usd": "0",
+        "known_tariff_upper_subtotal_usd": "0",
+        "unknown_attempts": 0,
+        "bounded_attempts": 0,
+        "attempts": 0
+      },
+      "tokens": {
+        "input_known_subtotal": 0,
+        "output_known_subtotal": 0,
+        "input_total": null,
+        "output_total": null,
+        "missing_input_attempts": 0,
+        "missing_output_attempts": 0,
+        "result_sdk_usage_missing_attempts": 0,
+        "known_subtotal_includes_identified_transport_orphans": false,
+        "unmatched_sdk_attempts": 0,
+        "ambiguous_orphan_observations_excluded_from_subtotal": 0,
+        "known_subtotal_reconciliation_complete": true
+      },
+      "prior_unknown_reservation_hold_usd": "0",
+      "average_cost_per_attempted_case": {
+        "denominator": 0,
+        "denominator_label": "lifetime model-case pairs with an attempt",
+        "status": "unavailable",
+        "cost_usd": null,
+        "cost_lower_usd": null,
+        "cost_upper_usd": null
+      },
+      "average_cost_per_attempted_interview": {
+        "denominator": 0,
+        "denominator_label": "B interviews with an attempt; B costs only",
+        "status": "unavailable",
+        "cost_usd": null,
+        "cost_lower_usd": null,
+        "cost_upper_usd": null
+      },
+      "cost_per_strict_B_draft_pair_match_diagnostic": {
+        "denominator": 0,
+        "denominator_label": "strict matches to unreviewed B draft pairs; B costs only",
+        "status": "unavailable",
+        "cost_usd": null,
+        "cost_lower_usd": null,
+        "cost_upper_usd": null,
+        "approved_correctness": false
+      },
+      "retry_or_failure_cost": {
+        "definition": "union(B attempt_number>1 or repeated A task stage, error_stage/error_code, attempt in failed/interrupted case); planned A review excluded; each physical attempt once",
+        "attempts": 0,
+        "cost": {
+          "status": "not_executed",
+          "cost_usd": null,
+          "cost_lower_usd": null,
+          "cost_upper_usd": null,
+          "known_confirmed_subtotal_usd": "0",
+          "known_tariff_lower_subtotal_usd": "0",
+          "known_tariff_upper_subtotal_usd": "0",
+          "unknown_attempts": 0,
+          "bounded_attempts": 0,
+          "attempts": 0
+        },
+        "actual_cost_ratio": null,
+        "actual_cost_ratio_lower": null,
+        "actual_cost_ratio_upper": null,
+        "known_upper_subtotal_ratio_diagnostic": null,
+        "known_upper_subtotal_ratio_is_actual_cost": false
+      },
+      "A_technical": {
+        "planned_cases": 11,
+        "technical_valid_cases": 0,
+        "technical_validity_basis": "original service succeeded with its schema validation; no semantic judge",
+        "service_succeeded_cases": 0,
+        "automatic_checks_by_job": [
+          {
+            "job_id": "claude-sonnet-5-5-1",
+            "model_id": "claude-sonnet-5-5",
+            "experiment": "A",
+            "corpus": "cases/question/benchmark-v1",
+            "run_state": "not_executed",
+            "fresh_run_state": "not_executed",
+            "result_reused": false,
+            "result_origin": "C:\\Users\\dreac\\Desktop\\kdt\\model-lab\\runs\\elice-dev30-10usd-20261111-recovery-2",
+            "planned_cases": 11,
+            "recorded_cases": 0,
+            "automatic_checks": null,
+            "service_execution": null
+          }
+        ],
+        "semantic_judge": "not_run",
+        "semantic_accuracy": null
+      },
+      "B_draft_diagnostic": {
+        "main": {
+          "planned_interviews": 4,
+          "scored_interviews": 0,
+          "expected_pairs": 68,
+          "compared_pairs": 0,
+          "unavailable_pairs": 68,
+          "strict_matches": 0,
+          "acceptable_matches": 0,
+          "target_na_pairs": 0,
+          "compared_target_na_pairs": 0,
+          "predicted_na_pairs": 0,
+          "na_matches": 0,
+          "na_mismatches": 0,
+          "numeric_pairs_compared": 0,
+          "numeric_absolute_error_sum": 0,
+          "numeric_stage_mae": null,
+          "service_total_absolute_deviation_mean": null,
+          "service_key_absolute_deviation_mean": null,
+          "service_scores": [],
+          "diagnostic_errors": [],
+          "review_status": "unreviewed",
+          "approved_accuracy_denominator": 0,
+          "interpretation": "unreviewed draft agreement; not approved correctness"
+        },
+        "legacy_na": {
+          "planned_interviews": 1,
+          "scored_interviews": 0,
+          "expected_pairs": 30,
+          "compared_pairs": 0,
+          "unavailable_pairs": 30,
+          "strict_matches": 0,
+          "acceptable_matches": 0,
+          "target_na_pairs": 13,
+          "compared_target_na_pairs": 0,
+          "predicted_na_pairs": 0,
+          "na_matches": 0,
+          "na_mismatches": 0,
+          "numeric_pairs_compared": 0,
+          "numeric_absolute_error_sum": 0,
+          "numeric_stage_mae": null,
+          "service_total_absolute_deviation_mean": null,
+          "service_key_absolute_deviation_mean": null,
+          "service_scores": [],
+          "diagnostic_errors": [],
+          "review_status": "unreviewed",
+          "approved_accuracy_denominator": 0,
+          "interpretation": "unreviewed draft agreement; not approved correctness"
+        }
+      },
+      "review_status": "unreviewed",
+      "approved_accuracy_denominator": 0
+    },
+    {
+      "model_id": "gpt-6-luna",
+      "planned_cases": 16,
+      "case_statuses": {
+        "not_executed": 16
+      },
+      "fresh_executed_cases": 0,
+      "executed_cases_including_reused_completed": 0,
+      "reused_completed_cases": 0,
+      "lifetime_attempted_cases": 0,
+      "unknown_cost_cases": 0,
+      "technical_failures": 0,
+      "failure_rate_executed": null,
+      "failure_rate_fresh_executed": null,
+      "latency_ms": {
+        "p50": null,
+        "p95": null,
+        "measured_cases": 0
+      },
+      "physical_attempts": 0,
+      "accounting_attempt_records": 0,
+      "sent_http_attempts": 0,
+      "cost": {
+        "status": "not_executed",
+        "cost_usd": null,
+        "cost_lower_usd": null,
+        "cost_upper_usd": null,
+        "known_confirmed_subtotal_usd": "0",
+        "known_tariff_lower_subtotal_usd": "0",
+        "known_tariff_upper_subtotal_usd": "0",
+        "unknown_attempts": 0,
+        "bounded_attempts": 0,
+        "attempts": 0
+      },
+      "tokens": {
+        "input_known_subtotal": 0,
+        "output_known_subtotal": 0,
+        "input_total": null,
+        "output_total": null,
+        "missing_input_attempts": 0,
+        "missing_output_attempts": 0,
+        "result_sdk_usage_missing_attempts": 0,
+        "known_subtotal_includes_identified_transport_orphans": false,
+        "unmatched_sdk_attempts": 0,
+        "ambiguous_orphan_observations_excluded_from_subtotal": 0,
+        "known_subtotal_reconciliation_complete": true
+      },
+      "prior_unknown_reservation_hold_usd": "0",
+      "average_cost_per_attempted_case": {
+        "denominator": 0,
+        "denominator_label": "lifetime model-case pairs with an attempt",
+        "status": "unavailable",
+        "cost_usd": null,
+        "cost_lower_usd": null,
+        "cost_upper_usd": null
+      },
+      "average_cost_per_attempted_interview": {
+        "denominator": 0,
+        "denominator_label": "B interviews with an attempt; B costs only",
+        "status": "unavailable",
+        "cost_usd": null,
+        "cost_lower_usd": null,
+        "cost_upper_usd": null
+      },
+      "cost_per_strict_B_draft_pair_match_diagnostic": {
+        "denominator": 0,
+        "denominator_label": "strict matches to unreviewed B draft pairs; B costs only",
+        "status": "unavailable",
+        "cost_usd": null,
+        "cost_lower_usd": null,
+        "cost_upper_usd": null,
+        "approved_correctness": false
+      },
+      "retry_or_failure_cost": {
+        "definition": "union(B attempt_number>1 or repeated A task stage, error_stage/error_code, attempt in failed/interrupted case); planned A review excluded; each physical attempt once",
+        "attempts": 0,
+        "cost": {
+          "status": "not_executed",
+          "cost_usd": null,
+          "cost_lower_usd": null,
+          "cost_upper_usd": null,
+          "known_confirmed_subtotal_usd": "0",
+          "known_tariff_lower_subtotal_usd": "0",
+          "known_tariff_upper_subtotal_usd": "0",
+          "unknown_attempts": 0,
+          "bounded_attempts": 0,
+          "attempts": 0
+        },
+        "actual_cost_ratio": null,
+        "actual_cost_ratio_lower": null,
+        "actual_cost_ratio_upper": null,
+        "known_upper_subtotal_ratio_diagnostic": null,
+        "known_upper_subtotal_ratio_is_actual_cost": false
+      },
+      "A_technical": {
+        "planned_cases": 11,
+        "technical_valid_cases": 0,
+        "technical_validity_basis": "original service succeeded with its schema validation; no semantic judge",
+        "service_succeeded_cases": 0,
+        "automatic_checks_by_job": [
+          {
+            "job_id": "gpt-6-luna-1",
+            "model_id": "gpt-6-luna",
+            "experiment": "A",
+            "corpus": "cases/question/benchmark-v1",
+            "run_state": "not_executed",
+            "fresh_run_state": "not_executed",
+            "result_reused": false,
+            "result_origin": "C:\\Users\\dreac\\Desktop\\kdt\\model-lab\\runs\\elice-dev30-10usd-20261111-recovery-2",
+            "planned_cases": 11,
+            "recorded_cases": 0,
+            "automatic_checks": null,
+            "service_execution": null
+          }
+        ],
+        "semantic_judge": "not_run",
+        "semantic_accuracy": null
+      },
+      "B_draft_diagnostic": {
+        "main": {
+          "planned_interviews": 4,
+          "scored_interviews": 0,
+          "expected_pairs": 68,
+          "compared_pairs": 0,
+          "unavailable_pairs": 68,
+          "strict_matches": 0,
+          "acceptable_matches": 0,
+          "target_na_pairs": 0,
+          "compared_target_na_pairs": 0,
+          "predicted_na_pairs": 0,
+          "na_matches": 0,
+          "na_mismatches": 0,
+          "numeric_pairs_compared": 0,
+          "numeric_absolute_error_sum": 0,
+          "numeric_stage_mae": null,
+          "service_total_absolute_deviation_mean": null,
+          "service_key_absolute_deviation_mean": null,
+          "service_scores": [],
+          "diagnostic_errors": [],
+          "review_status": "unreviewed",
+          "approved_accuracy_denominator": 0,
+          "interpretation": "unreviewed draft agreement; not approved correctness"
+        },
+        "legacy_na": {
+          "planned_interviews": 1,
+          "scored_interviews": 0,
+          "expected_pairs": 30,
+          "compared_pairs": 0,
+          "unavailable_pairs": 30,
+          "strict_matches": 0,
+          "acceptable_matches": 0,
+          "target_na_pairs": 13,
+          "compared_target_na_pairs": 0,
+          "predicted_na_pairs": 0,
+          "na_matches": 0,
+          "na_mismatches": 0,
+          "numeric_pairs_compared": 0,
+          "numeric_absolute_error_sum": 0,
+          "numeric_stage_mae": null,
+          "service_total_absolute_deviation_mean": null,
+          "service_key_absolute_deviation_mean": null,
+          "service_scores": [],
+          "diagnostic_errors": [],
+          "review_status": "unreviewed",
+          "approved_accuracy_denominator": 0,
+          "interpretation": "unreviewed draft agreement; not approved correctness"
+        }
+      },
+      "review_status": "unreviewed",
+      "approved_accuracy_denominator": 0
+    }
+  ],
+  "jobs": [
+    {
+      "job_id": "gpt-6.1-sol-1",
+      "model_id": "gpt-6.1-sol",
+      "experiment": "A",
+      "corpus": "cases/question/benchmark-v1",
+      "run_state": "completed",
+      "fresh_run_state": "completed",
+      "result_reused": false,
+      "result_origin": "C:\\Users\\dreac\\Desktop\\kdt\\model-lab\\runs\\elice-dev30-10usd-20261111-recovery-2",
+      "planned_cases": 11,
+      "recorded_cases": 11,
+      "automatic_checks": {
+        "input_contract": {
+          "status": "passed",
+          "total": 11,
+          "passed": 11,
+          "failed": 0,
+          "not_executed": 0
+        },
+        "service_execution": {
+          "status": "passed",
+          "total": 11,
+          "passed": 11,
+          "failed": 0,
+          "not_executed": 0
+        },
+        "report_form": {
+          "status": "not_executed",
+          "total": 0,
+          "passed": 0,
+          "failed": 0,
+          "not_executed": 0
+        },
+        "judge_controls": {
+          "status": "not_executed",
+          "total": 0,
+          "passed": 0,
+          "failed": 0,
+          "not_executed": 0
+        },
+        "diagnostic_judge_execution": {
+          "status": "not_executed",
+          "total": 11,
+          "passed": 0,
+          "failed": 0,
+          "not_executed": 11
+        }
+      },
+      "service_execution": null
+    },
+    {
+      "job_id": "gpt-6.1-sol-2",
+      "model_id": "gpt-6.1-sol",
+      "experiment": "B",
+      "corpus": "cases/answer/main-v1",
+      "run_state": "completed",
+      "fresh_run_state": "completed",
+      "result_reused": false,
+      "result_origin": "C:\\Users\\dreac\\Desktop\\kdt\\model-lab\\runs\\elice-dev30-10usd-20261111-recovery-2",
+      "planned_cases": 4,
+      "recorded_cases": 4,
+      "automatic_checks": null,
+      "service_execution": null
+    },
+    {
+      "job_id": "gpt-6.1-sol-3",
+      "model_id": "gpt-6.1-sol",
+      "experiment": "B",
+      "corpus": "cases/answer/legacy-na-v1",
+      "run_state": "completed",
+      "fresh_run_state": "completed",
+      "result_reused": false,
+      "result_origin": "C:\\Users\\dreac\\Desktop\\kdt\\model-lab\\runs\\elice-dev30-10usd-20261111-recovery-2",
+      "planned_cases": 1,
+      "recorded_cases": 1,
+      "automatic_checks": null,
+      "service_execution": null
+    },
+    {
+      "job_id": "gemini-3.8-flash-1",
+      "model_id": "gemini-3.8-flash",
+      "experiment": "A",
+      "corpus": "cases/question/benchmark-v1",
+      "run_state": "budget_stopped",
+      "fresh_run_state": "budget_stopped",
+      "result_reused": false,
+      "result_origin": "C:\\Users\\dreac\\Desktop\\kdt\\model-lab\\runs\\elice-dev30-10usd-20261111-recovery-2",
+      "planned_cases": 11,
+      "recorded_cases": 0,
+      "automatic_checks": null,
+      "service_execution": null
+    },
+    {
+      "job_id": "gemini-3.8-flash-2",
+      "model_id": "gemini-3.8-flash",
+      "experiment": "B",
+      "corpus": "cases/answer/main-v1",
+      "run_state": "not_executed",
+      "fresh_run_state": "not_executed",
+      "result_reused": false,
+      "result_origin": "C:\\Users\\dreac\\Desktop\\kdt\\model-lab\\runs\\elice-dev30-10usd-20261111-recovery-2",
+      "planned_cases": 4,
+      "recorded_cases": 0,
+      "automatic_checks": null,
+      "service_execution": null
+    },
+    {
+      "job_id": "gemini-3.8-flash-3",
+      "model_id": "gemini-3.8-flash",
+      "experiment": "B",
+      "corpus": "cases/answer/legacy-na-v1",
+      "run_state": "not_executed",
+      "fresh_run_state": "not_executed",
+      "result_reused": false,
+      "result_origin": "C:\\Users\\dreac\\Desktop\\kdt\\model-lab\\runs\\elice-dev30-10usd-20261111-recovery-2",
+      "planned_cases": 1,
+      "recorded_cases": 0,
+      "automatic_checks": null,
+      "service_execution": null
+    },
+    {
+      "job_id": "gemini-4-argon-1",
+      "model_id": "gemini-4-argon",
+      "experiment": "A",
+      "corpus": "cases/question/benchmark-v1",
+      "run_state": "not_executed",
+      "fresh_run_state": "not_executed",
+      "result_reused": false,
+      "result_origin": "C:\\Users\\dreac\\Desktop\\kdt\\model-lab\\runs\\elice-dev30-10usd-20261111-recovery-2",
+      "planned_cases": 11,
+      "recorded_cases": 0,
+      "automatic_checks": null,
+      "service_execution": null
+    },
+    {
+      "job_id": "gemini-4-argon-2",
+      "model_id": "gemini-4-argon",
+      "experiment": "B",
+      "corpus": "cases/answer/main-v1",
+      "run_state": "not_executed",
+      "fresh_run_state": "not_executed",
+      "result_reused": false,
+      "result_origin": "C:\\Users\\dreac\\Desktop\\kdt\\model-lab\\runs\\elice-dev30-10usd-20261111-recovery-2",
+      "planned_cases": 4,
+      "recorded_cases": 0,
+      "automatic_checks": null,
+      "service_execution": null
+    },
+    {
+      "job_id": "gemini-4-argon-3",
+      "model_id": "gemini-4-argon",
+      "experiment": "B",
+      "corpus": "cases/answer/legacy-na-v1",
+      "run_state": "not_executed",
+      "fresh_run_state": "not_executed",
+      "result_reused": false,
+      "result_origin": "C:\\Users\\dreac\\Desktop\\kdt\\model-lab\\runs\\elice-dev30-10usd-20261111-recovery-2",
+      "planned_cases": 1,
+      "recorded_cases": 0,
+      "automatic_checks": null,
+      "service_execution": null
+    },
+    {
+      "job_id": "claude-haiku-5-5-1",
+      "model_id": "claude-haiku-5-5",
+      "experiment": "A",
+      "corpus": "cases/question/benchmark-v1",
+      "run_state": "not_executed",
+      "fresh_run_state": "not_executed",
+      "result_reused": false,
+      "result_origin": "C:\\Users\\dreac\\Desktop\\kdt\\model-lab\\runs\\elice-dev30-10usd-20261111-recovery-2",
+      "planned_cases": 11,
+      "recorded_cases": 0,
+      "automatic_checks": null,
+      "service_execution": null
+    },
+    {
+      "job_id": "claude-haiku-5-5-2",
+      "model_id": "claude-haiku-5-5",
+      "experiment": "B",
+      "corpus": "cases/answer/main-v1",
+      "run_state": "not_executed",
+      "fresh_run_state": "not_executed",
+      "result_reused": false,
+      "result_origin": "C:\\Users\\dreac\\Desktop\\kdt\\model-lab\\runs\\elice-dev30-10usd-20261111-recovery-2",
+      "planned_cases": 4,
+      "recorded_cases": 0,
+      "automatic_checks": null,
+      "service_execution": null
+    },
+    {
+      "job_id": "claude-haiku-5-5-3",
+      "model_id": "claude-haiku-5-5",
+      "experiment": "B",
+      "corpus": "cases/answer/legacy-na-v1",
+      "run_state": "not_executed",
+      "fresh_run_state": "not_executed",
+      "result_reused": false,
+      "result_origin": "C:\\Users\\dreac\\Desktop\\kdt\\model-lab\\runs\\elice-dev30-10usd-20261111-recovery-2",
+      "planned_cases": 1,
+      "recorded_cases": 0,
+      "automatic_checks": null,
+      "service_execution": null
+    },
+    {
+      "job_id": "claude-sonnet-5-5-1",
+      "model_id": "claude-sonnet-5-5",
+      "experiment": "A",
+      "corpus": "cases/question/benchmark-v1",
+      "run_state": "not_executed",
+      "fresh_run_state": "not_executed",
+      "result_reused": false,
+      "result_origin": "C:\\Users\\dreac\\Desktop\\kdt\\model-lab\\runs\\elice-dev30-10usd-20261111-recovery-2",
+      "planned_cases": 11,
+      "recorded_cases": 0,
+      "automatic_checks": null,
+      "service_execution": null
+    },
+    {
+      "job_id": "claude-sonnet-5-5-2",
+      "model_id": "claude-sonnet-5-5",
+      "experiment": "B",
+      "corpus": "cases/answer/main-v1",
+      "run_state": "not_executed",
+      "fresh_run_state": "not_executed",
+      "result_reused": false,
+      "result_origin": "C:\\Users\\dreac\\Desktop\\kdt\\model-lab\\runs\\elice-dev30-10usd-20261111-recovery-2",
+      "planned_cases": 4,
+      "recorded_cases": 0,
+      "automatic_checks": null,
+      "service_execution": null
+    },
+    {
+      "job_id": "claude-sonnet-5-5-3",
+      "model_id": "claude-sonnet-5-5",
+      "experiment": "B",
+      "corpus": "cases/answer/legacy-na-v1",
+      "run_state": "not_executed",
+      "fresh_run_state": "not_executed",
+      "result_reused": false,
+      "result_origin": "C:\\Users\\dreac\\Desktop\\kdt\\model-lab\\runs\\elice-dev30-10usd-20261111-recovery-2",
+      "planned_cases": 1,
+      "recorded_cases": 0,
+      "automatic_checks": null,
+      "service_execution": null
+    },
+    {
+      "job_id": "gpt-6-luna-1",
+      "model_id": "gpt-6-luna",
+      "experiment": "A",
+      "corpus": "cases/question/benchmark-v1",
+      "run_state": "not_executed",
+      "fresh_run_state": "not_executed",
+      "result_reused": false,
+      "result_origin": "C:\\Users\\dreac\\Desktop\\kdt\\model-lab\\runs\\elice-dev30-10usd-20261111-recovery-2",
+      "planned_cases": 11,
+      "recorded_cases": 0,
+      "automatic_checks": null,
+      "service_execution": null
+    },
+    {
+      "job_id": "gpt-6-luna-2",
+      "model_id": "gpt-6-luna",
+      "experiment": "B",
+      "corpus": "cases/answer/main-v1",
+      "run_state": "not_executed",
+      "fresh_run_state": "not_executed",
+      "result_reused": false,
+      "result_origin": "C:\\Users\\dreac\\Desktop\\kdt\\model-lab\\runs\\elice-dev30-10usd-20261111-recovery-2",
+      "planned_cases": 4,
+      "recorded_cases": 0,
+      "automatic_checks": null,
+      "service_execution": null
+    },
+    {
+      "job_id": "gpt-6-luna-3",
+      "model_id": "gpt-6-luna",
+      "experiment": "B",
+      "corpus": "cases/answer/legacy-na-v1",
+      "run_state": "not_executed",
+      "fresh_run_state": "not_executed",
+      "result_reused": false,
+      "result_origin": "C:\\Users\\dreac\\Desktop\\kdt\\model-lab\\runs\\elice-dev30-10usd-20261111-recovery-2",
+      "planned_cases": 1,
+      "recorded_cases": 0,
+      "automatic_checks": null,
+      "service_execution": null
+    }
+  ],
+  "review_status": "unreviewed",
+  "reused_completed_job_ids": [],
+  "protocol_context": {
+    "recovery_phase": 2,
+    "max_output_tokens": 2000,
+    "four_non_openai_models_use_chat_bridge_in_phase3": false,
+    "gpt_models_use_native_responses": true,
+    "strict_schema_contract": "same original JSON schema and strict=true; no silent JSON-only fallback",
+    "comparison_limitations": [
+      "Phase 3 uses Responses for GPT models and a Chat Completions compatibility bridge for Gemini/Claude; wire protocol is a comparison condition.",
+      "All continued model calls cap output at 2000 tokens for the Elice non-streaming proxy; earlier failed reservations used the previous cap.",
+      "Sonnet source text recommends other models when JSON response format is required, while its generic API section lists response_format and structured-output compatibility; this is a documentation contradiction, not proven support.",
+      "Unreviewed draft metrics do not support an approved quality ranking or pass threshold."
+    ]
+  },
+  "quality_evaluation": "diagnostic_only",
+  "approved_accuracy_denominator": 0,
+  "semantic_judge_calls": 0,
+  "billing_history_lookup": "explicitly_skipped_by_user",
+  "limitations": [
+    "Prior 404/400 failures have missing SDK usage and unknown actual cost; their reservations are holds, not invoices.",
+    "No unknown attempt is replaced by zero cost; a later successful retry cannot erase earlier missing usage.",
+    "Provider tariff bounds, known subtotals, and approved budget exposure are separate from actual confirmed cost.",
+    "Any result case attempt with missing input/output totals makes its lifetime case cost unknown.",
+    "Parent and fresh local attempt IDs are qualified by immutable run origin before unioning.",
+    "Missing result rows use only marked explicit/sequential identity inference; unidentified attempts remain visible.",
+    "B draft gold is unreviewed; strict/acceptable agreement is not approved correctness. Main and legacy NA remain separate.",
+    "A reports service technical success and existing automatic checks; no semantic judge was called.",
+    "A latency uses service wall time; B latency sums recorded attempt latencies. Unavailable values are not zero.",
+    "Billing history, taxes, account adjustments, and account credits were not looked up."
+  ]
+}

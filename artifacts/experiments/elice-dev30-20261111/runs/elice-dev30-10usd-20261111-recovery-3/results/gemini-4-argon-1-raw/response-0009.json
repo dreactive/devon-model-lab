@@ -1,0 +1,55 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\n  \"question\": {\n    \"persona\": \"tech_lead\",\n    \"text\": \"제공된 CallbackRegistry 코드에서는 콜백을 linkedMapOf에 저장하고 deliver 호출 시 remove로 제거한 뒤 실행하고 있습니다. 콜백 보관 자료구조로 linkedMapOf를 선택하고 실행 시점에 항목을 바로 제거하도록 구성한 기술적 이유와, 이 방식이 전제하는 호출 환경이나 고려한 대안이 무엇인지 설명해 주세요.\",\n    \"topic_code\": \"callback_delivery_and_map_choice\",\n    \"question_contract\": {\n      \"purpose\": \"CallbackRegistry의 자료구조 선택과 deliver 시점의 제거 후 실행 방식에 대한 기술적 근거 및 전제 조건 확인\",\n      \"required_points\": [\n        {\n          \"key\": \"selection_reason\",\n          \"description\": \"linkedMapOf 사용 및 deliver 시 remove 후 실행 방식을 선택한 기술적 이유\"\n        },\n        {\n          \"key\": \"conditions_or_alternatives\",\n          \"description\": \"해당 동작이 전제하는 호출 조건(단일 스레드/인스턴스 등) 또는 고려한 대안\"\n        }\n      ],\n      \"assumptions\": [],\n      \"basis_refs\": [\n        {\n          \"kind\": \"evidence\",\n          \"id\": \"15994a55-9bd3-5cc1-9a47-7f1f639a7a51\"\n        },\n        {\n          \"kind\": \"answer_turn\",\n          \"id\": \"95ba820d-2778-55be-a0c3-085e951e7f0b\"\n        }\n      ],\n      \"evaluation_scope\": \"CallbackRegistry의 자료구조 및 콜백 실행·제거 방식에 대한 기술적 선택 근거와 조건 설명\",\n      \"evaluation_keys\": [\n        \"technical_reasoning\",\n        \"communication\"\n      ]\n    },\n    \"evidence_refs\": [\n      \"15994a55-9bd3-5cc1-9a47-7f1f639a7a51\"\n    ],\n    \"jd_requirement_ids\": [],\n    \"question_type\": \"follow_up\",\n    \"parent_turn_id\": \"95ba820d-2778-55be-a0c3-085e951e7f0b\"\n  },\n  \"intent\": \"직전 답변에서 중복 키 등록 거절 방식을 확인했으므로, 이어서 CallbackRegistry의 자료구조(linkedMapOf)와 deliver의 제거 후 실행 방식에 대한 기술적 선택 이유와 전제 조건을 심화 확인한다.\",\n  \"reason_summary\": \"직전 턴에서 register의 중복 거절 동작이 충분히 설명되었으므로, 같은 코드 근거(CallbackRegistry.kt)에서 확인되는 linkedMapOf 선택 및 deliver의 remove 후 invoke 구조에 대해 technical_reasoning 평가 목적에 맞춰 후속 질문을 구성했다.\"\n}",
+        "extra_content": {
+          "google": {
+            "thought_signature": "EmQKYgFpFH0T9AVDLWvmOhHwUs5GUDEdmIhhh6w0VVeHTaR2n/XIuM/rcAzivw1Af7Vqji5Cjrt1TlQ/cOVgafGeX2fGNznHuj+RBV1sZxceyUt7TlrarAGbHiOJRzUbDS8MgHAj"
+          }
+        },
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794341154,
+  "id": "Fnnzat3uGO6s0-kPhea_2AM",
+  "model": "gemini-4-argon",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 697,
+    "prompt_tokens": 7582,
+    "total_tokens": 8279,
+    "input_tokens": 7582,
+    "output_tokens": 697,
+    "cached_prompt_tokens": 0,
+    "cache_write_tokens": 0
+  },
+  "_elice_billing": {
+    "usage": {
+      "input_tokens": 7582,
+      "output_tokens": 697,
+      "cached_input_tokens": 0,
+      "cache_write_input_tokens": null,
+      "reasoning_output_tokens": null,
+      "cache_write_short_tokens": null,
+      "cache_write_long_tokens": null
+    },
+    "cost_usd": "0.022134",
+    "cost_lower_usd": "0.022134",
+    "cost_upper_usd": "0.022134",
+    "cost_status": "confirmed",
+    "provider_model": "gemini-4-argon",
+    "canonical_model": "gemini-4-argon",
+    "attempt_id": "attempt-28",
+    "accounting_basis": "billing_upper_bound"
+  },
+  "_elice_wire": {
+    "protocol": "chat_completions",
+    "canonical_request_bytes": 28137,
+    "wire_request_bytes": 27943,
+    "reservation_input_bytes": 28137
+  }
+}

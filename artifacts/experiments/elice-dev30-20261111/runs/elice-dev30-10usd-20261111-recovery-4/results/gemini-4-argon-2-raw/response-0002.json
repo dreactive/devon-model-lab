@@ -1,0 +1,55 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\"judgments\": [{\"turn_id\": \"1\", \"key\": \"contribution_clarity\", \"level\": 3}, {\"turn_id\": \"1\", \"key\": \"communication\", \"level\": 3}, {\"turn_id\": \"2\", \"key\": \"project_understanding\", \"level\": 4}, {\"turn_id\": \"2\", \"key\": \"communication\", \"level\": 4}, {\"turn_id\": \"3\", \"key\": \"technical_reasoning\", \"level\": 0}, {\"turn_id\": \"3\", \"key\": \"communication\", \"level\": 1}, {\"turn_id\": \"4\", \"key\": \"problem_solving\", \"level\": 1}, {\"turn_id\": \"4\", \"key\": \"communication\", \"level\": 1}, {\"turn_id\": \"5\", \"key\": \"company_job_fit\", \"level\": 2}, {\"turn_id\": \"5\", \"key\": \"communication\", \"level\": 1}, {\"turn_id\": \"6\", \"key\": \"technical_reasoning\", \"level\": 1}, {\"turn_id\": \"6\", \"key\": \"communication\", \"level\": 1}, {\"turn_id\": \"7\", \"key\": \"technical_reasoning\", \"level\": 2}, {\"turn_id\": \"7\", \"key\": \"communication\", \"level\": 3}, {\"turn_id\": \"8\", \"key\": \"communication\", \"level\": 4}, {\"turn_id\": \"9\", \"key\": \"technical_reasoning\", \"level\": 3}, {\"turn_id\": \"9\", \"key\": \"communication\", \"level\": 3}]}",
+        "extra_content": {
+          "google": {
+            "thought_signature": "EmMKYQFpFH0TzC7tmIUyGnH2EYOWM9uhYQCThL0+xgiqdLEjnGligHPFQE8rh3XvIACEpJtdhXCINoBX9HPS8q6OmzVuthPhP930trrniwraQ5c4+ix/r8kaYTnyi3N3zk4FbtQ="
+          }
+        },
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794342238,
+  "id": "Vn3zarS5N-Gl0-kPkafl-Qs",
+  "model": "gemini-4-argon",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 378,
+    "prompt_tokens": 6593,
+    "total_tokens": 6971,
+    "input_tokens": 6593,
+    "output_tokens": 378,
+    "cached_prompt_tokens": 0,
+    "cache_write_tokens": 0
+  },
+  "_elice_billing": {
+    "usage": {
+      "input_tokens": 6593,
+      "output_tokens": 378,
+      "cached_input_tokens": 0,
+      "cache_write_input_tokens": null,
+      "reasoning_output_tokens": null,
+      "cache_write_short_tokens": null,
+      "cache_write_long_tokens": null
+    },
+    "cost_usd": "0.016966",
+    "cost_lower_usd": "0.016966",
+    "cost_upper_usd": "0.016966",
+    "cost_status": "confirmed",
+    "provider_model": "gemini-4-argon",
+    "canonical_model": "gemini-4-argon",
+    "attempt_id": "attempt-2",
+    "accounting_basis": "billing_upper_bound"
+  },
+  "_elice_wire": {
+    "protocol": "chat_completions",
+    "canonical_request_bytes": 27503,
+    "wire_request_bytes": 27460,
+    "reservation_input_bytes": 27503
+  }
+}

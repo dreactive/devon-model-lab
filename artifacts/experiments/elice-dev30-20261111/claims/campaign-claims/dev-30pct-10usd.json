@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "campaign_id": "dev-30pct-10usd",
+  "campaign_sha256": "a0a91702b404de48ba279a95f8671f1d260f95b1b3afdbf12931a24560ac2b5f",
+  "bundle_sha256": "65ac1b5313a0dd2521a1807ce03d5bddb4629c0624ca2480dddf7fe61c168ca2",
+  "budget_usd_total": "10.00",
+  "max_http_attempts_total": 192,
+  "claimed_at": "2026-11-10T18:23:38.228011+00:00"
+}

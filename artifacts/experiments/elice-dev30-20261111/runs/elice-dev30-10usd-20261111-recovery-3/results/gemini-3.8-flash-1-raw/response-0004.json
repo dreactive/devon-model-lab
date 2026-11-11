@@ -1,0 +1,58 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\n  \"plan_valid\": true,\n  \"context_valid\": true,\n  \"wording_valid\": true,\n  \"contract_matches\": true,\n  \"safe_alternative\": true,\n  \"reason_summary\": \"지원자의 직전 답변 내용과 제공된 코드 원문의 트랜잭션 흐름을 바탕으로, 동시 요청 시 예외 및 경합 처리에 대한 기술적 근거를 묻는 유효한 심화 후속 질문입니다.\"\n}",
+        "extra_content": {
+          "google": {
+            "thought_signature": "EsInCr8nAWkUfROFqZZZ/0EewgjepetjIUAVGjIcye0uHXlRS68VcOGx6MTHQeDOmPE6FGSQqBcVsyFSq7/mDAUtkQybzwK+UGcSOK9eO1u9ip3OoMm+ZjprCfmVFMCNanw7GfabxtbR+fI0N/xINdLDQ2DinnCKOyLQ2IRT3YGvglCB9eg23xdnp0MVhOFTo2II5HuoZK0lLeTDEZlaOqGV8exp+URStooIKi69CYrzplBRjR+m2gNY3IpW6yXWmmumNMn70+43dl+isWOA1QgXNFdZjFGC24nBfTCbU3SHyoIo1sakcwYgNP54rRDOHoDwmxfZiX1Ot6Zo/jw12Su0zsrOmgvTGmmKNv+8T7qR3VgPh4ZzEubF3Swu3TvAN9kSSmhPI0wqpfBgcr8MmHHXhhwaPljDofusa0BiyVP24gR5gSmZ+bE1ahN8JF/pWpo3lBgbDwbt1RpemAI5BN75R3kn1v9om8fbgCqp7qp4lCRXunHTtTU3+TuWzSPxMsHI+8lUYLPg+5XXWSDcSLxYlAdDp+XE2ZHkPXZnaf4ahC2YXIofpHgPFyZ/dRJ7QkDFcD6ZPAWtcsqE7DA0CI0xGDZ/KTDgvpSRovBxgGPrOXI4oTdy4fuaaGMjfClkydI//8XJ0kZku94HS03qTkZeZir2eXL5XVap1bLQDEpvrxunDs9a17repgG68wXjDoR/rL583KV5DW8kMaySFZUqQjNuvklysGKoXQX1BbD49NdBb6i0/7vbSzv+MEyo9Bwfmffrr3O2+fG7DLBIp8f9chdeimVt47qUjWNKk2p8nhmK59DcOS3kEyluuYQYU32UJCfjD0UgZOssUzggTF6luPlJqxsh6aE/MMC195TfcIDcEeSB9ilu7R+Jm2N+PGqRVmXIqrllWnp5bthnYF2gDG7ivTLafUsiEVzEz0TV8WiAL7omq1ilUJqZ/bIaKrcyz9JhKF4gTUmhpgI7FrUyuTJivb92SIliByr5BQYOxy2oxTW20+fQ8pY08WRacq/73KLaMFXt6yR9LGc9QFaKF1HlLksiYZ6iYIDBWWnURKrhAJGwRaW3+TRZQcM701zVQyygVJgrCZ+MQqAb3fmLW5leRYoACZ9amPxdVHvGuQpmZMQzfEjy1nZofioPpPzGCkMY/KWOIy0g72QgwwJbordeUxVwijuRvsYXK0qsJDDlPuw8yA2lM9K0e0uJpVFZSyk1jPDClp9scpOwGlLLOu2pG3MN9SrdB0c1EmLZS62JwH4fBxggS+oz/XkFVsY4725fQzLN3FE8FkJIO0VLvVKvwuC4Hi1Xb4lsVotuX4mPEwQ0FGILJbae7HyMnJ/NS0K9VzhkTN8L8AOzkhX5gHXGPIuIc1dvNF5ltNnW6uD2RFvDI3W3NwA0ilQZOHONDDaAJ0I4FO/euCa8wrnTdGwKZI60r0cKA61EFk56r0lUV3PrPXGGyGe0jadwlmcvXxQD/0vNvOV4JW5pT5+VjRO1CIJSDzeboPRR1YO/DSb/61QyRVXTeTaxPO+0N2WswJSaCCCHZRvGny9MMYUbgKFIG9xQFcnny2u3GXfB+QDmZW1eUTYmfhO3QTx+0Gy0OFdR/bs1fMsUjAuozIa/5t8pgek8LDVQqBwiY3vm6s6SlgpTwypKpxzHXS4gCcYDSaiJjzyUg4dyRgkx2efq5u/VOqXPxUJd1UzuCwXh13FA+RQ4ZGwHEydOshs5XK2S8wwrwm3geFsB0TfQ5qZCXcAhxdUKzOwg2BRtXLE0L8SG9LeU/9aXhoTsiLgx7rxWTqUCnGn3aykZZTKM8rCwxIi8LbWwYXzxpeu/UymFYWOUK6z6CiFPzitLLRHd86BSgxgMlgpNKmbFlHIilWYQWtpl/32iP6yF5t6N0AIf8mAl0bbAV8kVrFrqus0G0Op72MpcuX4weFYehTiR4R7lA9fyh9sBLQ/wOBCqwkyuKarNMdSn39pvfhHyc+W6gEZObM1byzc4gCWDn9DIJYYCYGKG/8iit4ixnout2zgSh6YVNPW1ijCd6jD3rviAQVL886aR8A623CS6svlJugrtA9qiaPsUkQw1+RtiVmwqI5H/rgCVgkyNvM2uHXto5UyQPq3g437uRCCJjBGTT/BNmU3DdsvaeMBhTbDnheTEz1MYPcVbOhlCL75L2PhFHrlwmrH9LRFR5LI5y5Vakro3X4lOE6+jel3Ni4KVh2vT9IwvvC1eCroEdPoF6/sZStBPLCYxh9lM9sPw9igLJENAxfPD5XAAJSWrRlmgG/M7EtZJxqkMozhb/GBfV+D5rTvOZRf3lYZVV/9dC7poJL78u6SD46aZ8YlzNf4W4j+NZcVjjjgxzHusVO6U50MO7/ktoa8E6N25P8KzHwVKD/TN+alZ2B1JjU7ugYzXHcDQwwR537ZQSApx8P/36uN/X9WnbGEzEQATFTTXCn2dNdTog3RD7L3guwqMHusip4lqq7szyFuRGBp7orbJyXAbt6A0mg+3dqiPulz6BCWYzedEeKW/8dN8YVBVfiyOf1zaVvDKk65OVP7n4Kvxva0gNly5RpO4oioh9MK7rxToZMs9uoM32WHd/SWopw2AkoubfAE5wQfj4DOeYBPwIlsbcBwGQXG8PsjqGnfZhMDGk8NyuZDBHKYRgvLuw4z4Rr4SaQ7vIBoVcdBZACtfyuyTUgJw0WD6WrhUmI4hD5J5KbmdSUGAgMWuhnD+grefw71NpLd2KRt/rnRrC/UqWYim04pG2NZ574zvsRs7dCMwJF+v74o++Ulkaz+2KFDTvqnhD/ylSrHMvUQ0rOG286HtxV48Tjz1oflJQyrzSslL2+6kc6EKw0k6zz7OZ7PzK96Ti6XtuKBzapb89Txu+vRU5tHGvAM026l5mZUpqoh/r6oRYkw7Xwn5UJ6+LtAk18T7xRdpwlVhRvjCY3QqSFYBZHO92bosN1aHGABvNw7qWs36RUbyW2CUeNrpe1UbYiLeLiXkaYhvRoeAwYBpVnAbmO9If/spbKDyl0/6Ll0Zp9hRb86nXuhucfPhk13uCnwLXOPiI5MjUgsZpVKWoc6qthxEKslrtBVeSs5F5RfvtUbAc5LSQzJJvAdxCRPxXm4V3uK9TtVCFRcdHSEhOFXrUR//uYA4TYU0/cmpE6YbGl7H0jEDK6gzUCL6U5kGt4/R6Dgw/OMFzn4FqDF4sL9SNnslNy+Op1TT9WsFXLyCyD+hzUx4gNm8t4XezJDLuzYFSGMRXav7qr3xtfVwhpusN45lbVq2oMJBkyTBRL3fJpggJXoec4clg9c40McCjU2jY2Hp7BPcVYG1bni0euwhFRqLJmxxbF25VLcjdlr1vB942l+DZpP+JogmsQ4KiW4eqwT1tzdA1g0SbGu7RH1oNUVyxGNwslPezFP4gAw3slbeJLLKPKolp5OnC+ySza1lfEMZqR8FCoGuEl/y3z7HU2xXKwJjbvZDymyfSvjB7ow03gS9TFl3FRFY4+jHNw8MP25pDsyXkyjYLrYu/ha0QOf8iQl3ppwikMSzLj8Z/xCV7sfDNqmrdirCmWiX3fpFANC6x5xDvQM6rmUf+8rsnTQ71yQm3d3mli6Sdr2E9LvfVQfVKhAi6BNVllOjqg/A6TbcKdWIcRr5HtwFggEYneQXcYugITyf2mMNNHoNUc/PdEx7SKYL6phIKct1iCP+PrKlamcZkBIjzim/wzkhNcZHFIXnYhX/solhiCKcCAFsH0LAwheEeiVzxAy29UxbqBCmx+GFFVDxiz9n72XTGLpH1lCwFAk02uWfZenCIk47u73mXuGVzKuudkRsxXBhPOPdscYGX7vI4W1mBY8Wh+aMR54CQkQG3Z+yCaPTlpc4FW5xyjV9oGwBt91Y6c2aq3VIEm+zlT3f2Z4yjmvc21G1o0qNpADOzvHuZXj3fdaP6FwUWg0OFRQ5aumw4GTHr8mTcC+75wMCwGKUJctTO64N8m2Ga9DvJaZ95kkXOn3976z+CEhaiIiCy7PdG2Cfsi8hyZaSuAw43pVrrc80X2t7fOo8GUZP9gNT/bw0MvO0ggSywtqURzPYoSWo7EQvOToaph6wMIYqwv8H4hzgXS5BYnEGVpcp6YUc0qSbT+Jg/Reh88QEI0ww96BfXjkTJT3A9MR9eOMTF+Ik27eksm9Tl+dwlrBpLHFJJsnHNM4wcfD/s9KN8WIk7EYaPGX3rEHs5Rv9J6t4JtCynehokxhU45PT5JKBkzjXYWBJRE4YulKWHo1pd7xnzhFe4Sp4flSBSouIbGaCA8KlzDJKj8E8lLt/cjPCn5CZo6aGUxuvt+nu0Rap5tnP5eceSO7o2yVViMSve+ZEzS5FvQuHaf+lDeaA/JRv7F5oWO2fAlL6HQRq9iJ4m4IAjd2VgR1a0PwUZ8n7PVcT7xUklQQqA/hPCiLSUCT7kYCEhyJK16yk3t1M71IfnyVxlHtnt8cAGCU0CuXBY7EgeLbOjyW2na79hn7ceSpnVkDPdbhnY+H6QWOrTFoKEaIzd5GjiFudAz21cIo/kR30I8FCAGtcz3qlUeN0qQbXVkAJ3THcTlMf1fuQVTI5gdT6xdPLS05COhKQtgJ6z3+P9VNRyyexSHYP2wX0XNYMBlh5Y0RuO49zTsm2lP+0wzx/3LbhayR3dKGH6/u+fEu6/Uz37b6wYukZzOgN5P0OT2w1luEKHDL56xLvZ/XzOIpjSW6QgaxrFYeEcP5j+EQVbbUuAD0QNyiiNfkA69/H8UIQdZBFdYM1FppzwcAW2MqXH6FYRkqbVVLyqwPRTTpG1kn7KvPErY/6WSJ4KYp22Ja/yyAhdzHHhIF7zPA6QmXFE/OM3S+KWJSpMDhPpI0E4IrtbrAFiWkFBL93jd0XtWM3wOS2W8dB9K5FOs8wtXnqNRD9LwlCF8/lIdJjrlAT0HlUFjvksUk7gPtenHqpUAOluCUNWK9nuxFlzdAxw2n0gfdgHxgPQioTIPjnIgFcL6Aso0l3XOfkqeyASouVCIqMzFsDsZYLRgIrmfLB5UsUV2+WnH3e/HW47XkBNHnq33CPQlm0iZ2PpcOUiIiiyA3LoVPs8/a96l97eDi8I2RKOqoStx+vbQdW830xUVJ8Xo9p1H8VPp2yWdni8XAbwPHii0ZQJTZtKnEYtqwbx6BuJNOtdPhThoEZHHDfRhm0PHGEaBa2xkne9wTpaWOnna9xjZDEF7zOm3zUiiONfO6mzbkRi3Jr0gvqqeVKFHpWvVWkB4UDXXIUwalS53C73ZlWGx3n4h48zoNMAsmOritOn5kbjtjc59RHlyDmhpaSdtujftXv+aEcXdjE8kGHnS57ZuI0rPfwrWhKZkAjG2bhb/VzKUDyJrNUPIZ0DIb0CDHFXzAyOlGmH5jM6E/SIzRPC73aNN96QRZkbANoSbpXFyfqYuwFTghJY4hE+4Mj0C/EfdISuqqtcXW1Abrv4vgUTaLfSEoXQ2s0BVDdli4EAPJcJYS65v9qVnAXfsZ+bUjMFXwhH3EV0nwLUld1PlVJV+Q8G+UKPWk0IGxlZCwi5Kk+yn0nWLWC3w5mro0WsbnJaC0SKohRm8Kf/fIWEsXw7M+LZ4i9vIM7QP1BznWx4VZNw0Q2QVthcSpDjz+od1lYfSSIRZCOueWJChAnHmMn3WQWUNFeMuP2c44oTzOW5PDwLAaCR+C8KFyEAWliKuxaJt5EFJX0ub1vnyPoItDyi9H3/Uskv9ACsIQZcTAH7vGxpBtpVyxRhlk91uRlXhY0HyHMceIY7TmJUvlwU7NzSsgwXXq3Qoae0CcbYT9TjILLsN103OWCkm2bxJTPPjkC5uTEoj3L/JWnitYLuKp7TGKoM3H4r6vqWNZpbn0se+IaTVhb1b9sxy+RQcADR1IbEScyyaXRr3y/kL0uqaGhFKhDm35JcfClLNqryyTV2a8cIeUssPW+eXgLSY+XfSPhhjfn1wcRPIINCkYO4JfxzEkUHiupx/+txs8/vZJlitU6MyTl+9mIJzFBe1eYjG/c6d0NH6fiNXgQvewFlXbecHLRlBaI3EduJ7+4RCaalvjnXpoyjdCLJe7LnsFqIE2sEGeQkQLjZNDN1MY1vYkljHxVXR9f+K99KuNW1GIfxUjuV4MamZORQe/Tzfkn+bgIVi5Tcw18SXHEyfYTyIctKK77VDxSkE+3phqEVW6PdEbXLQ664BNEYo+PIOldqF7aQVMi/QOdb32R6MadQnnZJtkamxeXkoiuk8t7Zl3m8gkurl9a4Hb3/QRrE2hDHQXCb55vDHUq6c6pYm2nx0l2IKA79yiM5OjO9WQcUbJPG9rUvR045PrPxxgD6HCdkXLMhXG6mYExjXmOpQ9bAzdTMDz+YyuFqs7qmwZpM2KAyXzbFfuywwpJJJ5hL7riUBAzHQUVcReW29WErGPdIgd88UoZx0dQyRv7RpPiBV1howsuD9ErTdz9MMrmAfu5otkSaxHt2srRDk0GYOPxnRAjST4oH/yIzCPahbArZsfVPd1ietAYhhPAdZl8UsinZbfmMK3ByhqyGch4Z/5z76433YsHh1MvAi2Wfhom6n23jX4D1rYf+kz53/3LkLpGs3iYi/iseE8/8bi5gmfGtiSHLGPU81zcgB0QDjy8mwr+kop70ZpdLQa/SkixD1hrwQHgPEUixhJ2pCKjTV+rfscDTbaR1hnprul5lWu1bGBx2J2k9p7BIVELAVAI0YkIrVkl82smJZYPvpaD5NKutjQZy8nLNH4aqcUo"
+          }
+        },
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794340880,
+  "id": "BHjzatbZEuPs2roPpLSd6A8",
+  "model": "gemini-3.8-flash",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 1499,
+    "prompt_tokens": 6722,
+    "total_tokens": 8221,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1390
+    },
+    "input_tokens": 6722,
+    "output_tokens": 1499,
+    "cached_prompt_tokens": 0,
+    "cache_write_tokens": 0
+  },
+  "_elice_billing": {
+    "usage": {
+      "input_tokens": 6722,
+      "output_tokens": 1499,
+      "cached_input_tokens": 0,
+      "cache_write_input_tokens": null,
+      "reasoning_output_tokens": 1390,
+      "cache_write_short_tokens": null,
+      "cache_write_long_tokens": null
+    },
+    "cost_usd": "0.01066275",
+    "cost_lower_usd": "0.01066275",
+    "cost_upper_usd": "0.01066275",
+    "cost_status": "confirmed",
+    "provider_model": "gemini-3.8-flash",
+    "canonical_model": "gemini-3.8-flash",
+    "attempt_id": "attempt-4",
+    "accounting_basis": "billing_upper_bound"
+  },
+  "_elice_wire": {
+    "protocol": "chat_completions",
+    "canonical_request_bytes": 27064,
+    "wire_request_bytes": 27030,
+    "reservation_input_bytes": 27064
+  }
+}

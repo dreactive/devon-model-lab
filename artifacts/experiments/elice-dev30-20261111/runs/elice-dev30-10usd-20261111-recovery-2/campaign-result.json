@@ -1,0 +1,170 @@
+{
+  "campaign_id": "dev-30pct-10usd",
+  "run_state": "budget_stopped",
+  "run_error": null,
+  "global_budget": {
+    "amount_usd": "10",
+    "max_attempts": 192,
+    "approval_id": "campaign-a0a91702b404de48ba279a95f8671f1d260f95b1b3afdbf12931a24560ac2b5f-continuation2",
+    "attempts_started": 30,
+    "reserved_usd": "0",
+    "remaining_usd": null,
+    "unknown_attempts": 3,
+    "in_flight_attempts": 0,
+    "halted": true,
+    "halt_reason": "actual_cost_unconfirmed",
+    "transport_integration": "elice_global_guard",
+    "active_amount_usd": "9.80682",
+    "active_max_attempts": 190,
+    "active_attempts_started": 28,
+    "new_unknown_attempts": 1,
+    "new_debited_upper_usd": "0.5304922",
+    "inherited_unknown_hold_usd": "0.19318",
+    "inherited_unknown_attempts": 2,
+    "debited_upper_usd": "0.7236722",
+    "prior_cost_status": "unconfirmed; held at original reservation upper bound",
+    "accounting_basis": "conservative billing upper-bound debits, not confirmed invoice cost"
+  },
+  "jobs": [
+    {
+      "job_id": "gpt-6.1-sol-1",
+      "model_id": "gpt-6.1-sol",
+      "experiment": "A",
+      "cases_root": "cases/question/benchmark-v1",
+      "run_state": "completed",
+      "output_path": "results/gpt-6.1-sol-1.json",
+      "expected_cases": 11,
+      "recorded_cases": 11,
+      "succeeded_cases": 11,
+      "failed_cases": 0
+    },
+    {
+      "job_id": "gpt-6.1-sol-2",
+      "model_id": "gpt-6.1-sol",
+      "experiment": "B",
+      "cases_root": "cases/answer/main-v1",
+      "run_state": "completed",
+      "output_path": "results/gpt-6.1-sol-2.json",
+      "expected_cases": 4,
+      "recorded_cases": 4,
+      "succeeded_cases": 4,
+      "failed_cases": 0
+    },
+    {
+      "job_id": "gpt-6.1-sol-3",
+      "model_id": "gpt-6.1-sol",
+      "experiment": "B",
+      "cases_root": "cases/answer/legacy-na-v1",
+      "run_state": "completed",
+      "output_path": "results/gpt-6.1-sol-3.json",
+      "expected_cases": 1,
+      "recorded_cases": 1,
+      "succeeded_cases": 1,
+      "failed_cases": 0
+    },
+    {
+      "job_id": "gemini-3.8-flash-1",
+      "model_id": "gemini-3.8-flash",
+      "experiment": "A",
+      "cases_root": "cases/question/benchmark-v1",
+      "run_state": "budget_stopped",
+      "output_path": "results/gemini-3.8-flash-1.json",
+      "expected_cases": 11,
+      "recorded_cases": 0,
+      "succeeded_cases": 0,
+      "failed_cases": 0
+    }
+  ],
+  "pending_jobs": 14,
+  "planned_model_case_pairs": 96,
+  "recorded_cases": 16,
+  "succeeded_cases": 16,
+  "failed_cases": 0,
+  "quality_denominator": 0,
+  "quality_evaluation": "diagnostic_only",
+  "review_status": "unreviewed",
+  "confirmed_cost_known_subtotal_usd": "0.3430030",
+  "bounded_cost_attempts": 14,
+  "unconfirmed_attempts": 3,
+  "settled_attempts": 30,
+  "automatic_resume": false,
+  "continuation": {
+    "version": 1,
+    "recovery_phase": 2,
+    "maximum_recovery_phase": 2,
+    "parent_bundle_path": "C:\\Users\\dreac\\Desktop\\kdt\\model-lab\\runs\\elice-dev30-10usd-20261111-continuation-1\\bundle.json",
+    "parent_directory": "C:\\Users\\dreac\\Desktop\\kdt\\model-lab\\runs\\elice-dev30-10usd-20261111-continuation-1",
+    "parent_directories": [
+      "C:\\Users\\dreac\\Desktop\\kdt\\model-lab\\runs\\elice-dev30-10usd-20261111",
+      "C:\\Users\\dreac\\Desktop\\kdt\\model-lab\\runs\\elice-dev30-10usd-20261111-continuation-1"
+    ],
+    "parent_claim_path": "C:\\Users\\dreac\\Desktop\\kdt\\model-lab\\runs\\.campaign-continuation-claims\\dev-30pct-10usd.json",
+    "parent_ledger_path": "C:\\Users\\dreac\\Desktop\\kdt\\model-lab\\runs\\elice-dev30-10usd-20261111-continuation-1\\ledger.json",
+    "parent_result_path": "C:\\Users\\dreac\\Desktop\\kdt\\model-lab\\runs\\elice-dev30-10usd-20261111-continuation-1\\campaign-result.json",
+    "parent_first_result_path": "C:\\Users\\dreac\\Desktop\\kdt\\model-lab\\runs\\elice-dev30-10usd-20261111-continuation-1\\results\\gpt-6.1-sol-1.json",
+    "parent_raw_path": "C:\\Users\\dreac\\Desktop\\kdt\\model-lab\\runs\\elice-dev30-10usd-20261111-continuation-1\\results\\gpt-6.1-sol-1-raw\\response-0001.json",
+    "parent_bundle_sha256": "32d506e5f6c36d1592f969a8f8ecfb4f54da7fead5d83bfd44845acce6a2cf5d",
+    "parent_claim_sha256": "bc74de1a4694847f73aa07c24545b642a746a062a71d34add26ee59df65b97c0",
+    "parent_ledger_sha256": "e993372d373988e02321e235e21db21ca248d1e07f2fd32c1e7908c1dea9d658",
+    "parent_result_sha256": "8d31bcc5bb5150952981047161bd92fb3cecde5ba549762fd9ae849a9e20d39c",
+    "parent_first_result_sha256": "f5b48cd6049766997676d625d330aa319fcea69d59d89d36021b7412845e90da",
+    "parent_raw_sha256": "c19e1c5f719a61fbe774563cfd0e3aa2feebe4d09324c20c3c87fe043b551307",
+    "original_first404": {
+      "version": 1,
+      "parent_bundle_path": "C:\\Users\\dreac\\Desktop\\kdt\\model-lab\\runs\\elice-dev30-10usd-20261111\\bundle.json",
+      "parent_directory": "C:\\Users\\dreac\\Desktop\\kdt\\model-lab\\runs\\elice-dev30-10usd-20261111",
+      "parent_claim_path": "C:\\Users\\dreac\\Desktop\\kdt\\model-lab\\runs\\.campaign-claims\\dev-30pct-10usd.json",
+      "parent_ledger_path": "C:\\Users\\dreac\\Desktop\\kdt\\model-lab\\runs\\elice-dev30-10usd-20261111\\ledger.json",
+      "parent_result_path": "C:\\Users\\dreac\\Desktop\\kdt\\model-lab\\runs\\elice-dev30-10usd-20261111\\campaign-result.json",
+      "parent_first_result_path": "C:\\Users\\dreac\\Desktop\\kdt\\model-lab\\runs\\elice-dev30-10usd-20261111\\results\\gpt-6.1-sol-1.json",
+      "parent_bundle_sha256": "65ac1b5313a0dd2521a1807ce03d5bddb4629c0624ca2480dddf7fe61c168ca2",
+      "parent_claim_sha256": "8c6701db30eab6f65fe7f9325310146349bae44a382520611dc41e9225d79f0c",
+      "parent_ledger_sha256": "4d626c4af5ddbefd35a1db131805e74477037ffcce87eff6e0a5af4b8eed2fb8",
+      "parent_result_sha256": "bdd2da3b8c95b79bc4d05564e548e9afe73e736fca4dc4b2dfeedeb888fd0d86",
+      "parent_first_result_sha256": "e64e630d08e4e719d5e5d4a9f712c96cca23b75dec11851b49973bc8aef4f73f",
+      "inherited_attempts": 1,
+      "inherited_unknown_attempts": 1,
+      "inherited_unknown_hold_usd": "0.09659",
+      "explicit_user_waiver": "skip provider billing lookup only for the first404; retain its full reserved upper bound",
+      "first_case_id": "a-dev-0001",
+      "first_job_id": "gpt-6.1-sol-1",
+      "prior_cost_status": "unconfirmed",
+      "prior_cost_usd": null,
+      "no_unbilled_assumption": true,
+      "job_overrides": {
+        "gpt-6.1-sol-1": {
+          "budget_usd": "1.62216",
+          "max_http_attempts": 22,
+          "lifetime_max_http_attempts": 23
+        },
+        "gpt-6.1-sol-2": {
+          "max_http_attempts": 7
+        }
+      },
+      "maximum_continuations": 1
+    },
+    "inherited_attempts": 2,
+    "inherited_unknown_attempts": 2,
+    "inherited_unknown_hold_usd": "0.19318",
+    "first_case_id": "a-dev-0001",
+    "first_job_id": "gpt-6.1-sol-1",
+    "explicit_user_waiver": "continue within the original USD10/192 scope without provider billing lookup; hold both unknown reservations and apply the observed non-streaming2000 ceiling to all models",
+    "prior_cost_status": "unconfirmed",
+    "prior_cost_usd": null,
+    "no_unbilled_assumption": true,
+    "max_output_tokens_all_models": 2000,
+    "job_overrides": {
+      "gpt-6.1-sol-1": {
+        "budget_usd": "1.52557",
+        "max_http_attempts": 22,
+        "lifetime_max_http_attempts": 24
+      },
+      "gpt-6.1-sol-2": {
+        "max_http_attempts": 6
+      }
+    }
+  },
+  "prior_first_case_retry": true,
+  "historical_unknown_first_case": true,
+  "active_settled_attempts": 28
+}

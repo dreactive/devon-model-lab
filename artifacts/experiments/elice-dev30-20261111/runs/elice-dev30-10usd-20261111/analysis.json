@@ -1,0 +1,1092 @@
+{
+  "run_state": "budget_stopped",
+  "run_error": null,
+  "budget_limit_usd": "10.00",
+  "global_budget": {
+    "amount_usd": "10",
+    "max_attempts": 192,
+    "approval_id": "campaign-a0a91702b404de48ba279a95f8671f1d260f95b1b3afdbf12931a24560ac2b5f",
+    "attempts_started": 1,
+    "reserved_usd": "0",
+    "remaining_usd": null,
+    "unknown_attempts": 1,
+    "in_flight_attempts": 0,
+    "halted": true,
+    "halt_reason": "actual_cost_unconfirmed",
+    "transport_integration": "requires_transport_binding",
+    "debited_upper_usd": "0",
+    "accounting_basis": "conservative billing upper-bound debits, not confirmed invoice cost"
+  },
+  "models": [
+    {
+      "model_id": "gpt-6.1-sol",
+      "planned_cases": 16,
+      "case_statuses": {
+        "interrupted": 1,
+        "not_executed": 15
+      },
+      "executed_cases": 1,
+      "technical_failures": 1,
+      "failure_rate_executed": 1.0,
+      "latency_ms": {
+        "p50": null,
+        "p95": null,
+        "measured_cases": 0
+      },
+      "http_attempts": 1,
+      "unknown_usage_attempts": 1,
+      "cost_status": "unconfirmed",
+      "cost_usd": null,
+      "known_confirmed_subtotal_usd": "0",
+      "cost_lower_known_usd": "0",
+      "cost_upper_usd": null,
+      "budget_debited_upper_known_usd": "0",
+      "bounded_cost_attempts": 0,
+      "tokens": {
+        "input_known_subtotal": 0,
+        "output_known_subtotal": 0,
+        "input_total": null,
+        "output_total": null
+      },
+      "B_draft_diagnostic": {
+        "expected_pairs": 98,
+        "compared_pairs": 0,
+        "unavailable_pairs": 98,
+        "strict_matches": 0,
+        "acceptable_matches": 0,
+        "na_mismatches": 0,
+        "numeric_stage_mae": null,
+        "service_total_absolute_deviation_mean": null,
+        "service_score_interviews": 0,
+        "service_scores": []
+      },
+      "quality_denominator": 0,
+      "review_status": "unreviewed",
+      "A_semantic_judge": "not_run",
+      "cases": [
+        {
+          "model_id": "gpt-6.1-sol",
+          "case_id": "a-dev-0001",
+          "experiment": "A",
+          "corpus": "cases/question/benchmark-v1",
+          "status": "interrupted",
+          "identity_from_sequential_checkpoint": true
+        },
+        {
+          "model_id": "gpt-6.1-sol",
+          "case_id": "a-dev-0004",
+          "experiment": "A",
+          "corpus": "cases/question/benchmark-v1",
+          "status": "not_executed",
+          "identity_from_sequential_checkpoint": false
+        },
+        {
+          "model_id": "gpt-6.1-sol",
+          "case_id": "a-dev-0007",
+          "experiment": "A",
+          "corpus": "cases/question/benchmark-v1",
+          "status": "not_executed",
+          "identity_from_sequential_checkpoint": false
+        },
+        {
+          "model_id": "gpt-6.1-sol",
+          "case_id": "a-dev-0013",
+          "experiment": "A",
+          "corpus": "cases/question/benchmark-v1",
+          "status": "not_executed",
+          "identity_from_sequential_checkpoint": false
+        },
+        {
+          "model_id": "gpt-6.1-sol",
+          "case_id": "a-dev-0014",
+          "experiment": "A",
+          "corpus": "cases/question/benchmark-v1",
+          "status": "not_executed",
+          "identity_from_sequential_checkpoint": false
+        },
+        {
+          "model_id": "gpt-6.1-sol",
+          "case_id": "a-dev-0016",
+          "experiment": "A",
+          "corpus": "cases/question/benchmark-v1",
+          "status": "not_executed",
+          "identity_from_sequential_checkpoint": false
+        },
+        {
+          "model_id": "gpt-6.1-sol",
+          "case_id": "a-dev-0018",
+          "experiment": "A",
+          "corpus": "cases/question/benchmark-v1",
+          "status": "not_executed",
+          "identity_from_sequential_checkpoint": false
+        },
+        {
+          "model_id": "gpt-6.1-sol",
+          "case_id": "a-dev-0020",
+          "experiment": "A",
+          "corpus": "cases/question/benchmark-v1",
+          "status": "not_executed",
+          "identity_from_sequential_checkpoint": false
+        },
+        {
+          "model_id": "gpt-6.1-sol",
+          "case_id": "a-dev-0021",
+          "experiment": "A",
+          "corpus": "cases/question/benchmark-v1",
+          "status": "not_executed",
+          "identity_from_sequential_checkpoint": false
+        },
+        {
+          "model_id": "gpt-6.1-sol",
+          "case_id": "a-dev-0022",
+          "experiment": "A",
+          "corpus": "cases/question/benchmark-v1",
+          "status": "not_executed",
+          "identity_from_sequential_checkpoint": false
+        },
+        {
+          "model_id": "gpt-6.1-sol",
+          "case_id": "a-dev-0025",
+          "experiment": "A",
+          "corpus": "cases/question/benchmark-v1",
+          "status": "not_executed",
+          "identity_from_sequential_checkpoint": false
+        },
+        {
+          "model_id": "gpt-6.1-sol",
+          "case_id": "b-main-02",
+          "experiment": "B",
+          "corpus": "cases/answer/main-v1",
+          "status": "not_executed",
+          "identity_from_sequential_checkpoint": false
+        },
+        {
+          "model_id": "gpt-6.1-sol",
+          "case_id": "b-main-05",
+          "experiment": "B",
+          "corpus": "cases/answer/main-v1",
+          "status": "not_executed",
+          "identity_from_sequential_checkpoint": false
+        },
+        {
+          "model_id": "gpt-6.1-sol",
+          "case_id": "b-main-06",
+          "experiment": "B",
+          "corpus": "cases/answer/main-v1",
+          "status": "not_executed",
+          "identity_from_sequential_checkpoint": false
+        },
+        {
+          "model_id": "gpt-6.1-sol",
+          "case_id": "b-main-08",
+          "experiment": "B",
+          "corpus": "cases/answer/main-v1",
+          "status": "not_executed",
+          "identity_from_sequential_checkpoint": false
+        },
+        {
+          "model_id": "gpt-6.1-sol",
+          "case_id": "b-legacy-na-01",
+          "experiment": "B",
+          "corpus": "cases/answer/legacy-na-v1",
+          "status": "not_executed",
+          "identity_from_sequential_checkpoint": false
+        }
+      ]
+    },
+    {
+      "model_id": "gemini-3.8-flash",
+      "planned_cases": 16,
+      "case_statuses": {
+        "not_executed": 16
+      },
+      "executed_cases": 0,
+      "technical_failures": 0,
+      "failure_rate_executed": null,
+      "latency_ms": {
+        "p50": null,
+        "p95": null,
+        "measured_cases": 0
+      },
+      "http_attempts": 0,
+      "unknown_usage_attempts": 0,
+      "cost_status": "not_executed",
+      "cost_usd": null,
+      "known_confirmed_subtotal_usd": "0",
+      "cost_lower_known_usd": "0",
+      "cost_upper_usd": null,
+      "budget_debited_upper_known_usd": "0",
+      "bounded_cost_attempts": 0,
+      "tokens": {
+        "input_known_subtotal": 0,
+        "output_known_subtotal": 0,
+        "input_total": null,
+        "output_total": null
+      },
+      "B_draft_diagnostic": {
+        "expected_pairs": 98,
+        "compared_pairs": 0,
+        "unavailable_pairs": 98,
+        "strict_matches": 0,
+        "acceptable_matches": 0,
+        "na_mismatches": 0,
+        "numeric_stage_mae": null,
+        "service_total_absolute_deviation_mean": null,
+        "service_score_interviews": 0,
+        "service_scores": []
+      },
+      "quality_denominator": 0,
+      "review_status": "unreviewed",
+      "A_semantic_judge": "not_run",
+      "cases": [
+        {
+          "model_id": "gemini-3.8-flash",
+          "case_id": "a-dev-0001",
+          "experiment": "A",
+          "corpus": "cases/question/benchmark-v1",
+          "status": "not_executed",
+          "identity_from_sequential_checkpoint": false
+        },
+        {
+          "model_id": "gemini-3.8-flash",
+          "case_id": "a-dev-0004",
+          "experiment": "A",
+          "corpus": "cases/question/benchmark-v1",
+          "status": "not_executed",
+          "identity_from_sequential_checkpoint": false
+        },
+        {
+          "model_id": "gemini-3.8-flash",
+          "case_id": "a-dev-0007",
+          "experiment": "A",
+          "corpus": "cases/question/benchmark-v1",
+          "status": "not_executed",
+          "identity_from_sequential_checkpoint": false
+        },
+        {
+          "model_id": "gemini-3.8-flash",
+          "case_id": "a-dev-0013",
+          "experiment": "A",
+          "corpus": "cases/question/benchmark-v1",
+          "status": "not_executed",
+          "identity_from_sequential_checkpoint": false
+        },
+        {
+          "model_id": "gemini-3.8-flash",
+          "case_id": "a-dev-0014",
+          "experiment": "A",
+          "corpus": "cases/question/benchmark-v1",
+          "status": "not_executed",
+          "identity_from_sequential_checkpoint": false
+        },
+        {
+          "model_id": "gemini-3.8-flash",
+          "case_id": "a-dev-0016",
+          "experiment": "A",
+          "corpus": "cases/question/benchmark-v1",
+          "status": "not_executed",
+          "identity_from_sequential_checkpoint": false
+        },
+        {
+          "model_id": "gemini-3.8-flash",
+          "case_id": "a-dev-0018",
+          "experiment": "A",
+          "corpus": "cases/question/benchmark-v1",
+          "status": "not_executed",
+          "identity_from_sequential_checkpoint": false
+        },
+        {
+          "model_id": "gemini-3.8-flash",
+          "case_id": "a-dev-0020",
+          "experiment": "A",
+          "corpus": "cases/question/benchmark-v1",
+          "status": "not_executed",
+          "identity_from_sequential_checkpoint": false
+        },
+        {
+          "model_id": "gemini-3.8-flash",
+          "case_id": "a-dev-0021",
+          "experiment": "A",
+          "corpus": "cases/question/benchmark-v1",
+          "status": "not_executed",
+          "identity_from_sequential_checkpoint": false
+        },
+        {
+          "model_id": "gemini-3.8-flash",
+          "case_id": "a-dev-0022",
+          "experiment": "A",
+          "corpus": "cases/question/benchmark-v1",
+          "status": "not_executed",
+          "identity_from_sequential_checkpoint": false
+        },
+        {
+          "model_id": "gemini-3.8-flash",
+          "case_id": "a-dev-0025",
+          "experiment": "A",
+          "corpus": "cases/question/benchmark-v1",
+          "status": "not_executed",
+          "identity_from_sequential_checkpoint": false
+        },
+        {
+          "model_id": "gemini-3.8-flash",
+          "case_id": "b-main-02",
+          "experiment": "B",
+          "corpus": "cases/answer/main-v1",
+          "status": "not_executed",
+          "identity_from_sequential_checkpoint": false
+        },
+        {
+          "model_id": "gemini-3.8-flash",
+          "case_id": "b-main-05",
+          "experiment": "B",
+          "corpus": "cases/answer/main-v1",
+          "status": "not_executed",
+          "identity_from_sequential_checkpoint": false
+        },
+        {
+          "model_id": "gemini-3.8-flash",
+          "case_id": "b-main-06",
+          "experiment": "B",
+          "corpus": "cases/answer/main-v1",
+          "status": "not_executed",
+          "identity_from_sequential_checkpoint": false
+        },
+        {
+          "model_id": "gemini-3.8-flash",
+          "case_id": "b-main-08",
+          "experiment": "B",
+          "corpus": "cases/answer/main-v1",
+          "status": "not_executed",
+          "identity_from_sequential_checkpoint": false
+        },
+        {
+          "model_id": "gemini-3.8-flash",
+          "case_id": "b-legacy-na-01",
+          "experiment": "B",
+          "corpus": "cases/answer/legacy-na-v1",
+          "status": "not_executed",
+          "identity_from_sequential_checkpoint": false
+        }
+      ]
+    },
+    {
+      "model_id": "gemini-4-argon",
+      "planned_cases": 16,
+      "case_statuses": {
+        "not_executed": 16
+      },
+      "executed_cases": 0,
+      "technical_failures": 0,
+      "failure_rate_executed": null,
+      "latency_ms": {
+        "p50": null,
+        "p95": null,
+        "measured_cases": 0
+      },
+      "http_attempts": 0,
+      "unknown_usage_attempts": 0,
+      "cost_status": "not_executed",
+      "cost_usd": null,
+      "known_confirmed_subtotal_usd": "0",
+      "cost_lower_known_usd": "0",
+      "cost_upper_usd": null,
+      "budget_debited_upper_known_usd": "0",
+      "bounded_cost_attempts": 0,
+      "tokens": {
+        "input_known_subtotal": 0,
+        "output_known_subtotal": 0,
+        "input_total": null,
+        "output_total": null
+      },
+      "B_draft_diagnostic": {
+        "expected_pairs": 98,
+        "compared_pairs": 0,
+        "unavailable_pairs": 98,
+        "strict_matches": 0,
+        "acceptable_matches": 0,
+        "na_mismatches": 0,
+        "numeric_stage_mae": null,
+        "service_total_absolute_deviation_mean": null,
+        "service_score_interviews": 0,
+        "service_scores": []
+      },
+      "quality_denominator": 0,
+      "review_status": "unreviewed",
+      "A_semantic_judge": "not_run",
+      "cases": [
+        {
+          "model_id": "gemini-4-argon",
+          "case_id": "a-dev-0001",
+          "experiment": "A",
+          "corpus": "cases/question/benchmark-v1",
+          "status": "not_executed",
+          "identity_from_sequential_checkpoint": false
+        },
+        {
+          "model_id": "gemini-4-argon",
+          "case_id": "a-dev-0004",
+          "experiment": "A",
+          "corpus": "cases/question/benchmark-v1",
+          "status": "not_executed",
+          "identity_from_sequential_checkpoint": false
+        },
+        {
+          "model_id": "gemini-4-argon",
+          "case_id": "a-dev-0007",
+          "experiment": "A",
+          "corpus": "cases/question/benchmark-v1",
+          "status": "not_executed",
+          "identity_from_sequential_checkpoint": false
+        },
+        {
+          "model_id": "gemini-4-argon",
+          "case_id": "a-dev-0013",
+          "experiment": "A",
+          "corpus": "cases/question/benchmark-v1",
+          "status": "not_executed",
+          "identity_from_sequential_checkpoint": false
+        },
+        {
+          "model_id": "gemini-4-argon",
+          "case_id": "a-dev-0014",
+          "experiment": "A",
+          "corpus": "cases/question/benchmark-v1",
+          "status": "not_executed",
+          "identity_from_sequential_checkpoint": false
+        },
+        {
+          "model_id": "gemini-4-argon",
+          "case_id": "a-dev-0016",
+          "experiment": "A",
+          "corpus": "cases/question/benchmark-v1",
+          "status": "not_executed",
+          "identity_from_sequential_checkpoint": false
+        },
+        {
+          "model_id": "gemini-4-argon",
+          "case_id": "a-dev-0018",
+          "experiment": "A",
+          "corpus": "cases/question/benchmark-v1",
+          "status": "not_executed",
+          "identity_from_sequential_checkpoint": false
+        },
+        {
+          "model_id": "gemini-4-argon",
+          "case_id": "a-dev-0020",
+          "experiment": "A",
+          "corpus": "cases/question/benchmark-v1",
+          "status": "not_executed",
+          "identity_from_sequential_checkpoint": false
+        },
+        {
+          "model_id": "gemini-4-argon",
+          "case_id": "a-dev-0021",
+          "experiment": "A",
+          "corpus": "cases/question/benchmark-v1",
+          "status": "not_executed",
+          "identity_from_sequential_checkpoint": false
+        },
+        {
+          "model_id": "gemini-4-argon",
+          "case_id": "a-dev-0022",
+          "experiment": "A",
+          "corpus": "cases/question/benchmark-v1",
+          "status": "not_executed",
+          "identity_from_sequential_checkpoint": false
+        },
+        {
+          "model_id": "gemini-4-argon",
+          "case_id": "a-dev-0025",
+          "experiment": "A",
+          "corpus": "cases/question/benchmark-v1",
+          "status": "not_executed",
+          "identity_from_sequential_checkpoint": false
+        },
+        {
+          "model_id": "gemini-4-argon",
+          "case_id": "b-main-02",
+          "experiment": "B",
+          "corpus": "cases/answer/main-v1",
+          "status": "not_executed",
+          "identity_from_sequential_checkpoint": false
+        },
+        {
+          "model_id": "gemini-4-argon",
+          "case_id": "b-main-05",
+          "experiment": "B",
+          "corpus": "cases/answer/main-v1",
+          "status": "not_executed",
+          "identity_from_sequential_checkpoint": false
+        },
+        {
+          "model_id": "gemini-4-argon",
+          "case_id": "b-main-06",
+          "experiment": "B",
+          "corpus": "cases/answer/main-v1",
+          "status": "not_executed",
+          "identity_from_sequential_checkpoint": false
+        },
+        {
+          "model_id": "gemini-4-argon",
+          "case_id": "b-main-08",
+          "experiment": "B",
+          "corpus": "cases/answer/main-v1",
+          "status": "not_executed",
+          "identity_from_sequential_checkpoint": false
+        },
+        {
+          "model_id": "gemini-4-argon",
+          "case_id": "b-legacy-na-01",
+          "experiment": "B",
+          "corpus": "cases/answer/legacy-na-v1",
+          "status": "not_executed",
+          "identity_from_sequential_checkpoint": false
+        }
+      ]
+    },
+    {
+      "model_id": "claude-haiku-5-5",
+      "planned_cases": 16,
+      "case_statuses": {
+        "not_executed": 16
+      },
+      "executed_cases": 0,
+      "technical_failures": 0,
+      "failure_rate_executed": null,
+      "latency_ms": {
+        "p50": null,
+        "p95": null,
+        "measured_cases": 0
+      },
+      "http_attempts": 0,
+      "unknown_usage_attempts": 0,
+      "cost_status": "not_executed",
+      "cost_usd": null,
+      "known_confirmed_subtotal_usd": "0",
+      "cost_lower_known_usd": "0",
+      "cost_upper_usd": null,
+      "budget_debited_upper_known_usd": "0",
+      "bounded_cost_attempts": 0,
+      "tokens": {
+        "input_known_subtotal": 0,
+        "output_known_subtotal": 0,
+        "input_total": null,
+        "output_total": null
+      },
+      "B_draft_diagnostic": {
+        "expected_pairs": 98,
+        "compared_pairs": 0,
+        "unavailable_pairs": 98,
+        "strict_matches": 0,
+        "acceptable_matches": 0,
+        "na_mismatches": 0,
+        "numeric_stage_mae": null,
+        "service_total_absolute_deviation_mean": null,
+        "service_score_interviews": 0,
+        "service_scores": []
+      },
+      "quality_denominator": 0,
+      "review_status": "unreviewed",
+      "A_semantic_judge": "not_run",
+      "cases": [
+        {
+          "model_id": "claude-haiku-5-5",
+          "case_id": "a-dev-0001",
+          "experiment": "A",
+          "corpus": "cases/question/benchmark-v1",
+          "status": "not_executed",
+          "identity_from_sequential_checkpoint": false
+        },
+        {
+          "model_id": "claude-haiku-5-5",
+          "case_id": "a-dev-0004",
+          "experiment": "A",
+          "corpus": "cases/question/benchmark-v1",
+          "status": "not_executed",
+          "identity_from_sequential_checkpoint": false
+        },
+        {
+          "model_id": "claude-haiku-5-5",
+          "case_id": "a-dev-0007",
+          "experiment": "A",
+          "corpus": "cases/question/benchmark-v1",
+          "status": "not_executed",
+          "identity_from_sequential_checkpoint": false
+        },
+        {
+          "model_id": "claude-haiku-5-5",
+          "case_id": "a-dev-0013",
+          "experiment": "A",
+          "corpus": "cases/question/benchmark-v1",
+          "status": "not_executed",
+          "identity_from_sequential_checkpoint": false
+        },
+        {
+          "model_id": "claude-haiku-5-5",
+          "case_id": "a-dev-0014",
+          "experiment": "A",
+          "corpus": "cases/question/benchmark-v1",
+          "status": "not_executed",
+          "identity_from_sequential_checkpoint": false
+        },
+        {
+          "model_id": "claude-haiku-5-5",
+          "case_id": "a-dev-0016",
+          "experiment": "A",
+          "corpus": "cases/question/benchmark-v1",
+          "status": "not_executed",
+          "identity_from_sequential_checkpoint": false
+        },
+        {
+          "model_id": "claude-haiku-5-5",
+          "case_id": "a-dev-0018",
+          "experiment": "A",
+          "corpus": "cases/question/benchmark-v1",
+          "status": "not_executed",
+          "identity_from_sequential_checkpoint": false
+        },
+        {
+          "model_id": "claude-haiku-5-5",
+          "case_id": "a-dev-0020",
+          "experiment": "A",
+          "corpus": "cases/question/benchmark-v1",
+          "status": "not_executed",
+          "identity_from_sequential_checkpoint": false
+        },
+        {
+          "model_id": "claude-haiku-5-5",
+          "case_id": "a-dev-0021",
+          "experiment": "A",
+          "corpus": "cases/question/benchmark-v1",
+          "status": "not_executed",
+          "identity_from_sequential_checkpoint": false
+        },
+        {
+          "model_id": "claude-haiku-5-5",
+          "case_id": "a-dev-0022",
+          "experiment": "A",
+          "corpus": "cases/question/benchmark-v1",
+          "status": "not_executed",
+          "identity_from_sequential_checkpoint": false
+        },
+        {
+          "model_id": "claude-haiku-5-5",
+          "case_id": "a-dev-0025",
+          "experiment": "A",
+          "corpus": "cases/question/benchmark-v1",
+          "status": "not_executed",
+          "identity_from_sequential_checkpoint": false
+        },
+        {
+          "model_id": "claude-haiku-5-5",
+          "case_id": "b-main-02",
+          "experiment": "B",
+          "corpus": "cases/answer/main-v1",
+          "status": "not_executed",
+          "identity_from_sequential_checkpoint": false
+        },
+        {
+          "model_id": "claude-haiku-5-5",
+          "case_id": "b-main-05",
+          "experiment": "B",
+          "corpus": "cases/answer/main-v1",
+          "status": "not_executed",
+          "identity_from_sequential_checkpoint": false
+        },
+        {
+          "model_id": "claude-haiku-5-5",
+          "case_id": "b-main-06",
+          "experiment": "B",
+          "corpus": "cases/answer/main-v1",
+          "status": "not_executed",
+          "identity_from_sequential_checkpoint": false
+        },
+        {
+          "model_id": "claude-haiku-5-5",
+          "case_id": "b-main-08",
+          "experiment": "B",
+          "corpus": "cases/answer/main-v1",
+          "status": "not_executed",
+          "identity_from_sequential_checkpoint": false
+        },
+        {
+          "model_id": "claude-haiku-5-5",
+          "case_id": "b-legacy-na-01",
+          "experiment": "B",
+          "corpus": "cases/answer/legacy-na-v1",
+          "status": "not_executed",
+          "identity_from_sequential_checkpoint": false
+        }
+      ]
+    },
+    {
+      "model_id": "claude-sonnet-5-5",
+      "planned_cases": 16,
+      "case_statuses": {
+        "not_executed": 16
+      },
+      "executed_cases": 0,
+      "technical_failures": 0,
+      "failure_rate_executed": null,
+      "latency_ms": {
+        "p50": null,
+        "p95": null,
+        "measured_cases": 0
+      },
+      "http_attempts": 0,
+      "unknown_usage_attempts": 0,
+      "cost_status": "not_executed",
+      "cost_usd": null,
+      "known_confirmed_subtotal_usd": "0",
+      "cost_lower_known_usd": "0",
+      "cost_upper_usd": null,
+      "budget_debited_upper_known_usd": "0",
+      "bounded_cost_attempts": 0,
+      "tokens": {
+        "input_known_subtotal": 0,
+        "output_known_subtotal": 0,
+        "input_total": null,
+        "output_total": null
+      },
+      "B_draft_diagnostic": {
+        "expected_pairs": 98,
+        "compared_pairs": 0,
+        "unavailable_pairs": 98,
+        "strict_matches": 0,
+        "acceptable_matches": 0,
+        "na_mismatches": 0,
+        "numeric_stage_mae": null,
+        "service_total_absolute_deviation_mean": null,
+        "service_score_interviews": 0,
+        "service_scores": []
+      },
+      "quality_denominator": 0,
+      "review_status": "unreviewed",
+      "A_semantic_judge": "not_run",
+      "cases": [
+        {
+          "model_id": "claude-sonnet-5-5",
+          "case_id": "a-dev-0001",
+          "experiment": "A",
+          "corpus": "cases/question/benchmark-v1",
+          "status": "not_executed",
+          "identity_from_sequential_checkpoint": false
+        },
+        {
+          "model_id": "claude-sonnet-5-5",
+          "case_id": "a-dev-0004",
+          "experiment": "A",
+          "corpus": "cases/question/benchmark-v1",
+          "status": "not_executed",
+          "identity_from_sequential_checkpoint": false
+        },
+        {
+          "model_id": "claude-sonnet-5-5",
+          "case_id": "a-dev-0007",
+          "experiment": "A",
+          "corpus": "cases/question/benchmark-v1",
+          "status": "not_executed",
+          "identity_from_sequential_checkpoint": false
+        },
+        {
+          "model_id": "claude-sonnet-5-5",
+          "case_id": "a-dev-0013",
+          "experiment": "A",
+          "corpus": "cases/question/benchmark-v1",
+          "status": "not_executed",
+          "identity_from_sequential_checkpoint": false
+        },
+        {
+          "model_id": "claude-sonnet-5-5",
+          "case_id": "a-dev-0014",
+          "experiment": "A",
+          "corpus": "cases/question/benchmark-v1",
+          "status": "not_executed",
+          "identity_from_sequential_checkpoint": false
+        },
+        {
+          "model_id": "claude-sonnet-5-5",
+          "case_id": "a-dev-0016",
+          "experiment": "A",
+          "corpus": "cases/question/benchmark-v1",
+          "status": "not_executed",
+          "identity_from_sequential_checkpoint": false
+        },
+        {
+          "model_id": "claude-sonnet-5-5",
+          "case_id": "a-dev-0018",
+          "experiment": "A",
+          "corpus": "cases/question/benchmark-v1",
+          "status": "not_executed",
+          "identity_from_sequential_checkpoint": false
+        },
+        {
+          "model_id": "claude-sonnet-5-5",
+          "case_id": "a-dev-0020",
+          "experiment": "A",
+          "corpus": "cases/question/benchmark-v1",
+          "status": "not_executed",
+          "identity_from_sequential_checkpoint": false
+        },
+        {
+          "model_id": "claude-sonnet-5-5",
+          "case_id": "a-dev-0021",
+          "experiment": "A",
+          "corpus": "cases/question/benchmark-v1",
+          "status": "not_executed",
+          "identity_from_sequential_checkpoint": false
+        },
+        {
+          "model_id": "claude-sonnet-5-5",
+          "case_id": "a-dev-0022",
+          "experiment": "A",
+          "corpus": "cases/question/benchmark-v1",
+          "status": "not_executed",
+          "identity_from_sequential_checkpoint": false
+        },
+        {
+          "model_id": "claude-sonnet-5-5",
+          "case_id": "a-dev-0025",
+          "experiment": "A",
+          "corpus": "cases/question/benchmark-v1",
+          "status": "not_executed",
+          "identity_from_sequential_checkpoint": false
+        },
+        {
+          "model_id": "claude-sonnet-5-5",
+          "case_id": "b-main-02",
+          "experiment": "B",
+          "corpus": "cases/answer/main-v1",
+          "status": "not_executed",
+          "identity_from_sequential_checkpoint": false
+        },
+        {
+          "model_id": "claude-sonnet-5-5",
+          "case_id": "b-main-05",
+          "experiment": "B",
+          "corpus": "cases/answer/main-v1",
+          "status": "not_executed",
+          "identity_from_sequential_checkpoint": false
+        },
+        {
+          "model_id": "claude-sonnet-5-5",
+          "case_id": "b-main-06",
+          "experiment": "B",
+          "corpus": "cases/answer/main-v1",
+          "status": "not_executed",
+          "identity_from_sequential_checkpoint": false
+        },
+        {
+          "model_id": "claude-sonnet-5-5",
+          "case_id": "b-main-08",
+          "experiment": "B",
+          "corpus": "cases/answer/main-v1",
+          "status": "not_executed",
+          "identity_from_sequential_checkpoint": false
+        },
+        {
+          "model_id": "claude-sonnet-5-5",
+          "case_id": "b-legacy-na-01",
+          "experiment": "B",
+          "corpus": "cases/answer/legacy-na-v1",
+          "status": "not_executed",
+          "identity_from_sequential_checkpoint": false
+        }
+      ]
+    },
+    {
+      "model_id": "gpt-6-luna",
+      "planned_cases": 16,
+      "case_statuses": {
+        "not_executed": 16
+      },
+      "executed_cases": 0,
+      "technical_failures": 0,
+      "failure_rate_executed": null,
+      "latency_ms": {
+        "p50": null,
+        "p95": null,
+        "measured_cases": 0
+      },
+      "http_attempts": 0,
+      "unknown_usage_attempts": 0,
+      "cost_status": "not_executed",
+      "cost_usd": null,
+      "known_confirmed_subtotal_usd": "0",
+      "cost_lower_known_usd": "0",
+      "cost_upper_usd": null,
+      "budget_debited_upper_known_usd": "0",
+      "bounded_cost_attempts": 0,
+      "tokens": {
+        "input_known_subtotal": 0,
+        "output_known_subtotal": 0,
+        "input_total": null,
+        "output_total": null
+      },
+      "B_draft_diagnostic": {
+        "expected_pairs": 98,
+        "compared_pairs": 0,
+        "unavailable_pairs": 98,
+        "strict_matches": 0,
+        "acceptable_matches": 0,
+        "na_mismatches": 0,
+        "numeric_stage_mae": null,
+        "service_total_absolute_deviation_mean": null,
+        "service_score_interviews": 0,
+        "service_scores": []
+      },
+      "quality_denominator": 0,
+      "review_status": "unreviewed",
+      "A_semantic_judge": "not_run",
+      "cases": [
+        {
+          "model_id": "gpt-6-luna",
+          "case_id": "a-dev-0001",
+          "experiment": "A",
+          "corpus": "cases/question/benchmark-v1",
+          "status": "not_executed",
+          "identity_from_sequential_checkpoint": false
+        },
+        {
+          "model_id": "gpt-6-luna",
+          "case_id": "a-dev-0004",
+          "experiment": "A",
+          "corpus": "cases/question/benchmark-v1",
+          "status": "not_executed",
+          "identity_from_sequential_checkpoint": false
+        },
+        {
+          "model_id": "gpt-6-luna",
+          "case_id": "a-dev-0007",
+          "experiment": "A",
+          "corpus": "cases/question/benchmark-v1",
+          "status": "not_executed",
+          "identity_from_sequential_checkpoint": false
+        },
+        {
+          "model_id": "gpt-6-luna",
+          "case_id": "a-dev-0013",
+          "experiment": "A",
+          "corpus": "cases/question/benchmark-v1",
+          "status": "not_executed",
+          "identity_from_sequential_checkpoint": false
+        },
+        {
+          "model_id": "gpt-6-luna",
+          "case_id": "a-dev-0014",
+          "experiment": "A",
+          "corpus": "cases/question/benchmark-v1",
+          "status": "not_executed",
+          "identity_from_sequential_checkpoint": false
+        },
+        {
+          "model_id": "gpt-6-luna",
+          "case_id": "a-dev-0016",
+          "experiment": "A",
+          "corpus": "cases/question/benchmark-v1",
+          "status": "not_executed",
+          "identity_from_sequential_checkpoint": false
+        },
+        {
+          "model_id": "gpt-6-luna",
+          "case_id": "a-dev-0018",
+          "experiment": "A",
+          "corpus": "cases/question/benchmark-v1",
+          "status": "not_executed",
+          "identity_from_sequential_checkpoint": false
+        },
+        {
+          "model_id": "gpt-6-luna",
+          "case_id": "a-dev-0020",
+          "experiment": "A",
+          "corpus": "cases/question/benchmark-v1",
+          "status": "not_executed",
+          "identity_from_sequential_checkpoint": false
+        },
+        {
+          "model_id": "gpt-6-luna",
+          "case_id": "a-dev-0021",
+          "experiment": "A",
+          "corpus": "cases/question/benchmark-v1",
+          "status": "not_executed",
+          "identity_from_sequential_checkpoint": false
+        },
+        {
+          "model_id": "gpt-6-luna",
+          "case_id": "a-dev-0022",
+          "experiment": "A",
+          "corpus": "cases/question/benchmark-v1",
+          "status": "not_executed",
+          "identity_from_sequential_checkpoint": false
+        },
+        {
+          "model_id": "gpt-6-luna",
+          "case_id": "a-dev-0025",
+          "experiment": "A",
+          "corpus": "cases/question/benchmark-v1",
+          "status": "not_executed",
+          "identity_from_sequential_checkpoint": false
+        },
+        {
+          "model_id": "gpt-6-luna",
+          "case_id": "b-main-02",
+          "experiment": "B",
+          "corpus": "cases/answer/main-v1",
+          "status": "not_executed",
+          "identity_from_sequential_checkpoint": false
+        },
+        {
+          "model_id": "gpt-6-luna",
+          "case_id": "b-main-05",
+          "experiment": "B",
+          "corpus": "cases/answer/main-v1",
+          "status": "not_executed",
+          "identity_from_sequential_checkpoint": false
+        },
+        {
+          "model_id": "gpt-6-luna",
+          "case_id": "b-main-06",
+          "experiment": "B",
+          "corpus": "cases/answer/main-v1",
+          "status": "not_executed",
+          "identity_from_sequential_checkpoint": false
+        },
+        {
+          "model_id": "gpt-6-luna",
+          "case_id": "b-main-08",
+          "experiment": "B",
+          "corpus": "cases/answer/main-v1",
+          "status": "not_executed",
+          "identity_from_sequential_checkpoint": false
+        },
+        {
+          "model_id": "gpt-6-luna",
+          "case_id": "b-legacy-na-01",
+          "experiment": "B",
+          "corpus": "cases/answer/legacy-na-v1",
+          "status": "not_executed",
+          "identity_from_sequential_checkpoint": false
+        }
+      ]
+    }
+  ],
+  "planned_model_case_pairs": 96,
+  "case_statuses": {
+    "interrupted": 1,
+    "not_executed": 95
+  },
+  "exact_cost_total_usd": null,
+  "known_upper_debit_total_usd": "0",
+  "unknown_attempts": 1,
+  "review_status": "unreviewed",
+  "quality_evaluation": "diagnostic_only",
+  "semantic_judge_calls": 0,
+  "limitations": [
+    "Draft gold is unreviewed; agreement is not approved accuracy.",
+    "A semantic quality was not scored by a separate judge.",
+    "Failed and unexecuted cases/pairs remain visible; missing usage is not zero cost.",
+    "Budget debit is an upper bound based on supplied tariffs, not a confirmed invoice.",
+    "B latency is the sum of attempt latencies; A latency is service wall time.",
+    "Any interrupted case identity inferred from sequential checkpoints is explicitly marked."
+  ]
+}

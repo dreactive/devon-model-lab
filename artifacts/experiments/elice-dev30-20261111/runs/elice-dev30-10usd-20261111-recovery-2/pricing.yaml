@@ -1,0 +1,73 @@
+{
+  "version": 1,
+  "currency": "USD",
+  "unit": 1000000,
+  "models": {
+    "gpt-6.1-sol": {
+      "input_usd_per_million": "2",
+      "output_usd_per_million": "10",
+      "cached_input_usd_per_million": null,
+      "reasoning_output_usd_per_million": null,
+      "source_url": "https://kakaotechcampus.elice.io/cloud/mlapi/model-libraries",
+      "checked_at": "2026-11-11",
+      "price_version": "user-supplied-html-sha256-b192518d816ae1568fe75eb28ba70091bc90d5e76caae4940cfe47352f35e095",
+      "source_path": "C:\\Users\\dreac\\.codex\\attachments\\e31e678c-2597-49bf-b01d-0f234bfdb547\\붙여넣은 텍스트.txt",
+      "billing_basis": "Elice billing bounds in elice_billing.py; not base-only invoice accounting"
+    },
+    "gemini-3.8-flash": {
+      "input_usd_per_million": ".75",
+      "output_usd_per_million": "3.75",
+      "cached_input_usd_per_million": null,
+      "reasoning_output_usd_per_million": null,
+      "source_url": "https://kakaotechcampus.elice.io/cloud/mlapi/model-libraries",
+      "checked_at": "2026-11-11",
+      "price_version": "user-supplied-html-sha256-b192518d816ae1568fe75eb28ba70091bc90d5e76caae4940cfe47352f35e095",
+      "source_path": "C:\\Users\\dreac\\.codex\\attachments\\e31e678c-2597-49bf-b01d-0f234bfdb547\\붙여넣은 텍스트.txt",
+      "billing_basis": "Elice billing bounds in elice_billing.py; not base-only invoice accounting"
+    },
+    "gemini-4-argon": {
+      "input_usd_per_million": "2",
+      "output_usd_per_million": "10",
+      "cached_input_usd_per_million": null,
+      "reasoning_output_usd_per_million": null,
+      "source_url": "https://kakaotechcampus.elice.io/cloud/mlapi/model-libraries",
+      "checked_at": "2026-11-11",
+      "price_version": "user-supplied-html-sha256-b192518d816ae1568fe75eb28ba70091bc90d5e76caae4940cfe47352f35e095",
+      "source_path": "C:\\Users\\dreac\\.codex\\attachments\\e31e678c-2597-49bf-b01d-0f234bfdb547\\붙여넣은 텍스트.txt",
+      "billing_basis": "Elice billing bounds in elice_billing.py; not base-only invoice accounting"
+    },
+    "claude-haiku-5-5": {
+      "input_usd_per_million": ".10",
+      "output_usd_per_million": ".50",
+      "cached_input_usd_per_million": null,
+      "reasoning_output_usd_per_million": null,
+      "source_url": "https://kakaotechcampus.elice.io/cloud/mlapi/model-libraries",
+      "checked_at": "2026-11-11",
+      "price_version": "user-supplied-html-sha256-b192518d816ae1568fe75eb28ba70091bc90d5e76caae4940cfe47352f35e095",
+      "source_path": "C:\\Users\\dreac\\.codex\\attachments\\e31e678c-2597-49bf-b01d-0f234bfdb547\\붙여넣은 텍스트.txt",
+      "billing_basis": "Elice billing bounds in elice_billing.py; not base-only invoice accounting"
+    },
+    "claude-sonnet-5-5": {
+      "input_usd_per_million": "2",
+      "output_usd_per_million": "10",
+      "cached_input_usd_per_million": null,
+      "reasoning_output_usd_per_million": null,
+      "source_url": "https://kakaotechcampus.elice.io/cloud/mlapi/model-libraries",
+      "checked_at": "2026-11-11",
+      "price_version": "user-supplied-html-sha256-b192518d816ae1568fe75eb28ba70091bc90d5e76caae4940cfe47352f35e095",
+      "source_path": "C:\\Users\\dreac\\.codex\\attachments\\e31e678c-2597-49bf-b01d-0f234bfdb547\\붙여넣은 텍스트.txt",
+      "billing_basis": "Elice billing bounds in elice_billing.py; not base-only invoice accounting"
+    },
+    "gpt-6-luna": {
+      "input_usd_per_million": ".10",
+      "output_usd_per_million": ".50",
+      "cached_input_usd_per_million": null,
+      "reasoning_output_usd_per_million": null,
+      "source_url": "https://kakaotechcampus.elice.io/cloud/mlapi/model-libraries",
+      "checked_at": "2026-11-11",
+      "price_version": "user-supplied-html-sha256-b192518d816ae1568fe75eb28ba70091bc90d5e76caae4940cfe47352f35e095",
+      "source_path": "C:\\Users\\dreac\\.codex\\attachments\\e31e678c-2597-49bf-b01d-0f234bfdb547\\붙여넣은 텍스트.txt",
+      "billing_basis": "Elice billing bounds in elice_billing.py; not base-only invoice accounting"
+    }
+  }
+}

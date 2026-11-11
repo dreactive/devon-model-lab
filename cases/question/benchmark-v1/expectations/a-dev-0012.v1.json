@@ -1,0 +1,41 @@
+{
+  "case_id": "a-dev-0012",
+  "version": 1,
+  "allowed": [
+    {
+      "id": "a-purpose",
+      "purpose": "직전 동시 배정 설명에서 누락된 대안 tradeoff만 원래 목적 안에서 보완한다."
+    }
+  ],
+  "forbidden": [
+    {
+      "id": "f-premise",
+      "reason": "원래 묻지 않은 배포 전략을 답변 누락으로 만들어 요구한다.",
+      "type": "invented_missing_requirement"
+    }
+  ],
+  "grader_controls": [
+    {
+      "kind": "allowed",
+      "output": "{\"decision\":{\"next_step\":\"ask\",\"intent\":\"프로젝트 답변에 근거한 다음 질문\",\"persona\":\"tech_lead\",\"target\":\"직전 처리 방식과 대안의 비교 조건 보완\",\"tool_requests\":[],\"reason_summary\":\"현재 자료와 직전 답변을 바탕으로 질문한다.\"},\"question\":{\"persona\":\"tech_lead\",\"text\":\"문의 키 중복 등록을 거절한 이유는 들었습니다. 같은 키의 후속 등록으로 콜백을 교체하는 대안과 비교하면 어떤 사용자 영향 때문에 현재 방식을 택하시겠어요?\",\"topic_code\":\"project_discussion\",\"question_contract\":{\"purpose\":\"직전 처리 방식과 대안의 비교 조건 보완\",\"required_points\":[{\"key\":\"comparison\",\"description\":\"질문한 대안과 비교할 조건\"}],\"assumptions\":[],\"basis_refs\":[{\"kind\":\"answer_turn\",\"id\":\"e5781843-bada-5d01-af47-89e3627c9dd7\"},{\"kind\":\"evidence\",\"id\":\"15994a55-9bd3-5cc1-9a47-7f1f639a7a51\"}],\"evaluation_scope\":\"직전 처리 방식과 대안의 비교 조건 보완\",\"evaluation_keys\":[\"technical_reasoning\",\"communication\"]},\"evidence_refs\":[\"15994a55-9bd3-5cc1-9a47-7f1f639a7a51\"],\"jd_requirement_ids\":[],\"question_type\":\"follow_up\",\"parent_turn_id\":\"e5781843-bada-5d01-af47-89e3627c9dd7\"}}"
+    },
+    {
+      "kind": "forbidden",
+      "output": "{\"decision\":{\"next_step\":\"ask\",\"intent\":\"프로젝트 답변에 근거한 다음 질문\",\"persona\":\"tech_lead\",\"target\":\"직전 처리 방식과 대안의 비교 조건 보완\",\"tool_requests\":[],\"reason_summary\":\"현재 자료와 직전 답변을 바탕으로 질문한다.\"},\"question\":{\"persona\":\"tech_lead\",\"text\":\"배포 전략 설명이 빠졌습니다. 무중단 배포와 서버 교체 절차까지 보완해 주세요.\",\"topic_code\":\"project_discussion\",\"question_contract\":{\"purpose\":\"직전 처리 방식과 대안의 비교 조건 보완\",\"required_points\":[{\"key\":\"comparison\",\"description\":\"질문한 대안과 비교할 조건\"}],\"assumptions\":[],\"basis_refs\":[{\"kind\":\"answer_turn\",\"id\":\"e5781843-bada-5d01-af47-89e3627c9dd7\"},{\"kind\":\"evidence\",\"id\":\"15994a55-9bd3-5cc1-9a47-7f1f639a7a51\"}],\"evaluation_scope\":\"직전 처리 방식과 대안의 비교 조건 보완\",\"evaluation_keys\":[\"technical_reasoning\",\"communication\"]},\"evidence_refs\":[\"15994a55-9bd3-5cc1-9a47-7f1f639a7a51\"],\"jd_requirement_ids\":[],\"question_type\":\"follow_up\",\"parent_turn_id\":\"e5781843-bada-5d01-af47-89e3627c9dd7\"}}"
+    },
+    {
+      "kind": "ambiguous",
+      "output": "{\"decision\":{\"next_step\":\"ask\",\"intent\":\"프로젝트 답변에 근거한 다음 질문\",\"persona\":\"tech_lead\",\"target\":\"직전 처리 방식과 대안의 비교 조건 보완\",\"tool_requests\":[],\"reason_summary\":\"현재 자료와 직전 답변을 바탕으로 질문한다.\"},\"question\":{\"persona\":\"tech_lead\",\"text\":\"다른 등록 방식은 어떤가요?\",\"topic_code\":\"project_discussion\",\"question_contract\":{\"purpose\":\"직전 처리 방식과 대안의 비교 조건 보완\",\"required_points\":[{\"key\":\"comparison\",\"description\":\"질문한 대안과 비교할 조건\"}],\"assumptions\":[],\"basis_refs\":[{\"kind\":\"answer_turn\",\"id\":\"e5781843-bada-5d01-af47-89e3627c9dd7\"},{\"kind\":\"evidence\",\"id\":\"15994a55-9bd3-5cc1-9a47-7f1f639a7a51\"}],\"evaluation_scope\":\"직전 처리 방식과 대안의 비교 조건 보완\",\"evaluation_keys\":[\"technical_reasoning\",\"communication\"]},\"evidence_refs\":[\"15994a55-9bd3-5cc1-9a47-7f1f639a7a51\"],\"jd_requirement_ids\":[],\"question_type\":\"follow_up\",\"parent_turn_id\":\"e5781843-bada-5d01-af47-89e3627c9dd7\"}}"
+    }
+  ],
+  "review": {
+    "status": "unreviewed",
+    "author": "Codex",
+    "reviewer": null,
+    "reviewed_at": null,
+    "pending_notes": [
+      "Draft semantic expectations and all three controls require independent human review.",
+      "Ambiguous control is a calibration boundary; no Judge or model output was used to author gold."
+    ]
+  }
+}

@@ -1,0 +1,266 @@
+{
+  "case_id": "a-dev-0025",
+  "version": 1,
+  "control": {
+    "kind": "question",
+    "split": "dev",
+    "source_group_id": "a-dev-billing",
+    "synthetic": true
+  },
+  "payload": {
+    "service_task": "director",
+    "service_input": {
+      "context": {
+        "interview_id": "6cbe6f7a-205d-5561-8234-c67853a5d74d",
+        "current_turn_id": "c8aaacc7-29fb-5d72-9729-ac9a375c03e8",
+        "turn_no": 9,
+        "total_turns": 9,
+        "persona_counts": [
+          {
+            "persona": "tech_lead",
+            "count": 6
+          },
+          {
+            "persona": "hr_manager",
+            "count": 1
+          },
+          {
+            "persona": "domain_lead",
+            "count": 1
+          }
+        ],
+        "allowed_personas": [
+          "domain_lead"
+        ],
+        "jd_requirements": [
+          {
+            "id": "2f8f01ac-00d9-5c58-b3de-2b2556b2ac88",
+            "text": "실패한 요청을 추적하고 지연·재시도 여부가 고객에게 주는 영향을 설명한다.",
+            "category": "responsibility",
+            "source_field": "responsibilities",
+            "tech_tags": []
+          }
+        ],
+        "repositories": [
+          {
+            "repository_id": "e5cfa4a4-66c5-5341-bced-ff039abb111e",
+            "git_ref": "5aca2ca3d5784bacb85c27b934d3362f07348f44",
+            "primary": true,
+            "analysis_refs": [],
+            "limitations": []
+          }
+        ],
+        "history": [
+          {
+            "turn_id": "b7c5400e-6a9e-5186-9e44-e71bf14322a5",
+            "persona": "hr_manager",
+            "question": "프로젝트에서 본인이 맡은 부분과 협업 경계를 소개해 주세요.",
+            "answer": "저는 환불 접수, 처리 중, 완료 상태 전환과 안내 문구를 맡았습니다. 세금 계산은 동료 작업이고 결제 원장 내부는 공동으로 인터페이스만 확인했습니다.",
+            "analysis_ref": null
+          },
+          {
+            "turn_id": "d36dc984-e50c-5c3b-bf2a-6b6d3203995d",
+            "persona": "tech_lead",
+            "question": "반환장에서 입력이 결과 상태로 바뀌는 주요 흐름을 설명해 주세요.",
+            "answer": "환불 신청은 청구 ID와 요청 ID로 키를 만들고 접수 상태를 남깁니다. 처리기는 결과에 따라 상태를 갱신하며 화면은 완료와 실패를 구분합니다. 제공된 연결 함수는 작업에 쓸 연결을 빌리고 반환합니다.",
+            "analysis_ref": null
+          },
+          {
+            "turn_id": "f74f851a-3e27-5eb5-a4e7-a3b9aaae844e",
+            "persona": "tech_lead",
+            "question": "주요 처리 방식을 고른 이유와 다른 방식과 비교할 조건을 설명해 주세요.",
+            "answer": "같은 요청을 다시 추적하려고 청구 ID와 요청 ID를 함께 키로 사용했습니다. 화면의 접수 상태와 실제 환불 완료를 분리해 실패한 요청을 완료로 표시하지 않도록 했습니다.",
+            "analysis_ref": null
+          },
+          {
+            "turn_id": "1610ad59-b029-572a-999b-015618adae21",
+            "persona": "tech_lead",
+            "question": "결과 상태가 기대와 달라진다고 가정하면 어떤 관측으로 원인을 나누고 확인하시겠어요?",
+            "answer": "가정상 처리 중 상태가 오래 남으면 상태 변경 시각과 처리 응답을 먼저 확인하겠습니다. 외부 응답 지연인지 내부 상태 저장 실패인지 나눈 뒤 재시도가 중복 환불을 만들지 않는지 담당 경계를 확인하겠습니다.",
+            "analysis_ref": null
+          },
+          {
+            "turn_id": "3a8fe128-e5e8-507b-ad6b-d087ebac6349",
+            "persona": "tech_lead",
+            "question": "주어진 JD 책임 중 이 프로젝트의 본인 경험과 연결할 부분과 한계를 설명해 주세요.",
+            "answer": "실패 추적 책임과 연결할 수 있는 경험은 환불 상태와 안내를 구분한 것입니다. 금융 업계 경력이나 손실을 줄였다는 성과는 없으며 실제 정책 담당자와 확인할 범위를 설명하겠습니다.",
+            "analysis_ref": null
+          },
+          {
+            "turn_id": "0453286b-b788-5173-b5dd-9119189d2106",
+            "persona": "tech_lead",
+            "question": "실패 여부를 판정하는 관측 기준을 왜 골랐으며 다른 기준과 어떤 차이가 있나요?",
+            "answer": "가정상 처리 중 상태가 오래 남으면 상태 변경 시각과 처리 응답을 먼저 확인하겠습니다. 외부 응답 지연인지 내부 상태 저장 실패인지 나눈 뒤 재시도가 중복 환불을 만들지 않는지 담당 경계를 확인하겠습니다.",
+            "analysis_ref": null
+          },
+          {
+            "turn_id": "bfcd77e5-ec12-5244-9b91-0d9c07f04e87",
+            "persona": "tech_lead",
+            "question": "처리 경계를 현재처럼 나눈 이유와 다른 경계로 나눌 때의 비용을 설명해 주세요.",
+            "answer": "같은 요청을 다시 추적하려고 청구 ID와 요청 ID를 함께 키로 사용했습니다. 화면의 접수 상태와 실제 환불 완료를 분리해 실패한 요청을 완료로 표시하지 않도록 했습니다. 경계를 넓히면 확인할 상태가 늘어나므로 책임 단위를 구분했습니다.",
+            "analysis_ref": null
+          },
+          {
+            "turn_id": "c8aaacc7-29fb-5d72-9729-ac9a375c03e8",
+            "persona": "domain_lead",
+            "question": "처리 상태가 늦게 반영되는 상황을 사용자에게 어떤 순서와 표현으로 설명하시겠어요?",
+            "answer": "고객에게 완료로 오해시키지 않도록 처리 중임을 먼저 알리고 다음 확인 시각을 제시하겠습니다. 아직 확인되지 않은 지연 원인이나 환불 성공을 단정하지 않겠습니다.",
+            "analysis_ref": null
+          }
+        ],
+        "current_question_contract": {
+          "purpose": "사용자 관점의 명료한 상태 설명",
+          "required_points": [
+            {
+              "key": "message",
+              "description": "사용자가 판단할 핵심 사실"
+            },
+            {
+              "key": "order",
+              "description": "혼동을 줄이는 설명 순서"
+            }
+          ],
+          "assumptions": [],
+          "basis_refs": [
+            {
+              "kind": "evidence",
+              "id": "220f1987-4303-5377-a074-6afabb6df089"
+            }
+          ],
+          "evaluation_scope": "사용자 관점의 명료한 상태 설명",
+          "evaluation_keys": [
+            "communication"
+          ]
+        },
+        "evidence": [
+          {
+            "evidence_id": "220f1987-4303-5377-a074-6afabb6df089",
+            "repository_id": "e5cfa4a4-66c5-5341-bced-ff039abb111e",
+            "git_ref": "5aca2ca3d5784bacb85c27b934d3362f07348f44",
+            "source_kind": "code",
+            "path": "refund/connect.py",
+            "metadata_key": null,
+            "content": "from contextlib import contextmanager\n\n@contextmanager\ndef refund_connection(pool):\n    connection = pool.acquire()\n    try:\n        yield connection\n    finally:\n        pool.release(connection)\n\ndef refund_key(invoice, request):\n    return str(invoice) + ':' + str(request)\n",
+            "tool_name": null,
+            "summary": "합성 프로젝트 원문 발췌. 개인 작성 사실이나 운영 성과를 증명하지 않는다.",
+            "start_line": 1,
+            "end_line": 12
+          },
+          {
+            "evidence_id": "6fb999f2-784b-5f97-b9e2-8bf28e1de18a",
+            "repository_id": "e5cfa4a4-66c5-5341-bced-ff039abb111e",
+            "git_ref": "5aca2ca3d5784bacb85c27b934d3362f07348f44",
+            "source_kind": "document",
+            "path": "PROJECT_NOTES.md",
+            "metadata_key": null,
+            "content": "반환장은 환불 신청 상태를 추적하는 합성 프로젝트다. 제공된 소스는 연결 획득·반환과 환불 키 생성 발췌뿐이다. 트랜잭션 실행부, 유일 키 저장, 세금 계산, 운영 손실 수치는 포함하지 않는다. 환불 상태 담당자와 세금 담당자는 서로 다르다.",
+            "tool_name": null,
+            "summary": null,
+            "start_line": 1,
+            "end_line": 1
+          }
+        ],
+        "domain_frames": [],
+        "limits": {
+          "remaining_calls": 2,
+          "remaining_replans": 0,
+          "policy_version": "interview-v1"
+        },
+        "evaluation_targets": [
+          {
+            "persona": "domain_lead",
+            "keys": [
+              "communication"
+            ]
+          }
+        ],
+        "supplemental_sources": [],
+        "external_searches": [],
+        "supplemental_limitations": []
+      },
+      "question": {
+        "persona": "domain_lead",
+        "text": "처리 상태가 늦게 반영되는 상황을 사용자에게 어떤 순서와 표현으로 설명하시겠어요?",
+        "topic_code": "project_discussion",
+        "question_contract": {
+          "purpose": "사용자 관점의 명료한 상태 설명",
+          "required_points": [
+            {
+              "key": "message",
+              "description": "사용자가 판단할 핵심 사실"
+            },
+            {
+              "key": "order",
+              "description": "혼동을 줄이는 설명 순서"
+            }
+          ],
+          "assumptions": [],
+          "basis_refs": [
+            {
+              "kind": "evidence",
+              "id": "220f1987-4303-5377-a074-6afabb6df089"
+            }
+          ],
+          "evaluation_scope": "사용자 관점의 명료한 상태 설명",
+          "evaluation_keys": [
+            "communication"
+          ]
+        },
+        "evidence_refs": [
+          "220f1987-4303-5377-a074-6afabb6df089"
+        ],
+        "jd_requirement_ids": [],
+        "question_type": "main",
+        "parent_turn_id": null
+      },
+      "answer_text": "고객에게 완료로 오해시키지 않도록 처리 중임을 먼저 알리고 다음 확인 시각을 제시하겠습니다. 아직 확인되지 않은 지연 원인이나 환불 성공을 단정하지 않겠습니다.",
+      "answer_analysis": {
+        "evaluation_status": "evaluated",
+        "sufficiency": "sufficient",
+        "covered_points": [
+          {
+            "key": "message",
+            "answer_quotes": [
+              "고객에게 완료로 오해시키지 않도록 처리 중임을 먼저 알리고 다음 확인 시각을 제시하겠습니다. 아직 확인되지 않은 지연 원인이나 환불 성공을 단정하지 않겠습니다."
+            ]
+          },
+          {
+            "key": "order",
+            "answer_quotes": [
+              "고객에게 완료로 오해시키지 않도록 처리 중임을 먼저 알리고 다음 확인 시각을 제시하겠습니다. 아직 확인되지 않은 지연 원인이나 환불 성공을 단정하지 않겠습니다."
+            ]
+          }
+        ],
+        "missing_points": [],
+        "technical_assessment": {
+          "explanation": "답변이 설명한 범위와 제공 원문을 구분해 관찰했다.",
+          "answer_quotes": [
+            "고객에게 완료로 오해시키지 않도록 처리 중임을 먼저 알리고 다음 확인 시각을 제시하겠습니다. 아직 확인되지 않은 지연 원인이나 환불 성공을 단정하지 않겠습니다."
+          ],
+          "evidence_refs": [],
+          "limitations": []
+        },
+        "contribution_scope": {
+          "scope": "unknown",
+          "answer_quotes": [
+            "고객에게 완료로 오해시키지 않도록 처리 중임을 먼저 알리고 다음 확인 시각을 제시하겠습니다. 아직 확인되지 않은 지연 원인이나 환불 성공을 단정하지 않겠습니다."
+          ]
+        },
+        "claim_checks": [],
+        "needs_verification": false,
+        "verification_requests": [],
+        "limitations": [],
+        "external_queries": []
+      },
+      "allowed_locations": [
+        [
+          "e5cfa4a4-66c5-5341-bced-ff039abb111e",
+          "5aca2ca3d5784bacb85c27b934d3362f07348f44",
+          "refund/connect.py"
+        ]
+      ],
+      "reference_texts": [],
+      "tool_results": []
+    }
+  }
+}

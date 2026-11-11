@@ -1,0 +1,2 @@
+# Preserve the exact bytes fingerprinted by FILE_MANIFEST.json on all platforms.
+* -text

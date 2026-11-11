@@ -1,0 +1,41 @@
+{
+  "case_id": "a-holdout-0006",
+  "version": 1,
+  "allowed": [
+    {
+      "id": "a-purpose",
+      "purpose": "집계 창 흐름과 지연 도착 허용 설명을 인정하고 입력 증가 시 창·재집계 선택 조건으로 발전한다."
+    }
+  ],
+  "forbidden": [
+    {
+      "id": "f-premise",
+      "reason": "충분히 설명된 집계 흐름을 미답으로 반복한다.",
+      "type": "repeated_satisfied_purpose"
+    }
+  ],
+  "grader_controls": [
+    {
+      "kind": "allowed",
+      "output": "{\"decision\":{\"next_step\":\"ask\",\"intent\":\"프로젝트 답변에 근거한 다음 질문\",\"persona\":\"tech_lead\",\"target\":\"처리 방식의 조건별 선택 기준 확인\",\"tool_requests\":[],\"reason_summary\":\"현재 자료와 직전 답변을 바탕으로 질문한다.\"},\"question\":{\"persona\":\"tech_lead\",\"text\":\"창 경계와 늦은 관측 재집계 흐름은 들었습니다. 입력량이 늘어난다면 지연 허용 시간과 재집계 비용 사이에서 어떤 기준으로 방식을 선택하시겠어요?\",\"topic_code\":\"project_discussion\",\"question_contract\":{\"purpose\":\"처리 방식의 조건별 선택 기준 확인\",\"required_points\":[{\"key\":\"response\",\"description\":\"질문한 처리 선택 또는 역할 설명\"},{\"key\":\"basis\",\"description\":\"설명을 뒷받침하는 판단 근거\"}],\"assumptions\":[],\"basis_refs\":[{\"kind\":\"answer_turn\",\"id\":\"f45c30f2-3115-578e-8992-a336edded48c\"},{\"kind\":\"evidence\",\"id\":\"c5dd272a-d54c-5862-954e-c1330a93d549\"}],\"evaluation_scope\":\"처리 방식의 조건별 선택 기준 확인\",\"evaluation_keys\":[\"technical_reasoning\",\"communication\"]},\"evidence_refs\":[\"c5dd272a-d54c-5862-954e-c1330a93d549\"],\"jd_requirement_ids\":[],\"question_type\":\"main\",\"parent_turn_id\":null}}"
+    },
+    {
+      "kind": "forbidden",
+      "output": "{\"decision\":{\"next_step\":\"ask\",\"intent\":\"프로젝트 답변에 근거한 다음 질문\",\"persona\":\"tech_lead\",\"target\":\"처리 방식의 조건별 선택 기준 확인\",\"tool_requests\":[],\"reason_summary\":\"현재 자료와 직전 답변을 바탕으로 질문한다.\"},\"question\":{\"persona\":\"tech_lead\",\"text\":\"집계 창에서 어떤 값을 더하는지 아직 답하지 않았습니다. 같은 집계 흐름을 처음부터 다시 설명해 주세요.\",\"topic_code\":\"project_discussion\",\"question_contract\":{\"purpose\":\"처리 방식의 조건별 선택 기준 확인\",\"required_points\":[{\"key\":\"response\",\"description\":\"질문한 처리 선택 또는 역할 설명\"},{\"key\":\"basis\",\"description\":\"설명을 뒷받침하는 판단 근거\"}],\"assumptions\":[],\"basis_refs\":[{\"kind\":\"answer_turn\",\"id\":\"f45c30f2-3115-578e-8992-a336edded48c\"},{\"kind\":\"evidence\",\"id\":\"c5dd272a-d54c-5862-954e-c1330a93d549\"}],\"evaluation_scope\":\"처리 방식의 조건별 선택 기준 확인\",\"evaluation_keys\":[\"technical_reasoning\",\"communication\"]},\"evidence_refs\":[\"c5dd272a-d54c-5862-954e-c1330a93d549\"],\"jd_requirement_ids\":[],\"question_type\":\"main\",\"parent_turn_id\":null}}"
+    },
+    {
+      "kind": "ambiguous",
+      "output": "{\"decision\":{\"next_step\":\"ask\",\"intent\":\"프로젝트 답변에 근거한 다음 질문\",\"persona\":\"tech_lead\",\"target\":\"처리 방식의 조건별 선택 기준 확인\",\"tool_requests\":[],\"reason_summary\":\"현재 자료와 직전 답변을 바탕으로 질문한다.\"},\"question\":{\"persona\":\"tech_lead\",\"text\":\"집계 창을 조금 더 자세히 설명해 주세요.\",\"topic_code\":\"project_discussion\",\"question_contract\":{\"purpose\":\"처리 방식의 조건별 선택 기준 확인\",\"required_points\":[{\"key\":\"response\",\"description\":\"질문한 처리 선택 또는 역할 설명\"},{\"key\":\"basis\",\"description\":\"설명을 뒷받침하는 판단 근거\"}],\"assumptions\":[],\"basis_refs\":[{\"kind\":\"answer_turn\",\"id\":\"f45c30f2-3115-578e-8992-a336edded48c\"},{\"kind\":\"evidence\",\"id\":\"c5dd272a-d54c-5862-954e-c1330a93d549\"}],\"evaluation_scope\":\"처리 방식의 조건별 선택 기준 확인\",\"evaluation_keys\":[\"technical_reasoning\",\"communication\"]},\"evidence_refs\":[\"c5dd272a-d54c-5862-954e-c1330a93d549\"],\"jd_requirement_ids\":[],\"question_type\":\"main\",\"parent_turn_id\":null}}"
+    }
+  ],
+  "review": {
+    "status": "unreviewed",
+    "author": "Codex",
+    "reviewer": null,
+    "reviewed_at": null,
+    "pending_notes": [
+      "Draft semantic expectations and all three controls require independent human review.",
+      "Ambiguous control is a calibration boundary; no Judge or model output was used to author gold."
+    ]
+  }
+}

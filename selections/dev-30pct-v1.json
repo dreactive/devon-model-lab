@@ -1,0 +1,103 @@
+{
+  "version": 1,
+  "selection_id": "dev-30pct-v1",
+  "reference_population": {
+    "A": 35,
+    "B": 17,
+    "total": 52
+  },
+  "split": "dev",
+  "model_ids": [
+    "gpt-6.1-sol",
+    "gemini-3.8-flash",
+    "gemini-4-argon",
+    "claude-haiku-5-5",
+    "claude-sonnet-5-5",
+    "gpt-6-luna"
+  ],
+  "review_status": "unreviewed",
+  "datasets": [
+    {
+      "experiment": "A",
+      "cases_root": "cases/question/benchmark-v1",
+      "cases": [
+        {
+          "case_id": "a-dev-0001",
+          "version": 1
+        },
+        {
+          "case_id": "a-dev-0004",
+          "version": 1
+        },
+        {
+          "case_id": "a-dev-0007",
+          "version": 1
+        },
+        {
+          "case_id": "a-dev-0013",
+          "version": 1
+        },
+        {
+          "case_id": "a-dev-0014",
+          "version": 1
+        },
+        {
+          "case_id": "a-dev-0016",
+          "version": 1
+        },
+        {
+          "case_id": "a-dev-0018",
+          "version": 1
+        },
+        {
+          "case_id": "a-dev-0020",
+          "version": 1
+        },
+        {
+          "case_id": "a-dev-0021",
+          "version": 1
+        },
+        {
+          "case_id": "a-dev-0022",
+          "version": 1
+        },
+        {
+          "case_id": "a-dev-0025",
+          "version": 1
+        }
+      ]
+    },
+    {
+      "experiment": "B",
+      "cases_root": "cases/answer/main-v1",
+      "cases": [
+        {
+          "case_id": "b-main-02",
+          "version": 1
+        },
+        {
+          "case_id": "b-main-05",
+          "version": 1
+        },
+        {
+          "case_id": "b-main-06",
+          "version": 1
+        },
+        {
+          "case_id": "b-main-08",
+          "version": 1
+        }
+      ]
+    },
+    {
+      "experiment": "B",
+      "cases_root": "cases/answer/legacy-na-v1",
+      "cases": [
+        {
+          "case_id": "b-legacy-na-01",
+          "version": 1
+        }
+      ]
+    }
+  ]
+}

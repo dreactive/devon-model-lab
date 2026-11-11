@@ -1,0 +1,55 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\"plan_valid\":true,\"context_valid\":true,\"wording_valid\":true,\"contract_matches\":true,\"safe_alternative\":true,\"reason_summary\":\"직전 답변의 실제 발언(환불 상태와 원장 기록을 묶어 처리 및 실패 시 전체 rollback)과 제공된 refund/connect.py 원문(연결 획득·반환만 존재하고 트랜잭션 실행부는 미포함)의 범위를 명확히 구분하여, 배정된 technical_reasoning과 communication 평가 목적에 맞게 선택 기준과 대안을 중립적인 follow_up 질문으로 확인하고 있습니다.\"}",
+        "extra_content": {
+          "google": {
+            "thought_signature": "EmMKYQFpFH0TcuLA3SWaDs8fi78IVNIxWIDgyrT8pnm94aAUUAT13x0fYFB7DDKlPAzoRwOj6uzz+LrwAga7Bzx8p4T3ND/do49kFSChKA+p20xwgIis7GghJf9Gv0Wa5fmg6V0="
+          }
+        },
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794341273,
+  "id": "kXnzau7bAs3Z9tMP8e-uqQI",
+  "model": "gemini-4-argon",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 142,
+    "prompt_tokens": 6912,
+    "total_tokens": 7054,
+    "input_tokens": 6912,
+    "output_tokens": 142,
+    "cached_prompt_tokens": 0,
+    "cache_write_tokens": 0
+  },
+  "_elice_billing": {
+    "usage": {
+      "input_tokens": 6912,
+      "output_tokens": 142,
+      "cached_input_tokens": 0,
+      "cache_write_input_tokens": null,
+      "reasoning_output_tokens": null,
+      "cache_write_short_tokens": null,
+      "cache_write_long_tokens": null
+    },
+    "cost_usd": "0.015244",
+    "cost_lower_usd": "0.015244",
+    "cost_upper_usd": "0.015244",
+    "cost_status": "confirmed",
+    "provider_model": "gemini-4-argon",
+    "canonical_model": "gemini-4-argon",
+    "attempt_id": "attempt-39",
+    "accounting_basis": "billing_upper_bound"
+  },
+  "_elice_wire": {
+    "protocol": "chat_completions",
+    "canonical_request_bytes": 28256,
+    "wire_request_bytes": 28222,
+    "reservation_input_bytes": 28256
+  }
+}

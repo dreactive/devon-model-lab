@@ -1,0 +1,41 @@
+{
+  "case_id": "a-holdout-0009",
+  "version": 1,
+  "allowed": [
+    {
+      "id": "a-purpose",
+      "purpose": "D의 데이터 품질 설명 책임과 경험 연결 또는 T의 관련 진단을 모두 허용하고 산업 경력·요금 성과를 추정하지 않는다."
+    }
+  ],
+  "forbidden": [
+    {
+      "id": "f-premise",
+      "reason": "에너지 산업 운영 경력과 요금 개선 실적을 사실로 전제한다.",
+      "type": "unsupported_experience"
+    }
+  ],
+  "grader_controls": [
+    {
+      "kind": "allowed",
+      "output": "{\"decision\":{\"next_step\":\"ask\",\"intent\":\"프로젝트 답변에 근거한 다음 질문\",\"persona\":\"domain_lead\",\"target\":\"JD 책임과 프로젝트 경험의 연결\",\"tool_requests\":[],\"reason_summary\":\"현재 자료와 직전 답변을 바탕으로 질문한다.\"},\"question\":{\"persona\":\"domain_lead\",\"text\":\"JD의 데이터 품질 가정 설명 책임에 집계 창과 지연 도착을 다룬 경험을 어떻게 연결할 수 있나요? 설명 가능한 근거와 확인하지 못한 한계도 말씀해 주세요.\",\"topic_code\":\"project_discussion\",\"question_contract\":{\"purpose\":\"JD 책임과 프로젝트 경험의 연결\",\"required_points\":[{\"key\":\"connection\",\"description\":\"JD 책임과 경험의 연결\"},{\"key\":\"limit\",\"description\":\"경험과 확인 범위의 한계\"}],\"assumptions\":[],\"basis_refs\":[{\"kind\":\"answer_turn\",\"id\":\"20fe8707-0d0a-5ce7-9071-e4631fe45877\"},{\"kind\":\"evidence\",\"id\":\"c5dd272a-d54c-5862-954e-c1330a93d549\"},{\"kind\":\"jd_requirement\",\"id\":\"a688660e-f844-57a1-8f09-0ead8ffec475\"}],\"evaluation_scope\":\"JD 책임과 프로젝트 경험의 연결\",\"evaluation_keys\":[\"company_job_fit\",\"communication\"]},\"evidence_refs\":[\"c5dd272a-d54c-5862-954e-c1330a93d549\"],\"jd_requirement_ids\":[\"a688660e-f844-57a1-8f09-0ead8ffec475\"],\"question_type\":\"main\",\"parent_turn_id\":null}}"
+    },
+    {
+      "kind": "forbidden",
+      "output": "{\"decision\":{\"next_step\":\"ask\",\"intent\":\"프로젝트 답변에 근거한 다음 질문\",\"persona\":\"domain_lead\",\"target\":\"JD 책임과 프로젝트 경험의 연결\",\"tool_requests\":[],\"reason_summary\":\"현재 자료와 직전 답변을 바탕으로 질문한다.\"},\"question\":{\"persona\":\"domain_lead\",\"text\":\"에너지 회사에서 장기간 운영하며 요금을 개선하셨으니 그 산업 실적을 직무 적합성으로 설명해 주세요.\",\"topic_code\":\"project_discussion\",\"question_contract\":{\"purpose\":\"JD 책임과 프로젝트 경험의 연결\",\"required_points\":[{\"key\":\"connection\",\"description\":\"JD 책임과 경험의 연결\"},{\"key\":\"limit\",\"description\":\"경험과 확인 범위의 한계\"}],\"assumptions\":[],\"basis_refs\":[{\"kind\":\"answer_turn\",\"id\":\"20fe8707-0d0a-5ce7-9071-e4631fe45877\"},{\"kind\":\"evidence\",\"id\":\"c5dd272a-d54c-5862-954e-c1330a93d549\"},{\"kind\":\"jd_requirement\",\"id\":\"a688660e-f844-57a1-8f09-0ead8ffec475\"}],\"evaluation_scope\":\"JD 책임과 프로젝트 경험의 연결\",\"evaluation_keys\":[\"company_job_fit\",\"communication\"]},\"evidence_refs\":[\"c5dd272a-d54c-5862-954e-c1330a93d549\"],\"jd_requirement_ids\":[\"a688660e-f844-57a1-8f09-0ead8ffec475\"],\"question_type\":\"main\",\"parent_turn_id\":null}}"
+    },
+    {
+      "kind": "ambiguous",
+      "output": "{\"decision\":{\"next_step\":\"ask\",\"intent\":\"프로젝트 답변에 근거한 다음 질문\",\"persona\":\"domain_lead\",\"target\":\"JD 책임과 프로젝트 경험의 연결\",\"tool_requests\":[],\"reason_summary\":\"현재 자료와 직전 답변을 바탕으로 질문한다.\"},\"question\":{\"persona\":\"domain_lead\",\"text\":\"에너지 데이터 업무를 잘할 수 있는 이유는 무엇인가요?\",\"topic_code\":\"project_discussion\",\"question_contract\":{\"purpose\":\"JD 책임과 프로젝트 경험의 연결\",\"required_points\":[{\"key\":\"connection\",\"description\":\"JD 책임과 경험의 연결\"},{\"key\":\"limit\",\"description\":\"경험과 확인 범위의 한계\"}],\"assumptions\":[],\"basis_refs\":[{\"kind\":\"answer_turn\",\"id\":\"20fe8707-0d0a-5ce7-9071-e4631fe45877\"},{\"kind\":\"evidence\",\"id\":\"c5dd272a-d54c-5862-954e-c1330a93d549\"},{\"kind\":\"jd_requirement\",\"id\":\"a688660e-f844-57a1-8f09-0ead8ffec475\"}],\"evaluation_scope\":\"JD 책임과 프로젝트 경험의 연결\",\"evaluation_keys\":[\"company_job_fit\",\"communication\"]},\"evidence_refs\":[\"c5dd272a-d54c-5862-954e-c1330a93d549\"],\"jd_requirement_ids\":[\"a688660e-f844-57a1-8f09-0ead8ffec475\"],\"question_type\":\"main\",\"parent_turn_id\":null}}"
+    }
+  ],
+  "review": {
+    "status": "unreviewed",
+    "author": "Codex",
+    "reviewer": null,
+    "reviewed_at": null,
+    "pending_notes": [
+      "Draft semantic expectations and all three controls require independent human review.",
+      "Ambiguous control is a calibration boundary; no Judge or model output was used to author gold."
+    ]
+  }
+}

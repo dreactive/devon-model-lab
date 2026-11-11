@@ -1,0 +1,37 @@
+{
+  "error": {
+    "message": "response_format is not supported by claude-sonnet-5-5: its provider does not accept a forced tool choice, and structured output is built on one. Use tool_choice \"auto\" and ask for the shape in the prompt, or pick a model that supports it.",
+    "type": "invalid_request_error",
+    "param": null,
+    "code": "400"
+  },
+  "_elice_diagnostic": {
+    "kind": "http_error",
+    "http_status": 400,
+    "model": "claude-sonnet-5-5",
+    "attempt_id": "attempt-55",
+    "captured_body_bytes": 321,
+    "body_sha256": "fb7625948202c138d9b85890210687437066d1fcc9aabafc5a090c2a51afaf26",
+    "hash_scope": "captured_body_bytes",
+    "body_truncated": false,
+    "body_kind": "json",
+    "error_code": "response_usage_unconfirmed"
+  },
+  "_elice_billing": {
+    "usage": null,
+    "cost_usd": null,
+    "cost_lower_usd": null,
+    "cost_upper_usd": null,
+    "cost_status": "unconfirmed",
+    "canonical_model": "claude-sonnet-5-5",
+    "provider_model": null,
+    "attempt_id": "attempt-55",
+    "accounting_basis": "billing_upper_bound"
+  },
+  "_elice_wire": {
+    "protocol": "chat_completions",
+    "canonical_request_bytes": 22258,
+    "wire_request_bytes": 22104,
+    "reservation_input_bytes": 22258
+  }
+}

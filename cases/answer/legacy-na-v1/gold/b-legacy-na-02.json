@@ -1,0 +1,199 @@
+[
+  {
+    "turn_id": "1",
+    "key": "contribution_clarity",
+    "level": 4,
+    "rationale": "시설 점검 기록: '저는 체크리스트 초안 저장과 revision 조회 API를 단독 작성했습니다. 사진 업로드는 동료가, 승인 권한 정책은 다른 동료가 맡았습니다. 승인본이 가리킬 revision 규칙은 함께 합의했고'라는 이 턴 답변에서 단독 작업, 팀원 작업과 공동 합의 경계를 모두 구분한다.",
+    "rubric_quote": "협업 지점과 단독 기여를 명확히 구분해 설명한다."
+  },
+  {
+    "turn_id": "1",
+    "key": "communication",
+    "level": 4,
+    "rationale": "'저는 체크리스트 초안 저장과 revision 조회 API를 단독 작성했습니다. 사진 업로드는 동료가, 승인 권한 정책은 다른 동료가 맡았습니다. 승인본이 가리킬 '라는 이 턴의 표현은 선택·핵심 구분을 먼저 말하고 이유나 구체 사례를 분리해 설명한다. 기술 내용의 단계와 별도로 문장 구성을 판정한다.",
+    "rubric_quote": "핵심을 먼저 제시하고 근거를 명확히 구조화해 설명한다."
+  },
+  {
+    "turn_id": "2",
+    "key": "project_understanding",
+    "level": 2,
+    "rationale": "시설 점검 기록: '시설별 체크리스트와 사진을 기록하는 도구입니다. 초안을 저장하고 승인한다는 기능은 알지만 사진 저장소와 승인 기록의 연결은 자세히 모르겠습니다.'라는 이 턴 답변에서 기능은 말하나 구성요소 간 연결은 피상적이다.",
+    "rubric_quote": "핵심 기능은 설명하나 구조·흐름 설명이 피상적이거나 일부 부정확하다."
+  },
+  {
+    "turn_id": "2",
+    "key": "technical_reasoning",
+    "level": "not_applicable",
+    "rationale": "질문은 프로젝트 목적과 핵심 구조 및 흐름을 설명한다.라는 범위다. technical_reasoning의 별도 설명을 요청하지 않았으므로 답변의 부족함을 0으로 만들지 않고 이 후보 key를 NA로 둔다."
+  },
+  {
+    "turn_id": "2",
+    "key": "problem_solving",
+    "level": "not_applicable",
+    "rationale": "질문은 프로젝트 목적과 핵심 구조 및 흐름을 설명한다.라는 범위다. problem_solving의 별도 설명을 요청하지 않았으므로 답변의 부족함을 0으로 만들지 않고 이 후보 key를 NA로 둔다."
+  },
+  {
+    "turn_id": "2",
+    "key": "communication",
+    "level": 3,
+    "rationale": "'시설별 체크리스트와 사진을 기록하는 도구입니다. 초안을 저장하고 승인한다는 기능은 알지만 사진 저장소와 승인 기록의 연결은 자세히 모르겠습니다.'라는 이 턴의 표현은 질문 의도에 맞는 흐름으로 설명한다. 핵심을 먼저 구조화한 최고 단계까지 자동 승격하지 않는다.",
+    "rubric_quote": "질문 의도에 맞춰 논리적 순서로 답변한다."
+  },
+  {
+    "turn_id": "3",
+    "key": "project_understanding",
+    "level": "not_applicable",
+    "rationale": "질문은 승인 참조의 선택과 근거를 설명한다.라는 범위다. project_understanding의 별도 설명을 요청하지 않았으므로 답변의 부족함을 0으로 만들지 않고 이 후보 key를 NA로 둔다."
+  },
+  {
+    "turn_id": "3",
+    "key": "technical_reasoning",
+    "level": 3,
+    "rationale": "현재 체크리스트 ID만 참조을 대안으로 인지하고 현재 ID는 조회가 쉽지만 변경 후 과거 승인 내용도 달라 보입니다라는 차이로 선택을 설명하나 선택한 방식의 구체 비용과 한계를 함께 다루지는 않는다.",
+    "rubric_quote": "대안을 인지하고 선택 이유를 합리적으로 설명한다."
+  },
+  {
+    "turn_id": "3",
+    "key": "problem_solving",
+    "level": "not_applicable",
+    "rationale": "질문은 승인 참조의 선택과 근거를 설명한다.라는 범위다. problem_solving의 별도 설명을 요청하지 않았으므로 답변의 부족함을 0으로 만들지 않고 이 후보 key를 NA로 둔다."
+  },
+  {
+    "turn_id": "3",
+    "key": "communication",
+    "level": 4,
+    "rationale": "'승인본이 특정 revision을 참조을 택했습니다. 선택 근거는 다음과 같습니다: 나중에 초안을 고쳐도 당시 승인 내용을 재현합니다. 현재 체크리스트 ID만 참조'라는 이 턴의 표현은 선택·핵심 구분을 먼저 말하고 이유나 구체 사례를 분리해 설명한다. 기술 내용의 단계와 별도로 문장 구성을 판정한다.",
+    "rubric_quote": "핵심을 먼저 제시하고 근거를 명확히 구조화해 설명한다."
+  },
+  {
+    "turn_id": "4",
+    "key": "project_understanding",
+    "level": "not_applicable",
+    "rationale": "질문은 하나의 문제를 식별하고 해결한 과정을 설명한다.라는 범위다. project_understanding의 별도 설명을 요청하지 않았으므로 답변의 부족함을 0으로 만들지 않고 이 후보 key를 NA로 둔다."
+  },
+  {
+    "turn_id": "4",
+    "key": "technical_reasoning",
+    "level": "not_applicable",
+    "rationale": "질문은 하나의 문제를 식별하고 해결한 과정을 설명한다.라는 범위다. technical_reasoning의 별도 설명을 요청하지 않았으므로 답변의 부족함을 0으로 만들지 않고 이 후보 key를 NA로 둔다."
+  },
+  {
+    "turn_id": "4",
+    "key": "problem_solving",
+    "level": 2,
+    "rationale": "시설 점검 기록: '승인 후 내용을 고치면 승인본도 바뀌었습니다. revision을 새로 만드는 쪽으로 수정했고 이전 내용이 남는 것은 확인했습니다. 어느 저장 참조가 문제였고 어떻게 진단했는지는 정리하지 못했습니다.'라는 이 턴 답변에서 원인 추정이나 수정 일부를 말하나 진단과 검증의 연결이 모호하다.",
+    "rubric_quote": "해결했다고 말하며 원인이나 방법을 언급하나 모호하거나 일부만 설명한다."
+  },
+  {
+    "turn_id": "4",
+    "key": "communication",
+    "level": 3,
+    "rationale": "'승인 후 내용을 고치면 승인본도 바뀌었습니다. revision을 새로 만드는 쪽으로 수정했고 이전 내용이 남는 것은 확인했습니다. 어느 저장 참조가 문제였고 어떻'라는 이 턴의 표현은 질문 의도에 맞는 흐름으로 설명한다. 핵심을 먼저 구조화한 최고 단계까지 자동 승격하지 않는다.",
+    "rubric_quote": "질문 의도에 맞춰 논리적 순서로 답변한다."
+  },
+  {
+    "turn_id": "5",
+    "key": "company_job_fit",
+    "level": 3,
+    "rationale": "시설 점검 기록: '공고의 추적 가능성 요구와 제가 작성한 revision 조회 경험을 연결할 수 있습니다. 승인본이 특정 revision을 가리키게 해 이후 초안 수정과 구분했습니다. 다만 실제 현장 점검의 정확성을'라는 이 턴 답변에서 요구사항과 직접 수행한 경험을 하나의 구체적 사례로 연결한다.",
+    "rubric_quote": "요구사항과 본인 경험을 구체적 사례로 연결한다."
+  },
+  {
+    "turn_id": "5",
+    "key": "communication",
+    "level": 3,
+    "rationale": "'공고의 추적 가능성 요구와 제가 작성한 revision 조회 경험을 연결할 수 있습니다. 승인본이 특정 revision을 가리키게 해 이후 초안 수정과 구분했습니'라는 이 턴의 표현은 질문 의도에 맞는 흐름으로 설명한다. 핵심을 먼저 구조화한 최고 단계까지 자동 승격하지 않는다.",
+    "rubric_quote": "질문 의도에 맞춰 논리적 순서로 답변한다."
+  },
+  {
+    "turn_id": "6",
+    "key": "project_understanding",
+    "level": "not_applicable",
+    "rationale": "질문은 사진 연결의 선택과 근거를 설명한다.라는 범위다. project_understanding의 별도 설명을 요청하지 않았으므로 답변의 부족함을 0으로 만들지 않고 이 후보 key를 NA로 둔다."
+  },
+  {
+    "turn_id": "6",
+    "key": "technical_reasoning",
+    "level": 2,
+    "rationale": "현재 사진 교체가 예전 승인 증빙을 바꾸지 않습니다라는 구체 근거가 있으나 시설 ID에 최신 사진만 연결과의 비교는 하지 않는다.",
+    "rubric_quote": "근거는 제시하나 대안과의 비교가 없거나 피상적이다."
+  },
+  {
+    "turn_id": "6",
+    "key": "problem_solving",
+    "level": "not_applicable",
+    "rationale": "질문은 사진 연결의 선택과 근거를 설명한다.라는 범위다. problem_solving의 별도 설명을 요청하지 않았으므로 답변의 부족함을 0으로 만들지 않고 이 후보 key를 NA로 둔다."
+  },
+  {
+    "turn_id": "6",
+    "key": "communication",
+    "level": 4,
+    "rationale": "'첨부 ID를 revision별로 고정을 택했습니다. 선택 근거는 다음과 같습니다: 현재 사진 교체가 예전 승인 증빙을 바꾸지 않습니다.'라는 이 턴의 표현은 선택·핵심 구분을 먼저 말하고 이유나 구체 사례를 분리해 설명한다. 기술 내용의 단계와 별도로 문장 구성을 판정한다.",
+    "rubric_quote": "핵심을 먼저 제시하고 근거를 명확히 구조화해 설명한다."
+  },
+  {
+    "turn_id": "7",
+    "key": "project_understanding",
+    "level": "not_applicable",
+    "rationale": "질문은 임시 저장의 선택과 근거를 설명한다.라는 범위다. project_understanding의 별도 설명을 요청하지 않았으므로 답변의 부족함을 0으로 만들지 않고 이 후보 key를 NA로 둔다."
+  },
+  {
+    "turn_id": "7",
+    "key": "technical_reasoning",
+    "level": 3,
+    "rationale": "저장 즉시 승인 상태을 대안으로 인지하고 즉시 승인은 단계가 적지만 미완성 기록을 확정으로 오해합니다라는 차이로 선택을 설명하나 선택한 방식의 구체 비용과 한계를 함께 다루지는 않는다.",
+    "rubric_quote": "대안을 인지하고 선택 이유를 합리적으로 설명한다."
+  },
+  {
+    "turn_id": "7",
+    "key": "problem_solving",
+    "level": "not_applicable",
+    "rationale": "질문은 임시 저장의 선택과 근거를 설명한다.라는 범위다. problem_solving의 별도 설명을 요청하지 않았으므로 답변의 부족함을 0으로 만들지 않고 이 후보 key를 NA로 둔다."
+  },
+  {
+    "turn_id": "7",
+    "key": "communication",
+    "level": 4,
+    "rationale": "'초안과 승인 상태 분리을 택했습니다. 선택 근거는 다음과 같습니다: 일부 항목을 작성한 초안이 완료 점검으로 집계되지 않습니다. 저장 즉시 승인 상태도 검토했습니'라는 이 턴의 표현은 선택·핵심 구분을 먼저 말하고 이유나 구체 사례를 분리해 설명한다. 기술 내용의 단계와 별도로 문장 구성을 판정한다.",
+    "rubric_quote": "핵심을 먼저 제시하고 근거를 명확히 구조화해 설명한다."
+  },
+  {
+    "turn_id": "8",
+    "key": "company_job_fit",
+    "level": "not_applicable",
+    "rationale": "질문은 사용자에게 상태·개념의 차이를 설명하는 범위이며 JD와 본인 경험을 연결하도록 묻지 않는다. JD ID가 연결되어 있어도 직무 적합성은 관찰하지 않았다."
+  },
+  {
+    "turn_id": "8",
+    "key": "communication",
+    "level": 2,
+    "rationale": "'승인본은 먼저 남아 있고요, 수정은 나중인데, 사진도 revision에 붙고요. 그러니까 초안을 고치면 새 revision이 생기고 기존 승인은 이전 revisi'라는 이 턴의 표현은 질문에는 답하지만 개념과 결과를 뒤늦게 되짚어 설명 순서가 뒤섞인다.",
+    "rubric_quote": "질문에는 답하나 설명 순서가 뒤섞여 이해하기 어렵다."
+  },
+  {
+    "turn_id": "9",
+    "key": "project_understanding",
+    "level": "not_applicable",
+    "rationale": "질문은 오프라인 식별의 선택과 근거를 설명한다.라는 범위다. project_understanding의 별도 설명을 요청하지 않았으므로 답변의 부족함을 0으로 만들지 않고 이 후보 key를 NA로 둔다."
+  },
+  {
+    "turn_id": "9",
+    "key": "technical_reasoning",
+    "level": 4,
+    "rationale": "서버 수신마다 새 ID과 비교하고, 선택 비용 '기기가 안정적인 ID를 보관해야 합니다'와 한계 '내용이 같은 별도 점검까지 자동으로 중복으로 볼 수는 없습니다'까지 구체적으로 설명한다.",
+    "rubric_quote": "트레이드오프를 구체적으로 비교하고 한계까지 인지하고 있다."
+  },
+  {
+    "turn_id": "9",
+    "key": "problem_solving",
+    "level": "not_applicable",
+    "rationale": "질문은 오프라인 식별의 선택과 근거를 설명한다.라는 범위다. problem_solving의 별도 설명을 요청하지 않았으므로 답변의 부족함을 0으로 만들지 않고 이 후보 key를 NA로 둔다."
+  },
+  {
+    "turn_id": "9",
+    "key": "communication",
+    "level": 4,
+    "rationale": "'기기 생성 기록 UUID 유지을 택했습니다. 연결 복구 후 같은 초안 재전송을 식별합니다. 비교한 서버 수신마다 새 ID은 새 ID는 생성이 쉽지만 재시도마다 중'라는 이 턴의 표현은 선택·핵심 구분을 먼저 말하고 이유나 구체 사례를 분리해 설명한다. 기술 내용의 단계와 별도로 문장 구성을 판정한다.",
+    "rubric_quote": "핵심을 먼저 제시하고 근거를 명확히 구조화해 설명한다."
+  }
+]

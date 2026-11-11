@@ -1,0 +1,235 @@
+{
+  "case_id": "a-holdout-0010",
+  "version": 1,
+  "control": {
+    "kind": "question",
+    "split": "holdout",
+    "source_group_id": "a-holdout-energy",
+    "synthetic": true
+  },
+  "payload": {
+    "service_task": "director",
+    "service_input": {
+      "context": {
+        "interview_id": "cf638bb6-2671-506e-afda-b8027689e244",
+        "current_turn_id": "23a6176a-9f79-516a-8c9e-a63bcc674084",
+        "turn_no": 3,
+        "total_turns": 9,
+        "persona_counts": [
+          {
+            "persona": "tech_lead",
+            "count": 1
+          },
+          {
+            "persona": "hr_manager",
+            "count": 1
+          },
+          {
+            "persona": "domain_lead",
+            "count": 0
+          }
+        ],
+        "allowed_personas": [
+          "tech_lead",
+          "domain_lead"
+        ],
+        "jd_requirements": [
+          {
+            "id": "a688660e-f844-57a1-8f09-0ead8ffec475",
+            "text": "데이터 품질 가정과 집계 지연의 한계를 비전문가에게 근거와 함께 설명한다.",
+            "category": "responsibility",
+            "source_field": "responsibilities",
+            "tech_tags": []
+          }
+        ],
+        "repositories": [
+          {
+            "repository_id": "27b7d843-14f9-5b0e-a7da-d5f5183bcfba",
+            "git_ref": "fa73a6f5d20134f97a84fac510d1b6f3083e1d44",
+            "primary": true,
+            "analysis_refs": [],
+            "limitations": []
+          }
+        ],
+        "history": [
+          {
+            "turn_id": "bfc91144-e85a-5fa6-8807-d0b2acbe71b4",
+            "persona": "hr_manager",
+            "question": "프로젝트에서 본인이 맡은 부분과 협업 경계를 소개해 주세요.",
+            "answer": "저는 계측 수집 API와 집계 창 경계를 맡았습니다. 센서 보정 모델은 다른 구성원이 맡아서 원리를 모르며 배포 자동화는 맡지 않았습니다.",
+            "analysis_ref": null
+          },
+          {
+            "turn_id": "23a6176a-9f79-516a-8c9e-a63bcc674084",
+            "persona": "tech_lead",
+            "question": "빛모음에서 입력이 결과 상태로 바뀌는 주요 흐름을 설명해 주세요.",
+            "answer": "API는 관측 시각과 사용량을 읽어 offset이 있는 datetime과 Decimal로 변환합니다. 창 시작은 포함하고 끝은 제외해 합산하고 늦게 들어오는 읽기는 다음 재집계에서 반영합니다.",
+            "analysis_ref": null
+          }
+        ],
+        "current_question_contract": {
+          "purpose": "주요 처리 흐름 이해 확인",
+          "required_points": [
+            {
+              "key": "flow",
+              "description": "입력부터 결과까지의 흐름"
+            },
+            {
+              "key": "boundary",
+              "description": "구성 요소의 역할 경계"
+            }
+          ],
+          "assumptions": [],
+          "basis_refs": [
+            {
+              "kind": "evidence",
+              "id": "c5dd272a-d54c-5862-954e-c1330a93d549"
+            }
+          ],
+          "evaluation_scope": "주요 처리 흐름 이해 확인",
+          "evaluation_keys": [
+            "project_understanding",
+            "communication"
+          ]
+        },
+        "evidence": [
+          {
+            "evidence_id": "c5dd272a-d54c-5862-954e-c1330a93d549",
+            "repository_id": "27b7d843-14f9-5b0e-a7da-d5f5183bcfba",
+            "git_ref": "fa73a6f5d20134f97a84fac510d1b6f3083e1d44",
+            "source_kind": "code",
+            "path": "readings/window.py",
+            "metadata_key": null,
+            "content": "from datetime import datetime\nfrom decimal import Decimal\n\ndef parse_reading(raw):\n    observed = datetime.fromisoformat(raw['observed_at'])\n    return observed, Decimal(raw['watt_hours'])\n\ndef total_window(readings, start, end):\n    return sum((value for observed, value in readings if start <= observed < end), Decimal('0'))\n",
+            "tool_name": null,
+            "summary": "합성 프로젝트 원문 발췌. 개인 작성 사실이나 운영 성과를 증명하지 않는다.",
+            "start_line": 1,
+            "end_line": 9
+          },
+          {
+            "evidence_id": "7af0085c-ed35-51dc-a91f-aa7113850b3a",
+            "repository_id": "27b7d843-14f9-5b0e-a7da-d5f5183bcfba",
+            "git_ref": "fa73a6f5d20134f97a84fac510d1b6f3083e1d44",
+            "source_kind": "document",
+            "path": "PROJECT_NOTES.md",
+            "metadata_key": null,
+            "content": "빛모음은 계측 API로 모은 전력 사용량을 시간 창별로 집계하는 합성 프로젝트다. parse_reading은 ISO offset을 보존하고 명시적인 UTC 정규화 호출은 없다. 창의 끝은 배제한다. 자동 배포, 요금 절감 성과, 보정 모델 학습 자료는 제공하지 않는다.",
+            "tool_name": null,
+            "summary": null,
+            "start_line": 1,
+            "end_line": 1
+          }
+        ],
+        "domain_frames": [],
+        "limits": {
+          "remaining_calls": 2,
+          "remaining_replans": 0,
+          "policy_version": "interview-v1"
+        },
+        "evaluation_targets": [
+          {
+            "persona": "tech_lead",
+            "keys": [
+              "technical_reasoning",
+              "communication"
+            ]
+          },
+          {
+            "persona": "domain_lead",
+            "keys": [
+              "company_job_fit",
+              "communication"
+            ]
+          }
+        ],
+        "supplemental_sources": [],
+        "external_searches": [],
+        "supplemental_limitations": []
+      },
+      "question": {
+        "persona": "tech_lead",
+        "text": "빛모음에서 입력이 결과 상태로 바뀌는 주요 흐름을 설명해 주세요.",
+        "topic_code": "project_discussion",
+        "question_contract": {
+          "purpose": "주요 처리 흐름 이해 확인",
+          "required_points": [
+            {
+              "key": "flow",
+              "description": "입력부터 결과까지의 흐름"
+            },
+            {
+              "key": "boundary",
+              "description": "구성 요소의 역할 경계"
+            }
+          ],
+          "assumptions": [],
+          "basis_refs": [
+            {
+              "kind": "evidence",
+              "id": "c5dd272a-d54c-5862-954e-c1330a93d549"
+            }
+          ],
+          "evaluation_scope": "주요 처리 흐름 이해 확인",
+          "evaluation_keys": [
+            "project_understanding",
+            "communication"
+          ]
+        },
+        "evidence_refs": [
+          "c5dd272a-d54c-5862-954e-c1330a93d549"
+        ],
+        "jd_requirement_ids": [],
+        "question_type": "main",
+        "parent_turn_id": null
+      },
+      "answer_text": "API는 관측 시각과 사용량을 읽어 offset이 있는 datetime과 Decimal로 변환합니다. 창 시작은 포함하고 끝은 제외해 합산하고 늦게 들어오는 읽기는 다음 재집계에서 반영합니다.",
+      "answer_analysis": {
+        "evaluation_status": "evaluated",
+        "sufficiency": "sufficient",
+        "covered_points": [
+          {
+            "key": "flow",
+            "answer_quotes": [
+              "API는 관측 시각과 사용량을 읽어 offset이 있는 datetime과 Decimal로 변환합니다. 창 시작은 포함하고 끝은 제외해 합산하고 늦게 들어오는 읽기는 다음 재집계에서 반영합니다."
+            ]
+          },
+          {
+            "key": "boundary",
+            "answer_quotes": [
+              "API는 관측 시각과 사용량을 읽어 offset이 있는 datetime과 Decimal로 변환합니다. 창 시작은 포함하고 끝은 제외해 합산하고 늦게 들어오는 읽기는 다음 재집계에서 반영합니다."
+            ]
+          }
+        ],
+        "missing_points": [],
+        "technical_assessment": {
+          "explanation": "답변이 설명한 범위와 제공 원문을 구분해 관찰했다.",
+          "answer_quotes": [
+            "API는 관측 시각과 사용량을 읽어 offset이 있는 datetime과 Decimal로 변환합니다. 창 시작은 포함하고 끝은 제외해 합산하고 늦게 들어오는 읽기는 다음 재집계에서 반영합니다."
+          ],
+          "evidence_refs": [],
+          "limitations": []
+        },
+        "contribution_scope": {
+          "scope": "unknown",
+          "answer_quotes": [
+            "API는 관측 시각과 사용량을 읽어 offset이 있는 datetime과 Decimal로 변환합니다. 창 시작은 포함하고 끝은 제외해 합산하고 늦게 들어오는 읽기는 다음 재집계에서 반영합니다."
+          ]
+        },
+        "claim_checks": [],
+        "needs_verification": false,
+        "verification_requests": [],
+        "limitations": [],
+        "external_queries": []
+      },
+      "allowed_locations": [
+        [
+          "27b7d843-14f9-5b0e-a7da-d5f5183bcfba",
+          "fa73a6f5d20134f97a84fac510d1b6f3083e1d44",
+          "readings/window.py"
+        ]
+      ],
+      "reference_texts": [],
+      "tool_results": []
+    }
+  }
+}

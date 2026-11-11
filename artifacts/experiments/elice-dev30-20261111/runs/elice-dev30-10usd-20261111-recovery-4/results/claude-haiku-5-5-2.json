@@ -1,0 +1,1109 @@
+{
+  "experiment": "B",
+  "mode": "execute",
+  "manifest": {
+    "task_name": "report_score",
+    "version": "report_score_v3",
+    "model": "claude-haiku-5-5",
+    "template_sha256": "fa79e4af67a70bae1a3eef312ccdcbb852121d0e2fc0b978414afe2b86b1a702",
+    "limits": {
+      "timeout_seconds": 30,
+      "max_output_tokens": 2000,
+      "max_input_bytes": 65536,
+      "max_response_bytes": 1048576,
+      "reasoning_effort": null,
+      "stream": false
+    }
+  },
+  "cases": [
+    {
+      "case_id": "b-main-02",
+      "kind": "report",
+      "attempts": [
+        {
+          "attempt": 1,
+          "provider": "openai",
+          "model": "claude-haiku-5-5",
+          "prompt_version": "report_score_v3",
+          "schema_version": "1",
+          "latency_ms": 2029,
+          "input_tokens": 14477,
+          "output_tokens": 410,
+          "error_stage": null,
+          "error_code": null,
+          "response_id": "msg_011Cgusiw8cKi8Mqjzswapwj"
+        }
+      ],
+      "status": "succeeded",
+      "output": {
+        "judgments": [
+          {
+            "turn_id": "1",
+            "key": "contribution_clarity",
+            "level": 0
+          },
+          {
+            "turn_id": "1",
+            "key": "communication",
+            "level": 0
+          },
+          {
+            "turn_id": "2",
+            "key": "project_understanding",
+            "level": 2
+          },
+          {
+            "turn_id": "2",
+            "key": "communication",
+            "level": 1
+          },
+          {
+            "turn_id": "3",
+            "key": "technical_reasoning",
+            "level": 1
+          },
+          {
+            "turn_id": "3",
+            "key": "communication",
+            "level": 1
+          },
+          {
+            "turn_id": "4",
+            "key": "problem_solving",
+            "level": 4
+          },
+          {
+            "turn_id": "4",
+            "key": "communication",
+            "level": 3
+          },
+          {
+            "turn_id": "5",
+            "key": "company_job_fit",
+            "level": 4
+          },
+          {
+            "turn_id": "5",
+            "key": "communication",
+            "level": 3
+          },
+          {
+            "turn_id": "6",
+            "key": "technical_reasoning",
+            "level": 3
+          },
+          {
+            "turn_id": "6",
+            "key": "communication",
+            "level": 2
+          },
+          {
+            "turn_id": "7",
+            "key": "technical_reasoning",
+            "level": 3
+          },
+          {
+            "turn_id": "7",
+            "key": "communication",
+            "level": 2
+          },
+          {
+            "turn_id": "8",
+            "key": "communication",
+            "level": 1
+          },
+          {
+            "turn_id": "9",
+            "key": "technical_reasoning",
+            "level": 0
+          },
+          {
+            "turn_id": "9",
+            "key": "communication",
+            "level": 0
+          }
+        ]
+      },
+      "review_status": "unreviewed",
+      "quality": "excluded_unreviewed",
+      "failure": null
+    },
+    {
+      "case_id": "b-main-05",
+      "kind": "report",
+      "attempts": [
+        {
+          "attempt": 1,
+          "provider": "openai",
+          "model": "claude-haiku-5-5",
+          "prompt_version": "report_score_v3",
+          "schema_version": "1",
+          "latency_ms": 1875,
+          "input_tokens": 13539,
+          "output_tokens": 410,
+          "error_stage": null,
+          "error_code": null,
+          "response_id": "msg_011Cgusj5TRgYfeXJjZgxr4b"
+        }
+      ],
+      "status": "succeeded",
+      "output": {
+        "judgments": [
+          {
+            "turn_id": "1",
+            "key": "contribution_clarity",
+            "level": 3
+          },
+          {
+            "turn_id": "1",
+            "key": "communication",
+            "level": 3
+          },
+          {
+            "turn_id": "2",
+            "key": "project_understanding",
+            "level": 4
+          },
+          {
+            "turn_id": "2",
+            "key": "communication",
+            "level": 4
+          },
+          {
+            "turn_id": "3",
+            "key": "technical_reasoning",
+            "level": 0
+          },
+          {
+            "turn_id": "3",
+            "key": "communication",
+            "level": 0
+          },
+          {
+            "turn_id": "4",
+            "key": "problem_solving",
+            "level": 1
+          },
+          {
+            "turn_id": "4",
+            "key": "communication",
+            "level": 1
+          },
+          {
+            "turn_id": "5",
+            "key": "company_job_fit",
+            "level": 2
+          },
+          {
+            "turn_id": "5",
+            "key": "communication",
+            "level": 2
+          },
+          {
+            "turn_id": "6",
+            "key": "technical_reasoning",
+            "level": 1
+          },
+          {
+            "turn_id": "6",
+            "key": "communication",
+            "level": 2
+          },
+          {
+            "turn_id": "7",
+            "key": "technical_reasoning",
+            "level": 2
+          },
+          {
+            "turn_id": "7",
+            "key": "communication",
+            "level": 2
+          },
+          {
+            "turn_id": "8",
+            "key": "communication",
+            "level": 3
+          },
+          {
+            "turn_id": "9",
+            "key": "technical_reasoning",
+            "level": 3
+          },
+          {
+            "turn_id": "9",
+            "key": "communication",
+            "level": 3
+          }
+        ]
+      },
+      "review_status": "unreviewed",
+      "quality": "excluded_unreviewed",
+      "failure": null
+    },
+    {
+      "case_id": "b-main-06",
+      "kind": "report",
+      "attempts": [
+        {
+          "attempt": 1,
+          "provider": "openai",
+          "model": "claude-haiku-5-5",
+          "prompt_version": "report_score_v3",
+          "schema_version": "1",
+          "latency_ms": 2095,
+          "input_tokens": 13393,
+          "output_tokens": 416,
+          "error_stage": "semantic",
+          "error_code": "llm_failed",
+          "response_id": "msg_011CgusjDhmERTCHjSW9Wg2y"
+        }
+      ],
+      "status": "failed",
+      "output": null,
+      "review_status": "unreviewed",
+      "quality": "excluded_unreviewed",
+      "failure": {
+        "stage": "semantic",
+        "error_code": "report_score_unscorable",
+        "reason_summary": "No scorable turn.",
+        "provider_status": null,
+        "provider_cause": null,
+        "manual_retryable": null
+      }
+    },
+    {
+      "case_id": "b-main-08",
+      "kind": "report",
+      "attempts": [
+        {
+          "attempt": 1,
+          "provider": "openai",
+          "model": "claude-haiku-5-5",
+          "prompt_version": "report_score_v3",
+          "schema_version": "1",
+          "latency_ms": 1891,
+          "input_tokens": 13318,
+          "output_tokens": 410,
+          "error_stage": null,
+          "error_code": null,
+          "response_id": "msg_011CgusjNboB5cUB7Pke8Fw5"
+        }
+      ],
+      "status": "succeeded",
+      "output": {
+        "judgments": [
+          {
+            "turn_id": "1",
+            "key": "contribution_clarity",
+            "level": 1
+          },
+          {
+            "turn_id": "1",
+            "key": "communication",
+            "level": 1
+          },
+          {
+            "turn_id": "2",
+            "key": "project_understanding",
+            "level": 2
+          },
+          {
+            "turn_id": "2",
+            "key": "communication",
+            "level": 2
+          },
+          {
+            "turn_id": "3",
+            "key": "technical_reasoning",
+            "level": 3
+          },
+          {
+            "turn_id": "3",
+            "key": "communication",
+            "level": 3
+          },
+          {
+            "turn_id": "4",
+            "key": "problem_solving",
+            "level": 4
+          },
+          {
+            "turn_id": "4",
+            "key": "communication",
+            "level": 3
+          },
+          {
+            "turn_id": "5",
+            "key": "company_job_fit",
+            "level": 0
+          },
+          {
+            "turn_id": "5",
+            "key": "communication",
+            "level": 1
+          },
+          {
+            "turn_id": "6",
+            "key": "technical_reasoning",
+            "level": 3
+          },
+          {
+            "turn_id": "6",
+            "key": "communication",
+            "level": 3
+          },
+          {
+            "turn_id": "7",
+            "key": "technical_reasoning",
+            "level": 0
+          },
+          {
+            "turn_id": "7",
+            "key": "communication",
+            "level": 1
+          },
+          {
+            "turn_id": "8",
+            "key": "communication",
+            "level": 1
+          },
+          {
+            "turn_id": "9",
+            "key": "technical_reasoning",
+            "level": 1
+          },
+          {
+            "turn_id": "9",
+            "key": "communication",
+            "level": 1
+          }
+        ]
+      },
+      "review_status": "unreviewed",
+      "quality": "excluded_unreviewed",
+      "failure": null
+    }
+  ],
+  "summary": {
+    "total_cases": 4,
+    "quality_denominator": 0,
+    "quality_evaluation": "diagnostic_only"
+  },
+  "in_progress_case": null,
+  "approval_plan_sha256": "c79e9526aecdad0dfffd458bae2cfdb7b66eb40c018de1b714c676e30938e4f7",
+  "cost_budget": {
+    "amount_usd": "0.075",
+    "max_attempts": 8,
+    "approval_id": "a1d80d70781777f36ba922795995d7bd280b4fb82380acd64088c4f56d16ba09",
+    "attempts_started": 4,
+    "spent_usd": "0.0106791",
+    "reserved_usd": "0",
+    "remaining_usd": "0.0643209",
+    "unknown_attempts": 0,
+    "in_flight_attempts": 0,
+    "halted": false,
+    "halt_reason": null,
+    "transport_integration": "guarded_http_transport",
+    "accounting_basis": "conservative_cost_upper_bound"
+  },
+  "cost_audit": [
+    {
+      "event": "reserved",
+      "attempt_id": "attempt-23",
+      "local_attempt_id": "attempt-1",
+      "model": "claude-haiku-5-5",
+      "reserved_usd": "0.0064928",
+      "accounting_basis": "billing_upper_bound",
+      "wire_protocol": "chat_completions",
+      "canonical_request_bytes": 27464,
+      "wire_request_bytes": 27421,
+      "reservation_input_bytes": 27464,
+      "budget": {
+        "amount_usd": "0.075",
+        "max_attempts": 8,
+        "approval_id": "a1d80d70781777f36ba922795995d7bd280b4fb82380acd64088c4f56d16ba09",
+        "attempts_started": 1,
+        "spent_usd": "0",
+        "reserved_usd": "0.0064928",
+        "remaining_usd": "0.0685072",
+        "unknown_attempts": 0,
+        "in_flight_attempts": 1,
+        "halted": false,
+        "halt_reason": null,
+        "transport_integration": "elice_global_guard",
+        "accounting_basis": "billing_upper_bound",
+        "spent_upper_usd": "0"
+      },
+      "global_budget": {
+        "amount_usd": "8.6218768",
+        "max_attempts": 122,
+        "approval_id": "campaign-a0a91702b404de48ba279a95f8671f1d260f95b1b3afdbf12931a24560ac2b5f-continuation4",
+        "attempts_started": 23,
+        "spent_usd": "0.1384499",
+        "reserved_usd": "0.0064928",
+        "remaining_usd": "8.4769341",
+        "unknown_attempts": 0,
+        "in_flight_attempts": 1,
+        "halted": false,
+        "halt_reason": null,
+        "transport_integration": "elice_global_guard",
+        "accounting_basis": "billing_upper_bound",
+        "spent_upper_usd": "0.1384499"
+      },
+      "halted": false,
+      "halt_reason": null
+    },
+    {
+      "event": "settled",
+      "attempt_id": "attempt-23",
+      "local_attempt_id": "attempt-1",
+      "model": "claude-haiku-5-5",
+      "reserved_usd": "0.0064928",
+      "cost_usd": null,
+      "cost_lower_usd": "0.0016527",
+      "cost_upper_usd": "0.0031004",
+      "cost_status": "bounded",
+      "accounting_basis": "billing_upper_bound",
+      "error_code": null,
+      "http_status": 200,
+      "sent": true,
+      "response_id": "msg_011Cgusiw8cKi8Mqjzswapwj",
+      "wire_protocol": "chat_completions",
+      "canonical_request_bytes": 27464,
+      "wire_request_bytes": 27421,
+      "reservation_input_bytes": 27464,
+      "usage": {
+        "input_tokens": 14477,
+        "output_tokens": 410,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": null,
+        "reasoning_output_tokens": null,
+        "cache_write_short_tokens": null,
+        "cache_write_long_tokens": null
+      },
+      "input_tokens": 14477,
+      "output_tokens": 410,
+      "cached_input_tokens": 0,
+      "provider_model": "claude-haiku-5-5",
+      "raw_response_sha256": "7ade0e87b3a05339c8708197a28a64e9156330f89cf0528db3ae00b2414dfa59",
+      "budget": {
+        "amount_usd": "0.075",
+        "max_attempts": 8,
+        "approval_id": "a1d80d70781777f36ba922795995d7bd280b4fb82380acd64088c4f56d16ba09",
+        "attempts_started": 1,
+        "spent_usd": "0.0031004",
+        "reserved_usd": "0",
+        "remaining_usd": "0.0718996",
+        "unknown_attempts": 0,
+        "in_flight_attempts": 0,
+        "halted": false,
+        "halt_reason": null,
+        "transport_integration": "elice_global_guard",
+        "accounting_basis": "billing_upper_bound",
+        "spent_upper_usd": "0.0031004"
+      },
+      "global_budget": {
+        "amount_usd": "8.6218768",
+        "max_attempts": 122,
+        "approval_id": "campaign-a0a91702b404de48ba279a95f8671f1d260f95b1b3afdbf12931a24560ac2b5f-continuation4",
+        "attempts_started": 23,
+        "spent_usd": "0.1415503",
+        "reserved_usd": "0",
+        "remaining_usd": "8.4803265",
+        "unknown_attempts": 0,
+        "in_flight_attempts": 0,
+        "halted": false,
+        "halt_reason": null,
+        "transport_integration": "elice_global_guard",
+        "accounting_basis": "billing_upper_bound",
+        "spent_upper_usd": "0.1415503"
+      },
+      "halted": false,
+      "halt_reason": null
+    },
+    {
+      "event": "reserved",
+      "attempt_id": "attempt-24",
+      "local_attempt_id": "attempt-2",
+      "model": "claude-haiku-5-5",
+      "reserved_usd": "0.006501",
+      "accounting_basis": "billing_upper_bound",
+      "wire_protocol": "chat_completions",
+      "canonical_request_bytes": 27505,
+      "wire_request_bytes": 27462,
+      "reservation_input_bytes": 27505,
+      "budget": {
+        "amount_usd": "0.075",
+        "max_attempts": 8,
+        "approval_id": "a1d80d70781777f36ba922795995d7bd280b4fb82380acd64088c4f56d16ba09",
+        "attempts_started": 2,
+        "spent_usd": "0.0031004",
+        "reserved_usd": "0.006501",
+        "remaining_usd": "0.0653986",
+        "unknown_attempts": 0,
+        "in_flight_attempts": 1,
+        "halted": false,
+        "halt_reason": null,
+        "transport_integration": "elice_global_guard",
+        "accounting_basis": "billing_upper_bound",
+        "spent_upper_usd": "0.0031004"
+      },
+      "global_budget": {
+        "amount_usd": "8.6218768",
+        "max_attempts": 122,
+        "approval_id": "campaign-a0a91702b404de48ba279a95f8671f1d260f95b1b3afdbf12931a24560ac2b5f-continuation4",
+        "attempts_started": 24,
+        "spent_usd": "0.1415503",
+        "reserved_usd": "0.006501",
+        "remaining_usd": "8.4738255",
+        "unknown_attempts": 0,
+        "in_flight_attempts": 1,
+        "halted": false,
+        "halt_reason": null,
+        "transport_integration": "elice_global_guard",
+        "accounting_basis": "billing_upper_bound",
+        "spent_upper_usd": "0.1415503"
+      },
+      "halted": false,
+      "halt_reason": null
+    },
+    {
+      "event": "settled",
+      "attempt_id": "attempt-24",
+      "local_attempt_id": "attempt-2",
+      "model": "claude-haiku-5-5",
+      "reserved_usd": "0.006501",
+      "cost_usd": null,
+      "cost_lower_usd": "0.0011958",
+      "cost_upper_usd": "0.0025497",
+      "cost_status": "bounded",
+      "accounting_basis": "billing_upper_bound",
+      "error_code": null,
+      "http_status": 200,
+      "sent": true,
+      "response_id": "msg_011Cgusj5TRgYfeXJjZgxr4b",
+      "wire_protocol": "chat_completions",
+      "canonical_request_bytes": 27505,
+      "wire_request_bytes": 27462,
+      "reservation_input_bytes": 27505,
+      "usage": {
+        "input_tokens": 13539,
+        "output_tokens": 410,
+        "cached_input_tokens": 3631,
+        "cache_write_input_tokens": null,
+        "reasoning_output_tokens": null,
+        "cache_write_short_tokens": null,
+        "cache_write_long_tokens": null
+      },
+      "input_tokens": 13539,
+      "output_tokens": 410,
+      "cached_input_tokens": 3631,
+      "provider_model": "claude-haiku-5-5",
+      "raw_response_sha256": "1419eec35bea1e63ae8dce7cf72090a8a76c83b44efacb41e8ac91acc5c07f4d",
+      "budget": {
+        "amount_usd": "0.075",
+        "max_attempts": 8,
+        "approval_id": "a1d80d70781777f36ba922795995d7bd280b4fb82380acd64088c4f56d16ba09",
+        "attempts_started": 2,
+        "spent_usd": "0.0056501",
+        "reserved_usd": "0",
+        "remaining_usd": "0.0693499",
+        "unknown_attempts": 0,
+        "in_flight_attempts": 0,
+        "halted": false,
+        "halt_reason": null,
+        "transport_integration": "elice_global_guard",
+        "accounting_basis": "billing_upper_bound",
+        "spent_upper_usd": "0.0056501"
+      },
+      "global_budget": {
+        "amount_usd": "8.6218768",
+        "max_attempts": 122,
+        "approval_id": "campaign-a0a91702b404de48ba279a95f8671f1d260f95b1b3afdbf12931a24560ac2b5f-continuation4",
+        "attempts_started": 24,
+        "spent_usd": "0.1441",
+        "reserved_usd": "0",
+        "remaining_usd": "8.4777768",
+        "unknown_attempts": 0,
+        "in_flight_attempts": 0,
+        "halted": false,
+        "halt_reason": null,
+        "transport_integration": "elice_global_guard",
+        "accounting_basis": "billing_upper_bound",
+        "spent_upper_usd": "0.1441"
+      },
+      "halted": false,
+      "halt_reason": null
+    },
+    {
+      "event": "reserved",
+      "attempt_id": "attempt-25",
+      "local_attempt_id": "attempt-3",
+      "model": "claude-haiku-5-5",
+      "reserved_usd": "0.0064518",
+      "accounting_basis": "billing_upper_bound",
+      "wire_protocol": "chat_completions",
+      "canonical_request_bytes": 27259,
+      "wire_request_bytes": 27216,
+      "reservation_input_bytes": 27259,
+      "budget": {
+        "amount_usd": "0.075",
+        "max_attempts": 8,
+        "approval_id": "a1d80d70781777f36ba922795995d7bd280b4fb82380acd64088c4f56d16ba09",
+        "attempts_started": 3,
+        "spent_usd": "0.0056501",
+        "reserved_usd": "0.0064518",
+        "remaining_usd": "0.0628981",
+        "unknown_attempts": 0,
+        "in_flight_attempts": 1,
+        "halted": false,
+        "halt_reason": null,
+        "transport_integration": "elice_global_guard",
+        "accounting_basis": "billing_upper_bound",
+        "spent_upper_usd": "0.0056501"
+      },
+      "global_budget": {
+        "amount_usd": "8.6218768",
+        "max_attempts": 122,
+        "approval_id": "campaign-a0a91702b404de48ba279a95f8671f1d260f95b1b3afdbf12931a24560ac2b5f-continuation4",
+        "attempts_started": 25,
+        "spent_usd": "0.1441",
+        "reserved_usd": "0.0064518",
+        "remaining_usd": "8.471325",
+        "unknown_attempts": 0,
+        "in_flight_attempts": 1,
+        "halted": false,
+        "halt_reason": null,
+        "transport_integration": "elice_global_guard",
+        "accounting_basis": "billing_upper_bound",
+        "spent_upper_usd": "0.1441"
+      },
+      "halted": false,
+      "halt_reason": null
+    },
+    {
+      "event": "settled",
+      "attempt_id": "attempt-25",
+      "local_attempt_id": "attempt-3",
+      "model": "claude-haiku-5-5",
+      "reserved_usd": "0.0064518",
+      "cost_usd": null,
+      "cost_lower_usd": "0.0011842",
+      "cost_upper_usd": "0.0025235",
+      "cost_status": "bounded",
+      "accounting_basis": "billing_upper_bound",
+      "error_code": null,
+      "http_status": 200,
+      "sent": true,
+      "response_id": "msg_011CgusjDhmERTCHjSW9Wg2y",
+      "wire_protocol": "chat_completions",
+      "canonical_request_bytes": 27259,
+      "wire_request_bytes": 27216,
+      "reservation_input_bytes": 27259,
+      "usage": {
+        "input_tokens": 13393,
+        "output_tokens": 416,
+        "cached_input_tokens": 3631,
+        "cache_write_input_tokens": null,
+        "reasoning_output_tokens": null,
+        "cache_write_short_tokens": null,
+        "cache_write_long_tokens": null
+      },
+      "input_tokens": 13393,
+      "output_tokens": 416,
+      "cached_input_tokens": 3631,
+      "provider_model": "claude-haiku-5-5",
+      "raw_response_sha256": "ff2fb78a8fde0f6318c70fc26cefd8fdfeec6405b4f5211cdb8450cd28878d48",
+      "budget": {
+        "amount_usd": "0.075",
+        "max_attempts": 8,
+        "approval_id": "a1d80d70781777f36ba922795995d7bd280b4fb82380acd64088c4f56d16ba09",
+        "attempts_started": 3,
+        "spent_usd": "0.0081736",
+        "reserved_usd": "0",
+        "remaining_usd": "0.0668264",
+        "unknown_attempts": 0,
+        "in_flight_attempts": 0,
+        "halted": false,
+        "halt_reason": null,
+        "transport_integration": "elice_global_guard",
+        "accounting_basis": "billing_upper_bound",
+        "spent_upper_usd": "0.0081736"
+      },
+      "global_budget": {
+        "amount_usd": "8.6218768",
+        "max_attempts": 122,
+        "approval_id": "campaign-a0a91702b404de48ba279a95f8671f1d260f95b1b3afdbf12931a24560ac2b5f-continuation4",
+        "attempts_started": 25,
+        "spent_usd": "0.1466235",
+        "reserved_usd": "0",
+        "remaining_usd": "8.4752533",
+        "unknown_attempts": 0,
+        "in_flight_attempts": 0,
+        "halted": false,
+        "halt_reason": null,
+        "transport_integration": "elice_global_guard",
+        "accounting_basis": "billing_upper_bound",
+        "spent_upper_usd": "0.1466235"
+      },
+      "halted": false,
+      "halt_reason": null
+    },
+    {
+      "event": "reserved",
+      "attempt_id": "attempt-26",
+      "local_attempt_id": "attempt-4",
+      "model": "claude-haiku-5-5",
+      "reserved_usd": "0.0064322",
+      "accounting_basis": "billing_upper_bound",
+      "wire_protocol": "chat_completions",
+      "canonical_request_bytes": 27161,
+      "wire_request_bytes": 27118,
+      "reservation_input_bytes": 27161,
+      "budget": {
+        "amount_usd": "0.075",
+        "max_attempts": 8,
+        "approval_id": "a1d80d70781777f36ba922795995d7bd280b4fb82380acd64088c4f56d16ba09",
+        "attempts_started": 4,
+        "spent_usd": "0.0081736",
+        "reserved_usd": "0.0064322",
+        "remaining_usd": "0.0603942",
+        "unknown_attempts": 0,
+        "in_flight_attempts": 1,
+        "halted": false,
+        "halt_reason": null,
+        "transport_integration": "elice_global_guard",
+        "accounting_basis": "billing_upper_bound",
+        "spent_upper_usd": "0.0081736"
+      },
+      "global_budget": {
+        "amount_usd": "8.6218768",
+        "max_attempts": 122,
+        "approval_id": "campaign-a0a91702b404de48ba279a95f8671f1d260f95b1b3afdbf12931a24560ac2b5f-continuation4",
+        "attempts_started": 26,
+        "spent_usd": "0.1466235",
+        "reserved_usd": "0.0064322",
+        "remaining_usd": "8.4688211",
+        "unknown_attempts": 0,
+        "in_flight_attempts": 1,
+        "halted": false,
+        "halt_reason": null,
+        "transport_integration": "elice_global_guard",
+        "accounting_basis": "billing_upper_bound",
+        "spent_upper_usd": "0.1466235"
+      },
+      "halted": false,
+      "halt_reason": null
+    },
+    {
+      "event": "settled",
+      "attempt_id": "attempt-26",
+      "local_attempt_id": "attempt-4",
+      "model": "claude-haiku-5-5",
+      "reserved_usd": "0.0064322",
+      "cost_usd": null,
+      "cost_lower_usd": "0.0011737",
+      "cost_upper_usd": "0.0025055",
+      "cost_status": "bounded",
+      "accounting_basis": "billing_upper_bound",
+      "error_code": null,
+      "http_status": 200,
+      "sent": true,
+      "response_id": "msg_011CgusjNboB5cUB7Pke8Fw5",
+      "wire_protocol": "chat_completions",
+      "canonical_request_bytes": 27161,
+      "wire_request_bytes": 27118,
+      "reservation_input_bytes": 27161,
+      "usage": {
+        "input_tokens": 13318,
+        "output_tokens": 410,
+        "cached_input_tokens": 3631,
+        "cache_write_input_tokens": null,
+        "reasoning_output_tokens": null,
+        "cache_write_short_tokens": null,
+        "cache_write_long_tokens": null
+      },
+      "input_tokens": 13318,
+      "output_tokens": 410,
+      "cached_input_tokens": 3631,
+      "provider_model": "claude-haiku-5-5",
+      "raw_response_sha256": "2676ecbec689fea48163f2f5b84718a0c4f560e70b3f77dee85ff2c653eb87dc",
+      "budget": {
+        "amount_usd": "0.075",
+        "max_attempts": 8,
+        "approval_id": "a1d80d70781777f36ba922795995d7bd280b4fb82380acd64088c4f56d16ba09",
+        "attempts_started": 4,
+        "spent_usd": "0.0106791",
+        "reserved_usd": "0",
+        "remaining_usd": "0.0643209",
+        "unknown_attempts": 0,
+        "in_flight_attempts": 0,
+        "halted": false,
+        "halt_reason": null,
+        "transport_integration": "elice_global_guard",
+        "accounting_basis": "billing_upper_bound",
+        "spent_upper_usd": "0.0106791"
+      },
+      "global_budget": {
+        "amount_usd": "8.6218768",
+        "max_attempts": 122,
+        "approval_id": "campaign-a0a91702b404de48ba279a95f8671f1d260f95b1b3afdbf12931a24560ac2b5f-continuation4",
+        "attempts_started": 26,
+        "spent_usd": "0.149129",
+        "reserved_usd": "0",
+        "remaining_usd": "8.4727478",
+        "unknown_attempts": 0,
+        "in_flight_attempts": 0,
+        "halted": false,
+        "halt_reason": null,
+        "transport_integration": "elice_global_guard",
+        "accounting_basis": "billing_upper_bound",
+        "spent_upper_usd": "0.149129"
+      },
+      "halted": false,
+      "halt_reason": null
+    }
+  ],
+  "guarded_transport": {
+    "budget": {
+      "amount_usd": "0.075",
+      "max_attempts": 8,
+      "approval_id": "a1d80d70781777f36ba922795995d7bd280b4fb82380acd64088c4f56d16ba09",
+      "attempts_started": 4,
+      "spent_usd": "0.0106791",
+      "reserved_usd": "0",
+      "remaining_usd": "0.0643209",
+      "unknown_attempts": 0,
+      "in_flight_attempts": 0,
+      "halted": false,
+      "halt_reason": null,
+      "transport_integration": "elice_global_guard",
+      "accounting_basis": "billing_upper_bound",
+      "spent_upper_usd": "0.0106791"
+    },
+    "global_budget": {
+      "amount_usd": "8.6218768",
+      "max_attempts": 122,
+      "approval_id": "campaign-a0a91702b404de48ba279a95f8671f1d260f95b1b3afdbf12931a24560ac2b5f-continuation4",
+      "attempts_started": 26,
+      "spent_usd": "0.149129",
+      "reserved_usd": "0",
+      "remaining_usd": "8.4727478",
+      "unknown_attempts": 0,
+      "in_flight_attempts": 0,
+      "halted": false,
+      "halt_reason": null,
+      "transport_integration": "elice_global_guard",
+      "accounting_basis": "billing_upper_bound",
+      "spent_upper_usd": "0.149129"
+    },
+    "halted": false,
+    "halt_reason": null,
+    "attempts": [
+      {
+        "event": "settled",
+        "attempt_id": "attempt-23",
+        "local_attempt_id": "attempt-1",
+        "model": "claude-haiku-5-5",
+        "reserved_usd": "0.0064928",
+        "cost_usd": null,
+        "cost_lower_usd": "0.0016527",
+        "cost_upper_usd": "0.0031004",
+        "cost_status": "bounded",
+        "accounting_basis": "billing_upper_bound",
+        "error_code": null,
+        "http_status": 200,
+        "sent": true,
+        "response_id": "msg_011Cgusiw8cKi8Mqjzswapwj",
+        "wire_protocol": "chat_completions",
+        "canonical_request_bytes": 27464,
+        "wire_request_bytes": 27421,
+        "reservation_input_bytes": 27464,
+        "usage": {
+          "input_tokens": 14477,
+          "output_tokens": 410,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": null,
+          "reasoning_output_tokens": null,
+          "cache_write_short_tokens": null,
+          "cache_write_long_tokens": null
+        },
+        "input_tokens": 14477,
+        "output_tokens": 410,
+        "cached_input_tokens": 0,
+        "provider_model": "claude-haiku-5-5",
+        "raw_response_sha256": "7ade0e87b3a05339c8708197a28a64e9156330f89cf0528db3ae00b2414dfa59"
+      },
+      {
+        "event": "settled",
+        "attempt_id": "attempt-24",
+        "local_attempt_id": "attempt-2",
+        "model": "claude-haiku-5-5",
+        "reserved_usd": "0.006501",
+        "cost_usd": null,
+        "cost_lower_usd": "0.0011958",
+        "cost_upper_usd": "0.0025497",
+        "cost_status": "bounded",
+        "accounting_basis": "billing_upper_bound",
+        "error_code": null,
+        "http_status": 200,
+        "sent": true,
+        "response_id": "msg_011Cgusj5TRgYfeXJjZgxr4b",
+        "wire_protocol": "chat_completions",
+        "canonical_request_bytes": 27505,
+        "wire_request_bytes": 27462,
+        "reservation_input_bytes": 27505,
+        "usage": {
+          "input_tokens": 13539,
+          "output_tokens": 410,
+          "cached_input_tokens": 3631,
+          "cache_write_input_tokens": null,
+          "reasoning_output_tokens": null,
+          "cache_write_short_tokens": null,
+          "cache_write_long_tokens": null
+        },
+        "input_tokens": 13539,
+        "output_tokens": 410,
+        "cached_input_tokens": 3631,
+        "provider_model": "claude-haiku-5-5",
+        "raw_response_sha256": "1419eec35bea1e63ae8dce7cf72090a8a76c83b44efacb41e8ac91acc5c07f4d"
+      },
+      {
+        "event": "settled",
+        "attempt_id": "attempt-25",
+        "local_attempt_id": "attempt-3",
+        "model": "claude-haiku-5-5",
+        "reserved_usd": "0.0064518",
+        "cost_usd": null,
+        "cost_lower_usd": "0.0011842",
+        "cost_upper_usd": "0.0025235",
+        "cost_status": "bounded",
+        "accounting_basis": "billing_upper_bound",
+        "error_code": null,
+        "http_status": 200,
+        "sent": true,
+        "response_id": "msg_011CgusjDhmERTCHjSW9Wg2y",
+        "wire_protocol": "chat_completions",
+        "canonical_request_bytes": 27259,
+        "wire_request_bytes": 27216,
+        "reservation_input_bytes": 27259,
+        "usage": {
+          "input_tokens": 13393,
+          "output_tokens": 416,
+          "cached_input_tokens": 3631,
+          "cache_write_input_tokens": null,
+          "reasoning_output_tokens": null,
+          "cache_write_short_tokens": null,
+          "cache_write_long_tokens": null
+        },
+        "input_tokens": 13393,
+        "output_tokens": 416,
+        "cached_input_tokens": 3631,
+        "provider_model": "claude-haiku-5-5",
+        "raw_response_sha256": "ff2fb78a8fde0f6318c70fc26cefd8fdfeec6405b4f5211cdb8450cd28878d48"
+      },
+      {
+        "event": "settled",
+        "attempt_id": "attempt-26",
+        "local_attempt_id": "attempt-4",
+        "model": "claude-haiku-5-5",
+        "reserved_usd": "0.0064322",
+        "cost_usd": null,
+        "cost_lower_usd": "0.0011737",
+        "cost_upper_usd": "0.0025055",
+        "cost_status": "bounded",
+        "accounting_basis": "billing_upper_bound",
+        "error_code": null,
+        "http_status": 200,
+        "sent": true,
+        "response_id": "msg_011CgusjNboB5cUB7Pke8Fw5",
+        "wire_protocol": "chat_completions",
+        "canonical_request_bytes": 27161,
+        "wire_request_bytes": 27118,
+        "reservation_input_bytes": 27161,
+        "usage": {
+          "input_tokens": 13318,
+          "output_tokens": 410,
+          "cached_input_tokens": 3631,
+          "cache_write_input_tokens": null,
+          "reasoning_output_tokens": null,
+          "cache_write_short_tokens": null,
+          "cache_write_long_tokens": null
+        },
+        "input_tokens": 13318,
+        "output_tokens": 410,
+        "cached_input_tokens": 3631,
+        "provider_model": "claude-haiku-5-5",
+        "raw_response_sha256": "2676ecbec689fea48163f2f5b84718a0c4f560e70b3f77dee85ff2c653eb87dc"
+      }
+    ],
+    "sent_attempts": 4,
+    "transport_integration": "elice_global_guard",
+    "wire_protocol": "chat_completions",
+    "request_byte_counts": [
+      {
+        "attempt_id": "attempt-23",
+        "wire_protocol": "chat_completions",
+        "canonical_request_bytes": 27464,
+        "wire_request_bytes": 27421,
+        "reservation_input_bytes": 27464
+      },
+      {
+        "attempt_id": "attempt-24",
+        "wire_protocol": "chat_completions",
+        "canonical_request_bytes": 27505,
+        "wire_request_bytes": 27462,
+        "reservation_input_bytes": 27505
+      },
+      {
+        "attempt_id": "attempt-25",
+        "wire_protocol": "chat_completions",
+        "canonical_request_bytes": 27259,
+        "wire_request_bytes": 27216,
+        "reservation_input_bytes": 27259
+      },
+      {
+        "attempt_id": "attempt-26",
+        "wire_protocol": "chat_completions",
+        "canonical_request_bytes": 27161,
+        "wire_request_bytes": 27118,
+        "reservation_input_bytes": 27161
+      }
+    ]
+  },
+  "raw_response_artifacts": [
+    {
+      "path": "runs/elice-dev30-10usd-20261111-recovery-4/results/claude-haiku-5-5-2-raw/response-0001.json",
+      "sha256": "85c073cc2673c779fe15ff512376365d9e09b1d5ade6b8c592bcbc01af704e28"
+    },
+    {
+      "path": "runs/elice-dev30-10usd-20261111-recovery-4/results/claude-haiku-5-5-2-raw/response-0002.json",
+      "sha256": "405c99808abcb90a661400fb4ff6783caa9fc7567181e2564ad82bf46a8af30e"
+    },
+    {
+      "path": "runs/elice-dev30-10usd-20261111-recovery-4/results/claude-haiku-5-5-2-raw/response-0003.json",
+      "sha256": "6283eab044bc2853a64ba937e757afbec256120a4404ebf91c2b3cafb2c081ec"
+    },
+    {
+      "path": "runs/elice-dev30-10usd-20261111-recovery-4/results/claude-haiku-5-5-2-raw/response-0004.json",
+      "sha256": "d35573731659365582b0b40cb7627affbd86fd5065a2d320d7018fc52e17260e"
+    }
+  ],
+  "campaign_budget": {
+    "amount_usd": "8.6218768",
+    "max_attempts": 122,
+    "approval_id": "campaign-a0a91702b404de48ba279a95f8671f1d260f95b1b3afdbf12931a24560ac2b5f-continuation4",
+    "attempts_started": 26,
+    "spent_usd": "0.149129",
+    "reserved_usd": "0",
+    "remaining_usd": "8.4727478",
+    "unknown_attempts": 0,
+    "in_flight_attempts": 0,
+    "halted": false,
+    "halt_reason": null,
+    "transport_integration": "requires_transport_binding",
+    "accounting_basis": "conservative_cost_upper_bound"
+  },
+  "run_state": "completed",
+  "output_format_version": 2
+}

@@ -1,0 +1,30 @@
+version: 1
+
+# Model IDs are requested configuration, not verified provider availability.
+# Execution requires a priced, budgeted, pinned approval through run_lab.py.
+models:
+  - name: baseline
+    enabled: true
+    provider: openai
+    adapter: responses
+    model_id: gpt-5.6-luna
+    temperature: null
+
+  - name: candidate_01
+    enabled: false
+    provider: null
+    adapter: null
+    model_id: null
+    temperature: null
+
+judge:
+  provider: null
+  model_id: null
+  family: null
+
+execution:
+  mode: prepare_by_default
+  temperature_policy: service_omitted
+  paid_execution_implemented: true
+  max_budget_usd: null
+  approval_reference: null

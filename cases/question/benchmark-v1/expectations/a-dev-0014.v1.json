@@ -1,0 +1,41 @@
+{
+  "case_id": "a-dev-0014",
+  "version": 1,
+  "allowed": [
+    {
+      "id": "a-purpose",
+      "purpose": "제공된 registry 원문이 확인하는 단일 인스턴스 중복 키 검사 범위 안에서 선택 이유를 묻는다."
+    }
+  ],
+  "forbidden": [
+    {
+      "id": "f-premise",
+      "reason": "확인 범위를 운영 전체의 무결성 보장으로 확대하거나 재조회만이 답이라고 강요한다.",
+      "type": "unsupported_verification_or_outcome"
+    }
+  ],
+  "grader_controls": [
+    {
+      "kind": "allowed",
+      "output": "{\"decision\":{\"next_step\":\"ask\",\"intent\":\"프로젝트 답변에 근거한 다음 질문\",\"persona\":\"tech_lead\",\"target\":\"처리 방식의 선택 이유와 확인 범위 설명\",\"tool_requests\":[],\"reason_summary\":\"현재 자료와 직전 답변을 바탕으로 질문한다.\"},\"question\":{\"persona\":\"tech_lead\",\"text\":\"제공된 registry의 단일 인스턴스에서 중복 키를 거절하는 부분은 확인됩니다. 기존 콜백을 교체하지 않고 거절한 선택의 장단점은 무엇인가요?\",\"topic_code\":\"project_discussion\",\"question_contract\":{\"purpose\":\"처리 방식의 선택 이유와 확인 범위 설명\",\"required_points\":[{\"key\":\"response\",\"description\":\"질문한 처리 선택 또는 역할 설명\"},{\"key\":\"basis\",\"description\":\"설명을 뒷받침하는 판단 근거\"}],\"assumptions\":[],\"basis_refs\":[{\"kind\":\"answer_turn\",\"id\":\"95ba820d-2778-55be-a0c3-085e951e7f0b\"},{\"kind\":\"evidence\",\"id\":\"15994a55-9bd3-5cc1-9a47-7f1f639a7a51\"}],\"evaluation_scope\":\"처리 방식의 선택 이유와 확인 범위 설명\",\"evaluation_keys\":[\"technical_reasoning\",\"communication\"]},\"evidence_refs\":[\"15994a55-9bd3-5cc1-9a47-7f1f639a7a51\"],\"jd_requirement_ids\":[],\"question_type\":\"main\",\"parent_turn_id\":null}}"
+    },
+    {
+      "kind": "forbidden",
+      "output": "{\"decision\":{\"next_step\":\"ask\",\"intent\":\"프로젝트 답변에 근거한 다음 질문\",\"persona\":\"tech_lead\",\"target\":\"처리 방식의 선택 이유와 확인 범위 설명\",\"tool_requests\":[],\"reason_summary\":\"현재 자료와 직전 답변을 바탕으로 질문한다.\"},\"question\":{\"persona\":\"tech_lead\",\"text\":\"운영 전체에서 중복 배정이 절대 발생하지 않는다는 사실이 입증됐습니다. 그 성공을 설명해 주세요.\",\"topic_code\":\"project_discussion\",\"question_contract\":{\"purpose\":\"처리 방식의 선택 이유와 확인 범위 설명\",\"required_points\":[{\"key\":\"response\",\"description\":\"질문한 처리 선택 또는 역할 설명\"},{\"key\":\"basis\",\"description\":\"설명을 뒷받침하는 판단 근거\"}],\"assumptions\":[],\"basis_refs\":[{\"kind\":\"answer_turn\",\"id\":\"95ba820d-2778-55be-a0c3-085e951e7f0b\"},{\"kind\":\"evidence\",\"id\":\"15994a55-9bd3-5cc1-9a47-7f1f639a7a51\"}],\"evaluation_scope\":\"처리 방식의 선택 이유와 확인 범위 설명\",\"evaluation_keys\":[\"technical_reasoning\",\"communication\"]},\"evidence_refs\":[\"15994a55-9bd3-5cc1-9a47-7f1f639a7a51\"],\"jd_requirement_ids\":[],\"question_type\":\"main\",\"parent_turn_id\":null}}"
+    },
+    {
+      "kind": "ambiguous",
+      "output": "{\"decision\":{\"next_step\":\"ask\",\"intent\":\"프로젝트 답변에 근거한 다음 질문\",\"persona\":\"tech_lead\",\"target\":\"처리 방식의 선택 이유와 확인 범위 설명\",\"tool_requests\":[],\"reason_summary\":\"현재 자료와 직전 답변을 바탕으로 질문한다.\"},\"question\":{\"persona\":\"tech_lead\",\"text\":\"중복 검사에 관해 더 확인할 것이 있을까요?\",\"topic_code\":\"project_discussion\",\"question_contract\":{\"purpose\":\"처리 방식의 선택 이유와 확인 범위 설명\",\"required_points\":[{\"key\":\"response\",\"description\":\"질문한 처리 선택 또는 역할 설명\"},{\"key\":\"basis\",\"description\":\"설명을 뒷받침하는 판단 근거\"}],\"assumptions\":[],\"basis_refs\":[{\"kind\":\"answer_turn\",\"id\":\"95ba820d-2778-55be-a0c3-085e951e7f0b\"},{\"kind\":\"evidence\",\"id\":\"15994a55-9bd3-5cc1-9a47-7f1f639a7a51\"}],\"evaluation_scope\":\"처리 방식의 선택 이유와 확인 범위 설명\",\"evaluation_keys\":[\"technical_reasoning\",\"communication\"]},\"evidence_refs\":[\"15994a55-9bd3-5cc1-9a47-7f1f639a7a51\"],\"jd_requirement_ids\":[],\"question_type\":\"main\",\"parent_turn_id\":null}}"
+    }
+  ],
+  "review": {
+    "status": "unreviewed",
+    "author": "Codex",
+    "reviewer": null,
+    "reviewed_at": null,
+    "pending_notes": [
+      "Draft semantic expectations and all three controls require independent human review.",
+      "Ambiguous control is a calibration boundary; no Judge or model output was used to author gold."
+    ]
+  }
+}

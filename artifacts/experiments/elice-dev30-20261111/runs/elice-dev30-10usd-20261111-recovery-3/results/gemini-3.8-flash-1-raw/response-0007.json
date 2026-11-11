@@ -1,0 +1,58 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\n  \"plan_valid\": true,\n  \"context_valid\": true,\n  \"wording_valid\": true,\n  \"contract_matches\": true,\n  \"safe_alternative\": true,\n  \"reason_summary\": \"지원자가 답변에서 밝힌 담당 범위(상태 갱신 및 콜백 등록)와 실제 코드 근거를 바탕으로 기술적 선택 이유를 묻고 있으며, 평가 항목과 계약 내용이 일치합니다.\"\n}",
+        "extra_content": {
+          "google": {
+            "thought_signature": "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"
+          }
+        },
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794340910,
+  "id": "JnjzaoCJI-2_1e8P7PK2qAc",
+  "model": "gemini-3.8-flash",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 957,
+    "prompt_tokens": 6462,
+    "total_tokens": 7419,
+    "completion_tokens_details": {
+      "reasoning_tokens": 853
+    },
+    "input_tokens": 6462,
+    "output_tokens": 957,
+    "cached_prompt_tokens": 0,
+    "cache_write_tokens": 0
+  },
+  "_elice_billing": {
+    "usage": {
+      "input_tokens": 6462,
+      "output_tokens": 957,
+      "cached_input_tokens": 0,
+      "cache_write_input_tokens": null,
+      "reasoning_output_tokens": 853,
+      "cache_write_short_tokens": null,
+      "cache_write_long_tokens": null
+    },
+    "cost_usd": "0.00843525",
+    "cost_lower_usd": "0.00843525",
+    "cost_upper_usd": "0.00843525",
+    "cost_status": "confirmed",
+    "provider_model": "gemini-3.8-flash",
+    "canonical_model": "gemini-3.8-flash",
+    "attempt_id": "attempt-7",
+    "accounting_basis": "billing_upper_bound"
+  },
+  "_elice_wire": {
+    "protocol": "chat_completions",
+    "canonical_request_bytes": 26465,
+    "wire_request_bytes": 26431,
+    "reservation_input_bytes": 26465
+  }
+}

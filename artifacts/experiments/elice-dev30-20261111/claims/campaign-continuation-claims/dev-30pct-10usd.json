@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "campaign_id": "dev-30pct-10usd",
+  "campaign_sha256": "a0a91702b404de48ba279a95f8671f1d260f95b1b3afdbf12931a24560ac2b5f",
+  "bundle_sha256": "32d506e5f6c36d1592f969a8f8ecfb4f54da7fead5d83bfd44845acce6a2cf5d",
+  "budget_usd_total": "10.00",
+  "max_http_attempts_total": 192,
+  "claimed_at": "2026-11-10T19:25:07.262364+00:00",
+  "active_budget_usd": "9.90341",
+  "active_max_http_attempts": 191,
+  "continuation": {
+    "version": 1,
+    "parent_bundle_path": "C:\\Users\\dreac\\Desktop\\kdt\\model-lab\\runs\\elice-dev30-10usd-20261111\\bundle.json",
+    "parent_directory": "C:\\Users\\dreac\\Desktop\\kdt\\model-lab\\runs\\elice-dev30-10usd-20261111",
+    "parent_claim_path": "C:\\Users\\dreac\\Desktop\\kdt\\model-lab\\runs\\.campaign-claims\\dev-30pct-10usd.json",
+    "parent_ledger_path": "C:\\Users\\dreac\\Desktop\\kdt\\model-lab\\runs\\elice-dev30-10usd-20261111\\ledger.json",
+    "parent_result_path": "C:\\Users\\dreac\\Desktop\\kdt\\model-lab\\runs\\elice-dev30-10usd-20261111\\campaign-result.json",
+    "parent_first_result_path": "C:\\Users\\dreac\\Desktop\\kdt\\model-lab\\runs\\elice-dev30-10usd-20261111\\results\\gpt-6.1-sol-1.json",
+    "parent_bundle_sha256": "65ac1b5313a0dd2521a1807ce03d5bddb4629c0624ca2480dddf7fe61c168ca2",
+    "parent_claim_sha256": "8c6701db30eab6f65fe7f9325310146349bae44a382520611dc41e9225d79f0c",
+    "parent_ledger_sha256": "4d626c4af5ddbefd35a1db131805e74477037ffcce87eff6e0a5af4b8eed2fb8",
+    "parent_result_sha256": "bdd2da3b8c95b79bc4d05564e548e9afe73e736fca4dc4b2dfeedeb888fd0d86",
+    "parent_first_result_sha256": "e64e630d08e4e719d5e5d4a9f712c96cca23b75dec11851b49973bc8aef4f73f",
+    "inherited_attempts": 1,
+    "inherited_unknown_attempts": 1,
+    "inherited_unknown_hold_usd": "0.09659",
+    "explicit_user_waiver": "skip provider billing lookup only for the first404; retain its full reserved upper bound",
+    "first_case_id": "a-dev-0001",
+    "first_job_id": "gpt-6.1-sol-1",
+    "prior_cost_status": "unconfirmed",
+    "prior_cost_usd": null,
+    "no_unbilled_assumption": true,
+    "job_overrides": {
+      "gpt-6.1-sol-1": {
+        "budget_usd": "1.62216",
+        "max_http_attempts": 22,
+        "lifetime_max_http_attempts": 23
+      },
+      "gpt-6.1-sol-2": {
+        "max_http_attempts": 7
+      }
+    },
+    "maximum_continuations": 1
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "case_id": "a-dev-0011",
+  "version": 1,
+  "allowed": [
+    {
+      "id": "a-purpose",
+      "purpose": "큐 선택 이유는 충분히 설명된 것으로 두고 지연 증가 가정에서 관측·원인 진단으로 발전한다."
+    }
+  ],
+  "forbidden": [
+    {
+      "id": "f-premise",
+      "reason": "이미 설명된 큐 선택 이유를 미답이라고 요구한다.",
+      "type": "repeated_satisfied_purpose"
+    }
+  ],
+  "grader_controls": [
+    {
+      "kind": "allowed",
+      "output": "{\"decision\":{\"next_step\":\"ask\",\"intent\":\"프로젝트 답변에 근거한 다음 질문\",\"persona\":\"tech_lead\",\"target\":\"처리 방식의 조건별 선택 기준 확인\",\"tool_requests\":[],\"reason_summary\":\"현재 자료와 직전 답변을 바탕으로 질문한다.\"},\"question\":{\"persona\":\"tech_lead\",\"text\":\"큐로 요청과 처리를 분리한 이유는 들었습니다. 대기 시간이 늘어난다고 가정하면 큐 대기와 콜백 실행 지연을 나누기 위해 무엇부터 관측하시겠어요?\",\"topic_code\":\"project_discussion\",\"question_contract\":{\"purpose\":\"처리 방식의 조건별 선택 기준 확인\",\"required_points\":[{\"key\":\"response\",\"description\":\"질문한 처리 선택 또는 역할 설명\"},{\"key\":\"basis\",\"description\":\"설명을 뒷받침하는 판단 근거\"}],\"assumptions\":[],\"basis_refs\":[{\"kind\":\"answer_turn\",\"id\":\"fae4e631-82be-53dc-97c6-f2bdad01575e\"},{\"kind\":\"evidence\",\"id\":\"15994a55-9bd3-5cc1-9a47-7f1f639a7a51\"}],\"evaluation_scope\":\"처리 방식의 조건별 선택 기준 확인\",\"evaluation_keys\":[\"problem_solving\",\"communication\"]},\"evidence_refs\":[\"15994a55-9bd3-5cc1-9a47-7f1f639a7a51\"],\"jd_requirement_ids\":[],\"question_type\":\"main\",\"parent_turn_id\":null}}"
+    },
+    {
+      "kind": "forbidden",
+      "output": "{\"decision\":{\"next_step\":\"ask\",\"intent\":\"프로젝트 답변에 근거한 다음 질문\",\"persona\":\"tech_lead\",\"target\":\"처리 방식의 조건별 선택 기준 확인\",\"tool_requests\":[],\"reason_summary\":\"현재 자료와 직전 답변을 바탕으로 질문한다.\"},\"question\":{\"persona\":\"tech_lead\",\"text\":\"왜 큐를 골랐는지는 아직 답하지 않으셨습니다. 그 이유를 다시 말해 주세요.\",\"topic_code\":\"project_discussion\",\"question_contract\":{\"purpose\":\"처리 방식의 조건별 선택 기준 확인\",\"required_points\":[{\"key\":\"response\",\"description\":\"질문한 처리 선택 또는 역할 설명\"},{\"key\":\"basis\",\"description\":\"설명을 뒷받침하는 판단 근거\"}],\"assumptions\":[],\"basis_refs\":[{\"kind\":\"answer_turn\",\"id\":\"fae4e631-82be-53dc-97c6-f2bdad01575e\"},{\"kind\":\"evidence\",\"id\":\"15994a55-9bd3-5cc1-9a47-7f1f639a7a51\"}],\"evaluation_scope\":\"처리 방식의 조건별 선택 기준 확인\",\"evaluation_keys\":[\"problem_solving\",\"communication\"]},\"evidence_refs\":[\"15994a55-9bd3-5cc1-9a47-7f1f639a7a51\"],\"jd_requirement_ids\":[],\"question_type\":\"main\",\"parent_turn_id\":null}}"
+    },
+    {
+      "kind": "ambiguous",
+      "output": "{\"decision\":{\"next_step\":\"ask\",\"intent\":\"프로젝트 답변에 근거한 다음 질문\",\"persona\":\"tech_lead\",\"target\":\"처리 방식의 조건별 선택 기준 확인\",\"tool_requests\":[],\"reason_summary\":\"현재 자료와 직전 답변을 바탕으로 질문한다.\"},\"question\":{\"persona\":\"tech_lead\",\"text\":\"큐 사용에 대해 더 자세히 설명해 주세요.\",\"topic_code\":\"project_discussion\",\"question_contract\":{\"purpose\":\"처리 방식의 조건별 선택 기준 확인\",\"required_points\":[{\"key\":\"response\",\"description\":\"질문한 처리 선택 또는 역할 설명\"},{\"key\":\"basis\",\"description\":\"설명을 뒷받침하는 판단 근거\"}],\"assumptions\":[],\"basis_refs\":[{\"kind\":\"answer_turn\",\"id\":\"fae4e631-82be-53dc-97c6-f2bdad01575e\"},{\"kind\":\"evidence\",\"id\":\"15994a55-9bd3-5cc1-9a47-7f1f639a7a51\"}],\"evaluation_scope\":\"처리 방식의 조건별 선택 기준 확인\",\"evaluation_keys\":[\"problem_solving\",\"communication\"]},\"evidence_refs\":[\"15994a55-9bd3-5cc1-9a47-7f1f639a7a51\"],\"jd_requirement_ids\":[],\"question_type\":\"main\",\"parent_turn_id\":null}}"
+    }
+  ],
+  "review": {
+    "status": "unreviewed",
+    "author": "Codex",
+    "reviewer": null,
+    "reviewed_at": null,
+    "pending_notes": [
+      "Draft semantic expectations and all three controls require independent human review.",
+      "Ambiguous control is a calibration boundary; no Judge or model output was used to author gold."
+    ]
+  }
+}

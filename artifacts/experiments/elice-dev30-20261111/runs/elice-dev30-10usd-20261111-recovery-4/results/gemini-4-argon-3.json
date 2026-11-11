@@ -1,0 +1,442 @@
+{
+  "experiment": "B",
+  "mode": "execute",
+  "manifest": {
+    "task_name": "report_score",
+    "version": "report_score_v3",
+    "model": "gemini-4-argon",
+    "template_sha256": "fa79e4af67a70bae1a3eef312ccdcbb852121d0e2fc0b978414afe2b86b1a702",
+    "limits": {
+      "timeout_seconds": 30,
+      "max_output_tokens": 2000,
+      "max_input_bytes": 65536,
+      "max_response_bytes": 1048576,
+      "reasoning_effort": null,
+      "stream": false
+    }
+  },
+  "cases": [
+    {
+      "case_id": "b-legacy-na-01",
+      "kind": "report",
+      "attempts": [
+        {
+          "attempt": 1,
+          "provider": "openai",
+          "model": "gemini-4-argon",
+          "prompt_version": "report_score_v3",
+          "schema_version": "1",
+          "latency_ms": 17615,
+          "input_tokens": 6644,
+          "output_tokens": 692,
+          "error_stage": null,
+          "error_code": null,
+          "response_id": "dX3zaqeyIbDM2roPxL7XmA4"
+        }
+      ],
+      "status": "succeeded",
+      "output": {
+        "judgments": [
+          {
+            "turn_id": "1",
+            "key": "contribution_clarity",
+            "level": 4
+          },
+          {
+            "turn_id": "1",
+            "key": "communication",
+            "level": 4
+          },
+          {
+            "turn_id": "2",
+            "key": "project_understanding",
+            "level": 4
+          },
+          {
+            "turn_id": "2",
+            "key": "technical_reasoning",
+            "level": "not_applicable"
+          },
+          {
+            "turn_id": "2",
+            "key": "problem_solving",
+            "level": "not_applicable"
+          },
+          {
+            "turn_id": "2",
+            "key": "communication",
+            "level": 4
+          },
+          {
+            "turn_id": "3",
+            "key": "project_understanding",
+            "level": "not_applicable"
+          },
+          {
+            "turn_id": "3",
+            "key": "technical_reasoning",
+            "level": 2
+          },
+          {
+            "turn_id": "3",
+            "key": "problem_solving",
+            "level": "not_applicable"
+          },
+          {
+            "turn_id": "3",
+            "key": "communication",
+            "level": 3
+          },
+          {
+            "turn_id": "4",
+            "key": "project_understanding",
+            "level": "not_applicable"
+          },
+          {
+            "turn_id": "4",
+            "key": "technical_reasoning",
+            "level": "not_applicable"
+          },
+          {
+            "turn_id": "4",
+            "key": "problem_solving",
+            "level": 3
+          },
+          {
+            "turn_id": "4",
+            "key": "communication",
+            "level": 3
+          },
+          {
+            "turn_id": "5",
+            "key": "company_job_fit",
+            "level": 4
+          },
+          {
+            "turn_id": "5",
+            "key": "communication",
+            "level": 4
+          },
+          {
+            "turn_id": "6",
+            "key": "project_understanding",
+            "level": "not_applicable"
+          },
+          {
+            "turn_id": "6",
+            "key": "technical_reasoning",
+            "level": 3
+          },
+          {
+            "turn_id": "6",
+            "key": "problem_solving",
+            "level": "not_applicable"
+          },
+          {
+            "turn_id": "6",
+            "key": "communication",
+            "level": 3
+          },
+          {
+            "turn_id": "7",
+            "key": "project_understanding",
+            "level": "not_applicable"
+          },
+          {
+            "turn_id": "7",
+            "key": "technical_reasoning",
+            "level": 4
+          },
+          {
+            "turn_id": "7",
+            "key": "problem_solving",
+            "level": "not_applicable"
+          },
+          {
+            "turn_id": "7",
+            "key": "communication",
+            "level": 4
+          },
+          {
+            "turn_id": "8",
+            "key": "company_job_fit",
+            "level": "not_applicable"
+          },
+          {
+            "turn_id": "8",
+            "key": "communication",
+            "level": 4
+          },
+          {
+            "turn_id": "9",
+            "key": "project_understanding",
+            "level": "not_applicable"
+          },
+          {
+            "turn_id": "9",
+            "key": "technical_reasoning",
+            "level": 2
+          },
+          {
+            "turn_id": "9",
+            "key": "problem_solving",
+            "level": "not_applicable"
+          },
+          {
+            "turn_id": "9",
+            "key": "communication",
+            "level": 3
+          }
+        ]
+      },
+      "review_status": "unreviewed",
+      "quality": "excluded_unreviewed",
+      "failure": null
+    }
+  ],
+  "summary": {
+    "total_cases": 1,
+    "quality_denominator": 0,
+    "quality_evaluation": "diagnostic_only"
+  },
+  "in_progress_case": null,
+  "approval_plan_sha256": "533b7251b4758f447b0f04c8acc338859ff76aa8b24943f50fc07f21621ee0be",
+  "cost_budget": {
+    "amount_usd": "0.1375",
+    "max_attempts": 2,
+    "approval_id": "2430c06da0826b908ab8d28bc9882af56e83b22797a28b731eddd79cb7a92dcb",
+    "attempts_started": 1,
+    "spent_usd": "0.020208",
+    "reserved_usd": "0",
+    "remaining_usd": "0.117292",
+    "unknown_attempts": 0,
+    "in_flight_attempts": 0,
+    "halted": false,
+    "halt_reason": null,
+    "transport_integration": "guarded_http_transport",
+    "accounting_basis": "conservative_cost_upper_bound"
+  },
+  "cost_audit": [
+    {
+      "event": "reserved",
+      "attempt_id": "attempt-5",
+      "local_attempt_id": "attempt-1",
+      "model": "gemini-4-argon",
+      "reserved_usd": "0.07525",
+      "accounting_basis": "billing_upper_bound",
+      "wire_protocol": "chat_completions",
+      "canonical_request_bytes": 27625,
+      "wire_request_bytes": 27582,
+      "reservation_input_bytes": 27625,
+      "budget": {
+        "amount_usd": "0.1375",
+        "max_attempts": 2,
+        "approval_id": "2430c06da0826b908ab8d28bc9882af56e83b22797a28b731eddd79cb7a92dcb",
+        "attempts_started": 1,
+        "spent_usd": "0",
+        "reserved_usd": "0.07525",
+        "remaining_usd": "0.06225",
+        "unknown_attempts": 0,
+        "in_flight_attempts": 1,
+        "halted": false,
+        "halt_reason": null,
+        "transport_integration": "elice_global_guard",
+        "accounting_basis": "billing_upper_bound",
+        "spent_upper_usd": "0"
+      },
+      "global_budget": {
+        "amount_usd": "8.6218768",
+        "max_attempts": 122,
+        "approval_id": "campaign-a0a91702b404de48ba279a95f8671f1d260f95b1b3afdbf12931a24560ac2b5f-continuation4",
+        "attempts_started": 5,
+        "spent_usd": "0.066144",
+        "reserved_usd": "0.07525",
+        "remaining_usd": "8.4804828",
+        "unknown_attempts": 0,
+        "in_flight_attempts": 1,
+        "halted": false,
+        "halt_reason": null,
+        "transport_integration": "elice_global_guard",
+        "accounting_basis": "billing_upper_bound",
+        "spent_upper_usd": "0.066144"
+      },
+      "halted": false,
+      "halt_reason": null
+    },
+    {
+      "event": "settled",
+      "attempt_id": "attempt-5",
+      "local_attempt_id": "attempt-1",
+      "model": "gemini-4-argon",
+      "reserved_usd": "0.07525",
+      "cost_usd": "0.020208",
+      "cost_lower_usd": "0.020208",
+      "cost_upper_usd": "0.020208",
+      "cost_status": "confirmed",
+      "accounting_basis": "billing_upper_bound",
+      "error_code": null,
+      "http_status": 200,
+      "sent": true,
+      "response_id": "dX3zaqeyIbDM2roPxL7XmA4",
+      "wire_protocol": "chat_completions",
+      "canonical_request_bytes": 27625,
+      "wire_request_bytes": 27582,
+      "reservation_input_bytes": 27625,
+      "usage": {
+        "input_tokens": 6644,
+        "output_tokens": 692,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": null,
+        "reasoning_output_tokens": null,
+        "cache_write_short_tokens": null,
+        "cache_write_long_tokens": null
+      },
+      "input_tokens": 6644,
+      "output_tokens": 692,
+      "cached_input_tokens": 0,
+      "provider_model": "gemini-4-argon",
+      "raw_response_sha256": "8e497753a3823d4919b68792b48e40e25525ccf745ac7b334b22ca83f2cdfb76",
+      "budget": {
+        "amount_usd": "0.1375",
+        "max_attempts": 2,
+        "approval_id": "2430c06da0826b908ab8d28bc9882af56e83b22797a28b731eddd79cb7a92dcb",
+        "attempts_started": 1,
+        "spent_usd": "0.020208",
+        "reserved_usd": "0",
+        "remaining_usd": "0.117292",
+        "unknown_attempts": 0,
+        "in_flight_attempts": 0,
+        "halted": false,
+        "halt_reason": null,
+        "transport_integration": "elice_global_guard",
+        "accounting_basis": "billing_upper_bound",
+        "spent_upper_usd": "0.020208"
+      },
+      "global_budget": {
+        "amount_usd": "8.6218768",
+        "max_attempts": 122,
+        "approval_id": "campaign-a0a91702b404de48ba279a95f8671f1d260f95b1b3afdbf12931a24560ac2b5f-continuation4",
+        "attempts_started": 5,
+        "spent_usd": "0.086352",
+        "reserved_usd": "0",
+        "remaining_usd": "8.5355248",
+        "unknown_attempts": 0,
+        "in_flight_attempts": 0,
+        "halted": false,
+        "halt_reason": null,
+        "transport_integration": "elice_global_guard",
+        "accounting_basis": "billing_upper_bound",
+        "spent_upper_usd": "0.086352"
+      },
+      "halted": false,
+      "halt_reason": null
+    }
+  ],
+  "guarded_transport": {
+    "budget": {
+      "amount_usd": "0.1375",
+      "max_attempts": 2,
+      "approval_id": "2430c06da0826b908ab8d28bc9882af56e83b22797a28b731eddd79cb7a92dcb",
+      "attempts_started": 1,
+      "spent_usd": "0.020208",
+      "reserved_usd": "0",
+      "remaining_usd": "0.117292",
+      "unknown_attempts": 0,
+      "in_flight_attempts": 0,
+      "halted": false,
+      "halt_reason": null,
+      "transport_integration": "elice_global_guard",
+      "accounting_basis": "billing_upper_bound",
+      "spent_upper_usd": "0.020208"
+    },
+    "global_budget": {
+      "amount_usd": "8.6218768",
+      "max_attempts": 122,
+      "approval_id": "campaign-a0a91702b404de48ba279a95f8671f1d260f95b1b3afdbf12931a24560ac2b5f-continuation4",
+      "attempts_started": 5,
+      "spent_usd": "0.086352",
+      "reserved_usd": "0",
+      "remaining_usd": "8.5355248",
+      "unknown_attempts": 0,
+      "in_flight_attempts": 0,
+      "halted": false,
+      "halt_reason": null,
+      "transport_integration": "elice_global_guard",
+      "accounting_basis": "billing_upper_bound",
+      "spent_upper_usd": "0.086352"
+    },
+    "halted": false,
+    "halt_reason": null,
+    "attempts": [
+      {
+        "event": "settled",
+        "attempt_id": "attempt-5",
+        "local_attempt_id": "attempt-1",
+        "model": "gemini-4-argon",
+        "reserved_usd": "0.07525",
+        "cost_usd": "0.020208",
+        "cost_lower_usd": "0.020208",
+        "cost_upper_usd": "0.020208",
+        "cost_status": "confirmed",
+        "accounting_basis": "billing_upper_bound",
+        "error_code": null,
+        "http_status": 200,
+        "sent": true,
+        "response_id": "dX3zaqeyIbDM2roPxL7XmA4",
+        "wire_protocol": "chat_completions",
+        "canonical_request_bytes": 27625,
+        "wire_request_bytes": 27582,
+        "reservation_input_bytes": 27625,
+        "usage": {
+          "input_tokens": 6644,
+          "output_tokens": 692,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": null,
+          "reasoning_output_tokens": null,
+          "cache_write_short_tokens": null,
+          "cache_write_long_tokens": null
+        },
+        "input_tokens": 6644,
+        "output_tokens": 692,
+        "cached_input_tokens": 0,
+        "provider_model": "gemini-4-argon",
+        "raw_response_sha256": "8e497753a3823d4919b68792b48e40e25525ccf745ac7b334b22ca83f2cdfb76"
+      }
+    ],
+    "sent_attempts": 1,
+    "transport_integration": "elice_global_guard",
+    "wire_protocol": "chat_completions",
+    "request_byte_counts": [
+      {
+        "attempt_id": "attempt-5",
+        "wire_protocol": "chat_completions",
+        "canonical_request_bytes": 27625,
+        "wire_request_bytes": 27582,
+        "reservation_input_bytes": 27625
+      }
+    ]
+  },
+  "raw_response_artifacts": [
+    {
+      "path": "runs/elice-dev30-10usd-20261111-recovery-4/results/gemini-4-argon-3-raw/response-0001.json",
+      "sha256": "0266660389b84426c556f41bdc58cbbeb128fe4893d7d03c2312fcf23395805d"
+    }
+  ],
+  "campaign_budget": {
+    "amount_usd": "8.6218768",
+    "max_attempts": 122,
+    "approval_id": "campaign-a0a91702b404de48ba279a95f8671f1d260f95b1b3afdbf12931a24560ac2b5f-continuation4",
+    "attempts_started": 5,
+    "spent_usd": "0.086352",
+    "reserved_usd": "0",
+    "remaining_usd": "8.5355248",
+    "unknown_attempts": 0,
+    "in_flight_attempts": 0,
+    "halted": false,
+    "halt_reason": null,
+    "transport_integration": "requires_transport_binding",
+    "accounting_basis": "conservative_cost_upper_bound"
+  },
+  "run_state": "completed",
+  "output_format_version": 2
+}

@@ -1,0 +1,31 @@
+{
+  "error": {
+    "message": "Unsupported parameter(s) for /v1/responses on this model: text. They cannot be honoured here and are rejected rather than ignored — remove them from the request.",
+    "type": "invalid_request_error",
+    "param": null,
+    "code": "400"
+  },
+  "_elice_diagnostic": {
+    "kind": "http_error",
+    "http_status": 400,
+    "model": "gemini-3.8-flash",
+    "attempt_id": "attempt-28",
+    "captured_body_bytes": 244,
+    "body_sha256": "163efdfcb9029ebaf23b060bfd60d928d61f7bdc79a6db71a9cb698d801a7579",
+    "hash_scope": "captured_body_bytes",
+    "body_truncated": false,
+    "body_kind": "json",
+    "error_code": "response_usage_unconfirmed"
+  },
+  "_elice_billing": {
+    "usage": null,
+    "cost_usd": null,
+    "cost_lower_usd": null,
+    "cost_upper_usd": null,
+    "cost_status": "unconfirmed",
+    "canonical_model": "gemini-3.8-flash",
+    "provider_model": null,
+    "attempt_id": "attempt-28",
+    "accounting_basis": "billing_upper_bound"
+  }
+}

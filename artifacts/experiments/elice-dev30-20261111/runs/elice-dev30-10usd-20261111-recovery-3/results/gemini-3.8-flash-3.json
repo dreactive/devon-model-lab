@@ -1,0 +1,442 @@
+{
+  "experiment": "B",
+  "mode": "execute",
+  "manifest": {
+    "task_name": "report_score",
+    "version": "report_score_v3",
+    "model": "gemini-3.8-flash",
+    "template_sha256": "fa79e4af67a70bae1a3eef312ccdcbb852121d0e2fc0b978414afe2b86b1a702",
+    "limits": {
+      "timeout_seconds": 30,
+      "max_output_tokens": 2000,
+      "max_input_bytes": 65536,
+      "max_response_bytes": 1048576,
+      "reasoning_effort": null,
+      "stream": false
+    }
+  },
+  "cases": [
+    {
+      "case_id": "b-legacy-na-01",
+      "kind": "report",
+      "attempts": [
+        {
+          "attempt": 1,
+          "provider": "openai",
+          "model": "gemini-3.8-flash",
+          "prompt_version": "report_score_v3",
+          "schema_version": "1",
+          "latency_ms": 7474,
+          "input_tokens": 6678,
+          "output_tokens": 1032,
+          "error_stage": null,
+          "error_code": null,
+          "response_id": "uXjzaqGLOMSWvr0Ptf7EmAM"
+        }
+      ],
+      "status": "succeeded",
+      "output": {
+        "judgments": [
+          {
+            "turn_id": "1",
+            "key": "contribution_clarity",
+            "level": 4
+          },
+          {
+            "turn_id": "1",
+            "key": "communication",
+            "level": 4
+          },
+          {
+            "turn_id": "2",
+            "key": "project_understanding",
+            "level": 4
+          },
+          {
+            "turn_id": "2",
+            "key": "technical_reasoning",
+            "level": "not_applicable"
+          },
+          {
+            "turn_id": "2",
+            "key": "problem_solving",
+            "level": "not_applicable"
+          },
+          {
+            "turn_id": "2",
+            "key": "communication",
+            "level": 3
+          },
+          {
+            "turn_id": "3",
+            "key": "project_understanding",
+            "level": "not_applicable"
+          },
+          {
+            "turn_id": "3",
+            "key": "technical_reasoning",
+            "level": 2
+          },
+          {
+            "turn_id": "3",
+            "key": "problem_solving",
+            "level": "not_applicable"
+          },
+          {
+            "turn_id": "3",
+            "key": "communication",
+            "level": 3
+          },
+          {
+            "turn_id": "4",
+            "key": "project_understanding",
+            "level": "not_applicable"
+          },
+          {
+            "turn_id": "4",
+            "key": "technical_reasoning",
+            "level": "not_applicable"
+          },
+          {
+            "turn_id": "4",
+            "key": "problem_solving",
+            "level": 3
+          },
+          {
+            "turn_id": "4",
+            "key": "communication",
+            "level": 3
+          },
+          {
+            "turn_id": "5",
+            "key": "company_job_fit",
+            "level": 4
+          },
+          {
+            "turn_id": "5",
+            "key": "communication",
+            "level": 4
+          },
+          {
+            "turn_id": "6",
+            "key": "project_understanding",
+            "level": "not_applicable"
+          },
+          {
+            "turn_id": "6",
+            "key": "technical_reasoning",
+            "level": 3
+          },
+          {
+            "turn_id": "6",
+            "key": "problem_solving",
+            "level": "not_applicable"
+          },
+          {
+            "turn_id": "6",
+            "key": "communication",
+            "level": 3
+          },
+          {
+            "turn_id": "7",
+            "key": "project_understanding",
+            "level": "not_applicable"
+          },
+          {
+            "turn_id": "7",
+            "key": "technical_reasoning",
+            "level": 4
+          },
+          {
+            "turn_id": "7",
+            "key": "problem_solving",
+            "level": "not_applicable"
+          },
+          {
+            "turn_id": "7",
+            "key": "communication",
+            "level": 3
+          },
+          {
+            "turn_id": "8",
+            "key": "company_job_fit",
+            "level": 3
+          },
+          {
+            "turn_id": "8",
+            "key": "communication",
+            "level": 4
+          },
+          {
+            "turn_id": "9",
+            "key": "project_understanding",
+            "level": "not_applicable"
+          },
+          {
+            "turn_id": "9",
+            "key": "technical_reasoning",
+            "level": 2
+          },
+          {
+            "turn_id": "9",
+            "key": "problem_solving",
+            "level": "not_applicable"
+          },
+          {
+            "turn_id": "9",
+            "key": "communication",
+            "level": 3
+          }
+        ]
+      },
+      "review_status": "unreviewed",
+      "quality": "excluded_unreviewed",
+      "failure": null
+    }
+  ],
+  "summary": {
+    "total_cases": 1,
+    "quality_denominator": 0,
+    "quality_evaluation": "diagnostic_only"
+  },
+  "in_progress_case": null,
+  "approval_plan_sha256": "eb6ef700dfeaf4bc77f851ec8bc7125381a5c95c772628dbc594772a25a15ac3",
+  "cost_budget": {
+    "amount_usd": "0.0625",
+    "max_attempts": 2,
+    "approval_id": "133b7bc4b29cb381e0bb99117295d12124c67ba05bb01889cdf533eefbedbd2c",
+    "attempts_started": 1,
+    "spent_usd": "0.0088785",
+    "reserved_usd": "0",
+    "remaining_usd": "0.0536215",
+    "unknown_attempts": 0,
+    "in_flight_attempts": 0,
+    "halted": false,
+    "halt_reason": null,
+    "transport_integration": "guarded_http_transport",
+    "accounting_basis": "conservative_cost_upper_bound"
+  },
+  "cost_audit": [
+    {
+      "event": "reserved",
+      "attempt_id": "attempt-19",
+      "local_attempt_id": "attempt-1",
+      "model": "gemini-3.8-flash",
+      "reserved_usd": "0.02822025",
+      "accounting_basis": "billing_upper_bound",
+      "wire_protocol": "chat_completions",
+      "canonical_request_bytes": 27627,
+      "wire_request_bytes": 27584,
+      "reservation_input_bytes": 27627,
+      "budget": {
+        "amount_usd": "0.0625",
+        "max_attempts": 2,
+        "approval_id": "133b7bc4b29cb381e0bb99117295d12124c67ba05bb01889cdf533eefbedbd2c",
+        "attempts_started": 1,
+        "spent_usd": "0",
+        "reserved_usd": "0.02822025",
+        "remaining_usd": "0.03427975",
+        "unknown_attempts": 0,
+        "in_flight_attempts": 1,
+        "halted": false,
+        "halt_reason": null,
+        "transport_integration": "elice_global_guard",
+        "accounting_basis": "billing_upper_bound",
+        "spent_upper_usd": "0"
+      },
+      "global_budget": {
+        "amount_usd": "9.25213505",
+        "max_attempts": 162,
+        "approval_id": "campaign-a0a91702b404de48ba279a95f8671f1d260f95b1b3afdbf12931a24560ac2b5f-continuation3",
+        "attempts_started": 19,
+        "spent_usd": "0.18045375",
+        "reserved_usd": "0.02822025",
+        "remaining_usd": "9.04346105",
+        "unknown_attempts": 0,
+        "in_flight_attempts": 1,
+        "halted": false,
+        "halt_reason": null,
+        "transport_integration": "elice_global_guard",
+        "accounting_basis": "billing_upper_bound",
+        "spent_upper_usd": "0.18045375"
+      },
+      "halted": false,
+      "halt_reason": null
+    },
+    {
+      "event": "settled",
+      "attempt_id": "attempt-19",
+      "local_attempt_id": "attempt-1",
+      "model": "gemini-3.8-flash",
+      "reserved_usd": "0.02822025",
+      "cost_usd": "0.0088785",
+      "cost_lower_usd": "0.0088785",
+      "cost_upper_usd": "0.0088785",
+      "cost_status": "confirmed",
+      "accounting_basis": "billing_upper_bound",
+      "error_code": null,
+      "http_status": 200,
+      "sent": true,
+      "response_id": "uXjzaqGLOMSWvr0Ptf7EmAM",
+      "wire_protocol": "chat_completions",
+      "canonical_request_bytes": 27627,
+      "wire_request_bytes": 27584,
+      "reservation_input_bytes": 27627,
+      "usage": {
+        "input_tokens": 6678,
+        "output_tokens": 1032,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": null,
+        "reasoning_output_tokens": null,
+        "cache_write_short_tokens": null,
+        "cache_write_long_tokens": null
+      },
+      "input_tokens": 6678,
+      "output_tokens": 1032,
+      "cached_input_tokens": 0,
+      "provider_model": "gemini-3.8-flash",
+      "raw_response_sha256": "2e63f619e277d32b741f69d3f26b2bf6a4ce53da0f6072397e038e800d86ffe1",
+      "budget": {
+        "amount_usd": "0.0625",
+        "max_attempts": 2,
+        "approval_id": "133b7bc4b29cb381e0bb99117295d12124c67ba05bb01889cdf533eefbedbd2c",
+        "attempts_started": 1,
+        "spent_usd": "0.0088785",
+        "reserved_usd": "0",
+        "remaining_usd": "0.0536215",
+        "unknown_attempts": 0,
+        "in_flight_attempts": 0,
+        "halted": false,
+        "halt_reason": null,
+        "transport_integration": "elice_global_guard",
+        "accounting_basis": "billing_upper_bound",
+        "spent_upper_usd": "0.0088785"
+      },
+      "global_budget": {
+        "amount_usd": "9.25213505",
+        "max_attempts": 162,
+        "approval_id": "campaign-a0a91702b404de48ba279a95f8671f1d260f95b1b3afdbf12931a24560ac2b5f-continuation3",
+        "attempts_started": 19,
+        "spent_usd": "0.18933225",
+        "reserved_usd": "0",
+        "remaining_usd": "9.0628028",
+        "unknown_attempts": 0,
+        "in_flight_attempts": 0,
+        "halted": false,
+        "halt_reason": null,
+        "transport_integration": "elice_global_guard",
+        "accounting_basis": "billing_upper_bound",
+        "spent_upper_usd": "0.18933225"
+      },
+      "halted": false,
+      "halt_reason": null
+    }
+  ],
+  "guarded_transport": {
+    "budget": {
+      "amount_usd": "0.0625",
+      "max_attempts": 2,
+      "approval_id": "133b7bc4b29cb381e0bb99117295d12124c67ba05bb01889cdf533eefbedbd2c",
+      "attempts_started": 1,
+      "spent_usd": "0.0088785",
+      "reserved_usd": "0",
+      "remaining_usd": "0.0536215",
+      "unknown_attempts": 0,
+      "in_flight_attempts": 0,
+      "halted": false,
+      "halt_reason": null,
+      "transport_integration": "elice_global_guard",
+      "accounting_basis": "billing_upper_bound",
+      "spent_upper_usd": "0.0088785"
+    },
+    "global_budget": {
+      "amount_usd": "9.25213505",
+      "max_attempts": 162,
+      "approval_id": "campaign-a0a91702b404de48ba279a95f8671f1d260f95b1b3afdbf12931a24560ac2b5f-continuation3",
+      "attempts_started": 19,
+      "spent_usd": "0.18933225",
+      "reserved_usd": "0",
+      "remaining_usd": "9.0628028",
+      "unknown_attempts": 0,
+      "in_flight_attempts": 0,
+      "halted": false,
+      "halt_reason": null,
+      "transport_integration": "elice_global_guard",
+      "accounting_basis": "billing_upper_bound",
+      "spent_upper_usd": "0.18933225"
+    },
+    "halted": false,
+    "halt_reason": null,
+    "attempts": [
+      {
+        "event": "settled",
+        "attempt_id": "attempt-19",
+        "local_attempt_id": "attempt-1",
+        "model": "gemini-3.8-flash",
+        "reserved_usd": "0.02822025",
+        "cost_usd": "0.0088785",
+        "cost_lower_usd": "0.0088785",
+        "cost_upper_usd": "0.0088785",
+        "cost_status": "confirmed",
+        "accounting_basis": "billing_upper_bound",
+        "error_code": null,
+        "http_status": 200,
+        "sent": true,
+        "response_id": "uXjzaqGLOMSWvr0Ptf7EmAM",
+        "wire_protocol": "chat_completions",
+        "canonical_request_bytes": 27627,
+        "wire_request_bytes": 27584,
+        "reservation_input_bytes": 27627,
+        "usage": {
+          "input_tokens": 6678,
+          "output_tokens": 1032,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": null,
+          "reasoning_output_tokens": null,
+          "cache_write_short_tokens": null,
+          "cache_write_long_tokens": null
+        },
+        "input_tokens": 6678,
+        "output_tokens": 1032,
+        "cached_input_tokens": 0,
+        "provider_model": "gemini-3.8-flash",
+        "raw_response_sha256": "2e63f619e277d32b741f69d3f26b2bf6a4ce53da0f6072397e038e800d86ffe1"
+      }
+    ],
+    "sent_attempts": 1,
+    "transport_integration": "elice_global_guard",
+    "wire_protocol": "chat_completions",
+    "request_byte_counts": [
+      {
+        "attempt_id": "attempt-19",
+        "wire_protocol": "chat_completions",
+        "canonical_request_bytes": 27627,
+        "wire_request_bytes": 27584,
+        "reservation_input_bytes": 27627
+      }
+    ]
+  },
+  "raw_response_artifacts": [
+    {
+      "path": "runs/elice-dev30-10usd-20261111-recovery-3/results/gemini-3.8-flash-3-raw/response-0001.json",
+      "sha256": "ab23534c796652081368cca16cb078812e7b04fa2b670ee85e979d5f56fd7b00"
+    }
+  ],
+  "campaign_budget": {
+    "amount_usd": "9.25213505",
+    "max_attempts": 162,
+    "approval_id": "campaign-a0a91702b404de48ba279a95f8671f1d260f95b1b3afdbf12931a24560ac2b5f-continuation3",
+    "attempts_started": 19,
+    "spent_usd": "0.18933225",
+    "reserved_usd": "0",
+    "remaining_usd": "9.0628028",
+    "unknown_attempts": 0,
+    "in_flight_attempts": 0,
+    "halted": false,
+    "halt_reason": null,
+    "transport_integration": "requires_transport_binding",
+    "accounting_basis": "conservative_cost_upper_bound"
+  },
+  "run_state": "completed",
+  "output_format_version": 2
+}

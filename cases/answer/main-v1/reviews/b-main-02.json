@@ -1,0 +1,16 @@
+{
+  "case_id": "b-main-02",
+  "version": 1,
+  "review": {
+    "status": "unreviewed",
+    "author": "Codex",
+    "reviewer": null,
+    "reviewed_at": null,
+    "pending_notes": [
+      "전체 문답·315개 annotation은 합성 초안이다. 후보 모델 출력이나 Judge로 gold를 만든 것이 아니며 독립 사람 판정 전에는 의미 정답으로 확정하지 않는다.",
+      "유일한 H null 사례. 실패는 후보 평가가 아닌 합성 문답 관찰이다.",
+      "특히 R2의 짧은 선택+이유는 질문의 필수 의도에 답한 경우에만 C4로 초안 판정했다. 선택 이유를 묻는 질문에 방식만 나열한 응답은 C4가 아니다.",
+      "인접 단계와 C2/C3/C4 경계는 독립 검토가 필요하다. null은 C0, 의미가 분명한 모름·미회상 선언은 부분 응답 C1로 초안 판정했으며 legacy NA도 사람이 검토해야 한다."
+    ]
+  }
+}

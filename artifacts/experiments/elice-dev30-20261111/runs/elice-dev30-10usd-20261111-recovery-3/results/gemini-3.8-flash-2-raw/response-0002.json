@@ -1,0 +1,55 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\n  \"judgments\": [\n    {\n      \"turn_id\": \"1\",\n      \"key\": \"contribution_clarity\",\n      \"level\": 4\n    },\n    {\n      \"turn_id\": \"1\",\n      \"key\": \"communication\",\n      \"level\": 3\n    },\n    {\n      \"turn_id\": \"2\",\n      \"key\": \"project_understanding\",\n      \"level\": 4\n    },\n    {\n      \"turn_id\": \"2\",\n      \"key\": \"communication\",\n      \"level\": 3\n    },\n    {\n      \"turn_id\": \"3\",\n      \"key\": \"technical_reasoning\",\n      \"level\": 0\n    },\n    {\n      \"turn_id\": \"3\",\n      \"key\": \"communication\",\n      \"level\": 0\n    },\n    {\n      \"turn_id\": \"4\",\n      \"key\": \"problem_solving\",\n      \"level\": 1\n    },\n    {\n      \"turn_id\": \"4\",\n      \"key\": \"communication\",\n      \"level\": 1\n    },\n    {\n      \"turn_id\": \"5\",\n      \"key\": \"company_job_fit\",\n      \"level\": 2\n    },\n    {\n      \"turn_id\": \"5\",\n      \"key\": \"communication\",\n      \"level\": 2\n    },\n    {\n      \"turn_id\": \"6\",\n      \"key\": \"technical_reasoning\",\n      \"level\": 1\n    },\n    {\n      \"turn_id\": \"6\",\n      \"key\": \"communication\",\n      \"level\": 3\n    },\n    {\n      \"turn_id\": \"7\",\n      \"key\": \"technical_reasoning\",\n      \"level\": 2\n    },\n    {\n      \"turn_id\": \"7\",\n      \"key\": \"communication\",\n      \"level\": 3\n    },\n    {\n      \"turn_id\": \"8\",\n      \"key\": \"communication\",\n      \"level\": 4\n    },\n    {\n      \"turn_id\": \"9\",\n      \"key\": \"technical_reasoning\",\n      \"level\": 3\n    },\n    {\n      \"turn_id\": \"9\",\n      \"key\": \"communication\",\n      \"level\": 3\n    }\n  ]\n}",
+        "extra_content": {
+          "google": {
+            "thought_signature": "EmkKZwFpFH0TB0jvNfpvqoCMck/tqj2s8CXUwJPa/UyXj1oVwrwlfjCP5p6c2/gayvrgCur5W7q2/y6Tbn/MiMQZzUDhiYK2k7F0lX2MVDE//1GifRIqn1jhF4Z/MT0jIKviGFrnvQoxNGQ="
+          }
+        },
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794341037,
+  "id": "qHjzauWgIPG_1e8P1tHNsQQ",
+  "model": "gemini-3.8-flash",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 563,
+    "prompt_tokens": 6605,
+    "total_tokens": 7168,
+    "input_tokens": 6605,
+    "output_tokens": 563,
+    "cached_prompt_tokens": 0,
+    "cache_write_tokens": 0
+  },
+  "_elice_billing": {
+    "usage": {
+      "input_tokens": 6605,
+      "output_tokens": 563,
+      "cached_input_tokens": 0,
+      "cache_write_input_tokens": null,
+      "reasoning_output_tokens": null,
+      "cache_write_short_tokens": null,
+      "cache_write_long_tokens": null
+    },
+    "cost_usd": "0.007065",
+    "cost_lower_usd": "0.007065",
+    "cost_upper_usd": "0.007065",
+    "cost_status": "confirmed",
+    "provider_model": "gemini-3.8-flash",
+    "canonical_model": "gemini-3.8-flash",
+    "attempt_id": "attempt-16",
+    "accounting_basis": "billing_upper_bound"
+  },
+  "_elice_wire": {
+    "protocol": "chat_completions",
+    "canonical_request_bytes": 27505,
+    "wire_request_bytes": 27462,
+    "reservation_input_bytes": 27505
+  }
+}

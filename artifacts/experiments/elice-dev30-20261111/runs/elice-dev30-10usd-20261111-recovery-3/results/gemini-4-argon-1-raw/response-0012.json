@@ -1,0 +1,55 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\"plan_valid\": true, \"context_valid\": true, \"wording_valid\": true, \"contract_matches\": true, \"safe_alternative\": true, \"reason_summary\": \"직전 답변에서 누락된 대안 비교 조건(comparison)을 보완하기 위해, progress/record.go 원문에 나타난 Save와 Mark 분리 구조를 바탕으로 단일 처리 방식과의 비교 조건을 중립적이고 명확하게 묻고 있으며 계약 및 평가 항목과도 일치한다.\"}",
+        "extra_content": {
+          "google": {
+            "thought_signature": "EmQKYgFpFH0T6o1xOOaXDfD5n7rg593H5JK6wV3sITbhXFt8EZCwDDdwyr7EPa109h9KPGGU+Ng0imTRtd/5Ca/EaDc5ugnwrO97/EdhAh3qF3jvvmoRIX7HkGxp9AqZBkZf2xxu"
+          }
+        },
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794341190,
+  "id": "NHnzaoGJDN7qrfcPsY3X6Qc",
+  "model": "gemini-4-argon",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 119,
+    "prompt_tokens": 6989,
+    "total_tokens": 7108,
+    "input_tokens": 6989,
+    "output_tokens": 119,
+    "cached_prompt_tokens": 0,
+    "cache_write_tokens": 0
+  },
+  "_elice_billing": {
+    "usage": {
+      "input_tokens": 6989,
+      "output_tokens": 119,
+      "cached_input_tokens": 0,
+      "cache_write_input_tokens": null,
+      "reasoning_output_tokens": null,
+      "cache_write_short_tokens": null,
+      "cache_write_long_tokens": null
+    },
+    "cost_usd": "0.015168",
+    "cost_lower_usd": "0.015168",
+    "cost_upper_usd": "0.015168",
+    "cost_status": "confirmed",
+    "provider_model": "gemini-4-argon",
+    "canonical_model": "gemini-4-argon",
+    "attempt_id": "attempt-31",
+    "accounting_basis": "billing_upper_bound"
+  },
+  "_elice_wire": {
+    "protocol": "chat_completions",
+    "canonical_request_bytes": 28407,
+    "wire_request_bytes": 28373,
+    "reservation_input_bytes": 28407
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\n  \"plan_valid\": true,\n  \"context_valid\": true,\n  \"wording_valid\": true,\n  \"contract_matches\": true,\n  \"safe_alternative\": true,\n  \"reason_summary\": \"첫 번째 문답에 요구되는 HR 자기소개 및 프로젝트 내 본인 역할 확인 목적에 부합하며, 배정된 평가 항목 및 증거 자료 전제와 일치하는 중립적 질문입니다.\"\n}",
+        "extra_content": {
+          "google": {
+            "thought_signature": "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"
+          }
+        },
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794340852,
+  "id": "7XfzarjFCLH_2roPu4PX6Ak",
+  "model": "gemini-3.8-flash",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 860,
+    "prompt_tokens": 5288,
+    "total_tokens": 6148,
+    "completion_tokens_details": {
+      "reasoning_tokens": 758
+    },
+    "input_tokens": 5288,
+    "output_tokens": 860,
+    "cached_prompt_tokens": 0,
+    "cache_write_tokens": 0
+  },
+  "_elice_billing": {
+    "usage": {
+      "input_tokens": 5288,
+      "output_tokens": 860,
+      "cached_input_tokens": 0,
+      "cache_write_input_tokens": null,
+      "reasoning_output_tokens": 758,
+      "cache_write_short_tokens": null,
+      "cache_write_long_tokens": null
+    },
+    "cost_usd": "0.007191",
+    "cost_lower_usd": "0.007191",
+    "cost_upper_usd": "0.007191",
+    "cost_status": "confirmed",
+    "provider_model": "gemini-3.8-flash",
+    "canonical_model": "gemini-3.8-flash",
+    "attempt_id": "attempt-2",
+    "accounting_basis": "billing_upper_bound"
+  },
+  "_elice_wire": {
+    "protocol": "chat_completions",
+    "canonical_request_bytes": 22276,
+    "wire_request_bytes": 22242,
+    "reservation_input_bytes": 22276
+  }
+}

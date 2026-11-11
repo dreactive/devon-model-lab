@@ -1,0 +1,96 @@
+{
+  "case_id": "a-dev-0001",
+  "version": 1,
+  "control": {
+    "kind": "question",
+    "split": "dev",
+    "source_group_id": "a-dev-reserve",
+    "synthetic": true
+  },
+  "payload": {
+    "service_task": "director",
+    "service_input": {
+      "context": {
+        "interview_id": "49256519-abe8-5598-bc15-6a5b7112def8",
+        "current_turn_id": null,
+        "turn_no": 1,
+        "total_turns": 9,
+        "persona_counts": [
+          {
+            "persona": "tech_lead",
+            "count": 0
+          },
+          {
+            "persona": "hr_manager",
+            "count": 0
+          },
+          {
+            "persona": "domain_lead",
+            "count": 0
+          }
+        ],
+        "allowed_personas": [
+          "hr_manager"
+        ],
+        "jd_requirements": [],
+        "repositories": [
+          {
+            "repository_id": "f1a3b69a-f455-561d-8657-b88a24d5d23e",
+            "git_ref": "8cadf7cafbe550447f4a2906eb71698cb96d31c4",
+            "primary": true,
+            "analysis_refs": [],
+            "limitations": []
+          }
+        ],
+        "history": [],
+        "current_question_contract": null,
+        "evidence": [
+          {
+            "evidence_id": "59709dcc-c422-5e51-82a9-dfd49048ad0e",
+            "repository_id": "f1a3b69a-f455-561d-8657-b88a24d5d23e",
+            "git_ref": "8cadf7cafbe550447f4a2906eb71698cb96d31c4",
+            "source_kind": "code",
+            "path": "reservations/lease.py",
+            "metadata_key": null,
+            "content": "from datetime import timedelta\n\ndef retain_seat(db, seat, owner, now):\n    deadline = now + timedelta(seconds=75)\n    with db.transaction():\n        db.execute('DELETE FROM seat_lease WHERE seat = ? AND until_at <= ?', seat, now)\n        return db.insert_unique('seat_lease', seat=seat, owner=owner, until_at=deadline)\n\ndef release_expired(db, now):\n    return db.execute('DELETE FROM seat_lease WHERE until_at <= ?', now)\n",
+            "tool_name": null,
+            "summary": "합성 프로젝트 원문 발췌. 개인 작성 사실이나 운영 성과를 증명하지 않는다.",
+            "start_line": 1,
+            "end_line": 10
+          },
+          {
+            "evidence_id": "8ee6abff-b7b8-5eda-98fc-54d85bbbf074",
+            "repository_id": "f1a3b69a-f455-561d-8657-b88a24d5d23e",
+            "git_ref": "8cadf7cafbe550447f4a2906eb71698cb96d31c4",
+            "source_kind": "document",
+            "path": "PROJECT_NOTES.md",
+            "metadata_key": null,
+            "content": "자리누리는 공연 좌석을 75초 동안 임시 점유하는 합성 팀 프로젝트다. 요청 시 만료 행 정리와 별도 청소 작업을 함께 둔다. 팀 문서는 개인 작성자를 기록하지 않는다. 유일 제약은 좌석별 임시 점유 행에만 적용되며 결제 시스템의 성공이나 실제 운영 부하는 자료에 없다.",
+            "tool_name": null,
+            "summary": null,
+            "start_line": 1,
+            "end_line": 1
+          }
+        ],
+        "domain_frames": [],
+        "limits": {
+          "remaining_calls": 2,
+          "remaining_replans": 0,
+          "policy_version": "interview-v1"
+        },
+        "evaluation_targets": [
+          {
+            "persona": "hr_manager",
+            "keys": [
+              "contribution_clarity",
+              "communication"
+            ]
+          }
+        ],
+        "supplemental_sources": [],
+        "external_searches": [],
+        "supplemental_limitations": []
+      }
+    }
+  }
+}

@@ -1,0 +1,226 @@
+{
+  "type": "object",
+  "properties": {
+    "question": {
+      "type": "object",
+      "properties": {
+        "persona": {
+          "type": "string",
+          "enum": [
+            "tech_lead"
+          ]
+        },
+        "text": {
+          "type": "string"
+        },
+        "topic_code": {
+          "type": "string"
+        },
+        "question_contract": {
+          "type": "object",
+          "properties": {
+            "purpose": {
+              "type": "string"
+            },
+            "required_points": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "key": {
+                    "type": "string"
+                  },
+                  "description": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "key",
+                  "description"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "assumptions": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "basis_refs": {
+              "type": "array",
+              "items": {
+                "anyOf": [
+                  {
+                    "type": "object",
+                    "properties": {
+                      "kind": {
+                        "type": "string",
+                        "enum": [
+                          "answer_turn"
+                        ]
+                      },
+                      "id": {
+                        "type": "string",
+                        "enum": [
+                          "0d5b91c0-fc2d-50b5-9086-97238de84fcd",
+                          "2cb81a51-5a31-5eda-8502-2369d4b11a25",
+                          "4b15a972-0a0f-5090-b6d5-a9c90c6a4e65",
+                          "68838317-d4b7-514a-be0b-aca965ae7616",
+                          "aeaa8dce-a414-56a2-8aa2-c1fc36435640",
+                          "e49d1db1-3ffc-5698-be23-7af7edf34cfb",
+                          "e8467b34-16bf-5b4e-8bf7-6dfdc0498208"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "kind",
+                      "id"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "kind": {
+                        "type": "string",
+                        "enum": [
+                          "evidence"
+                        ]
+                      },
+                      "id": {
+                        "type": "string",
+                        "enum": [
+                          "34ca279b-7abb-5f1c-9bff-6eece35846b4",
+                          "618629e2-b2f2-5950-949b-67f07c47d734"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "kind",
+                      "id"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "kind": {
+                        "type": "string",
+                        "enum": [
+                          "jd_requirement"
+                        ]
+                      },
+                      "id": {
+                        "type": "string",
+                        "enum": [
+                          "3960261e-1f6e-5bde-87c6-78628ea4aec4"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "kind",
+                      "id"
+                    ],
+                    "additionalProperties": false
+                  }
+                ]
+              }
+            },
+            "evaluation_scope": {
+              "type": "string"
+            },
+            "evaluation_keys": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": [
+                  "project_understanding",
+                  "technical_reasoning",
+                  "problem_solving",
+                  "communication",
+                  "contribution_clarity",
+                  "company_job_fit"
+                ]
+              }
+            }
+          },
+          "required": [
+            "purpose",
+            "required_points",
+            "assumptions",
+            "basis_refs",
+            "evaluation_scope",
+            "evaluation_keys"
+          ],
+          "additionalProperties": false
+        },
+        "evidence_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "34ca279b-7abb-5f1c-9bff-6eece35846b4",
+              "618629e2-b2f2-5950-949b-67f07c47d734"
+            ]
+          }
+        },
+        "jd_requirement_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "3960261e-1f6e-5bde-87c6-78628ea4aec4"
+            ]
+          }
+        },
+        "question_type": {
+          "type": "string",
+          "enum": [
+            "main",
+            "follow_up"
+          ]
+        },
+        "parent_turn_id": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            null,
+            "68838317-d4b7-514a-be0b-aca965ae7616",
+            "e49d1db1-3ffc-5698-be23-7af7edf34cfb",
+            "aeaa8dce-a414-56a2-8aa2-c1fc36435640",
+            "2cb81a51-5a31-5eda-8502-2369d4b11a25",
+            "0d5b91c0-fc2d-50b5-9086-97238de84fcd",
+            "4b15a972-0a0f-5090-b6d5-a9c90c6a4e65",
+            "e8467b34-16bf-5b4e-8bf7-6dfdc0498208"
+          ]
+        }
+      },
+      "required": [
+        "persona",
+        "text",
+        "topic_code",
+        "question_contract",
+        "evidence_refs",
+        "jd_requirement_ids",
+        "question_type",
+        "parent_turn_id"
+      ],
+      "additionalProperties": false
+    },
+    "intent": {
+      "type": "string"
+    },
+    "reason_summary": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "question",
+    "intent",
+    "reason_summary"
+  ],
+  "additionalProperties": false
+}

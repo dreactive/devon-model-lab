@@ -1,0 +1,55 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\n  \"plan_valid\": true,\n  \"context_valid\": true,\n  \"wording_valid\": true,\n  \"contract_matches\": true,\n  \"safe_alternative\": true,\n  \"reason_summary\": \"첫 번째 턴의 HR 자기소개 질문으로서, PROJECT_NOTES.md 근거를 바탕으로 미확인된 개인 기여를 단정하지 않고 팀 작업과 본인의 실제 담당 역할을 구분해 설명하도록 명료하게 묻고 있으며 계약 및 배정된 평가 항목(contribution_clarity, communication)과 일치합니다.\"\n}",
+        "extra_content": {
+          "google": {
+            "thought_signature": "EmMKYQFpFH0TIA9VSn1/pqT6u4UysEbG8JhPpzIMlZ84YE2ULYOK9GTyhYsjOWBWjW0FWmY6tb2d5jLSSJMT/chbjlMOWvh6oe6roaA+btrfkVyyZfuIEuIixMUXuR4RhJVBSs0="
+          }
+        },
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794341078,
+  "id": "0njzavrzB4qx1e8Pg46A2Q4",
+  "model": "gemini-4-argon",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 138,
+    "prompt_tokens": 5341,
+    "total_tokens": 5479,
+    "input_tokens": 5341,
+    "output_tokens": 138,
+    "cached_prompt_tokens": 0,
+    "cache_write_tokens": 0
+  },
+  "_elice_billing": {
+    "usage": {
+      "input_tokens": 5341,
+      "output_tokens": 138,
+      "cached_input_tokens": 0,
+      "cache_write_input_tokens": null,
+      "reasoning_output_tokens": null,
+      "cache_write_short_tokens": null,
+      "cache_write_long_tokens": null
+    },
+    "cost_usd": "0.012062",
+    "cost_lower_usd": "0.012062",
+    "cost_upper_usd": "0.012062",
+    "cost_status": "confirmed",
+    "provider_model": "gemini-4-argon",
+    "canonical_model": "gemini-4-argon",
+    "attempt_id": "attempt-21",
+    "accounting_basis": "billing_upper_bound"
+  },
+  "_elice_wire": {
+    "protocol": "chat_completions",
+    "canonical_request_bytes": 22376,
+    "wire_request_bytes": 22342,
+    "reservation_input_bytes": 22376
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "run_state": "budget_stopped",
+  "http_attempts": 1,
+  "unknown_usage_attempts": 1,
+  "completed_cases": 0,
+  "interrupted_cases": 1,
+  "not_executed_cases": 95,
+  "configured_budget_usd": "10",
+  "remaining_budget_usd": null,
+  "actual_total_cost_usd": null,
+  "actual_cost_status": "unconfirmed",
+  "first_failure_http_status": 404,
+  "provider_failure_body_preserved": false,
+  "integration": "EliceTransport with local and global reserve-before-send guards",
+  "transport_integration_metadata_note": "ledger CostBudget default requires_transport_binding is stale descriptive metadata; it is not an execution bypass",
+  "devon_tracked_files_verified": 1265,
+  "devon_git_status_unchanged": true,
+  "devon_bytecode_directories_unchanged": true,
+  "protected_corpus_files_verified": 167,
+  "corpus_changed": 0,
+  "review_status": "unreviewed",
+  "configured_endpoints_validated_offline": 6,
+  "endpoint_followup_tests": {
+    "run": 14,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "real_credential_matches_in_generated_artifacts": 0,
+  "campaign_resumed": false,
+  "additional_model_calls": 0,
+  "needs_before_resume": [
+    "Provider confirmation of first failed request usage/charge",
+    "Explicit reconciliation preserving this ledger and shared $10/192 limits; no automatic resume"
+  ]
+}

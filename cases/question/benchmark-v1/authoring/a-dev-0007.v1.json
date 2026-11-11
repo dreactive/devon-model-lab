@@ -1,0 +1,108 @@
+{
+  "case_id": "a-dev-0007",
+  "version": 1,
+  "state": "S2",
+  "history_contracts": [
+    {
+      "turn_id": "3442abb5-a592-571d-9837-cc3895936da0",
+      "persona": "hr_manager",
+      "question_contract": {
+        "purpose": "실제 역할과 협업 경계 확인",
+        "required_points": [
+          {
+            "key": "responsibility",
+            "description": "직접 맡은 업무"
+          },
+          {
+            "key": "handoff",
+            "description": "다른 구성원과 나눈 경계"
+          }
+        ],
+        "assumptions": [],
+        "basis_refs": [
+          {
+            "kind": "evidence",
+            "id": "3fa818ac-b382-5747-ae51-6fe387d0b3ee"
+          }
+        ],
+        "evaluation_scope": "실제 역할과 협업 경계 확인",
+        "evaluation_keys": [
+          "contribution_clarity",
+          "communication"
+        ]
+      },
+      "authored_before_answer": true
+    },
+    {
+      "turn_id": "22e65a81-084e-53dd-bc55-bcbd95c30918",
+      "persona": "tech_lead",
+      "question_contract": {
+        "purpose": "주요 처리 흐름 이해 확인",
+        "required_points": [
+          {
+            "key": "flow",
+            "description": "입력부터 결과까지의 흐름"
+          },
+          {
+            "key": "boundary",
+            "description": "구성 요소의 역할 경계"
+          }
+        ],
+        "assumptions": [],
+        "basis_refs": [
+          {
+            "kind": "evidence",
+            "id": "3fa818ac-b382-5747-ae51-6fe387d0b3ee"
+          }
+        ],
+        "evaluation_scope": "주요 처리 흐름 이해 확인",
+        "evaluation_keys": [
+          "project_understanding",
+          "communication"
+        ]
+      },
+      "authored_before_answer": true
+    }
+  ],
+  "synthetic_source_bundle": {
+    "synthetic": true,
+    "authorship": "Codex; newly composed for this corpus, no user data or original q fixtures",
+    "source_group_id": "a-dev-inventory",
+    "repository_id": "bf111c05-78ea-52bb-891a-c9220ebec392",
+    "git_ref": "116ccc2f4d0b7ea6d54ec2bd690e0ed855191a0f",
+    "provenance_kind": "synthetic_project_source_bundle",
+    "files": [
+      {
+        "path": "stock/quantity.ts",
+        "content": "type Stock = { quantity: number; revision: number };\nexport function withdraw(current: Stock, units: number): Stock {\n  if (!Number.isInteger(units) || units <= 0) throw Error('bad units');\n  if (current.quantity < units) throw Error('not enough stock');\n  return { quantity: current.quantity - units, revision: current.revision + 1 };\n}\nexport async function save(store: any, before: Stock, after: Stock) {\n  return store.compareAndSwap(before.revision, after);\n}\n",
+        "sha256": "acb10df1d0a9f71b87ced0ea97f40e26471998975a57c82bfa0a50e23449e4f9"
+      },
+      {
+        "path": "PROJECT_NOTES.md",
+        "content": "팜서랍은 공유 비품 입출고를 관리하는 합성 프로젝트다. 수량 검증 함수와 revision 조건부 저장이 분리되어 있다. 수량 검증과 오류 표시를 한 구성원이, 조건부 저장을 다른 구성원이 맡는 팀 문서만 있다. 실제 재고 손실이나 장애 기록은 없다.",
+        "sha256": "e216f4d86b5e247aa67125c99e84b2433e4062d1545d4b0599036761098d5734"
+      }
+    ],
+    "limitations": [
+      "Generated observations are authored test inputs, not results of repository tools or production operations.",
+      "Git ref is an opaque synthetic fixture identity; no external repository is claimed."
+    ]
+  },
+  "construction_order": [
+    "question and contract",
+    "synthetic answer",
+    "canonical observation",
+    "draft expectation"
+  ],
+  "observation_provenance": "AnswerAnalysis and ToolResults are authored canonical synthetic observations, not model/provider outputs.",
+  "review": {
+    "status": "unreviewed",
+    "author": "Codex",
+    "reviewer": null,
+    "reviewed_at": null,
+    "pending_notes": [
+      "Draft semantic expectations and all three controls require independent human review.",
+      "Ambiguous control is a calibration boundary; no Judge or model output was used to author gold."
+    ]
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\"plan_valid\": true, \"context_valid\": true, \"wording_valid\": true, \"contract_matches\": true, \"safe_alternative\": true, \"reason_summary\": \"제공된 progress/record.go 코드와 직전 답변에 근거하여 Seen-Save-Mark 순차 처리 구조의 기술적 선택 이유와 트레이드오프를 중립적으로 묻고 있으며, 미확인된 원자성을 단정하지 않고 배정된 technical_reasoning 및 communication 평가 항목과 질문 계약이 정확히 일치합니다.\"}",
+        "extra_content": {
+          "google": {
+            "thought_signature": "EmMKYQFpFH0T15KR8+VuThqRUS2gRrxbEipaJy7Mt39tAS9KzXuIb8xuAq9NHtHcwyBg8ws6OUGKd32ylRqFqemEBMCwrVZk61EHz3xb8f7Ij6fDwVHVmpFrEPXZ8I+xj2X8IX0="
+          }
+        },
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794341231,
+  "id": "Z3nzat_xKpbY9tMP67uj8AE",
+  "model": "gemini-4-argon",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 128,
+    "prompt_tokens": 6543,
+    "total_tokens": 6671,
+    "input_tokens": 6543,
+    "output_tokens": 128,
+    "cached_prompt_tokens": 0,
+    "cache_write_tokens": 0
+  },
+  "_elice_billing": {
+    "usage": {
+      "input_tokens": 6543,
+      "output_tokens": 128,
+      "cached_input_tokens": 0,
+      "cache_write_input_tokens": null,
+      "reasoning_output_tokens": null,
+      "cache_write_short_tokens": null,
+      "cache_write_long_tokens": null
+    },
+    "cost_usd": "0.014366",
+    "cost_lower_usd": "0.014366",
+    "cost_upper_usd": "0.014366",
+    "cost_status": "confirmed",
+    "provider_model": "gemini-4-argon",
+    "canonical_model": "gemini-4-argon",
+    "attempt_id": "attempt-35",
+    "accounting_basis": "billing_upper_bound"
+  },
+  "_elice_wire": {
+    "protocol": "chat_completions",
+    "canonical_request_bytes": 26819,
+    "wire_request_bytes": 26785,
+    "reservation_input_bytes": 26819
+  }
+}

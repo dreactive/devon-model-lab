@@ -1,0 +1,178 @@
+{
+  "version": 1,
+  "campaign_id": "dev-30pct-10usd",
+  "selection": "selections/dev-30pct-v1.json",
+  "budget_usd_total": "10.00",
+  "max_http_attempts_total": 192,
+  "repeats": 1,
+  "model_count": 6,
+  "selected_inputs_per_model": 16,
+  "scope_authorized_in_chat": true,
+  "authorized_at_date": "2026-11-11",
+  "models": [
+    {
+      "model_id": "gpt-6.1-sol",
+      "manifest": "manifests/elice-30pct/gpt-6.1-sol.json",
+      "budget_usd": "2.50",
+      "jobs": [
+        {
+          "experiment": "A",
+          "cases_root": "cases/question/benchmark-v1",
+          "max_http_attempts": 22,
+          "budget_usd": "1.71875"
+        },
+        {
+          "experiment": "B",
+          "cases_root": "cases/answer/main-v1",
+          "max_http_attempts": 8,
+          "budget_usd": "0.625"
+        },
+        {
+          "experiment": "B",
+          "cases_root": "cases/answer/legacy-na-v1",
+          "max_http_attempts": 2,
+          "budget_usd": "0.15625"
+        }
+      ]
+    },
+    {
+      "model_id": "gemini-3.8-flash",
+      "manifest": "manifests/elice-30pct/gemini-3.8-flash.json",
+      "budget_usd": "1.00",
+      "jobs": [
+        {
+          "experiment": "A",
+          "cases_root": "cases/question/benchmark-v1",
+          "max_http_attempts": 22,
+          "budget_usd": "0.6875"
+        },
+        {
+          "experiment": "B",
+          "cases_root": "cases/answer/main-v1",
+          "max_http_attempts": 8,
+          "budget_usd": "0.25"
+        },
+        {
+          "experiment": "B",
+          "cases_root": "cases/answer/legacy-na-v1",
+          "max_http_attempts": 2,
+          "budget_usd": "0.0625"
+        }
+      ]
+    },
+    {
+      "model_id": "gemini-4-argon",
+      "manifest": "manifests/elice-30pct/gemini-4-argon.json",
+      "budget_usd": "2.20",
+      "jobs": [
+        {
+          "experiment": "A",
+          "cases_root": "cases/question/benchmark-v1",
+          "max_http_attempts": 22,
+          "budget_usd": "1.5125"
+        },
+        {
+          "experiment": "B",
+          "cases_root": "cases/answer/main-v1",
+          "max_http_attempts": 8,
+          "budget_usd": "0.55"
+        },
+        {
+          "experiment": "B",
+          "cases_root": "cases/answer/legacy-na-v1",
+          "max_http_attempts": 2,
+          "budget_usd": "0.1375"
+        }
+      ]
+    },
+    {
+      "model_id": "claude-haiku-5-5",
+      "manifest": "manifests/elice-30pct/claude-haiku-5-5.json",
+      "budget_usd": "0.30",
+      "jobs": [
+        {
+          "experiment": "A",
+          "cases_root": "cases/question/benchmark-v1",
+          "max_http_attempts": 22,
+          "budget_usd": "0.20625"
+        },
+        {
+          "experiment": "B",
+          "cases_root": "cases/answer/main-v1",
+          "max_http_attempts": 8,
+          "budget_usd": "0.075"
+        },
+        {
+          "experiment": "B",
+          "cases_root": "cases/answer/legacy-na-v1",
+          "max_http_attempts": 2,
+          "budget_usd": "0.01875"
+        }
+      ]
+    },
+    {
+      "model_id": "claude-sonnet-5-5",
+      "manifest": "manifests/elice-30pct/claude-sonnet-5-5.json",
+      "budget_usd": "3.50",
+      "jobs": [
+        {
+          "experiment": "A",
+          "cases_root": "cases/question/benchmark-v1",
+          "max_http_attempts": 22,
+          "budget_usd": "2.40625"
+        },
+        {
+          "experiment": "B",
+          "cases_root": "cases/answer/main-v1",
+          "max_http_attempts": 8,
+          "budget_usd": "0.875"
+        },
+        {
+          "experiment": "B",
+          "cases_root": "cases/answer/legacy-na-v1",
+          "max_http_attempts": 2,
+          "budget_usd": "0.21875"
+        }
+      ]
+    },
+    {
+      "model_id": "gpt-6-luna",
+      "manifest": "manifests/elice-30pct/gpt-6-luna.json",
+      "budget_usd": "0.50",
+      "jobs": [
+        {
+          "experiment": "A",
+          "cases_root": "cases/question/benchmark-v1",
+          "max_http_attempts": 22,
+          "budget_usd": "0.34375"
+        },
+        {
+          "experiment": "B",
+          "cases_root": "cases/answer/main-v1",
+          "max_http_attempts": 8,
+          "budget_usd": "0.125"
+        },
+        {
+          "experiment": "B",
+          "cases_root": "cases/answer/legacy-na-v1",
+          "max_http_attempts": 2,
+          "budget_usd": "0.03125"
+        }
+      ]
+    }
+  ],
+  "budget_strategy": "fixed allocations across 18 plans; sum must not exceed total",
+  "stop_entire_campaign_on_unknown_usage": true,
+  "stop_on_budget_exhaustion": true,
+  "extra_smoke": 0,
+  "semantic_judge": false,
+  "review_status": "unreviewed",
+  "execution_enabled": false,
+  "plan_approvals_created": false,
+  "readiness_pending": [
+    "credentials",
+    "aggregate_enforcement_binding",
+    "cache_write_and_provider_usage_accounting",
+    "endpoint_pinned_plans"
+  ]
+}

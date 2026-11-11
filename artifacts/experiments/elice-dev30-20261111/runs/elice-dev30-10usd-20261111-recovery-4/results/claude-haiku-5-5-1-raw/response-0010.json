@@ -1,0 +1,51 @@
+{
+  "id": "msg_011CgusgPFAbLDVqCAhUbASu",
+  "object": "chat.completion",
+  "created": 1794342324,
+  "model": "claude-haiku-5-5",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\"plan_valid\": true, \"context_valid\": true, \"wording_valid\": true, \"contract_matches\": true, \"safe_alternative\": true, \"reason_summary\": \"도메인 Persona 배정(domain_lead)과 평가 항목(company_job_fit, communication)이 허용 범위와 일치한다. 질문은 JD 데이터 보관·삭제 범위 및 사용자 선택 설명 요구와 프로젝트 맥락의 연결을 가정형으로 묻고, 제공 원문이 삭제 정책을 검토 제안 단계로만 적시하므로 실무 경험을 전제하지 않는다. 직전 턴(설계 선택 이유·비교 조건)은 covered 상태이므로 주제 전환은 이전 답변의 보완이 아닌 새 main 질문으로 적절하다. evidence_refs(90b1d19e…)와 jd_requirement_ids(aa1ed4a6…)는 basis_refs의 같은 kind 항목과 일치한다. 질문 문장은 보관 기간과 삭제 범위 설명, 선택권 제공을 함께 묻는 다소 복합적 구조이나 단일 목적(데이터 수명 관리 설명) 안의 요소이므로 유효하다.\"}",
+        "refusal": null
+      },
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 12868,
+    "completion_tokens": 538,
+    "total_tokens": 13406,
+    "input_tokens": 12868,
+    "output_tokens": 538,
+    "cached_prompt_tokens": 7491,
+    "cache_write_tokens": 4284
+  },
+  "_elice_billing": {
+    "usage": {
+      "input_tokens": 12868,
+      "output_tokens": 538,
+      "cached_input_tokens": 7491,
+      "cache_write_input_tokens": null,
+      "reasoning_output_tokens": null,
+      "cache_write_short_tokens": null,
+      "cache_write_long_tokens": null
+    },
+    "cost_usd": null,
+    "cost_lower_usd": "0.0008067",
+    "cost_upper_usd": "0.0020935",
+    "cost_status": "bounded",
+    "provider_model": "claude-haiku-5-5",
+    "canonical_model": "claude-haiku-5-5",
+    "attempt_id": "attempt-15",
+    "accounting_basis": "billing_upper_bound"
+  },
+  "_elice_wire": {
+    "protocol": "chat_completions",
+    "canonical_request_bytes": 27199,
+    "wire_request_bytes": 27165,
+    "reservation_input_bytes": 27199
+  }
+}

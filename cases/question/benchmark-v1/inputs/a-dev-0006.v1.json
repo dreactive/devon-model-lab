@@ -1,0 +1,96 @@
+{
+  "case_id": "a-dev-0006",
+  "version": 1,
+  "control": {
+    "kind": "question",
+    "split": "dev",
+    "source_group_id": "a-dev-inventory",
+    "synthetic": true
+  },
+  "payload": {
+    "service_task": "director",
+    "service_input": {
+      "context": {
+        "interview_id": "f692e3a4-1c5c-5929-997d-efd3777cd188",
+        "current_turn_id": null,
+        "turn_no": 1,
+        "total_turns": 9,
+        "persona_counts": [
+          {
+            "persona": "tech_lead",
+            "count": 0
+          },
+          {
+            "persona": "hr_manager",
+            "count": 0
+          },
+          {
+            "persona": "domain_lead",
+            "count": 0
+          }
+        ],
+        "allowed_personas": [
+          "hr_manager"
+        ],
+        "jd_requirements": [],
+        "repositories": [
+          {
+            "repository_id": "bf111c05-78ea-52bb-891a-c9220ebec392",
+            "git_ref": "116ccc2f4d0b7ea6d54ec2bd690e0ed855191a0f",
+            "primary": true,
+            "analysis_refs": [],
+            "limitations": []
+          }
+        ],
+        "history": [],
+        "current_question_contract": null,
+        "evidence": [
+          {
+            "evidence_id": "3fa818ac-b382-5747-ae51-6fe387d0b3ee",
+            "repository_id": "bf111c05-78ea-52bb-891a-c9220ebec392",
+            "git_ref": "116ccc2f4d0b7ea6d54ec2bd690e0ed855191a0f",
+            "source_kind": "code",
+            "path": "stock/quantity.ts",
+            "metadata_key": null,
+            "content": "type Stock = { quantity: number; revision: number };\nexport function withdraw(current: Stock, units: number): Stock {\n  if (!Number.isInteger(units) || units <= 0) throw Error('bad units');\n  if (current.quantity < units) throw Error('not enough stock');\n  return { quantity: current.quantity - units, revision: current.revision + 1 };\n}\nexport async function save(store: any, before: Stock, after: Stock) {\n  return store.compareAndSwap(before.revision, after);\n}\n",
+            "tool_name": null,
+            "summary": "합성 프로젝트 원문 발췌. 개인 작성 사실이나 운영 성과를 증명하지 않는다.",
+            "start_line": 1,
+            "end_line": 9
+          },
+          {
+            "evidence_id": "84920178-ff7a-5886-97af-e37caa240ddb",
+            "repository_id": "bf111c05-78ea-52bb-891a-c9220ebec392",
+            "git_ref": "116ccc2f4d0b7ea6d54ec2bd690e0ed855191a0f",
+            "source_kind": "document",
+            "path": "PROJECT_NOTES.md",
+            "metadata_key": null,
+            "content": "팜서랍은 공유 비품 입출고를 관리하는 합성 프로젝트다. 수량 검증 함수와 revision 조건부 저장이 분리되어 있다. 수량 검증과 오류 표시를 한 구성원이, 조건부 저장을 다른 구성원이 맡는 팀 문서만 있다. 실제 재고 손실이나 장애 기록은 없다.",
+            "tool_name": null,
+            "summary": null,
+            "start_line": 1,
+            "end_line": 1
+          }
+        ],
+        "domain_frames": [],
+        "limits": {
+          "remaining_calls": 2,
+          "remaining_replans": 0,
+          "policy_version": "interview-v1"
+        },
+        "evaluation_targets": [
+          {
+            "persona": "hr_manager",
+            "keys": [
+              "contribution_clarity",
+              "communication"
+            ]
+          }
+        ],
+        "supplemental_sources": [],
+        "external_searches": [],
+        "supplemental_limitations": []
+      }
+    }
+  }
+}

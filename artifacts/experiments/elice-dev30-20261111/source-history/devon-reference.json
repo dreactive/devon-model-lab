@@ -1,0 +1,251 @@
+{
+  "version": 1,
+  "external_checkout": "DEVON",
+  "commit": "1bb0e33f30c95d578174208c3ee76192a4016b70",
+  "content_included": false,
+  "source_file_count": 42,
+  "verification": "All 90 preserved plans reference this identical 42-file fingerprint list; every file matched the local DEVON checkout during export.",
+  "source_fingerprints": [
+    {
+      "path": "ai/evals/async_grader.py",
+      "sha256": "8def70a5437f65dc3edf2b110f84ae6025a164ba2253898c222abfb28594c91f",
+      "bytes": 3521
+    },
+    {
+      "path": "ai/evals/eval_artifacts.py",
+      "sha256": "b89290b2654db119f17596103096ec765e5b8ae2c2239bf768134d1b05550f8e",
+      "bytes": 2475
+    },
+    {
+      "path": "ai/evals/eval_cases.py",
+      "sha256": "eed38933ce21e87effdf230ce5ffd41e8130640f02f1aea6b4b8d1fb7c5c86bb",
+      "bytes": 17803
+    },
+    {
+      "path": "ai/evals/eval_runner.py",
+      "sha256": "cfbeb3ece8d3ef9f6f7f59c620607971ec5069b00baaca5cf9b64867c924dbd6",
+      "bytes": 19303
+    },
+    {
+      "path": "ai/evals/grader_check.py",
+      "sha256": "05c49d87bffb82b1ff94bc91c319eb6bb8aaa78de0b894315265521f521fae0b",
+      "bytes": 4836
+    },
+    {
+      "path": "ai/evals/judge_context.py",
+      "sha256": "82844bcf51735eb57bc70b9bb289cc097a74e45312e33eaf15225fb2837b89ea",
+      "bytes": 8059
+    },
+    {
+      "path": "ai/evals/report_check.py",
+      "sha256": "650a3e7b1c8168b1fef10dbf820b068161c4073762802eb5d1f88c85ecd7975a",
+      "bytes": 4665
+    },
+    {
+      "path": "ai/evals/review_sheet.py",
+      "sha256": "452b4fd19818834832f64b56fbd7922cd62ae133d88cea7cf455d43d71454906",
+      "bytes": 10675
+    },
+    {
+      "path": "ai/evals/source_snapshot.py",
+      "sha256": "259b067d86402b43e6dae48c36993f531e13311e8ebcb8c98fa6fef03901d95c",
+      "bytes": 6535
+    },
+    {
+      "path": "ai/prompts/runtime-prompts.json",
+      "sha256": "bffb91f56aee9f21b2048bc10dbf86c9731c114fc6706ff2fd0c9e31ff2bf8d8",
+      "bytes": 980
+    },
+    {
+      "path": "ai/src/devon_ai/__init__.py",
+      "sha256": "16b00b1af5cb27f790f647005b21ff9dd6dd90ed47428a26048ef6f695d9c8ef",
+      "bytes": 99
+    },
+    {
+      "path": "ai/src/devon_ai/agents/__init__.py",
+      "sha256": "dd7dd834903aa4dad388577430ee8d9c484d5b13578b1a6b4b87bfb2fba3c2d6",
+      "bytes": 104
+    },
+    {
+      "path": "ai/src/devon_ai/agents/director/__init__.py",
+      "sha256": "6bf2b297c50227271d3332ab61de99940e9163d12f824b9b4e64c1c89e73cd29",
+      "bytes": 115
+    },
+    {
+      "path": "ai/src/devon_ai/agents/director/agent.py",
+      "sha256": "72b5eabfe37e685c45a984e271c478794715a87d61ac7d6c20340b3740c644b0",
+      "bytes": 13349
+    },
+    {
+      "path": "ai/src/devon_ai/agents/director/runtime.py",
+      "sha256": "a98787accf16c6f6828f55df09743cf3e81ab0fae6f2a9151b84a485344858ad",
+      "bytes": 31847
+    },
+    {
+      "path": "ai/src/devon_ai/agents/director/tools.py",
+      "sha256": "db43c668ccf4b0dc8a3dde81a6b14dacdb991bf9d7ef41fec398039337b65dc6",
+      "bytes": 91
+    },
+    {
+      "path": "ai/src/devon_ai/contracts.py",
+      "sha256": "5d57cc25da7071ae242dd31b0c3d4e0dcff0afb7d32182bf0124c5de44e68f5b",
+      "bytes": 71584
+    },
+    {
+      "path": "ai/src/devon_ai/llm_tasks/__init__.py",
+      "sha256": "a63dd53d2133bbd8d11b4c4be80ed2eb7e2ef5e96eea75efd9ff03d1f3901b57",
+      "bytes": 94
+    },
+    {
+      "path": "ai/src/devon_ai/llm_tasks/answer_analysis.py",
+      "sha256": "33ce80eaef23f5a7f7be33b3d2a30b78fed525e7c79388a709b65d278aa1411d",
+      "bytes": 17141
+    },
+    {
+      "path": "ai/src/devon_ai/llm_tasks/answer_analysis_wire.py",
+      "sha256": "dba0db85917935e92a589e7ee16ba6d22dde4c45c37ca99b08863f9e624d1c2f",
+      "bytes": 14025
+    },
+    {
+      "path": "ai/src/devon_ai/llm_tasks/claim_code.py",
+      "sha256": "299844720d35f7807f94b42ba4ab940bb6bbd3f0405a587dcd79dd4723396a38",
+      "bytes": 9045
+    },
+    {
+      "path": "ai/src/devon_ai/llm_tasks/doc_claims.py",
+      "sha256": "dc2e60e0e6ebb736945bdb33376f9433337ffce745addb825736294027611ea5",
+      "bytes": 6187
+    },
+    {
+      "path": "ai/src/devon_ai/llm_tasks/domain_category.py",
+      "sha256": "d69499db1ec9eb6aa4754d61e4fcd22fe503ef5cee07b853f296e64136c4fa0c",
+      "bytes": 5382
+    },
+    {
+      "path": "ai/src/devon_ai/llm_tasks/jd_extract_image.py",
+      "sha256": "a280bbd514fe141c25947455cef20bc0bd0192f5fedbaa33930fd7826b1fc4c2",
+      "bytes": 6962
+    },
+    {
+      "path": "ai/src/devon_ai/llm_tasks/repo_deep.py",
+      "sha256": "ed4240750c44b607c7084eca845b3882fd81af414b004ff425efb026ec161cfc",
+      "bytes": 3861
+    },
+    {
+      "path": "ai/src/devon_ai/llm_tasks/repo_shallow.py",
+      "sha256": "e5609e80d56a5a573a79a529673379334962d963c9d11619bd3470491cd711ba",
+      "bytes": 6158
+    },
+    {
+      "path": "ai/src/devon_ai/llm_tasks/report.py",
+      "sha256": "42682de1fdf56f93b4227ed58db2075d090d2a5441d2e50a09f8c7fbb4ea7901",
+      "bytes": 18849
+    },
+    {
+      "path": "ai/src/devon_ai/llm_tasks/report_score.py",
+      "sha256": "bd4d1f321eeaf0aed4e2987867bf1a5cd0147d579541a4dee7e3d3014865203a",
+      "bytes": 10597
+    },
+    {
+      "path": "ai/src/devon_ai/prompt_versions.py",
+      "sha256": "ba7bc2f4792ef163c742d691569da8b1ce001545a4b9d652fd0035fa4ece48e9",
+      "bytes": 905
+    },
+    {
+      "path": "ai/src/devon_ai/query_policy.py",
+      "sha256": "5de77281da2386e11c755de8c36c41999f3522806e5bf3a4a6c71f9950b9ad10",
+      "bytes": 1446
+    },
+    {
+      "path": "ai/src/devon_ai/report_scores.py",
+      "sha256": "963b7f935b240d8f2f898001d569df42e5a3c40adf495cf947d7ecd066204b01",
+      "bytes": 2099
+    },
+    {
+      "path": "ai/src/devon_ai/source_readers.py",
+      "sha256": "c61941659e40b2d2b77d92b9041211e189fed2984cc9b564dfecbdfa9a42f7f1",
+      "bytes": 2540
+    },
+    {
+      "path": "backend/app/core/config.py",
+      "sha256": "0208adfc6f71332f70ffc8c13b21c5185a4c83e96fb4dbbc63745ac47a8b6b9e",
+      "bytes": 31516
+    },
+    {
+      "path": "backend/app/db/models/interview.py",
+      "sha256": "a1220638ae3aff1a7ad25725b65e4198ba18df28005efa3340181b166d6a9675",
+      "bytes": 8980
+    },
+    {
+      "path": "backend/app/db/models/report.py",
+      "sha256": "6408335f386febba239b958d0c016ba98b5de2c40fbccb832304bb4814eb5e92",
+      "bytes": 8142
+    },
+    {
+      "path": "backend/app/integrations/llm/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "backend/app/integrations/llm/client.py",
+      "sha256": "0c7f9d82333a5c238f7a05c1a349dc452b9b2428a8b254e7e403a6d030f63702",
+      "bytes": 24282
+    },
+    {
+      "path": "backend/app/llm_tasks/report.py",
+      "sha256": "ca2564e8629c33f3a9eee473f5fe9fd719bfaf0b49a4aa6fc1ca447cd9b2b931",
+      "bytes": 7190
+    },
+    {
+      "path": "backend/scripts/ai_eval_bridge.py",
+      "sha256": "9048293b83df12386d02adc4d89b2961af570329eee0c4bd8aa07be9a8980157",
+      "bytes": 15661
+    },
+    {
+      "path": "backend/scripts/ai_model_judge.py",
+      "sha256": "d7a8e4f25f4ee0bd3c5a95e3044fa6dfbb2aa65df773636dc758df4022fc0717",
+      "bytes": 9169
+    },
+    {
+      "path": "backend/scripts/evaluation_output.py",
+      "sha256": "4918776a11846fe43d7003c6974aa149ba9519a8fc967ef47b551ca55d71a206",
+      "bytes": 3071
+    },
+    {
+      "path": "backend/scripts/run_ai_evaluation.py",
+      "sha256": "172b7e43826b55a7299e94124632be710cc09cda31c752a19e87163f941b8e1e",
+      "bytes": 22460
+    }
+  ],
+  "captured_prompt_fingerprints": [
+    {
+      "task": "answer_analysis",
+      "version": "answer_analysis_v6",
+      "path": "ai/prompts/answer-analysis-runtime-v6.md",
+      "sha256": "2361cb6596f6b979ba6c4eb0a9185de57a2197bd752da897a1ed5dc1b385646e",
+      "bytes": 6064
+    },
+    {
+      "task": "director",
+      "version": "director_v8",
+      "path": "ai/prompts/director-runtime-v8.md",
+      "sha256": "8edaaa516dd76d9ee994b423f1274da496b643ec2c915800ab3ebd9c354777ef",
+      "bytes": 16964
+    },
+    {
+      "task": "report",
+      "version": "report_v3",
+      "path": "ai/prompts/report-runtime-v3.md",
+      "sha256": "adde28f9b402c9534ce163ff4c22ce5ef808a38874af3195b19ed3e9f802accc",
+      "bytes": 6616
+    },
+    {
+      "task": "report_score",
+      "version": "report_score_v3",
+      "path": "ai/prompts/report-score-v3.md",
+      "sha256": "1f851b9c0674268c718fd1ec720f8ff70bac039ddfa0f332e0964a31c9732762",
+      "bytes": 7418
+    }
+  ],
+  "note": "This list is the captured execution dependency set, not the full checkout. Prompt references are separate. Corpus/schema regeneration additionally reads backend/scripts/seed_score_criteria.py and ai/prompts/evaluation-judge-v3.md from the pinned external checkout."
+}

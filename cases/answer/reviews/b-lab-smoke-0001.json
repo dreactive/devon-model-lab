@@ -1,0 +1,13 @@
+{
+  "case_id": "b-lab-smoke-0001",
+  "version": 1,
+  "review": {
+    "status": "unreviewed",
+    "author": "Codex",
+    "reviewer": null,
+    "reviewed_at": null,
+    "pending_notes": [
+      "Synthetic smoke only. Human semantic review is pending; this is not a benchmark corpus or corpus coverage."
+    ]
+  }
+}

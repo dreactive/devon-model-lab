@@ -1,0 +1,46 @@
+{
+  "type": "object",
+  "properties": {
+    "judgments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "turn_id": {
+            "type": "string"
+          },
+          "key": {
+            "enum": [
+              "project_understanding",
+              "technical_reasoning",
+              "problem_solving",
+              "communication",
+              "contribution_clarity",
+              "company_job_fit"
+            ]
+          },
+          "level": {
+            "enum": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              "not_applicable"
+            ]
+          }
+        },
+        "required": [
+          "turn_id",
+          "key",
+          "level"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "judgments"
+  ],
+  "additionalProperties": false
+}

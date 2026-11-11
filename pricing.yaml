@@ -1,0 +1,21 @@
+# All prices and provenance are filled manually by the user. No rates are inferred.
+version: 1
+currency: USD
+unit: 1000000
+models:
+  gpt-5.6-luna:
+    input_usd_per_million: null
+    output_usd_per_million: null
+    cached_input_usd_per_million: null
+    reasoning_output_usd_per_million: null
+    source_url: null
+    checked_at: null
+    price_version: null
+  candidate_model_id:
+    input_usd_per_million: null
+    output_usd_per_million: null
+    cached_input_usd_per_million: null
+    reasoning_output_usd_per_million: null
+    source_url: null
+    checked_at: null
+    price_version: null

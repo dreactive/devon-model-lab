@@ -1,0 +1,31 @@
+{
+  "error": {
+    "message": "max_output_tokens 4096 exceeds the 2000-token ceiling this proxy holds a NON-STREAMING reply to: the answer is invisible until it finishes and the gateway kills a long one mid-generation, so a larger budget would buy a timeout rather than a longer answer. Send stream=true for the full length, or lower max_output_tokens to 2000 or less.",
+    "type": "invalid_request_error",
+    "param": null,
+    "code": "400"
+  },
+  "_elice_diagnostic": {
+    "kind": "http_error",
+    "http_status": 400,
+    "model": "gpt-6.1-sol",
+    "attempt_id": "attempt-1",
+    "captured_body_bytes": 418,
+    "body_sha256": "45ed0abe894f198cc35984c66f3ae3fa274e38dba16fb98b811c81db3e5f45df",
+    "hash_scope": "captured_body_bytes",
+    "body_truncated": false,
+    "body_kind": "json",
+    "error_code": "response_usage_unconfirmed"
+  },
+  "_elice_billing": {
+    "usage": null,
+    "cost_usd": null,
+    "cost_lower_usd": null,
+    "cost_upper_usd": null,
+    "cost_status": "unconfirmed",
+    "canonical_model": "gpt-6.1-sol",
+    "provider_model": null,
+    "attempt_id": "attempt-1",
+    "accounting_basis": "billing_upper_bound"
+  }
+}

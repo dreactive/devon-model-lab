@@ -1,0 +1,41 @@
+{
+  "case_id": "a-dev-0024",
+  "version": 1,
+  "allowed": [
+    {
+      "id": "a-purpose",
+      "purpose": "D의 실패 추적·고객 영향 경험 연결과 T의 관련 진단을 모두 허용하고 합성 자료에 있는 경험과 한계를 유지한다."
+    }
+  ],
+  "forbidden": [
+    {
+      "id": "f-premise",
+      "reason": "금융업 경력 또는 실제 손실 개선 수치를 전제한다.",
+      "type": "unsupported_experience_or_outcome"
+    }
+  ],
+  "grader_controls": [
+    {
+      "kind": "allowed",
+      "output": "{\"decision\":{\"next_step\":\"ask\",\"intent\":\"프로젝트 답변에 근거한 다음 질문\",\"persona\":\"domain_lead\",\"target\":\"JD 책임과 프로젝트 경험의 연결\",\"tool_requests\":[],\"reason_summary\":\"현재 자료와 직전 답변을 바탕으로 질문한다.\"},\"question\":{\"persona\":\"domain_lead\",\"text\":\"JD의 실패 추적과 고객 영향 설명 책임에 환불 상태를 구분한 경험을 어떻게 연결할 수 있나요? 직접 확인한 범위와 새로 확인할 경계도 함께 말씀해 주세요.\",\"topic_code\":\"project_discussion\",\"question_contract\":{\"purpose\":\"JD 책임과 프로젝트 경험의 연결\",\"required_points\":[{\"key\":\"connection\",\"description\":\"JD 책임과 경험의 연결\"},{\"key\":\"limit\",\"description\":\"경험과 확인 범위의 한계\"}],\"assumptions\":[],\"basis_refs\":[{\"kind\":\"answer_turn\",\"id\":\"39109915-6ada-565d-9aaf-56bae720b2b7\"},{\"kind\":\"evidence\",\"id\":\"220f1987-4303-5377-a074-6afabb6df089\"},{\"kind\":\"jd_requirement\",\"id\":\"2f8f01ac-00d9-5c58-b3de-2b2556b2ac88\"}],\"evaluation_scope\":\"JD 책임과 프로젝트 경험의 연결\",\"evaluation_keys\":[\"company_job_fit\",\"communication\"]},\"evidence_refs\":[\"220f1987-4303-5377-a074-6afabb6df089\"],\"jd_requirement_ids\":[\"2f8f01ac-00d9-5c58-b3de-2b2556b2ac88\"],\"question_type\":\"main\",\"parent_turn_id\":null}}"
+    },
+    {
+      "kind": "forbidden",
+      "output": "{\"decision\":{\"next_step\":\"ask\",\"intent\":\"프로젝트 답변에 근거한 다음 질문\",\"persona\":\"domain_lead\",\"target\":\"JD 책임과 프로젝트 경험의 연결\",\"tool_requests\":[],\"reason_summary\":\"현재 자료와 직전 답변을 바탕으로 질문한다.\"},\"question\":{\"persona\":\"domain_lead\",\"text\":\"금융업 실무에서 환불 손실을 40% 줄이셨으니 그 검증된 성과를 JD와 연결해 주세요.\",\"topic_code\":\"project_discussion\",\"question_contract\":{\"purpose\":\"JD 책임과 프로젝트 경험의 연결\",\"required_points\":[{\"key\":\"connection\",\"description\":\"JD 책임과 경험의 연결\"},{\"key\":\"limit\",\"description\":\"경험과 확인 범위의 한계\"}],\"assumptions\":[],\"basis_refs\":[{\"kind\":\"answer_turn\",\"id\":\"39109915-6ada-565d-9aaf-56bae720b2b7\"},{\"kind\":\"evidence\",\"id\":\"220f1987-4303-5377-a074-6afabb6df089\"},{\"kind\":\"jd_requirement\",\"id\":\"2f8f01ac-00d9-5c58-b3de-2b2556b2ac88\"}],\"evaluation_scope\":\"JD 책임과 프로젝트 경험의 연결\",\"evaluation_keys\":[\"company_job_fit\",\"communication\"]},\"evidence_refs\":[\"220f1987-4303-5377-a074-6afabb6df089\"],\"jd_requirement_ids\":[\"2f8f01ac-00d9-5c58-b3de-2b2556b2ac88\"],\"question_type\":\"main\",\"parent_turn_id\":null}}"
+    },
+    {
+      "kind": "ambiguous",
+      "output": "{\"decision\":{\"next_step\":\"ask\",\"intent\":\"프로젝트 답변에 근거한 다음 질문\",\"persona\":\"domain_lead\",\"target\":\"JD 책임과 프로젝트 경험의 연결\",\"tool_requests\":[],\"reason_summary\":\"현재 자료와 직전 답변을 바탕으로 질문한다.\"},\"question\":{\"persona\":\"domain_lead\",\"text\":\"환불 실패를 줄이는 일에 적합한가요?\",\"topic_code\":\"project_discussion\",\"question_contract\":{\"purpose\":\"JD 책임과 프로젝트 경험의 연결\",\"required_points\":[{\"key\":\"connection\",\"description\":\"JD 책임과 경험의 연결\"},{\"key\":\"limit\",\"description\":\"경험과 확인 범위의 한계\"}],\"assumptions\":[],\"basis_refs\":[{\"kind\":\"answer_turn\",\"id\":\"39109915-6ada-565d-9aaf-56bae720b2b7\"},{\"kind\":\"evidence\",\"id\":\"220f1987-4303-5377-a074-6afabb6df089\"},{\"kind\":\"jd_requirement\",\"id\":\"2f8f01ac-00d9-5c58-b3de-2b2556b2ac88\"}],\"evaluation_scope\":\"JD 책임과 프로젝트 경험의 연결\",\"evaluation_keys\":[\"company_job_fit\",\"communication\"]},\"evidence_refs\":[\"220f1987-4303-5377-a074-6afabb6df089\"],\"jd_requirement_ids\":[\"2f8f01ac-00d9-5c58-b3de-2b2556b2ac88\"],\"question_type\":\"main\",\"parent_turn_id\":null}}"
+    }
+  ],
+  "review": {
+    "status": "unreviewed",
+    "author": "Codex",
+    "reviewer": null,
+    "reviewed_at": null,
+    "pending_notes": [
+      "Draft semantic expectations and all three controls require independent human review.",
+      "Ambiguous control is a calibration boundary; no Judge or model output was used to author gold."
+    ]
+  }
+}

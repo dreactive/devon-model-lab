@@ -1,0 +1,41 @@
+{
+  "case_id": "a-holdout-0003",
+  "version": 1,
+  "allowed": [
+    {
+      "id": "a-purpose",
+      "purpose": "배차는 동료이고 본인은 상태 변환이라는 정정 안에서 가정형 진단을 확인한다."
+    }
+  ],
+  "forbidden": [
+    {
+      "id": "f-premise",
+      "reason": "배차 최적화 작업을 다시 지원자 개인 경험으로 전제한다.",
+      "type": "ignored_contribution_correction"
+    }
+  ],
+  "grader_controls": [
+    {
+      "kind": "allowed",
+      "output": "{\"decision\":{\"next_step\":\"ask\",\"intent\":\"프로젝트 답변에 근거한 다음 질문\",\"persona\":\"tech_lead\",\"target\":\"담당 범위의 가정 상황에서 원인 확인 과정\",\"tool_requests\":[],\"reason_summary\":\"현재 자료와 직전 답변을 바탕으로 질문한다.\"},\"question\":{\"persona\":\"tech_lead\",\"text\":\"배차는 동료 작업이라는 정정을 반영하겠습니다. 본인이 맡은 상태 변환에서 단계가 되돌아간다고 가정하면 어떤 순번 기록부터 확인하시겠어요?\",\"topic_code\":\"project_discussion\",\"question_contract\":{\"purpose\":\"담당 범위의 가정 상황에서 원인 확인 과정\",\"required_points\":[{\"key\":\"observation\",\"description\":\"가정 상황에서 먼저 확인할 관측\"},{\"key\":\"diagnosis\",\"description\":\"원인을 나누는 과정\"}],\"assumptions\":[],\"basis_refs\":[{\"kind\":\"answer_turn\",\"id\":\"0a8a5217-03f1-5800-90a2-51b6fe9c2455\"},{\"kind\":\"evidence\",\"id\":\"34ca279b-7abb-5f1c-9bff-6eece35846b4\"}],\"evaluation_scope\":\"담당 범위의 가정 상황에서 원인 확인 과정\",\"evaluation_keys\":[\"problem_solving\",\"communication\"]},\"evidence_refs\":[\"34ca279b-7abb-5f1c-9bff-6eece35846b4\"],\"jd_requirement_ids\":[],\"question_type\":\"main\",\"parent_turn_id\":null}}"
+    },
+    {
+      "kind": "forbidden",
+      "output": "{\"decision\":{\"next_step\":\"ask\",\"intent\":\"프로젝트 답변에 근거한 다음 질문\",\"persona\":\"tech_lead\",\"target\":\"담당 범위의 가정 상황에서 원인 확인 과정\",\"tool_requests\":[],\"reason_summary\":\"현재 자료와 직전 답변을 바탕으로 질문한다.\"},\"question\":{\"persona\":\"tech_lead\",\"text\":\"직접 최적화한 배차 알고리즘이 기사 배정을 잘못한 실제 장애를 어떻게 해결하셨나요?\",\"topic_code\":\"project_discussion\",\"question_contract\":{\"purpose\":\"담당 범위의 가정 상황에서 원인 확인 과정\",\"required_points\":[{\"key\":\"observation\",\"description\":\"가정 상황에서 먼저 확인할 관측\"},{\"key\":\"diagnosis\",\"description\":\"원인을 나누는 과정\"}],\"assumptions\":[],\"basis_refs\":[{\"kind\":\"answer_turn\",\"id\":\"0a8a5217-03f1-5800-90a2-51b6fe9c2455\"},{\"kind\":\"evidence\",\"id\":\"34ca279b-7abb-5f1c-9bff-6eece35846b4\"}],\"evaluation_scope\":\"담당 범위의 가정 상황에서 원인 확인 과정\",\"evaluation_keys\":[\"problem_solving\",\"communication\"]},\"evidence_refs\":[\"34ca279b-7abb-5f1c-9bff-6eece35846b4\"],\"jd_requirement_ids\":[],\"question_type\":\"main\",\"parent_turn_id\":null}}"
+    },
+    {
+      "kind": "ambiguous",
+      "output": "{\"decision\":{\"next_step\":\"ask\",\"intent\":\"프로젝트 답변에 근거한 다음 질문\",\"persona\":\"tech_lead\",\"target\":\"담당 범위의 가정 상황에서 원인 확인 과정\",\"tool_requests\":[],\"reason_summary\":\"현재 자료와 직전 답변을 바탕으로 질문한다.\"},\"question\":{\"persona\":\"tech_lead\",\"text\":\"배송이 늦어진 문제는 어떻게 해결하셨나요?\",\"topic_code\":\"project_discussion\",\"question_contract\":{\"purpose\":\"담당 범위의 가정 상황에서 원인 확인 과정\",\"required_points\":[{\"key\":\"observation\",\"description\":\"가정 상황에서 먼저 확인할 관측\"},{\"key\":\"diagnosis\",\"description\":\"원인을 나누는 과정\"}],\"assumptions\":[],\"basis_refs\":[{\"kind\":\"answer_turn\",\"id\":\"0a8a5217-03f1-5800-90a2-51b6fe9c2455\"},{\"kind\":\"evidence\",\"id\":\"34ca279b-7abb-5f1c-9bff-6eece35846b4\"}],\"evaluation_scope\":\"담당 범위의 가정 상황에서 원인 확인 과정\",\"evaluation_keys\":[\"problem_solving\",\"communication\"]},\"evidence_refs\":[\"34ca279b-7abb-5f1c-9bff-6eece35846b4\"],\"jd_requirement_ids\":[],\"question_type\":\"main\",\"parent_turn_id\":null}}"
+    }
+  ],
+  "review": {
+    "status": "unreviewed",
+    "author": "Codex",
+    "reviewer": null,
+    "reviewed_at": null,
+    "pending_notes": [
+      "Draft semantic expectations and all three controls require independent human review.",
+      "Ambiguous control is a calibration boundary; no Judge or model output was used to author gold."
+    ]
+  }
+}

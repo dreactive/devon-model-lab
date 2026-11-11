@@ -1,0 +1,240 @@
+{
+  "case_id": "a-dev-0008",
+  "version": 1,
+  "control": {
+    "kind": "question",
+    "split": "dev",
+    "source_group_id": "a-dev-inventory",
+    "synthetic": true
+  },
+  "payload": {
+    "service_task": "director",
+    "service_input": {
+      "context": {
+        "interview_id": "b3923faa-e6bd-5cea-9db2-c204dce65ac0",
+        "current_turn_id": "be650223-c7db-5d6e-bbe0-0a56216e7b04",
+        "turn_no": 4,
+        "total_turns": 9,
+        "persona_counts": [
+          {
+            "persona": "tech_lead",
+            "count": 2
+          },
+          {
+            "persona": "hr_manager",
+            "count": 1
+          },
+          {
+            "persona": "domain_lead",
+            "count": 0
+          }
+        ],
+        "allowed_personas": [
+          "tech_lead",
+          "domain_lead"
+        ],
+        "jd_requirements": [
+          {
+            "id": "1dedf5e0-3967-5a66-bd1b-d57ac9e409f6",
+            "text": "재고 변동의 정합성 책임을 맡아 검증 조건과 실패 시 사용자 조치를 설명한다.",
+            "category": "responsibility",
+            "source_field": "responsibilities",
+            "tech_tags": []
+          }
+        ],
+        "repositories": [
+          {
+            "repository_id": "bf111c05-78ea-52bb-891a-c9220ebec392",
+            "git_ref": "116ccc2f4d0b7ea6d54ec2bd690e0ed855191a0f",
+            "primary": true,
+            "analysis_refs": [],
+            "limitations": []
+          }
+        ],
+        "history": [
+          {
+            "turn_id": "ea874e87-d488-5ba9-a50c-6bcf99021b76",
+            "persona": "hr_manager",
+            "question": "프로젝트에서 본인이 맡은 부분과 협업 경계를 소개해 주세요.",
+            "answer": "저는 입출고 수량 검증과 오류 표시를 맡았습니다. revision 조건부 저장과 동시성 처리는 동료가 맡았고 인터페이스를 같이 맞췄습니다.",
+            "analysis_ref": null
+          },
+          {
+            "turn_id": "79b5f4e8-3a1f-522a-a366-7bac17e4427a",
+            "persona": "tech_lead",
+            "question": "팜서랍에서 입력이 결과 상태로 바뀌는 주요 흐름을 설명해 주세요.",
+            "answer": "입력 수량이 양의 정수인지 확인하고 현재 수량보다 큰 차감은 거절합니다. 새 수량과 revision을 만든 뒤 조건부 저장하며 충돌이면 값을 다시 읽어 검증 후 재시도합니다.",
+            "analysis_ref": null
+          },
+          {
+            "turn_id": "be650223-c7db-5d6e-bbe0-0a56216e7b04",
+            "persona": "tech_lead",
+            "question": "이 처리 방식에서 본인이 맡은 범위를 구분하고 맡은 부분의 선택 이유를 설명해 주세요.",
+            "answer": "앞서 동시성도 제가 맡은 것처럼 들렸다면 정정하겠습니다. revision 비교는 동료가 맡았고 저는 입출고 수량 검증과 오류 메시지를 구현했습니다.",
+            "analysis_ref": null
+          }
+        ],
+        "current_question_contract": {
+          "purpose": "담당 범위 안의 처리 선택 확인",
+          "required_points": [
+            {
+              "key": "responsibility",
+              "description": "본인이 맡은 범위"
+            },
+            {
+              "key": "choice",
+              "description": "맡은 처리의 선택 이유"
+            }
+          ],
+          "assumptions": [],
+          "basis_refs": [
+            {
+              "kind": "evidence",
+              "id": "3fa818ac-b382-5747-ae51-6fe387d0b3ee"
+            }
+          ],
+          "evaluation_scope": "담당 범위 안의 처리 선택 확인",
+          "evaluation_keys": [
+            "technical_reasoning",
+            "communication"
+          ]
+        },
+        "evidence": [
+          {
+            "evidence_id": "3fa818ac-b382-5747-ae51-6fe387d0b3ee",
+            "repository_id": "bf111c05-78ea-52bb-891a-c9220ebec392",
+            "git_ref": "116ccc2f4d0b7ea6d54ec2bd690e0ed855191a0f",
+            "source_kind": "code",
+            "path": "stock/quantity.ts",
+            "metadata_key": null,
+            "content": "type Stock = { quantity: number; revision: number };\nexport function withdraw(current: Stock, units: number): Stock {\n  if (!Number.isInteger(units) || units <= 0) throw Error('bad units');\n  if (current.quantity < units) throw Error('not enough stock');\n  return { quantity: current.quantity - units, revision: current.revision + 1 };\n}\nexport async function save(store: any, before: Stock, after: Stock) {\n  return store.compareAndSwap(before.revision, after);\n}\n",
+            "tool_name": null,
+            "summary": "합성 프로젝트 원문 발췌. 개인 작성 사실이나 운영 성과를 증명하지 않는다.",
+            "start_line": 1,
+            "end_line": 9
+          },
+          {
+            "evidence_id": "84920178-ff7a-5886-97af-e37caa240ddb",
+            "repository_id": "bf111c05-78ea-52bb-891a-c9220ebec392",
+            "git_ref": "116ccc2f4d0b7ea6d54ec2bd690e0ed855191a0f",
+            "source_kind": "document",
+            "path": "PROJECT_NOTES.md",
+            "metadata_key": null,
+            "content": "팜서랍은 공유 비품 입출고를 관리하는 합성 프로젝트다. 수량 검증 함수와 revision 조건부 저장이 분리되어 있다. 수량 검증과 오류 표시를 한 구성원이, 조건부 저장을 다른 구성원이 맡는 팀 문서만 있다. 실제 재고 손실이나 장애 기록은 없다.",
+            "tool_name": null,
+            "summary": null,
+            "start_line": 1,
+            "end_line": 1
+          }
+        ],
+        "domain_frames": [],
+        "limits": {
+          "remaining_calls": 2,
+          "remaining_replans": 0,
+          "policy_version": "interview-v1"
+        },
+        "evaluation_targets": [
+          {
+            "persona": "tech_lead",
+            "keys": [
+              "problem_solving",
+              "communication"
+            ]
+          },
+          {
+            "persona": "domain_lead",
+            "keys": [
+              "company_job_fit",
+              "communication"
+            ]
+          }
+        ],
+        "supplemental_sources": [],
+        "external_searches": [],
+        "supplemental_limitations": []
+      },
+      "question": {
+        "persona": "tech_lead",
+        "text": "이 처리 방식에서 본인이 맡은 범위를 구분하고 맡은 부분의 선택 이유를 설명해 주세요.",
+        "topic_code": "project_discussion",
+        "question_contract": {
+          "purpose": "담당 범위 안의 처리 선택 확인",
+          "required_points": [
+            {
+              "key": "responsibility",
+              "description": "본인이 맡은 범위"
+            },
+            {
+              "key": "choice",
+              "description": "맡은 처리의 선택 이유"
+            }
+          ],
+          "assumptions": [],
+          "basis_refs": [
+            {
+              "kind": "evidence",
+              "id": "3fa818ac-b382-5747-ae51-6fe387d0b3ee"
+            }
+          ],
+          "evaluation_scope": "담당 범위 안의 처리 선택 확인",
+          "evaluation_keys": [
+            "technical_reasoning",
+            "communication"
+          ]
+        },
+        "evidence_refs": [
+          "3fa818ac-b382-5747-ae51-6fe387d0b3ee"
+        ],
+        "jd_requirement_ids": [],
+        "question_type": "main",
+        "parent_turn_id": null
+      },
+      "answer_text": "앞서 동시성도 제가 맡은 것처럼 들렸다면 정정하겠습니다. revision 비교는 동료가 맡았고 저는 입출고 수량 검증과 오류 메시지를 구현했습니다.",
+      "answer_analysis": {
+        "evaluation_status": "evaluated",
+        "sufficiency": "partial",
+        "covered_points": [
+          {
+            "key": "responsibility",
+            "answer_quotes": [
+              "앞서 동시성도 제가 맡은 것처럼 들렸다면 정정하겠습니다. revision 비교는 동료가 맡았고 저는 입출고 수량 검증과 오류 메시지를 구현했습니다."
+            ]
+          }
+        ],
+        "missing_points": [
+          "choice"
+        ],
+        "technical_assessment": {
+          "explanation": "답변이 설명한 범위와 제공 원문을 구분해 관찰했다.",
+          "answer_quotes": [
+            "앞서 동시성도 제가 맡은 것처럼 들렸다면 정정하겠습니다. revision 비교는 동료가 맡았고 저는 입출고 수량 검증과 오류 메시지를 구현했습니다."
+          ],
+          "evidence_refs": [],
+          "limitations": []
+        },
+        "contribution_scope": {
+          "scope": "self",
+          "answer_quotes": [
+            "앞서 동시성도 제가 맡은 것처럼 들렸다면 정정하겠습니다. revision 비교는 동료가 맡았고 저는 입출고 수량 검증과 오류 메시지를 구현했습니다."
+          ]
+        },
+        "claim_checks": [],
+        "needs_verification": false,
+        "verification_requests": [],
+        "limitations": [
+          "선택 이유 또는 대안 비교는 답변에 나타나지 않은 범위만 보완한다."
+        ],
+        "external_queries": []
+      },
+      "allowed_locations": [
+        [
+          "bf111c05-78ea-52bb-891a-c9220ebec392",
+          "116ccc2f4d0b7ea6d54ec2bd690e0ed855191a0f",
+          "stock/quantity.ts"
+        ]
+      ],
+      "reference_texts": [],
+      "tool_results": []
+    }
+  }
+}

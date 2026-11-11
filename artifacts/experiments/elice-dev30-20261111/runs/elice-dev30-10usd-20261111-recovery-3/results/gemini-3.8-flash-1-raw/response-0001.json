@@ -1,0 +1,58 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\n  \"question\": {\n    \"persona\": \"hr_manager\",\n    \"text\": \"간단한 자기소개와 함께 자리누리 프로젝트의 목표와 해당 프로젝트에서 지원자께서 실제로 담당하셨던 역할 및 기여 범위를 설명해 주시겠습니까?\",\n    \"topic_code\": \"self_intro_and_role\",\n    \"question_contract\": {\n      \"purpose\": \"지원자의 자기소개와 함께 자리누리 프로젝트 개요 및 팀 내 지원자의 실제 역할과 기여 범위를 명확히 확인한다.\",\n      \"required_points\": [\n        {\n          \"key\": \"project_overview\",\n          \"description\": \"프로젝트의 전반적인 목적과 배경에 대한 명확한 설명\"\n        },\n        {\n          \"key\": \"individual_role\",\n          \"description\": \"팀 내 협업 과정에서 본인이 직접 담당하고 수행한 역할과 기여 범위\"\n        }\n      ],\n      \"assumptions\": [\n        \"제공된 문서 원문에는 팀 프로젝트라는 점만 명시되어 있고 개인별 구체적인 역할 및 기여 범위는 기록되어 있지 않음.\"\n      ],\n      \"basis_refs\": [\n        {\n          \"kind\": \"evidence\",\n          \"id\": \"8ee6abff-b7b8-5eda-98fc-54d85bbbf074\"\n        }\n      ],\n      \"evaluation_scope\": \"프로젝트 개요 설명의 명확성과 본인 기여 및 담당 역할의 구체적 구분 여부\",\n      \"evaluation_keys\": [\n        \"contribution_clarity\",\n        \"communication\"\n      ]\n    },\n    \"evidence_refs\": [\n      \"8ee6abff-b7b8-5eda-98fc-54d85bbbf074\"\n    ],\n    \"jd_requirement_ids\": [],\n    \"question_type\": \"main\",\n    \"parent_turn_id\": null\n  },\n  \"intent\": \"첫 질문으로 자기소개와 함께 팀 프로젝트에서 지원자의 실제 기여도와 담당 영역을 파악하기 위함.\",\n  \"reason_summary\": \"면접 첫 턴에서 HR 담당자로서 자기소개와 프로젝트 내 본인의 실질적 역할 구분을 요청하는 질문으로 계획함.\"\n}",
+        "extra_content": {
+          "google": {
+            "thought_signature": "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"
+          }
+        },
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794340844,
+  "id": "33fzarGoKOXU2roPtPmuaQ",
+  "model": "gemini-3.8-flash",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 1663,
+    "prompt_tokens": 4896,
+    "total_tokens": 6559,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1135
+    },
+    "input_tokens": 4896,
+    "output_tokens": 1663,
+    "cached_prompt_tokens": 0,
+    "cache_write_tokens": 0
+  },
+  "_elice_billing": {
+    "usage": {
+      "input_tokens": 4896,
+      "output_tokens": 1663,
+      "cached_input_tokens": 0,
+      "cache_write_input_tokens": null,
+      "reasoning_output_tokens": 1135,
+      "cache_write_short_tokens": null,
+      "cache_write_long_tokens": null
+    },
+    "cost_usd": "0.00990825",
+    "cost_lower_usd": "0.00990825",
+    "cost_upper_usd": "0.00990825",
+    "cost_status": "confirmed",
+    "provider_model": "gemini-3.8-flash",
+    "canonical_model": "gemini-3.8-flash",
+    "attempt_id": "attempt-1",
+    "accounting_basis": "billing_upper_bound"
+  },
+  "_elice_wire": {
+    "protocol": "chat_completions",
+    "canonical_request_bytes": 22257,
+    "wire_request_bytes": 22103,
+    "reservation_input_bytes": 22257
+  }
+}

@@ -1,0 +1,260 @@
+{
+  "case_id": "a-dev-0016",
+  "version": 1,
+  "control": {
+    "kind": "question",
+    "split": "dev",
+    "source_group_id": "a-dev-learning",
+    "synthetic": true
+  },
+  "payload": {
+    "service_task": "director",
+    "service_input": {
+      "context": {
+        "interview_id": "434dd219-8c0e-56ab-af39-98e9bebc0076",
+        "current_turn_id": "8e7d07dd-e1e8-577f-a526-13f51e387770",
+        "turn_no": 8,
+        "total_turns": 9,
+        "persona_counts": [
+          {
+            "persona": "tech_lead",
+            "count": 4
+          },
+          {
+            "persona": "hr_manager",
+            "count": 1
+          },
+          {
+            "persona": "domain_lead",
+            "count": 2
+          }
+        ],
+        "allowed_personas": [
+          "tech_lead"
+        ],
+        "jd_requirements": [
+          {
+            "id": "aa1ed4a6-c4d7-543a-bafd-b411488bc0a8",
+            "text": "데이터 보관 시점과 삭제 범위를 정리하고 사용자에게 데이터 수명 관리 선택을 설명한다.",
+            "category": "responsibility",
+            "source_field": "responsibilities",
+            "tech_tags": []
+          }
+        ],
+        "repositories": [
+          {
+            "repository_id": "27c1d102-5eb7-59cd-b578-ee5161005a7b",
+            "git_ref": "e807cd629d0017771687570d5ca5695029bb69db",
+            "primary": true,
+            "analysis_refs": [],
+            "limitations": []
+          }
+        ],
+        "history": [
+          {
+            "turn_id": "c1f02583-dba2-5082-af1f-6aac05b92e88",
+            "persona": "hr_manager",
+            "question": "프로젝트에서 본인이 맡은 부분과 협업 경계를 소개해 주세요.",
+            "answer": "저는 진도 저장 API와 이벤트 재전송 처리를 맡았습니다. 추천 기능은 동료 영역이라 구현 내용을 모르고 삭제 정책은 팀에서 검토만 했습니다.",
+            "analysis_ref": null
+          },
+          {
+            "turn_id": "fd5d3f77-2661-54fc-b182-3c31f6357dbc",
+            "persona": "tech_lead",
+            "question": "걸음장에서 입력이 결과 상태로 바뀌는 주요 흐름을 설명해 주세요.",
+            "answer": "클라이언트가 학습자와 강의, 이벤트 ID를 보냅니다. API는 처리된 ID면 반환하고 새 ID면 진도를 저장한 뒤 처리 표시를 남깁니다. 조회 API는 저장된 진도로 완료 여부를 계산합니다.",
+            "analysis_ref": null
+          },
+          {
+            "turn_id": "9f0f39d1-13df-5b20-a305-b96005d48a04",
+            "persona": "domain_lead",
+            "question": "주어진 JD 책임 중 이 프로젝트의 본인 경험과 연결할 부분과 한계를 설명해 주세요.",
+            "answer": "JD의 데이터 수명 관리와 연결하면 진도 이벤트를 언제 저장하는지 정리한 경험이 있습니다. 삭제 운영 경험은 없어서 이벤트 보관과 집계 진도의 삭제 범위를 따로 검토하겠다고 설명하겠습니다.",
+            "analysis_ref": null
+          },
+          {
+            "turn_id": "1cc9b7ba-4e88-5aa0-a5bc-18ebb9a4a264",
+            "persona": "domain_lead",
+            "question": "처리 상태가 늦게 반영되는 상황을 사용자에게 어떤 순서와 표현으로 설명하시겠어요?",
+            "answer": "사용자에게 학습 기록과 화면의 완료 표시가 언제 반영되는지 먼저 설명하겠습니다. 보관 기간은 확정된 정책을 확인한 뒤 안내하고 제가 법적 기준을 정했다고 말하지 않겠습니다.",
+            "analysis_ref": null
+          },
+          {
+            "turn_id": "c91d20ca-6cc5-5fca-aa4b-a17748b03c72",
+            "persona": "tech_lead",
+            "question": "주요 처리 방식을 고른 이유와 다른 방식과 비교할 조건을 설명해 주세요.",
+            "answer": "네트워크 재전송으로 같은 완료가 두 번 반영되지 않게 이벤트 ID를 비교했습니다. 사용자와 강의만 키로 쓰면 서로 다른 학습 활동을 하나로 묶을 수 있어 요청별 ID를 썼습니다.",
+            "analysis_ref": null
+          },
+          {
+            "turn_id": "c7b55e5d-0d6f-58e4-8695-1ecdc692431a",
+            "persona": "tech_lead",
+            "question": "결과 상태가 기대와 달라진다고 가정하면 어떤 관측으로 원인을 나누고 확인하시겠어요?",
+            "answer": "가정상 완료가 누락되면 요청 ID, 저장 성공, 처리 표시를 분리해 재현하겠습니다. 저장 뒤 표시 전에 실패하는 구간을 시험하고 두 동작의 원자성 범위를 확인하겠습니다.",
+            "analysis_ref": null
+          },
+          {
+            "turn_id": "8e7d07dd-e1e8-577f-a526-13f51e387770",
+            "persona": "tech_lead",
+            "question": "현재 처리 방식을 고른 이유와 다른 방식과 비교할 조건을 설명해 주세요.",
+            "answer": "같은 완료 이벤트의 재전송만 구분하려고 이벤트 ID를 사용했습니다. 이벤트 ID는 요청 생성 때 한 번 정하고 재전송 때 그대로 보냈습니다.",
+            "analysis_ref": null
+          }
+        ],
+        "current_question_contract": {
+          "purpose": "직전 처리 방식의 선택 이유와 대안 비교",
+          "required_points": [
+            {
+              "key": "choice",
+              "description": "현재 처리 방식을 고른 이유"
+            },
+            {
+              "key": "comparison",
+              "description": "대안과 비교할 조건"
+            }
+          ],
+          "assumptions": [],
+          "basis_refs": [
+            {
+              "kind": "evidence",
+              "id": "e243cfec-534b-5ceb-96fe-6a1e5f183b19"
+            }
+          ],
+          "evaluation_scope": "직전 처리 방식의 선택 이유와 대안 비교",
+          "evaluation_keys": [
+            "technical_reasoning",
+            "communication"
+          ]
+        },
+        "evidence": [
+          {
+            "evidence_id": "e243cfec-534b-5ceb-96fe-6a1e5f183b19",
+            "repository_id": "27c1d102-5eb7-59cd-b578-ee5161005a7b",
+            "git_ref": "e807cd629d0017771687570d5ca5695029bb69db",
+            "source_kind": "code",
+            "path": "progress/record.go",
+            "metadata_key": null,
+            "content": "package progress\ntype Event struct { ID string; Learner string; Lesson string; Finished bool }\ntype Store interface { Seen(string) bool; Save(Event) error; Mark(string) error }\nfunc Record(s Store, e Event) error {\n    if s.Seen(e.ID) { return nil }\n    if err := s.Save(e); err != nil { return err }\n    return s.Mark(e.ID)\n}\n",
+            "tool_name": null,
+            "summary": "합성 프로젝트 원문 발췌. 개인 작성 사실이나 운영 성과를 증명하지 않는다.",
+            "start_line": 1,
+            "end_line": 8
+          },
+          {
+            "evidence_id": "90b1d19e-4e1a-5302-9e69-cabaf84fcf91",
+            "repository_id": "27c1d102-5eb7-59cd-b578-ee5161005a7b",
+            "git_ref": "e807cd629d0017771687570d5ca5695029bb69db",
+            "source_kind": "document",
+            "path": "PROJECT_NOTES.md",
+            "metadata_key": null,
+            "content": "걸음장은 강의 진도 이벤트를 저장하는 합성 학습 프로젝트다. 이벤트 ID로 재전송을 구분하고 저장 뒤 처리 표시를 한다. 이 발췌만으로 원자성은 확인되지 않는다. 추천 모델과 실제 학생 성과는 자료 범위 밖이며 데이터 삭제 정책은 검토 제안만 있다.",
+            "tool_name": null,
+            "summary": null,
+            "start_line": 1,
+            "end_line": 1
+          }
+        ],
+        "domain_frames": [],
+        "limits": {
+          "remaining_calls": 2,
+          "remaining_replans": 0,
+          "policy_version": "interview-v1"
+        },
+        "evaluation_targets": [
+          {
+            "persona": "tech_lead",
+            "keys": [
+              "technical_reasoning",
+              "communication"
+            ]
+          }
+        ],
+        "supplemental_sources": [],
+        "external_searches": [],
+        "supplemental_limitations": []
+      },
+      "question": {
+        "persona": "tech_lead",
+        "text": "현재 처리 방식을 고른 이유와 다른 방식과 비교할 조건을 설명해 주세요.",
+        "topic_code": "project_discussion",
+        "question_contract": {
+          "purpose": "직전 처리 방식의 선택 이유와 대안 비교",
+          "required_points": [
+            {
+              "key": "choice",
+              "description": "현재 처리 방식을 고른 이유"
+            },
+            {
+              "key": "comparison",
+              "description": "대안과 비교할 조건"
+            }
+          ],
+          "assumptions": [],
+          "basis_refs": [
+            {
+              "kind": "evidence",
+              "id": "e243cfec-534b-5ceb-96fe-6a1e5f183b19"
+            }
+          ],
+          "evaluation_scope": "직전 처리 방식의 선택 이유와 대안 비교",
+          "evaluation_keys": [
+            "technical_reasoning",
+            "communication"
+          ]
+        },
+        "evidence_refs": [
+          "e243cfec-534b-5ceb-96fe-6a1e5f183b19"
+        ],
+        "jd_requirement_ids": [],
+        "question_type": "main",
+        "parent_turn_id": null
+      },
+      "answer_text": "같은 완료 이벤트의 재전송만 구분하려고 이벤트 ID를 사용했습니다. 이벤트 ID는 요청 생성 때 한 번 정하고 재전송 때 그대로 보냈습니다.",
+      "answer_analysis": {
+        "evaluation_status": "evaluated",
+        "sufficiency": "partial",
+        "covered_points": [
+          {
+            "key": "choice",
+            "answer_quotes": [
+              "같은 완료 이벤트의 재전송만 구분하려고 이벤트 ID를 사용했습니다. 이벤트 ID는 요청 생성 때 한 번 정하고 재전송 때 그대로 보냈습니다."
+            ]
+          }
+        ],
+        "missing_points": [
+          "comparison"
+        ],
+        "technical_assessment": {
+          "explanation": "답변이 설명한 범위와 제공 원문을 구분해 관찰했다.",
+          "answer_quotes": [
+            "같은 완료 이벤트의 재전송만 구분하려고 이벤트 ID를 사용했습니다. 이벤트 ID는 요청 생성 때 한 번 정하고 재전송 때 그대로 보냈습니다."
+          ],
+          "evidence_refs": [],
+          "limitations": []
+        },
+        "contribution_scope": {
+          "scope": "unknown",
+          "answer_quotes": [
+            "같은 완료 이벤트의 재전송만 구분하려고 이벤트 ID를 사용했습니다. 이벤트 ID는 요청 생성 때 한 번 정하고 재전송 때 그대로 보냈습니다."
+          ]
+        },
+        "claim_checks": [],
+        "needs_verification": false,
+        "verification_requests": [],
+        "limitations": [
+          "선택 이유 또는 대안 비교는 답변에 나타나지 않은 범위만 보완한다."
+        ],
+        "external_queries": []
+      },
+      "allowed_locations": [
+        [
+          "27c1d102-5eb7-59cd-b578-ee5161005a7b",
+          "e807cd629d0017771687570d5ca5695029bb69db",
+          "progress/record.go"
+        ]
+      ],
+      "reference_texts": [],
+      "tool_results": []
+    }
+  }
+}

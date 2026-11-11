@@ -1,0 +1,355 @@
+{
+  "schema_version": "lab-case-schemas.v1",
+  "cases": [
+    {
+      "case_id": "a-dev-0001",
+      "version": 1,
+      "input_path": "inputs/a-dev-0001.v1.json",
+      "input_sha256": "cea5d8cd629ae8d75cb221bd795a5b485686daa7b202ce391101605bee386235",
+      "schema_path": "director-plan.a-dev-0001.v1.schema.json",
+      "schema_sha256": "78bb2b927157cd46086552998ac82a6613120dcf4c4052df1828a60769b9e70c",
+      "prompt_version": "director_v8",
+      "generator": "original runtime dynamic schema builder; exact prepared input"
+    },
+    {
+      "case_id": "a-dev-0002",
+      "version": 1,
+      "input_path": "inputs/a-dev-0002.v1.json",
+      "input_sha256": "9885dfd53aeab0e082982164f0d74a22c2c157d508af12349be6ce6d30481c48",
+      "schema_path": "director-plan.a-dev-0002.v1.schema.json",
+      "schema_sha256": "e3477f094a2550f59c324cc4d5815307d2f48f87d13610182ad45375d75223f0",
+      "prompt_version": "director_v8",
+      "generator": "original runtime dynamic schema builder; exact prepared input"
+    },
+    {
+      "case_id": "a-dev-0003",
+      "version": 1,
+      "input_path": "inputs/a-dev-0003.v1.json",
+      "input_sha256": "c0e1fc78bdfd373e4a48ea87717ba0d6830dc85be1b79b0940ec98346b2e7240",
+      "schema_path": "director-plan.a-dev-0003.v1.schema.json",
+      "schema_sha256": "b5a11ef8859fd34c3f9154c367060c52ac8542878298fd7bcdb0f6a5d126a839",
+      "prompt_version": "director_v8",
+      "generator": "original runtime dynamic schema builder; exact prepared input"
+    },
+    {
+      "case_id": "a-dev-0004",
+      "version": 1,
+      "input_path": "inputs/a-dev-0004.v1.json",
+      "input_sha256": "f02b77464263011c4c0478dc9c7dedba2b4c5d7576303f1b3a8a08b8ecca33a2",
+      "schema_path": "director-plan.a-dev-0004.v1.schema.json",
+      "schema_sha256": "019d3770cf2db1e092e98a5a4f1e47d1f1dc76b065021d2b0718a33643acd7cf",
+      "prompt_version": "director_v8",
+      "generator": "original runtime dynamic schema builder; exact prepared input"
+    },
+    {
+      "case_id": "a-dev-0005",
+      "version": 1,
+      "input_path": "inputs/a-dev-0005.v1.json",
+      "input_sha256": "626e4566a082ee718cc224f1a4fc797bd41202e8b4235ebd788e3b3b236c0396",
+      "schema_path": "director-plan.a-dev-0005.v1.schema.json",
+      "schema_sha256": "05677a8783e31054e8297833141728a956d468cdf3c2cabb3cbcac49925430df",
+      "prompt_version": "director_v8",
+      "generator": "original runtime dynamic schema builder; exact prepared input"
+    },
+    {
+      "case_id": "a-dev-0006",
+      "version": 1,
+      "input_path": "inputs/a-dev-0006.v1.json",
+      "input_sha256": "a116b6ae874eb0d7d4213b431c96325ae7d24f791de5acb387a6f5295a00dfd8",
+      "schema_path": "director-plan.a-dev-0006.v1.schema.json",
+      "schema_sha256": "2919b185b708b0d53a56798b3aa097546f0901722a4aac6dc99eb94c0be7b791",
+      "prompt_version": "director_v8",
+      "generator": "original runtime dynamic schema builder; exact prepared input"
+    },
+    {
+      "case_id": "a-dev-0007",
+      "version": 1,
+      "input_path": "inputs/a-dev-0007.v1.json",
+      "input_sha256": "544e4892ff83589f3c1b235781802cc3d34256a50d7cf7772e752ce88249155f",
+      "schema_path": "director-plan.a-dev-0007.v1.schema.json",
+      "schema_sha256": "05f9ddf258312d05e3da79af1817286d0fee9af3f803b442d0d39b7040738209",
+      "prompt_version": "director_v8",
+      "generator": "original runtime dynamic schema builder; exact prepared input"
+    },
+    {
+      "case_id": "a-dev-0008",
+      "version": 1,
+      "input_path": "inputs/a-dev-0008.v1.json",
+      "input_sha256": "f15a6b1a9beca47012e9600cf73267a91b48b240354fe9a788f00807bf57b08c",
+      "schema_path": "director-plan.a-dev-0008.v1.schema.json",
+      "schema_sha256": "2d3ec7c78ef4f5f58781ae6423a73d5b1ff337625050d077919b6724ea5a99b0",
+      "prompt_version": "director_v8",
+      "generator": "original runtime dynamic schema builder; exact prepared input"
+    },
+    {
+      "case_id": "a-dev-0009",
+      "version": 1,
+      "input_path": "inputs/a-dev-0009.v1.json",
+      "input_sha256": "11bf8865f6e4421962ec63f6af7ea88d7fae98195f2670e4ca575888410b9f08",
+      "schema_path": "director-plan.a-dev-0009.v1.schema.json",
+      "schema_sha256": "bceda5c589ccb478327e9c5aa7a5e8b63803385f75c942c29bb6f06ad914d3cb",
+      "prompt_version": "director_v8",
+      "generator": "original runtime dynamic schema builder; exact prepared input"
+    },
+    {
+      "case_id": "a-dev-0010",
+      "version": 1,
+      "input_path": "inputs/a-dev-0010.v1.json",
+      "input_sha256": "9d33efe2f3e13facc9589c0735c67b44439b266c7eaef49f0c1516c7fa56b317",
+      "schema_path": "director-plan.a-dev-0010.v1.schema.json",
+      "schema_sha256": "0c5ac1d205d79540e747a974c49ffda8d85fbc5d8b1ce56586292f1dc1a025fa",
+      "prompt_version": "director_v8",
+      "generator": "original runtime dynamic schema builder; exact prepared input"
+    },
+    {
+      "case_id": "a-dev-0011",
+      "version": 1,
+      "input_path": "inputs/a-dev-0011.v1.json",
+      "input_sha256": "9613f576349d7aed1c919b3816fe11ca112173b06aef1c07ba0cf804a1b1c281",
+      "schema_path": "director-plan.a-dev-0011.v1.schema.json",
+      "schema_sha256": "74fa00723c2580404feff2b4ef71dfe35bb279061bec654cbf05ddb567e67f89",
+      "prompt_version": "director_v8",
+      "generator": "original runtime dynamic schema builder; exact prepared input"
+    },
+    {
+      "case_id": "a-dev-0012",
+      "version": 1,
+      "input_path": "inputs/a-dev-0012.v1.json",
+      "input_sha256": "a789c6949406f321da9c838480782bf56fd6c7b0b1779713bce247576ba4a3d0",
+      "schema_path": "director-plan.a-dev-0012.v1.schema.json",
+      "schema_sha256": "29a24ffebfe166eb21f6438b939efc600159db68a6449ed3e09c25a3cf300b00",
+      "prompt_version": "director_v8",
+      "generator": "original runtime dynamic schema builder; exact prepared input"
+    },
+    {
+      "case_id": "a-dev-0013",
+      "version": 1,
+      "input_path": "inputs/a-dev-0013.v1.json",
+      "input_sha256": "0ec4f5deb977dc4c4315eb2282abe41a2b2871b71f26f87e90fcdf1b73244d84",
+      "schema_path": "director-plan.a-dev-0013.v1.schema.json",
+      "schema_sha256": "5f27fe1aa2ee2c6039b2bea9e3d43dd349b923a21b02eeb9bd66c3ade15ba81c",
+      "prompt_version": "director_v8",
+      "generator": "original runtime dynamic schema builder; exact prepared input"
+    },
+    {
+      "case_id": "a-dev-0014",
+      "version": 1,
+      "input_path": "inputs/a-dev-0014.v1.json",
+      "input_sha256": "3739428a38f2a64208151209105e86c910c68fe660db981da721de15d6ffb208",
+      "schema_path": "director-plan.a-dev-0014.v1.schema.json",
+      "schema_sha256": "ef2b3e061a8d7a2d10b92fa3669c11fefe119619ddbbfdd0554fe96743ee4991",
+      "prompt_version": "director_v8",
+      "generator": "original runtime dynamic schema builder; exact prepared input"
+    },
+    {
+      "case_id": "a-dev-0015",
+      "version": 1,
+      "input_path": "inputs/a-dev-0015.v1.json",
+      "input_sha256": "a52384e2f2fcb3531d245e2a8aa775dd4049aa0199ee36c05a7230bcf88b9cc3",
+      "schema_path": "director-plan.a-dev-0015.v1.schema.json",
+      "schema_sha256": "aa48c3a50f6105558e63c72e39451a0457463140184590b10a475989bb1d5203",
+      "prompt_version": "director_v8",
+      "generator": "original runtime dynamic schema builder; exact prepared input"
+    },
+    {
+      "case_id": "a-dev-0016",
+      "version": 1,
+      "input_path": "inputs/a-dev-0016.v1.json",
+      "input_sha256": "68ca7cb5319ba5683c0ba6c203d2026afb4e0a07dcf6bef5cf641abcffc49143",
+      "schema_path": "director-plan.a-dev-0016.v1.schema.json",
+      "schema_sha256": "938a73680feed8980870a174f59df86fe173533fb6f42e9e54f8088e41e291e1",
+      "prompt_version": "director_v8",
+      "generator": "original runtime dynamic schema builder; exact prepared input"
+    },
+    {
+      "case_id": "a-dev-0017",
+      "version": 1,
+      "input_path": "inputs/a-dev-0017.v1.json",
+      "input_sha256": "ce5a512302f6461f711e272bd29efcd1374c81af026be6a24dde83ce15e559d6",
+      "schema_path": "director-plan.a-dev-0017.v1.schema.json",
+      "schema_sha256": "b943940d7606e9b724a69319807881e94a768b437f12dd73854057bb64f72aae",
+      "prompt_version": "director_v8",
+      "generator": "original runtime dynamic schema builder; exact prepared input"
+    },
+    {
+      "case_id": "a-dev-0018",
+      "version": 1,
+      "input_path": "inputs/a-dev-0018.v1.json",
+      "input_sha256": "0781303765bd2cf812e092a37b86e011c738fd124efb012300447878a68e453a",
+      "schema_path": "director-plan.a-dev-0018.v1.schema.json",
+      "schema_sha256": "19f710729e176f787209940a71cb2828f2fd2754f7bdd3aa29c6ca553d1a30d7",
+      "prompt_version": "director_v8",
+      "generator": "original runtime dynamic schema builder; exact prepared input"
+    },
+    {
+      "case_id": "a-dev-0019",
+      "version": 1,
+      "input_path": "inputs/a-dev-0019.v1.json",
+      "input_sha256": "1e9232b9148cbff482b8af18754a064edf956ce6de102247065dcb57c39c4ed1",
+      "schema_path": "director-plan.a-dev-0019.v1.schema.json",
+      "schema_sha256": "606846f23b974402d8b2f7ba9df845a8c707a11b8866741941cf084edf323b12",
+      "prompt_version": "director_v8",
+      "generator": "original runtime dynamic schema builder; exact prepared input"
+    },
+    {
+      "case_id": "a-dev-0020",
+      "version": 1,
+      "input_path": "inputs/a-dev-0020.v1.json",
+      "input_sha256": "35545bcfd5d60b0e3eb3cac1d32bb97439404714895970c2231cd47c909d1c06",
+      "schema_path": "director-plan.a-dev-0020.v1.schema.json",
+      "schema_sha256": "6f17b6018afb0f21b869cb3963fddb1f0778fd588fe0860a648247401b72850f",
+      "prompt_version": "director_v8",
+      "generator": "original runtime dynamic schema builder; exact prepared input"
+    },
+    {
+      "case_id": "a-dev-0021",
+      "version": 1,
+      "input_path": "inputs/a-dev-0021.v1.json",
+      "input_sha256": "71bf0f394d9e646c5548f25ba34da375cad315ab8a0bfdec1e074251e4365653",
+      "schema_path": "director-plan.a-dev-0021.v1.schema.json",
+      "schema_sha256": "834dafe26d48b177958d5d0a8fab2c040499b8bba8501878bc53d159881386ea",
+      "prompt_version": "director_v8",
+      "generator": "original runtime dynamic schema builder; exact prepared input"
+    },
+    {
+      "case_id": "a-dev-0022",
+      "version": 1,
+      "input_path": "inputs/a-dev-0022.v1.json",
+      "input_sha256": "8584a68554f1b61956ca2594c1828469365ea19b1606fb32602809c6ff1ab3a9",
+      "schema_path": "director-plan.a-dev-0022.v1.schema.json",
+      "schema_sha256": "dbe9875bd0b7e952702112c521412f6b9967bb72ca11a0d5d3a8dcda312bb4ce",
+      "prompt_version": "director_v8",
+      "generator": "original runtime dynamic schema builder; exact prepared input"
+    },
+    {
+      "case_id": "a-dev-0023",
+      "version": 1,
+      "input_path": "inputs/a-dev-0023.v1.json",
+      "input_sha256": "8bf7e64391994464a3787fbf7525c636a129943b1fea3770495f660818d7bbe5",
+      "schema_path": "director-plan.a-dev-0023.v1.schema.json",
+      "schema_sha256": "a9b9781e4ba72e291b27f31dc255bc2f2e0fa8c38de48b744139e89e960c8b74",
+      "prompt_version": "director_v8",
+      "generator": "original runtime dynamic schema builder; exact prepared input"
+    },
+    {
+      "case_id": "a-dev-0024",
+      "version": 1,
+      "input_path": "inputs/a-dev-0024.v1.json",
+      "input_sha256": "7052b48a576a12a5e049afcd5d2cbb538af98ddca192a8ad216e78762414b473",
+      "schema_path": "director-plan.a-dev-0024.v1.schema.json",
+      "schema_sha256": "11bc7f7fe999d85f32b7c27286fcd6636254110182e1dcd91c8a0fcb12271ef0",
+      "prompt_version": "director_v8",
+      "generator": "original runtime dynamic schema builder; exact prepared input"
+    },
+    {
+      "case_id": "a-dev-0025",
+      "version": 1,
+      "input_path": "inputs/a-dev-0025.v1.json",
+      "input_sha256": "75137d8c674b110e5179c5605d1b3d86c9aa9e974add107d0a918ddfdedb69ba",
+      "schema_path": "director-plan.a-dev-0025.v1.schema.json",
+      "schema_sha256": "f203c46fc2db9a5449301a8ab8909b046647448522c321543fad4e0d0686cc05",
+      "prompt_version": "director_v8",
+      "generator": "original runtime dynamic schema builder; exact prepared input"
+    },
+    {
+      "case_id": "a-holdout-0001",
+      "version": 1,
+      "input_path": "inputs/a-holdout-0001.v1.json",
+      "input_sha256": "161b2599748730eec5755ae756d2d126b5f995b8abd9aba54a386dae9de7f43f",
+      "schema_path": "director-plan.a-holdout-0001.v1.schema.json",
+      "schema_sha256": "31e32ed1d741e2248ea55e7b3eb491d462b286e242a299e73fd6eaf3f8224963",
+      "prompt_version": "director_v8",
+      "generator": "original runtime dynamic schema builder; exact prepared input"
+    },
+    {
+      "case_id": "a-holdout-0002",
+      "version": 1,
+      "input_path": "inputs/a-holdout-0002.v1.json",
+      "input_sha256": "d8aa872e6f099caaa881a9fb1f99b07e7e49561b947d9723c4bc2eea0cf22e94",
+      "schema_path": "director-plan.a-holdout-0002.v1.schema.json",
+      "schema_sha256": "d0fe4f865625d11182625898e39664bf11b9ddaaa1d6c0da6fe79b62440f1277",
+      "prompt_version": "director_v8",
+      "generator": "original runtime dynamic schema builder; exact prepared input"
+    },
+    {
+      "case_id": "a-holdout-0003",
+      "version": 1,
+      "input_path": "inputs/a-holdout-0003.v1.json",
+      "input_sha256": "8a41ea28941c4971e5246437a108add29deb2273ac931b6484b455cff8f4e963",
+      "schema_path": "director-plan.a-holdout-0003.v1.schema.json",
+      "schema_sha256": "7abf80af57d3317a0c59494303f917ba3195710e8402086749d175f1db4a16df",
+      "prompt_version": "director_v8",
+      "generator": "original runtime dynamic schema builder; exact prepared input"
+    },
+    {
+      "case_id": "a-holdout-0004",
+      "version": 1,
+      "input_path": "inputs/a-holdout-0004.v1.json",
+      "input_sha256": "4f0d10c757bd5e655ad4522cb9df84d654d2670233220a16329ba90ef0a12fd3",
+      "schema_path": "director-plan.a-holdout-0004.v1.schema.json",
+      "schema_sha256": "37381946bd3d7e65388636b8babc6655832d1e0565e0ed47e3069824db49d355",
+      "prompt_version": "director_v8",
+      "generator": "original runtime dynamic schema builder; exact prepared input"
+    },
+    {
+      "case_id": "a-holdout-0005",
+      "version": 1,
+      "input_path": "inputs/a-holdout-0005.v1.json",
+      "input_sha256": "f9b36c9789d202a4ff9dee77af7cdcd65ef25a89a9f03b5ee446dbe2348d05ba",
+      "schema_path": "director-plan.a-holdout-0005.v1.schema.json",
+      "schema_sha256": "93de241c22dca4d68cbbe48c2fd31d661946efcd9d2905c306568b8b7518ae7a",
+      "prompt_version": "director_v8",
+      "generator": "original runtime dynamic schema builder; exact prepared input"
+    },
+    {
+      "case_id": "a-holdout-0006",
+      "version": 1,
+      "input_path": "inputs/a-holdout-0006.v1.json",
+      "input_sha256": "7319a9cf936698c6c5779f017ca66a59f91a21f079629735ea8764956a973e72",
+      "schema_path": "director-plan.a-holdout-0006.v1.schema.json",
+      "schema_sha256": "1284c447e710f5bd8cb1d07319c2b698b6b110dadbefc7533c93896bc473473f",
+      "prompt_version": "director_v8",
+      "generator": "original runtime dynamic schema builder; exact prepared input"
+    },
+    {
+      "case_id": "a-holdout-0007",
+      "version": 1,
+      "input_path": "inputs/a-holdout-0007.v1.json",
+      "input_sha256": "61a3f64d3c1c9955b2d410d8f053f801bfee53bbce3f123029d1c7c4cdb0b3ae",
+      "schema_path": "director-plan.a-holdout-0007.v1.schema.json",
+      "schema_sha256": "d882f7b14b8fb8b563691674a810258b2630ac31048435be92500fe895c733a5",
+      "prompt_version": "director_v8",
+      "generator": "original runtime dynamic schema builder; exact prepared input"
+    },
+    {
+      "case_id": "a-holdout-0008",
+      "version": 1,
+      "input_path": "inputs/a-holdout-0008.v1.json",
+      "input_sha256": "637f13e66d57d1166964d59f912b000b6de1d0d864ecd222e97c2faeb17cf4a5",
+      "schema_path": "director-plan.a-holdout-0008.v1.schema.json",
+      "schema_sha256": "e89ff3d141a323dcc179f954146a9371d01cfc8e989d595c3e3e2f745facfbbd",
+      "prompt_version": "director_v8",
+      "generator": "original runtime dynamic schema builder; exact prepared input"
+    },
+    {
+      "case_id": "a-holdout-0009",
+      "version": 1,
+      "input_path": "inputs/a-holdout-0009.v1.json",
+      "input_sha256": "5223219aab6a348c23e046c6ac64c62a8b2aed46397aedc8b81225f8bdec3e75",
+      "schema_path": "director-plan.a-holdout-0009.v1.schema.json",
+      "schema_sha256": "31a3203c50f4b3658e7e3e3c1572bc71b6af9754fd0236f0181d259f75d52574",
+      "prompt_version": "director_v8",
+      "generator": "original runtime dynamic schema builder; exact prepared input"
+    },
+    {
+      "case_id": "a-holdout-0010",
+      "version": 1,
+      "input_path": "inputs/a-holdout-0010.v1.json",
+      "input_sha256": "a3b8bb51e0ca1c1103390bc6177896a175ab4e42e7db28323f207288a19c7e90",
+      "schema_path": "director-plan.a-holdout-0010.v1.schema.json",
+      "schema_sha256": "3a92558f88c4e09150294f45b63118d03a20012d34c7c7f1f77016dece5b59cf",
+      "prompt_version": "director_v8",
+      "generator": "original runtime dynamic schema builder; exact prepared input"
+    }
+  ]
+}

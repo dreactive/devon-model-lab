@@ -1,0 +1,51 @@
+{
+  "id": "msg_011CgusiPBzYBcgH1VfMJLbF",
+  "object": "chat.completion",
+  "created": 1794342351,
+  "model": "claude-haiku-5-5",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\"plan_valid\": false, \"context_valid\": false, \"wording_valid\": false, \"contract_matches\": false, \"safe_alternative\": true, \"reason_summary\": \"직전 domain_lead 답변은 message와 order를 이미 충분히 다뤘고 판정도 sufficient다. 후보는 같은 communication 평가 항목 안에서 피해야 할 표현과 이유라는 새 관점을 묻지만, 해당 목적은 원래 계약의 required_points(message, order)와 다르며 계약 필수 확인내용을 새로 바꿔 선언한 것이다. 이는 이미 충분히 확인된 설명을 재사용하는 반복이 아니라 계약 외 목적으로의 전환이므로 계획 자체가 현재 계약과 어긋난다. 질문 문장에도 \\\"어떤 정보를 포함하고 어떤 표현은 피하시겠어요\\\"의 두 목적이 섞여 복합 질문이다. 마지막 질문이라는 사실만으로 거절하지 않으며, 근거 evidence 220f… 내 상태 설명 범위에서 같은 communication 항목에 맞는 안전한 대안은 가능하다.\"}",
+        "refusal": null
+      },
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 13908,
+    "completion_tokens": 513,
+    "total_tokens": 14421,
+    "input_tokens": 13908,
+    "output_tokens": 513,
+    "cached_prompt_tokens": 7491,
+    "cache_write_tokens": 5116
+  },
+  "_elice_billing": {
+    "usage": {
+      "input_tokens": 13908,
+      "output_tokens": 513,
+      "cached_input_tokens": 7491,
+      "cache_write_input_tokens": null,
+      "reasoning_output_tokens": null,
+      "cache_write_short_tokens": null,
+      "cache_write_long_tokens": null
+    },
+    "cost_usd": null,
+    "cost_lower_usd": "0.0008982",
+    "cost_upper_usd": "0.002289",
+    "cost_status": "bounded",
+    "provider_model": "claude-haiku-5-5",
+    "canonical_model": "claude-haiku-5-5",
+    "attempt_id": "attempt-22",
+    "accounting_basis": "billing_upper_bound"
+  },
+  "_elice_wire": {
+    "protocol": "chat_completions",
+    "canonical_request_bytes": 29383,
+    "wire_request_bytes": 29349,
+    "reservation_input_bytes": 29383
+  }
+}

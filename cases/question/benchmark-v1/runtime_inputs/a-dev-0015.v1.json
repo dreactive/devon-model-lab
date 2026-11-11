@@ -1,0 +1,51 @@
+{
+  "case_id": "a-dev-0015",
+  "version": 1,
+  "scope": "recovery_component",
+  "recovery_feedback": {
+    "previous_candidate": {
+      "persona": "tech_lead",
+      "text": "register에서 콜백을 즉시 실행하므로 등록 요청을 막는 지연이 발생합니다. 그 실행 지연을 해결한 이유를 설명해 주세요.",
+      "topic_code": "project_discussion",
+      "question_contract": {
+        "purpose": "제공된 처리 방식의 선택 조건 확인",
+        "required_points": [
+          {
+            "key": "response",
+            "description": "질문한 처리 선택 또는 역할 설명"
+          },
+          {
+            "key": "basis",
+            "description": "설명을 뒷받침하는 판단 근거"
+          }
+        ],
+        "assumptions": [],
+        "basis_refs": [
+          {
+            "kind": "answer_turn",
+            "id": "ee498e3e-9571-5c83-be52-51b643c42896"
+          },
+          {
+            "kind": "evidence",
+            "id": "15994a55-9bd3-5cc1-9a47-7f1f639a7a51"
+          }
+        ],
+        "evaluation_scope": "제공된 처리 방식의 선택 조건 확인",
+        "evaluation_keys": [
+          "technical_reasoning",
+          "communication"
+        ]
+      },
+      "evidence_refs": [
+        "15994a55-9bd3-5cc1-9a47-7f1f639a7a51"
+      ],
+      "jd_requirement_ids": [],
+      "question_type": "main",
+      "parent_turn_id": null
+    },
+    "recovery": {
+      "recovery": "replan",
+      "reason_summary": "합성 검토 관찰: 후보가 register에서 콜백이 즉시 실행된다고 전제했지만 제공 원문은 콜백을 저장하고 deliver에서 실행한다. 실행 시점 전제를 재검토해야 한다."
+    }
+  }
+}

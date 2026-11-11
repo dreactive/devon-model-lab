@@ -1,0 +1,55 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\"plan_valid\": true, \"context_valid\": true, \"wording_valid\": true, \"contract_matches\": true, \"safe_alternative\": true, \"reason_summary\": \"지원자가 정정한 본인 담당 범위(환불 상태 전환 및 안내 문구, 세금 계산 제외)를 정확히 반영했으며, domain_lead에 배정된 company_job_fit 및 communication 평가 항목에 맞춰 제공된 JD 요구사항과 프로젝트 경험의 연결을 중립적인 main 질문으로 적절하게 구성했습니다.\"}",
+        "extra_content": {
+          "google": {
+            "thought_signature": "EmMKYQFpFH0TM+q1Y6u/BuW4j6WFSea2M/bXLWKh1WBW9DH0VahnRXNayCj1ilhXGxDTeD9vyP8yEve5pP/3296afOcIKSlCC/pghpiVCRfnuciq3ASiowblZ+kniC0h0h1RuWg="
+          }
+        },
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1794341249,
+  "id": "fHnzaujbMqHb9tMPmpSeqQ4",
+  "model": "gemini-4-argon",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 127,
+    "prompt_tokens": 6596,
+    "total_tokens": 6723,
+    "input_tokens": 6596,
+    "output_tokens": 127,
+    "cached_prompt_tokens": 0,
+    "cache_write_tokens": 0
+  },
+  "_elice_billing": {
+    "usage": {
+      "input_tokens": 6596,
+      "output_tokens": 127,
+      "cached_input_tokens": 0,
+      "cache_write_input_tokens": null,
+      "reasoning_output_tokens": null,
+      "cache_write_short_tokens": null,
+      "cache_write_long_tokens": null
+    },
+    "cost_usd": "0.014462",
+    "cost_lower_usd": "0.014462",
+    "cost_upper_usd": "0.014462",
+    "cost_status": "confirmed",
+    "provider_model": "gemini-4-argon",
+    "canonical_model": "gemini-4-argon",
+    "attempt_id": "attempt-37",
+    "accounting_basis": "billing_upper_bound"
+  },
+  "_elice_wire": {
+    "protocol": "chat_completions",
+    "canonical_request_bytes": 26902,
+    "wire_request_bytes": 26868,
+    "reservation_input_bytes": 26902
+  }
+}

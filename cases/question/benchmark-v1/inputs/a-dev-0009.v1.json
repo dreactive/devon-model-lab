@@ -1,0 +1,246 @@
+{
+  "case_id": "a-dev-0009",
+  "version": 1,
+  "control": {
+    "kind": "question",
+    "split": "dev",
+    "source_group_id": "a-dev-inventory",
+    "synthetic": true
+  },
+  "payload": {
+    "service_task": "director",
+    "service_input": {
+      "context": {
+        "interview_id": "e74fcf6d-392d-5fe9-82b8-c50d206f75ee",
+        "current_turn_id": "bbe4d831-7a3e-58ae-9d79-3d2bf59cef00",
+        "turn_no": 3,
+        "total_turns": 9,
+        "persona_counts": [
+          {
+            "persona": "tech_lead",
+            "count": 1
+          },
+          {
+            "persona": "hr_manager",
+            "count": 1
+          },
+          {
+            "persona": "domain_lead",
+            "count": 0
+          }
+        ],
+        "allowed_personas": [
+          "tech_lead",
+          "domain_lead"
+        ],
+        "jd_requirements": [
+          {
+            "id": "1dedf5e0-3967-5a66-bd1b-d57ac9e409f6",
+            "text": "재고 변동의 정합성 책임을 맡아 검증 조건과 실패 시 사용자 조치를 설명한다.",
+            "category": "responsibility",
+            "source_field": "responsibilities",
+            "tech_tags": []
+          }
+        ],
+        "repositories": [
+          {
+            "repository_id": "bf111c05-78ea-52bb-891a-c9220ebec392",
+            "git_ref": "116ccc2f4d0b7ea6d54ec2bd690e0ed855191a0f",
+            "primary": true,
+            "analysis_refs": [],
+            "limitations": []
+          }
+        ],
+        "history": [
+          {
+            "turn_id": "9057992a-eb44-58d4-b160-ce2dfa9b95c0",
+            "persona": "hr_manager",
+            "question": "프로젝트에서 본인이 맡은 부분과 협업 경계를 소개해 주세요.",
+            "answer": "저는 입출고 수량 검증과 오류 표시를 맡았습니다. revision 조건부 저장과 동시성 처리는 동료가 맡았고 인터페이스를 같이 맞췄습니다.",
+            "analysis_ref": null
+          },
+          {
+            "turn_id": "bbe4d831-7a3e-58ae-9d79-3d2bf59cef00",
+            "persona": "tech_lead",
+            "question": "말씀하신 처리 방식이 어떻게 동작하며 그 순서나 단위를 왜 선택했는지 설명해 주세요.",
+            "answer": "수량을 먼저 차감한 뒤 음수가 되면 검사에서 막도록 구현했습니다. 유효하지 않으면 오류를 보여 주려고 그 순서를 택했습니다.",
+            "analysis_ref": null
+          }
+        ],
+        "current_question_contract": {
+          "purpose": "처리 방식과 선택 이유 확인",
+          "required_points": [
+            {
+              "key": "mechanism",
+              "description": "주장하는 처리 방식"
+            },
+            {
+              "key": "choice",
+              "description": "순서 또는 단위의 선택 이유"
+            }
+          ],
+          "assumptions": [],
+          "basis_refs": [
+            {
+              "kind": "evidence",
+              "id": "3fa818ac-b382-5747-ae51-6fe387d0b3ee"
+            }
+          ],
+          "evaluation_scope": "처리 방식과 선택 이유 확인",
+          "evaluation_keys": [
+            "project_understanding",
+            "communication"
+          ]
+        },
+        "evidence": [
+          {
+            "evidence_id": "3fa818ac-b382-5747-ae51-6fe387d0b3ee",
+            "repository_id": "bf111c05-78ea-52bb-891a-c9220ebec392",
+            "git_ref": "116ccc2f4d0b7ea6d54ec2bd690e0ed855191a0f",
+            "source_kind": "code",
+            "path": "stock/quantity.ts",
+            "metadata_key": null,
+            "content": "type Stock = { quantity: number; revision: number };\nexport function withdraw(current: Stock, units: number): Stock {\n  if (!Number.isInteger(units) || units <= 0) throw Error('bad units');\n  if (current.quantity < units) throw Error('not enough stock');\n  return { quantity: current.quantity - units, revision: current.revision + 1 };\n}\nexport async function save(store: any, before: Stock, after: Stock) {\n  return store.compareAndSwap(before.revision, after);\n}\n",
+            "tool_name": null,
+            "summary": "합성 프로젝트 원문 발췌. 개인 작성 사실이나 운영 성과를 증명하지 않는다.",
+            "start_line": 1,
+            "end_line": 9
+          },
+          {
+            "evidence_id": "84920178-ff7a-5886-97af-e37caa240ddb",
+            "repository_id": "bf111c05-78ea-52bb-891a-c9220ebec392",
+            "git_ref": "116ccc2f4d0b7ea6d54ec2bd690e0ed855191a0f",
+            "source_kind": "document",
+            "path": "PROJECT_NOTES.md",
+            "metadata_key": null,
+            "content": "팜서랍은 공유 비품 입출고를 관리하는 합성 프로젝트다. 수량 검증 함수와 revision 조건부 저장이 분리되어 있다. 수량 검증과 오류 표시를 한 구성원이, 조건부 저장을 다른 구성원이 맡는 팀 문서만 있다. 실제 재고 손실이나 장애 기록은 없다.",
+            "tool_name": null,
+            "summary": null,
+            "start_line": 1,
+            "end_line": 1
+          }
+        ],
+        "domain_frames": [],
+        "limits": {
+          "remaining_calls": 2,
+          "remaining_replans": 0,
+          "policy_version": "interview-v1"
+        },
+        "evaluation_targets": [
+          {
+            "persona": "tech_lead",
+            "keys": [
+              "technical_reasoning",
+              "communication"
+            ]
+          },
+          {
+            "persona": "domain_lead",
+            "keys": [
+              "company_job_fit",
+              "communication"
+            ]
+          }
+        ],
+        "supplemental_sources": [],
+        "external_searches": [],
+        "supplemental_limitations": []
+      },
+      "question": {
+        "persona": "tech_lead",
+        "text": "말씀하신 처리 방식이 어떻게 동작하며 그 순서나 단위를 왜 선택했는지 설명해 주세요.",
+        "topic_code": "project_discussion",
+        "question_contract": {
+          "purpose": "처리 방식과 선택 이유 확인",
+          "required_points": [
+            {
+              "key": "mechanism",
+              "description": "주장하는 처리 방식"
+            },
+            {
+              "key": "choice",
+              "description": "순서 또는 단위의 선택 이유"
+            }
+          ],
+          "assumptions": [],
+          "basis_refs": [
+            {
+              "kind": "evidence",
+              "id": "3fa818ac-b382-5747-ae51-6fe387d0b3ee"
+            }
+          ],
+          "evaluation_scope": "처리 방식과 선택 이유 확인",
+          "evaluation_keys": [
+            "project_understanding",
+            "communication"
+          ]
+        },
+        "evidence_refs": [
+          "3fa818ac-b382-5747-ae51-6fe387d0b3ee"
+        ],
+        "jd_requirement_ids": [],
+        "question_type": "main",
+        "parent_turn_id": null
+      },
+      "answer_text": "수량을 먼저 차감한 뒤 음수가 되면 검사에서 막도록 구현했습니다. 유효하지 않으면 오류를 보여 주려고 그 순서를 택했습니다.",
+      "answer_analysis": {
+        "evaluation_status": "evaluated",
+        "sufficiency": "sufficient",
+        "covered_points": [
+          {
+            "key": "mechanism",
+            "answer_quotes": [
+              "수량을 먼저 차감한 뒤 음수가 되면 검사에서 막도록 구현했습니다. 유효하지 않으면 오류를 보여 주려고 그 순서를 택했습니다."
+            ]
+          },
+          {
+            "key": "choice",
+            "answer_quotes": [
+              "수량을 먼저 차감한 뒤 음수가 되면 검사에서 막도록 구현했습니다. 유효하지 않으면 오류를 보여 주려고 그 순서를 택했습니다."
+            ]
+          }
+        ],
+        "missing_points": [],
+        "technical_assessment": {
+          "explanation": "답변이 설명한 범위와 제공 원문을 구분해 관찰했다.",
+          "answer_quotes": [
+            "수량을 먼저 차감한 뒤 음수가 되면 검사에서 막도록 구현했습니다. 유효하지 않으면 오류를 보여 주려고 그 순서를 택했습니다."
+          ],
+          "evidence_refs": [],
+          "limitations": []
+        },
+        "contribution_scope": {
+          "scope": "unknown",
+          "answer_quotes": [
+            "수량을 먼저 차감한 뒤 음수가 되면 검사에서 막도록 구현했습니다. 유효하지 않으면 오류를 보여 주려고 그 순서를 택했습니다."
+          ]
+        },
+        "claim_checks": [
+          {
+            "claim_text": "수량을 먼저 차감한 뒤 음수가 되면 검사에서 막도록 구현했습니다.",
+            "status": "conflicting",
+            "evidence_refs": [
+              "3fa818ac-b382-5747-ae51-6fe387d0b3ee"
+            ],
+            "limitations": [
+              "답변과 제공 발췌가 다르며 다른 단계나 버전은 확인하지 않았다."
+            ]
+          }
+        ],
+        "needs_verification": false,
+        "verification_requests": [],
+        "limitations": [],
+        "external_queries": []
+      },
+      "allowed_locations": [
+        [
+          "bf111c05-78ea-52bb-891a-c9220ebec392",
+          "116ccc2f4d0b7ea6d54ec2bd690e0ed855191a0f",
+          "stock/quantity.ts"
+        ]
+      ],
+      "reference_texts": [],
+      "tool_results": []
+    }
+  }
+}

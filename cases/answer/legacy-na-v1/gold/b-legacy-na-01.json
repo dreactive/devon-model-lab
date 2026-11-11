@@ -1,0 +1,199 @@
+[
+  {
+    "turn_id": "1",
+    "key": "contribution_clarity",
+    "level": 4,
+    "rationale": "센서 관측 portal: '저는 관측 수신 API와 품질 코드 표시를 맡았습니다. 수신 스키마와 결측 표시 테스트가 제 작업이며 센서 펌웨어는 동료 담당입니다. 품질 코드 이름은 함께 정했지만 코드 변환 함수는 제가 작성했습'라는 이 턴 답변에서 단독 작업, 팀원 작업과 공동 합의 경계를 모두 구분한다.",
+    "rubric_quote": "협업 지점과 단독 기여를 명확히 구분해 설명한다."
+  },
+  {
+    "turn_id": "1",
+    "key": "communication",
+    "level": 4,
+    "rationale": "'저는 관측 수신 API와 품질 코드 표시를 맡았습니다. 수신 스키마와 결측 표시 테스트가 제 작업이며 센서 펌웨어는 동료 담당입니다. 품질 코드 이름은 함께 정했'라는 이 턴의 표현은 선택·핵심 구분을 먼저 말하고 이유나 구체 사례를 분리해 설명한다. 기술 내용의 단계와 별도로 문장 구성을 판정한다.",
+    "rubric_quote": "핵심을 먼저 제시하고 근거를 명확히 구조화해 설명한다."
+  },
+  {
+    "turn_id": "2",
+    "key": "project_understanding",
+    "level": 4,
+    "rationale": "센서 관측 portal: 'portal은 센서 온도를 받아 품질 검사를 통과한 값을 보여줍니다. 수신 API가 원시 관측을 저장하고 검사 작업이 품질 코드를 붙입니다. 화면은 검증된 값과 마지막 관측 시각을 읽습니다. 원시 '라는 이 턴 답변에서 구조·의존관계와 왜 그 순서나 경계를 두었는지 설명한다.",
+    "rubric_quote": "구조·의존관계·설계 의도까지 근거를 들어 설명한다."
+  },
+  {
+    "turn_id": "2",
+    "key": "technical_reasoning",
+    "level": "not_applicable",
+    "rationale": "질문은 프로젝트 목적과 핵심 구조 및 흐름을 설명한다.라는 범위다. technical_reasoning의 별도 설명을 요청하지 않았으므로 답변의 부족함을 0으로 만들지 않고 이 후보 key를 NA로 둔다."
+  },
+  {
+    "turn_id": "2",
+    "key": "problem_solving",
+    "level": "not_applicable",
+    "rationale": "질문은 프로젝트 목적과 핵심 구조 및 흐름을 설명한다.라는 범위다. problem_solving의 별도 설명을 요청하지 않았으므로 답변의 부족함을 0으로 만들지 않고 이 후보 key를 NA로 둔다."
+  },
+  {
+    "turn_id": "2",
+    "key": "communication",
+    "level": 4,
+    "rationale": "'portal은 센서 온도를 받아 품질 검사를 통과한 값을 보여줍니다. 수신 API가 원시 관측을 저장하고 검사 작업이 품질 코드를 붙입니다. 화면은 검증된 값과 '라는 이 턴의 표현은 선택·핵심 구분을 먼저 말하고 이유나 구체 사례를 분리해 설명한다. 기술 내용의 단계와 별도로 문장 구성을 판정한다.",
+    "rubric_quote": "핵심을 먼저 제시하고 근거를 명확히 구조화해 설명한다."
+  },
+  {
+    "turn_id": "3",
+    "key": "project_understanding",
+    "level": "not_applicable",
+    "rationale": "질문은 관측 시각의 선택과 근거를 설명한다.라는 범위다. project_understanding의 별도 설명을 요청하지 않았으므로 답변의 부족함을 0으로 만들지 않고 이 후보 key를 NA로 둔다."
+  },
+  {
+    "turn_id": "3",
+    "key": "technical_reasoning",
+    "level": 2,
+    "rationale": "늦게 도착한 측정을 방금 측정한 온도로 표시하지 않습니다라는 구체 근거가 있으나 수신 시각만 저장과의 비교는 하지 않는다.",
+    "rubric_quote": "근거는 제시하나 대안과의 비교가 없거나 피상적이다."
+  },
+  {
+    "turn_id": "3",
+    "key": "problem_solving",
+    "level": "not_applicable",
+    "rationale": "질문은 관측 시각의 선택과 근거를 설명한다.라는 범위다. problem_solving의 별도 설명을 요청하지 않았으므로 답변의 부족함을 0으로 만들지 않고 이 후보 key를 NA로 둔다."
+  },
+  {
+    "turn_id": "3",
+    "key": "communication",
+    "level": 4,
+    "rationale": "'센서 관측 시각과 수신 시각 분리을 택했습니다. 선택 근거는 다음과 같습니다: 늦게 도착한 측정을 방금 측정한 온도로 표시하지 않습니다.'라는 이 턴의 표현은 선택·핵심 구분을 먼저 말하고 이유나 구체 사례를 분리해 설명한다. 기술 내용의 단계와 별도로 문장 구성을 판정한다.",
+    "rubric_quote": "핵심을 먼저 제시하고 근거를 명확히 구조화해 설명한다."
+  },
+  {
+    "turn_id": "4",
+    "key": "project_understanding",
+    "level": "not_applicable",
+    "rationale": "질문은 하나의 문제를 식별하고 해결한 과정을 설명한다.라는 범위다. project_understanding의 별도 설명을 요청하지 않았으므로 답변의 부족함을 0으로 만들지 않고 이 후보 key를 NA로 둔다."
+  },
+  {
+    "turn_id": "4",
+    "key": "technical_reasoning",
+    "level": "not_applicable",
+    "rationale": "질문은 하나의 문제를 식별하고 해결한 과정을 설명한다.라는 범위다. technical_reasoning의 별도 설명을 요청하지 않았으므로 답변의 부족함을 0으로 만들지 않고 이 후보 key를 NA로 둔다."
+  },
+  {
+    "turn_id": "4",
+    "key": "problem_solving",
+    "level": 3,
+    "rationale": "센서 관측 portal: '결측 구간이 0도로 그려졌습니다. API JSON과 차트 입력을 비교해 null을 숫자로 바꾸는 변환에서 0이 됨을 확인했습니다. null을 유지하고 선을 끊도록 바꾼 뒤 정상 0도와 결측을 나란히'라는 이 턴 답변에서 관찰로 원인을 진단하고 수정 및 검증 과정을 구체적으로 설명한다.",
+    "rubric_quote": "문제 원인을 진단하고 해결한 과정을 구체적으로 설명한다."
+  },
+  {
+    "turn_id": "4",
+    "key": "communication",
+    "level": 4,
+    "rationale": "'결측 구간이 0도로 그려졌습니다. API JSON과 차트 입력을 비교해 null을 숫자로 바꾸는 변환에서 0이 됨을 확인했습니다. null을 유지하고 선을 끊도록'라는 이 턴의 표현은 선택·핵심 구분을 먼저 말하고 이유나 구체 사례를 분리해 설명한다. 기술 내용의 단계와 별도로 문장 구성을 판정한다.",
+    "rubric_quote": "핵심을 먼저 제시하고 근거를 명확히 구조화해 설명한다."
+  },
+  {
+    "turn_id": "5",
+    "key": "company_job_fit",
+    "level": 4,
+    "rationale": "센서 관측 portal: '공고의 결측 구분 요구에는 제가 작성한 null 유지 변환과 0도 비교 테스트가 대응합니다. 품질 범위 요구에는 수신 시각과 관측 시각을 따로 표시한 경험이 대응합니다. 다만 센서 교정의 정확도를 '라는 이 턴 답변에서 두 요구에 대응하는 경험과 검증한 범위의 한계를 함께 설명한다.",
+    "rubric_quote": "요구사항별로 대응하는 경험과 한계까지 균형 있게 설명한다."
+  },
+  {
+    "turn_id": "5",
+    "key": "communication",
+    "level": 4,
+    "rationale": "'공고의 결측 구분 요구에는 제가 작성한 null 유지 변환과 0도 비교 테스트가 대응합니다. 품질 범위 요구에는 수신 시각과 관측 시각을 따로 표시한 경험이 대응'라는 이 턴의 표현은 선택·핵심 구분을 먼저 말하고 이유나 구체 사례를 분리해 설명한다. 기술 내용의 단계와 별도로 문장 구성을 판정한다.",
+    "rubric_quote": "핵심을 먼저 제시하고 근거를 명확히 구조화해 설명한다."
+  },
+  {
+    "turn_id": "6",
+    "key": "project_understanding",
+    "level": "not_applicable",
+    "rationale": "질문은 품질 표시의 선택과 근거를 설명한다.라는 범위다. project_understanding의 별도 설명을 요청하지 않았으므로 답변의 부족함을 0으로 만들지 않고 이 후보 key를 NA로 둔다."
+  },
+  {
+    "turn_id": "6",
+    "key": "technical_reasoning",
+    "level": 3,
+    "rationale": "이상치를 조용히 삭제을 대안으로 인지하고 삭제는 그래프가 깨끗하지만 값이 없어진 이유를 잃습니다라는 차이로 선택을 설명하나 선택한 방식의 구체 비용과 한계를 함께 다루지는 않는다.",
+    "rubric_quote": "대안을 인지하고 선택 이유를 합리적으로 설명한다."
+  },
+  {
+    "turn_id": "6",
+    "key": "problem_solving",
+    "level": "not_applicable",
+    "rationale": "질문은 품질 표시의 선택과 근거를 설명한다.라는 범위다. problem_solving의 별도 설명을 요청하지 않았으므로 답변의 부족함을 0으로 만들지 않고 이 후보 key를 NA로 둔다."
+  },
+  {
+    "turn_id": "6",
+    "key": "communication",
+    "level": 4,
+    "rationale": "'값과 품질 코드를 함께 반환을 택했습니다. 선택 근거는 다음과 같습니다: 숫자는 있어도 의심스러운 관측임을 화면에서 구별합니다. 이상치를 조용히 삭제도 검토했습니'라는 이 턴의 표현은 선택·핵심 구분을 먼저 말하고 이유나 구체 사례를 분리해 설명한다. 기술 내용의 단계와 별도로 문장 구성을 판정한다.",
+    "rubric_quote": "핵심을 먼저 제시하고 근거를 명확히 구조화해 설명한다."
+  },
+  {
+    "turn_id": "7",
+    "key": "project_understanding",
+    "level": "not_applicable",
+    "rationale": "질문은 재검사의 선택과 근거를 설명한다.라는 범위다. project_understanding의 별도 설명을 요청하지 않았으므로 답변의 부족함을 0으로 만들지 않고 이 후보 key를 NA로 둔다."
+  },
+  {
+    "turn_id": "7",
+    "key": "technical_reasoning",
+    "level": 4,
+    "rationale": "보정 값으로 원본 덮기과 비교하고, 선택 비용 '원시 값과 계산 값의 저장 공간이 함께 듭니다'와 한계 '센서에서 오기 전 유실된 값은 재계산하지 못합니다'까지 구체적으로 설명한다.",
+    "rubric_quote": "트레이드오프를 구체적으로 비교하고 한계까지 인지하고 있다."
+  },
+  {
+    "turn_id": "7",
+    "key": "problem_solving",
+    "level": "not_applicable",
+    "rationale": "질문은 재검사의 선택과 근거를 설명한다.라는 범위다. problem_solving의 별도 설명을 요청하지 않았으므로 답변의 부족함을 0으로 만들지 않고 이 후보 key를 NA로 둔다."
+  },
+  {
+    "turn_id": "7",
+    "key": "communication",
+    "level": 4,
+    "rationale": "'원시 관측 불변 보관을 택했습니다. 검증 규칙이 바뀌어도 같은 입력으로 표시 값을 다시 계산합니다. 비교한 보정 값으로 원본 덮기은 덮기는 공간이 적지만 이전 규'라는 이 턴의 표현은 선택·핵심 구분을 먼저 말하고 이유나 구체 사례를 분리해 설명한다. 기술 내용의 단계와 별도로 문장 구성을 판정한다.",
+    "rubric_quote": "핵심을 먼저 제시하고 근거를 명확히 구조화해 설명한다."
+  },
+  {
+    "turn_id": "8",
+    "key": "company_job_fit",
+    "level": "not_applicable",
+    "rationale": "질문은 사용자에게 상태·개념의 차이를 설명하는 범위이며 JD와 본인 경험을 연결하도록 묻지 않는다. JD ID가 연결되어 있어도 직무 적합성은 관찰하지 않았다."
+  },
+  {
+    "turn_id": "8",
+    "key": "communication",
+    "level": 4,
+    "rationale": "'결측은 측정 값이 없다는 뜻이고 0도는 실제 숫자 값입니다. 예를 들어 전원이 꺼진 센서의 구간을 0도로 그리면 온도가 내려갔다고 오해합니다. 그래서 결측은 선을'라는 이 턴의 표현은 선택·핵심 구분을 먼저 말하고 이유나 구체 사례를 분리해 설명한다. 기술 내용의 단계와 별도로 문장 구성을 판정한다.",
+    "rubric_quote": "핵심을 먼저 제시하고 근거를 명확히 구조화해 설명한다."
+  },
+  {
+    "turn_id": "9",
+    "key": "project_understanding",
+    "level": "not_applicable",
+    "rationale": "질문은 구간 집계의 선택과 근거를 설명한다.라는 범위다. project_understanding의 별도 설명을 요청하지 않았으므로 답변의 부족함을 0으로 만들지 않고 이 후보 key를 NA로 둔다."
+  },
+  {
+    "turn_id": "9",
+    "key": "technical_reasoning",
+    "level": 2,
+    "rationale": "몇 개의 값으로 평균을 만들었는지 사용자가 판단합니다라는 구체 근거가 있으나 평균만 표시과의 비교는 하지 않는다.",
+    "rubric_quote": "근거는 제시하나 대안과의 비교가 없거나 피상적이다."
+  },
+  {
+    "turn_id": "9",
+    "key": "problem_solving",
+    "level": "not_applicable",
+    "rationale": "질문은 구간 집계의 선택과 근거를 설명한다.라는 범위다. problem_solving의 별도 설명을 요청하지 않았으므로 답변의 부족함을 0으로 만들지 않고 이 후보 key를 NA로 둔다."
+  },
+  {
+    "turn_id": "9",
+    "key": "communication",
+    "level": 4,
+    "rationale": "'유효 관측 개수와 평균 함께 표시을 택했습니다. 선택 근거는 다음과 같습니다: 몇 개의 값으로 평균을 만들었는지 사용자가 판단합니다.'라는 이 턴의 표현은 선택·핵심 구분을 먼저 말하고 이유나 구체 사례를 분리해 설명한다. 기술 내용의 단계와 별도로 문장 구성을 판정한다.",
+    "rubric_quote": "핵심을 먼저 제시하고 근거를 명확히 구조화해 설명한다."
+  }
+]

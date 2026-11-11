@@ -1,0 +1,32 @@
+{
+  "type": "object",
+  "properties": {
+    "plan_valid": {
+      "type": "boolean"
+    },
+    "context_valid": {
+      "type": "boolean"
+    },
+    "wording_valid": {
+      "type": "boolean"
+    },
+    "contract_matches": {
+      "type": "boolean"
+    },
+    "safe_alternative": {
+      "type": "boolean"
+    },
+    "reason_summary": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "plan_valid",
+    "context_valid",
+    "wording_valid",
+    "contract_matches",
+    "safe_alternative",
+    "reason_summary"
+  ],
+  "additionalProperties": false
+}

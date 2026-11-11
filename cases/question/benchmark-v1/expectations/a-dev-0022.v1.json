@@ -1,0 +1,41 @@
+{
+  "case_id": "a-dev-0022",
+  "version": 1,
+  "allowed": [
+    {
+      "id": "a-purpose",
+      "purpose": "연결 생성·반환 발췌로는 전체 rollback을 판단할 수 없음을 밝히고 주장한 처리 단위와 선택 조건을 확인한다."
+    }
+  ],
+  "forbidden": [
+    {
+      "id": "f-premise",
+      "reason": "부분 발췌에 rollback이 없다는 사실만으로 미구현을 확정한다.",
+      "type": "absence_from_partial_evidence"
+    }
+  ],
+  "grader_controls": [
+    {
+      "kind": "allowed",
+      "output": "{\"decision\":{\"next_step\":\"ask\",\"intent\":\"프로젝트 답변에 근거한 다음 질문\",\"persona\":\"tech_lead\",\"target\":\"처리 설명과 원문의 조건 차이 확인\",\"tool_requests\":[],\"reason_summary\":\"현재 자료와 직전 답변을 바탕으로 질문한다.\"},\"question\":{\"persona\":\"tech_lead\",\"text\":\"제공된 구간은 연결을 빌리고 반환하는 부분이라 전체 rollback은 판단하기 어렵습니다. 말씀하신 묶음 처리의 경계와 그 경계를 고른 기준을 설명해 주시겠어요?\",\"topic_code\":\"project_discussion\",\"question_contract\":{\"purpose\":\"처리 설명과 원문의 조건 차이 확인\",\"required_points\":[{\"key\":\"response\",\"description\":\"질문한 처리 선택 또는 역할 설명\"},{\"key\":\"basis\",\"description\":\"설명을 뒷받침하는 판단 근거\"}],\"assumptions\":[],\"basis_refs\":[{\"kind\":\"answer_turn\",\"id\":\"527a2edd-bca4-58ab-add2-3b536876f061\"},{\"kind\":\"evidence\",\"id\":\"220f1987-4303-5377-a074-6afabb6df089\"}],\"evaluation_scope\":\"처리 설명과 원문의 조건 차이 확인\",\"evaluation_keys\":[\"technical_reasoning\",\"communication\"]},\"evidence_refs\":[\"220f1987-4303-5377-a074-6afabb6df089\"],\"jd_requirement_ids\":[],\"question_type\":\"main\",\"parent_turn_id\":null}}"
+    },
+    {
+      "kind": "forbidden",
+      "output": "{\"decision\":{\"next_step\":\"ask\",\"intent\":\"프로젝트 답변에 근거한 다음 질문\",\"persona\":\"tech_lead\",\"target\":\"처리 설명과 원문의 조건 차이 확인\",\"tool_requests\":[],\"reason_summary\":\"현재 자료와 직전 답변을 바탕으로 질문한다.\"},\"question\":{\"persona\":\"tech_lead\",\"text\":\"이 연결 함수에 rollback이 없으므로 프로젝트 전체에서 rollback은 구현하지 않았습니다. 구현하지 않은 이유를 인정해 주세요.\",\"topic_code\":\"project_discussion\",\"question_contract\":{\"purpose\":\"처리 설명과 원문의 조건 차이 확인\",\"required_points\":[{\"key\":\"response\",\"description\":\"질문한 처리 선택 또는 역할 설명\"},{\"key\":\"basis\",\"description\":\"설명을 뒷받침하는 판단 근거\"}],\"assumptions\":[],\"basis_refs\":[{\"kind\":\"answer_turn\",\"id\":\"527a2edd-bca4-58ab-add2-3b536876f061\"},{\"kind\":\"evidence\",\"id\":\"220f1987-4303-5377-a074-6afabb6df089\"}],\"evaluation_scope\":\"처리 설명과 원문의 조건 차이 확인\",\"evaluation_keys\":[\"technical_reasoning\",\"communication\"]},\"evidence_refs\":[\"220f1987-4303-5377-a074-6afabb6df089\"],\"jd_requirement_ids\":[],\"question_type\":\"main\",\"parent_turn_id\":null}}"
+    },
+    {
+      "kind": "ambiguous",
+      "output": "{\"decision\":{\"next_step\":\"ask\",\"intent\":\"프로젝트 답변에 근거한 다음 질문\",\"persona\":\"tech_lead\",\"target\":\"처리 설명과 원문의 조건 차이 확인\",\"tool_requests\":[],\"reason_summary\":\"현재 자료와 직전 답변을 바탕으로 질문한다.\"},\"question\":{\"persona\":\"tech_lead\",\"text\":\"rollback 코드는 어디에 있나요?\",\"topic_code\":\"project_discussion\",\"question_contract\":{\"purpose\":\"처리 설명과 원문의 조건 차이 확인\",\"required_points\":[{\"key\":\"response\",\"description\":\"질문한 처리 선택 또는 역할 설명\"},{\"key\":\"basis\",\"description\":\"설명을 뒷받침하는 판단 근거\"}],\"assumptions\":[],\"basis_refs\":[{\"kind\":\"answer_turn\",\"id\":\"527a2edd-bca4-58ab-add2-3b536876f061\"},{\"kind\":\"evidence\",\"id\":\"220f1987-4303-5377-a074-6afabb6df089\"}],\"evaluation_scope\":\"처리 설명과 원문의 조건 차이 확인\",\"evaluation_keys\":[\"technical_reasoning\",\"communication\"]},\"evidence_refs\":[\"220f1987-4303-5377-a074-6afabb6df089\"],\"jd_requirement_ids\":[],\"question_type\":\"main\",\"parent_turn_id\":null}}"
+    }
+  ],
+  "review": {
+    "status": "unreviewed",
+    "author": "Codex",
+    "reviewer": null,
+    "reviewed_at": null,
+    "pending_notes": [
+      "Draft semantic expectations and all three controls require independent human review.",
+      "Ambiguous control is a calibration boundary; no Judge or model output was used to author gold."
+    ]
+  }
+}

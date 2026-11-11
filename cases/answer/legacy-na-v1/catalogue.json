@@ -1,0 +1,84 @@
+{
+  "version": 1,
+  "kind": "report_score_draft",
+  "rubric_provenance": {
+    "source_path": "backend/scripts/seed_score_criteria.py",
+    "source_sha256": "af2e0fbe5da58b95e6f6e8b4e1c174c6c781dbe5fb4ee693d78e067794257a95",
+    "rubrics_sha256": "c726eba35161f623d05a436bffeefed526fed65f1dc715301fe2a9f9f4a155d4",
+    "method": "ast.literal_eval_only_no_seed_import",
+    "review_status": "unreviewed"
+  },
+  "authoring_order": "Question and contract definitions are constructed before answer composition; hashes record that pre-answer contract projection. No model output is generated or used for annotations.",
+  "cases": [
+    {
+      "case_id": "b-legacy-na-01",
+      "version": 1,
+      "split": "dev",
+      "source_group_id": "sg-b-legacy-na-01",
+      "project": "센서 관측 portal",
+      "input": "inputs/b-legacy-na-01.v1.json",
+      "gold": "gold/b-legacy-na-01.json",
+      "review": "reviews/b-legacy-na-01.json",
+      "source_bundle_sha256": "f26cb73422c80ceff31ba8b2b070de596dc6a30b04d464b27b8751d98df83bd6",
+      "source_input_sha256": "a7ca58ad9ed5280721b9f0170f98495dbcd60584a153d13011d273011c1e0e94",
+      "contracts_before_answers_sha256": [
+        "43866ed0503c8a47c7304722cc39c6e79d31bf16011fc5dc1d22c3f05aae5914",
+        "9adae1771a5da96160d2ea4f7e6ece541ec154810582fef72c2f58dc91d37dd6",
+        "23302b2f1926cdf5ce77dbf021c45f65a8634f77cfc1e0710810e1eee320c99a",
+        "cf275dc48a949c8d26c7213b208694c3dca26b3d7e281aca53b22c6aa70710c2",
+        "3790b35d7f35f072b83f02f56349fc6c7d8197dbca808ce42beba10c03e08351",
+        "c121baae048e2de257cca782bdb15f4d8833271d908ce378344c31296d3e5066",
+        "1273ec4cec6984fd02385b8cc61ed23e7205f45d61cd8a3ce34b0f9a5ba3d717",
+        "e9538d44d7e68307e2e7ce7077b340c1c625217d91a55ab0c90a43b9b4bd1b05",
+        "a49efb370098c7b97d98b70a8d7b7b9a72c92be4252f72f1d1ab61f14653a6e8"
+      ],
+      "answers_sha256": "23440f96ce65ab9b33d80f7291058823f4527735b471cd5793186c4739612b65",
+      "annotation_status": "unreviewed_semantic_draft",
+      "boundary_notes": [
+        "전 턴 evaluation_keys=[]; 8턴의 JD 링크는 F 평가 의도가 아니다."
+      ],
+      "rubric_provenance": {
+        "source_path": "backend/scripts/seed_score_criteria.py",
+        "source_sha256": "af2e0fbe5da58b95e6f6e8b4e1c174c6c781dbe5fb4ee693d78e067794257a95",
+        "rubrics_sha256": "c726eba35161f623d05a436bffeefed526fed65f1dc715301fe2a9f9f4a155d4",
+        "method": "ast.literal_eval_only_no_seed_import",
+        "review_status": "unreviewed"
+      }
+    },
+    {
+      "case_id": "b-legacy-na-02",
+      "version": 1,
+      "split": "holdout",
+      "source_group_id": "sg-b-legacy-na-02",
+      "project": "시설 점검 기록",
+      "input": "inputs/b-legacy-na-02.v1.json",
+      "gold": "gold/b-legacy-na-02.json",
+      "review": "reviews/b-legacy-na-02.json",
+      "source_bundle_sha256": "54e629742abbd7a2b1df75b896339f36f85c32947c827b9ed3cfc822375b5c25",
+      "source_input_sha256": "f9cc56ef7e8c9a0edfd085346b1613de817d0176ec0e09990f35bdca2217463e",
+      "contracts_before_answers_sha256": [
+        "124061c55edd985f03d593c109b684a4be867a060e4e7847133457bc21d7773e",
+        "c6b9e2f571d4c397050098c3383e732c19b2a62f92b0177207c76bc5d1030a90",
+        "d095752ddb326b468d73f5ab88737418301d9952275037db158d79e9bdeb970a",
+        "c5a6c40ba53b7520b4297b6ca97ab78a30a8a6a6ee8f059972b52b8f48c4cb9f",
+        "5def51d0af3f68d910a6f17696d710550d4deb77af098dea4558e4e1a60fe1f5",
+        "6e3ff97c6ddae76e104992ee76d7678fbacee6d908779d17f8e631935fdc8a39",
+        "04de1cb0275ead566b755241554a93fbe12fe9587a8beefbe9f73fd7bbb45a76",
+        "1a5c9893e38b66453e4a3a12f7d277d1880fae9d8ffc7c418b9309726599998f",
+        "8041d580efcfbf71f65bcec0cda462db6e20688c0ae0bd60a6515f89cecc7267"
+      ],
+      "answers_sha256": "2fb446ed2ff8f6653facc7b9765e6acfaeb45201546d5610910151bea21fdae7",
+      "annotation_status": "unreviewed_semantic_draft",
+      "boundary_notes": [
+        "전 턴 구형 계약; 현행 평가와 별도 분모."
+      ],
+      "rubric_provenance": {
+        "source_path": "backend/scripts/seed_score_criteria.py",
+        "source_sha256": "af2e0fbe5da58b95e6f6e8b4e1c174c6c781dbe5fb4ee693d78e067794257a95",
+        "rubrics_sha256": "c726eba35161f623d05a436bffeefed526fed65f1dc715301fe2a9f9f4a155d4",
+        "method": "ast.literal_eval_only_no_seed_import",
+        "review_status": "unreviewed"
+      }
+    }
+  ]
+}

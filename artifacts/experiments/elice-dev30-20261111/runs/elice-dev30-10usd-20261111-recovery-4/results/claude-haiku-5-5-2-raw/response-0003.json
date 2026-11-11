@@ -1,0 +1,51 @@
+{
+  "id": "msg_011CgusjDhmERTCHjSW9Wg2y",
+  "object": "chat.completion",
+  "created": 1794342362,
+  "model": "claude-haiku-5-5",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\"judgments\": [{\"turn_id\": \"1\", \"key\": \"contribution_clarity\", \"level\": 4}, {\"turn_id\": \"1\", \"key\": \"communication\", \"level\": 3}, {\"turn_id\": \"2\", \"key\": \"project_understanding\", \"level\": \"not_applicable\"}, {\"turn_id\": \"2\", \"key\": \"communication\", \"level\": 0}, {\"turn_id\": \"3\", \"key\": \"technical_reasoning\", \"level\": 1}, {\"turn_id\": \"3\", \"key\": \"communication\", \"level\": 2}, {\"turn_id\": \"4\", \"key\": \"problem_solving\", \"level\": 2}, {\"turn_id\": \"4\", \"key\": \"communication\", \"level\": 3}, {\"turn_id\": \"5\", \"key\": \"company_job_fit\", \"level\": 3}, {\"turn_id\": \"5\", \"key\": \"communication\", \"level\": 3}, {\"turn_id\": \"6\", \"key\": \"technical_reasoning\", \"level\": 2}, {\"turn_id\": \"6\", \"key\": \"communication\", \"level\": 2}, {\"turn_id\": \"7\", \"key\": \"technical_reasoning\", \"level\": 3}, {\"turn_id\": \"7\", \"key\": \"communication\", \"level\": 3}, {\"turn_id\": \"8\", \"key\": \"communication\", \"level\": 0}, {\"turn_id\": \"9\", \"key\": \"technical_reasoning\", \"level\": 4}, {\"turn_id\": \"9\", \"key\": \"communication\", \"level\": 2}]}",
+        "refusal": null
+      },
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 13393,
+    "completion_tokens": 416,
+    "total_tokens": 13809,
+    "input_tokens": 13393,
+    "output_tokens": 416,
+    "cached_prompt_tokens": 3631,
+    "cache_write_tokens": 7790
+  },
+  "_elice_billing": {
+    "usage": {
+      "input_tokens": 13393,
+      "output_tokens": 416,
+      "cached_input_tokens": 3631,
+      "cache_write_input_tokens": null,
+      "reasoning_output_tokens": null,
+      "cache_write_short_tokens": null,
+      "cache_write_long_tokens": null
+    },
+    "cost_usd": null,
+    "cost_lower_usd": "0.0011842",
+    "cost_upper_usd": "0.0025235",
+    "cost_status": "bounded",
+    "provider_model": "claude-haiku-5-5",
+    "canonical_model": "claude-haiku-5-5",
+    "attempt_id": "attempt-25",
+    "accounting_basis": "billing_upper_bound"
+  },
+  "_elice_wire": {
+    "protocol": "chat_completions",
+    "canonical_request_bytes": 27259,
+    "wire_request_bytes": 27216,
+    "reservation_input_bytes": 27259
+  }
+}

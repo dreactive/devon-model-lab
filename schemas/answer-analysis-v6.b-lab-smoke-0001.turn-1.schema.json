@@ -1,0 +1,748 @@
+{
+  "type": "object",
+  "properties": {
+    "coverage_assessment": {
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "evaluation_status": {
+              "enum": [
+                "evaluated"
+              ]
+            },
+            "sufficiency": {
+              "enum": [
+                "sufficient"
+              ]
+            },
+            "covered_points": {
+              "type": "object",
+              "properties": {
+                "own_scope": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "enum": [
+                      "answer:0001",
+                      "answer:0002",
+                      "answer:0003",
+                      "answer:0004"
+                    ]
+                  },
+                  "minItems": 1,
+                  "maxItems": 4
+                },
+                "handoffs": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "enum": [
+                      "answer:0001",
+                      "answer:0002",
+                      "answer:0003",
+                      "answer:0004"
+                    ]
+                  },
+                  "minItems": 1,
+                  "maxItems": 4
+                }
+              },
+              "required": [
+                "own_scope",
+                "handoffs"
+              ],
+              "additionalProperties": false
+            },
+            "missing_points": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": [
+                  "own_scope",
+                  "handoffs"
+                ]
+              },
+              "minItems": 0,
+              "maxItems": 0
+            },
+            "limitations": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "\\S"
+              },
+              "minItems": 0
+            }
+          },
+          "required": [
+            "evaluation_status",
+            "sufficiency",
+            "covered_points",
+            "missing_points",
+            "limitations"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "evaluation_status": {
+              "enum": [
+                "needs_clarification"
+              ]
+            },
+            "sufficiency": {
+              "enum": [
+                "sufficient"
+              ]
+            },
+            "covered_points": {
+              "type": "object",
+              "properties": {
+                "own_scope": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "enum": [
+                      "answer:0001",
+                      "answer:0002",
+                      "answer:0003",
+                      "answer:0004"
+                    ]
+                  },
+                  "minItems": 1,
+                  "maxItems": 4
+                },
+                "handoffs": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "enum": [
+                      "answer:0001",
+                      "answer:0002",
+                      "answer:0003",
+                      "answer:0004"
+                    ]
+                  },
+                  "minItems": 1,
+                  "maxItems": 4
+                }
+              },
+              "required": [
+                "own_scope",
+                "handoffs"
+              ],
+              "additionalProperties": false
+            },
+            "missing_points": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": [
+                  "own_scope",
+                  "handoffs"
+                ]
+              },
+              "minItems": 0,
+              "maxItems": 0
+            },
+            "limitations": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "\\S"
+              },
+              "minItems": 1
+            }
+          },
+          "required": [
+            "evaluation_status",
+            "sufficiency",
+            "covered_points",
+            "missing_points",
+            "limitations"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "evaluation_status": {
+              "enum": [
+                "evaluated",
+                "needs_clarification"
+              ]
+            },
+            "sufficiency": {
+              "enum": [
+                "partial"
+              ]
+            },
+            "covered_points": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "own_scope": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "enum": [
+                          "answer:0001",
+                          "answer:0002",
+                          "answer:0003",
+                          "answer:0004"
+                        ]
+                      },
+                      "minItems": 1,
+                      "maxItems": 4
+                    },
+                    "handoffs": {
+                      "anyOf": [
+                        {
+                          "type": "null"
+                        },
+                        {
+                          "type": "array",
+                          "items": {
+                            "type": "string",
+                            "enum": [
+                              "answer:0001",
+                              "answer:0002",
+                              "answer:0003",
+                              "answer:0004"
+                            ]
+                          },
+                          "minItems": 1,
+                          "maxItems": 4
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "own_scope",
+                    "handoffs"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "own_scope": {
+                      "anyOf": [
+                        {
+                          "type": "null"
+                        },
+                        {
+                          "type": "array",
+                          "items": {
+                            "type": "string",
+                            "enum": [
+                              "answer:0001",
+                              "answer:0002",
+                              "answer:0003",
+                              "answer:0004"
+                            ]
+                          },
+                          "minItems": 1,
+                          "maxItems": 4
+                        }
+                      ]
+                    },
+                    "handoffs": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "enum": [
+                          "answer:0001",
+                          "answer:0002",
+                          "answer:0003",
+                          "answer:0004"
+                        ]
+                      },
+                      "minItems": 1,
+                      "maxItems": 4
+                    }
+                  },
+                  "required": [
+                    "own_scope",
+                    "handoffs"
+                  ],
+                  "additionalProperties": false
+                }
+              ]
+            },
+            "missing_points": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": [
+                  "own_scope",
+                  "handoffs"
+                ]
+              },
+              "minItems": 1,
+              "maxItems": 2
+            },
+            "limitations": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "\\S"
+              },
+              "minItems": 1
+            }
+          },
+          "required": [
+            "evaluation_status",
+            "sufficiency",
+            "covered_points",
+            "missing_points",
+            "limitations"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "evaluation_status": {
+              "enum": [
+                "evaluated",
+                "needs_clarification"
+              ]
+            },
+            "sufficiency": {
+              "enum": [
+                "insufficient"
+              ]
+            },
+            "covered_points": {
+              "type": "object",
+              "properties": {
+                "own_scope": {
+                  "anyOf": [
+                    {
+                      "type": "null"
+                    },
+                    {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "enum": [
+                          "answer:0001",
+                          "answer:0002",
+                          "answer:0003",
+                          "answer:0004"
+                        ]
+                      },
+                      "minItems": 1,
+                      "maxItems": 4
+                    }
+                  ]
+                },
+                "handoffs": {
+                  "anyOf": [
+                    {
+                      "type": "null"
+                    },
+                    {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "enum": [
+                          "answer:0001",
+                          "answer:0002",
+                          "answer:0003",
+                          "answer:0004"
+                        ]
+                      },
+                      "minItems": 1,
+                      "maxItems": 4
+                    }
+                  ]
+                }
+              },
+              "required": [
+                "own_scope",
+                "handoffs"
+              ],
+              "additionalProperties": false
+            },
+            "missing_points": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": [
+                  "own_scope",
+                  "handoffs"
+                ]
+              },
+              "minItems": 1,
+              "maxItems": 2
+            },
+            "limitations": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "\\S"
+              },
+              "minItems": 1
+            }
+          },
+          "required": [
+            "evaluation_status",
+            "sufficiency",
+            "covered_points",
+            "missing_points",
+            "limitations"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "evaluation_status": {
+              "enum": [
+                "evaluated",
+                "needs_clarification",
+                "not_evaluable"
+              ]
+            },
+            "sufficiency": {
+              "type": "null"
+            },
+            "covered_points": {
+              "type": "object",
+              "properties": {
+                "own_scope": {
+                  "anyOf": [
+                    {
+                      "type": "null"
+                    },
+                    {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "enum": [
+                          "answer:0001",
+                          "answer:0002",
+                          "answer:0003",
+                          "answer:0004"
+                        ]
+                      },
+                      "minItems": 1,
+                      "maxItems": 4
+                    }
+                  ]
+                },
+                "handoffs": {
+                  "anyOf": [
+                    {
+                      "type": "null"
+                    },
+                    {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "enum": [
+                          "answer:0001",
+                          "answer:0002",
+                          "answer:0003",
+                          "answer:0004"
+                        ]
+                      },
+                      "minItems": 1,
+                      "maxItems": 4
+                    }
+                  ]
+                }
+              },
+              "required": [
+                "own_scope",
+                "handoffs"
+              ],
+              "additionalProperties": false
+            },
+            "missing_points": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": [
+                  "own_scope",
+                  "handoffs"
+                ]
+              },
+              "minItems": 0,
+              "maxItems": 2
+            },
+            "limitations": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "\\S"
+              },
+              "minItems": 1
+            }
+          },
+          "required": [
+            "evaluation_status",
+            "sufficiency",
+            "covered_points",
+            "missing_points",
+            "limitations"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "technical_assessment": {
+      "type": "object",
+      "properties": {
+        "explanation": {
+          "type": "string",
+          "pattern": "\\S"
+        },
+        "quote_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "answer:0001",
+              "answer:0002",
+              "answer:0003",
+              "answer:0004"
+            ]
+          },
+          "minItems": 0,
+          "maxItems": 4
+        },
+        "evidence_refs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 0,
+          "maxItems": 0
+        },
+        "limitations": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "\\S"
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "explanation",
+        "quote_ids",
+        "evidence_refs",
+        "limitations"
+      ],
+      "additionalProperties": false
+    },
+    "contribution_scope": {
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "scope": {
+              "enum": [
+                "unknown"
+              ]
+            },
+            "quote_ids": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": [
+                  "answer:0001",
+                  "answer:0002",
+                  "answer:0003",
+                  "answer:0004"
+                ]
+              },
+              "minItems": 0,
+              "maxItems": 4
+            },
+            "unknown_reason": {
+              "type": "string",
+              "pattern": "\\S"
+            }
+          },
+          "required": [
+            "scope",
+            "quote_ids",
+            "unknown_reason"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "scope": {
+              "enum": [
+                "self",
+                "shared",
+                "teammate"
+              ]
+            },
+            "quote_ids": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": [
+                  "answer:0001",
+                  "answer:0002",
+                  "answer:0003",
+                  "answer:0004"
+                ]
+              },
+              "minItems": 1,
+              "maxItems": 4
+            },
+            "unknown_reason": {
+              "type": "null"
+            }
+          },
+          "required": [
+            "scope",
+            "quote_ids",
+            "unknown_reason"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "claim_checks": {
+      "type": "array",
+      "items": {
+        "anyOf": [
+          {
+            "type": "object",
+            "properties": {
+              "quote_id": {
+                "type": "string",
+                "enum": [
+                  "answer:0001",
+                  "answer:0002",
+                  "answer:0003",
+                  "answer:0004"
+                ]
+              },
+              "status": {
+                "enum": [
+                  "unverified"
+                ]
+              },
+              "evidence_refs": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "minItems": 0,
+                "maxItems": 0
+              },
+              "limitations": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "\\S"
+                },
+                "minItems": 1
+              }
+            },
+            "required": [
+              "quote_id",
+              "status",
+              "evidence_refs",
+              "limitations"
+            ],
+            "additionalProperties": false
+          }
+        ]
+      },
+      "minItems": 0
+    },
+    "verification_requests": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "claim_quote_id": {
+            "type": "string",
+            "enum": [
+              "answer:0001",
+              "answer:0002",
+              "answer:0003",
+              "answer:0004"
+            ]
+          },
+          "purpose": {
+            "type": "string",
+            "pattern": "\\S"
+          },
+          "repository_id": {
+            "type": "string",
+            "pattern": "\\S"
+          },
+          "git_ref": {
+            "type": "string",
+            "pattern": "\\S"
+          },
+          "allowed_paths": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "\\S"
+            },
+            "minItems": 0
+          }
+        },
+        "required": [
+          "claim_quote_id",
+          "purpose",
+          "repository_id",
+          "git_ref",
+          "allowed_paths"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 0,
+      "maxItems": 0
+    },
+    "external_queries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "type": "string",
+            "pattern": "\\S"
+          },
+          "purpose": {
+            "type": "string",
+            "pattern": "\\S"
+          }
+        },
+        "required": [
+          "query",
+          "purpose"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 0,
+      "maxItems": 2
+    }
+  },
+  "required": [
+    "coverage_assessment",
+    "technical_assessment",
+    "contribution_scope",
+    "claim_checks",
+    "verification_requests",
+    "external_queries"
+  ],
+  "additionalProperties": false
+}
